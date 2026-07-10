@@ -19,7 +19,7 @@ namespace BorealisCards2.BorealisCards2Code.Cards.Defect;
 
 
 [Pool(typeof(DefectCardPool))]
-internal class ShockAndAwe() : BorealisCards2Card(2,
+internal class ShockAndAwe() : BorealisCards2Card(3,
     CardType.Power, CardRarity.Rare,
     TargetType.Self)
 {
@@ -35,6 +35,6 @@ internal class ShockAndAwe() : BorealisCards2Card(2,
 
     protected override void OnUpgrade()
     {
-        DynamicVars["ShockAndAwePower"].UpgradeValueBy(1M);
+        EnergyCost.UpgradeBy(-1);
     }
 }

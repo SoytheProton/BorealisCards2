@@ -7,7 +7,7 @@
   "BOREALISCARDS2-SHOCK_AND_AWE_POWER.smartDescription": "",
   "BOREALISCARDS2-SHOCK_AND_AWE_POWER.title": "Shock and Awe",
   
-  "BOREALISCARDS2-TEMPORARY_FOCUS_NEXT_TURN_POWER.description": "",
-  "BOREALISCARDS2-TEMPORARY_FOCUS_NEXT_TURN_POWER.smartDescription": "",
-  "BOREALISCARDS2-TEMPORARY_FOCUS_NEXT_TURN_POWER.title": "TemporaryFocusNextTurnPower"
+  "BOREALISCARDS2-TEMPORARY_FOCUS_NEXT_TURN_POWER.description": "At the start of your next turn, gain [gold]Focus[/gold] for that turn.",
+  "BOREALISCARDS2-TEMPORARY_FOCUS_NEXT_TURN_POWER.smartDescription": "At the start of your next turn, gain [blue]{Amount}[/blue] [gold]Focus[/gold] for that turn.",
+  "BOREALISCARDS2-TEMPORARY_FOCUS_NEXT_TURN_POWER.title": "Focus Next Turn Power"
 }

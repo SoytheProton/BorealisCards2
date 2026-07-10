@@ -16,7 +16,7 @@ namespace BorealisCards2.BorealisCards2Code.Cards.Defect;
 public class Glassblower() : BorealisCards2Card(0, CardType.Skill, CardRarity.Rare, TargetType.Self)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new CardsVar(4)];
-    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromOrb<GlassOrb>()];
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.Static(StaticHoverTip.Channeling), HoverTipFactory.FromOrb<GlassOrb>()];
     
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
@@ -32,7 +32,7 @@ public class Glassblower() : BorealisCards2Card(0, CardType.Skill, CardRarity.Ra
         if (cardPlay.Card.Owner == Owner && cardPlay.Card.Type == CardType.Attack && Filter(cardPlay.Card) && Pile.Type != PileType.Hand)
         {
             var num = CombatManager.Instance.History.CardPlaysFinished.Count(e =>
-                e.HappenedThisTurn(CombatState) && e.CardPlay.Card.Type == CardType.Attack && Filter(e.CardPlay.Card) &&
+                e.CardPlay.Card.Type == CardType.Attack && Filter(e.CardPlay.Card) &&
                 e.CardPlay.Card.Owner == Owner);
             if (num % DynamicVars.Cards.IntValue != 0)
                 return;

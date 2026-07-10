@@ -25,5 +25,5 @@ public class HyperspeedStrike() : BorealisCards2Card(0,
         await Cmd.Wait(0.5f);
     }
 
-    protected override void OnUpgrade() => DynamicVars.Damage.UpgradeValueBy(5m);
+    protected override void OnUpgrade() => DynamicVars.Damage.UpgradeValueBy(5M);
 }

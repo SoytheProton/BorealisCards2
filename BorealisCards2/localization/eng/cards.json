@@ -1,20 +1,20 @@
 {
-  "BOREALISCARDS2-GLASSBLOWER.description": "Channel 1 [gold]Glass[/gold].\nEvery {Cards:diff()} 0{energyPrefix:energyIcons(1)} {Cards:plural:Attack|Attacks} you play in a turn, put this into your [gold]Hand[/gold].",
+  "BOREALISCARDS2-GLASSBLOWER.description": "Channel 1 [gold]Glass[/gold].\nEvery {Cards:diff()} 0{energyPrefix:energyIcons(1)} {Cards:plural:Attack|Attacks} you play, put this into your [gold]Hand[/gold].",
   "BOREALISCARDS2-GLASSBLOWER.title": "Glassblowing",
 
   "BOREALISCARDS2-HYPERSPEED_STRIKE.description": "Deal {Damage:diff()} damage.\nAdd a [gold]Void[/gold] into your [gold]Draw Pile[/gold].",
   "BOREALISCARDS2-HYPERSPEED_STRIKE.title": "Hyperspeed Strike",
 
-  "BOREALISCARDS2-POWER_UP.description": "Deal {Damage:diff()} damage.\nAdd a [gold]Void[/gold] into your [gold]Draw Pile[/gold].",
+  "BOREALISCARDS2-POWER_UP.description": "Gain {Block:diff()} [gold]Block[/gold].\nNext turn, gain {FocusPower:diff()} [gold]Focus[/gold] for that turn.",
   "BOREALISCARDS2-POWER_UP.title": "Power Up",
 
-  "BOREALISCARDS2-RIPSAW.description": "engage blender mode for {Damage:diff()}. also youre dizzy now.",
+  "BOREALISCARDS2-RIPSAW.description": "Deal {Damage:diff()} damage.\nAdd {Cards:diff()} [gold]Dazed[/gold] into your [gold]Discard Pile[/gold].",
   "BOREALISCARDS2-RIPSAW.title": "Ripsaw",
 
-  "BOREALISCARDS2-ERR.description": "OH GREAT HEAVENS",
+  "BOREALISCARDS2-ERR.description": "Whenever you draw this card, play {Cards:diff()} random {Cards:plural:Power|Powers}.",
   "BOREALISCARDS2-ERR.title": "ERR://23¤Y%/",
 
-  "BOREALISCARDS2-NUCLEAR.description": "you like plasma dont you",
+  "BOREALISCARDS2-NUCLEAR.description": "{IfUpgraded:show:[gold]Channel[/gold] 1 [gold]Plasma[/gold].}\nAt the start of the next {NuclearPower:plural:turn|{:diff()} turns}, [gold]Channel[/gold] 1 [gold]Plasma[/gold].",
   "BOREALISCARDS2-NUCLEAR.title": "Nuclear",
 
   "BOREALISCARDS2-SHOCK_AND_AWE.description": "when lightning, go bazinga mode",
