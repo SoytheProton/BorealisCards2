@@ -1,11 +1,11 @@
 {
   "id": "BorealisCards2",
-  "name": "BorealisCards2",
-  "author": "SoytheProton",
-  "description": "Slay the Spire 2 character mod created from a template for use with BaseLib",
+  "name": "Borealis Cards 2",
+  "author": "SoytheProton & CrypticAurora",
+  "description": "funni",
   "version": "v0.0.0",
   "has_pck": true,
   "has_dll": true,
-  "dependencies": ["BaseLib"],
+  "dependencies": [{"id": "BaseLib", "min_version": "3.3.5"}],
   "affects_gameplay": true
 }

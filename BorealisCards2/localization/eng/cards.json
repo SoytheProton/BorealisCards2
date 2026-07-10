@@ -7,9 +7,6 @@
 
   "BOREALISCARDS2-POWER_UP.description": "Deal {Damage:diff()} damage.\nAdd a [gold]Void[/gold] into your [gold]Draw Pile[/gold].",
   "BOREALISCARDS2-POWER_UP.title": "Power Up",
-  
-  "BOREALISCARDS2-TRIPLE_BARREL_SHOTGUN.description": "meow",
-  "BOREALISCARDS2-TRIPLE_BARREL_SHOTGUN.title": "Triple Barrel Shotgun",
 
   "BOREALISCARDS2-RIPSAW.description": "engage blender mode for {Damage:diff()}. also youre dizzy now.",
   "BOREALISCARDS2-RIPSAW.title": "Ripsaw",
