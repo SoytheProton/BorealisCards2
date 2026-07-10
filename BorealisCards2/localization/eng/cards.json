@@ -18,5 +18,14 @@
   "BOREALISCARDS2-NUCLEAR.title": "Nuclear",
 
   "BOREALISCARDS2-SHOCK_AND_AWE.description": "when lightning, go bazinga mode",
-  "BOREALISCARDS2-SHOCK_AND_AWE.title": "Shock and Awe"
+  "BOREALISCARDS2-SHOCK_AND_AWE.title": "Shock and Awe",
+
+  "BOREALISCARDS2-HIGH_VOLTAGE.description": "Deal {Damage:diff()} damage. \n Channel 3(4) Lightning idk how to do strings rn im lazy fuck off.",
+  "BOREALISCARDS2-HIGH_VOLTAGE.title": "High Voltage",
+
+  "BOREALISCARDS2-STACK_TRACE.description": "Gain 1 Orb Slot. \n Add 1 Void(Dazed) into your discard pile.",
+  "BOREALISCARDS2-STACK_TRACE.title": "Stack Trace",
+
+  "BOREALISCARDS2-TEMPERATURE_SHOCK.description": "Channel 1 Lightning. \n Channel 1 Frost.",
+  "BOREALISCARDS2-TEMPERATURE_SHOCK.title": "Temperature Shock"
 }
