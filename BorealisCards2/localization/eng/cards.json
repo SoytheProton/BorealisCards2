@@ -6,5 +6,20 @@
   "BOREALISCARDS2-HYPERSPEED_STRIKE.title": "Hyperspeed Strike",
 
   "BOREALISCARDS2-POWER_UP.description": "Deal {Damage:diff()} damage.\nAdd a [gold]Void[/gold] into your [gold]Draw Pile[/gold].",
-  "BOREALISCARDS2-POWER_UP.title": "Power Up"
+  "BOREALISCARDS2-POWER_UP.title": "Power Up",
+  
+  "BOREALISCARDS2-TRIPLE_BARREL_SHOTGUN.description": "meow",
+  "BOREALISCARDS2-TRIPLE_BARREL_SHOTGUN.title": "Triple Barrel Shotgun",
+
+  "BOREALISCARDS2-RIPSAW.description": "engage blender mode for {Damage:diff()}. also youre dizzy now.",
+  "BOREALISCARDS2-RIPSAW.title": "Ripsaw",
+
+  "BOREALISCARDS2-ERR.description": "OH GREAT HEAVENS",
+  "BOREALISCARDS2-ERR.title": "ERR://23¤Y%/",
+
+  "BOREALISCARDS2-NUCLEAR.description": "you like plasma dont you",
+  "BOREALISCARDS2-NUCLEAR.title": "Nuclear",
+
+  "BOREALISCARDS2-SHOCK_AND_AWE.description": "when lightning, go bazinga mode",
+  "BOREALISCARDS2-SHOCK_AND_AWE.title": "Shock and Awe"
 }

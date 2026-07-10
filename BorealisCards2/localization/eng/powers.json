@@ -1,4 +1,11 @@
 {
+  "BOREALISCARDS2-NUCLEAR_POWER.description": "ooh a dollar",
+  "BOREALISCARDS2-NUCLEAR_POWER.smartDescription": "",
+  "BOREALISCARDS2-NUCLEAR_POWER.title": "Nuclear",
+
+  "BOREALISCARDS2-SHOCK_AND_AWE_POWER.description": "channel some FUCKING orbs",
+  "BOREALISCARDS2-SHOCK_AND_AWE_POWER.smartDescription": "",
+  "BOREALISCARDS2-SHOCK_AND_AWE_POWER.title": "Shock and Awe"
   "BOREALISCARDS2-TEMPORARY_FOCUS_NEXT_TURN_POWER.description": "",
   "BOREALISCARDS2-TEMPORARY_FOCUS_NEXT_TURN_POWER.smartDescription": "",
   "BOREALISCARDS2-TEMPORARY_FOCUS_NEXT_TURN_POWER.title": "TemporaryFocusNextTurnPower"
