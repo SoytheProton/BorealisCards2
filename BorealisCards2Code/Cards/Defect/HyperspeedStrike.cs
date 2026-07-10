@@ -10,7 +10,7 @@ using Void = MegaCrit.Sts2.Core.Models.Cards.Void;
 namespace BorealisCards2.BorealisCards2Code.Cards.Defect;
 
 [Pool(typeof(DefectCardPool))]
-public class HyperspeedStrike() : BorealisCards2Card(1,
+public class HyperspeedStrike() : BorealisCards2Card(0,
     CardType.Attack, CardRarity.Common,
     TargetType.AnyEnemy)
 {
