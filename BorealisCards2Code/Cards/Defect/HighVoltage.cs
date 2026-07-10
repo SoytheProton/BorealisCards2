@@ -12,7 +12,7 @@ namespace BorealisCards2.BorealisCards2Code.Cards.Defect;
 
 
 [Pool(typeof(DefectCardPool))]
-public class HighVoltage() : BorealisCards2Card(0,
+public class HighVoltage() : BorealisCards2Card(3,
     CardType.Attack, CardRarity.Common,
     TargetType.AnyEnemy)
 {

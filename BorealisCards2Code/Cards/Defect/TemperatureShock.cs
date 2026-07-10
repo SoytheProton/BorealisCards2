@@ -14,7 +14,7 @@ namespace BorealisCards2.BorealisCards2Code.Cards.Defect;
 
 
 [Pool(typeof(DefectCardPool))]
-public class TemperatureShock() : BorealisCards2Card(0,
+public class TemperatureShock() : BorealisCards2Card(1,
     CardType.Skill, CardRarity.Common,
     TargetType.Self)
 {
