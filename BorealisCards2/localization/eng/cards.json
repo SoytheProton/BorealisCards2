@@ -1,4 +1,10 @@
 {
-  "BOREALISCARDS2-TRIPLE_BARREL_SHOTGUN.description": "meow",
-  "BOREALISCARDS2-TRIPLE_BARREL_SHOTGUN.title": "Triple Barrel Shotgun"
+  "BOREALISCARDS2-GLASSBLOWER.description": "Channel 1 [gold]Glass[/gold].\nEvery {Cards:diff()} 0{energyPrefix:energyIcons(1)} {Cards:plural:Attack|Attacks} you play in a turn, put this into your [gold]Hand[/gold].",
+  "BOREALISCARDS2-GLASSBLOWER.title": "Glassblowing",
+
+  "BOREALISCARDS2-HYPERSPEED_STRIKE.description": "Deal {Damage:diff()} damage.\nAdd a [gold]Void[/gold] into your [gold]Draw Pile[/gold].",
+  "BOREALISCARDS2-HYPERSPEED_STRIKE.title": "Hyperspeed Strike",
+
+  "BOREALISCARDS2-POWER_UP.description": "Deal {Damage:diff()} damage.\nAdd a [gold]Void[/gold] into your [gold]Draw Pile[/gold].",
+  "BOREALISCARDS2-POWER_UP.title": "Power Up"
 }
