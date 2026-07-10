@@ -1,4 +1,5 @@
-using BaseLib.Utils;
+using MegaCrit.Sts2.Core.Combat;
+using MegaCrit.Sts2.Core.Combat.History.Entries;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Powers;
@@ -9,7 +10,7 @@ using MegaCrit.Sts2.Core.Models.Orbs;
 
 namespace BorealisCards2.BorealisCards2Code.Powers.Defect;
 
-public sealed class ShockAndAwePower : BorealisCards2Power
+public sealed class IonizePower : BorealisCards2Power
 {
     public override PowerType Type => PowerType.Buff;
 
@@ -19,16 +20,11 @@ public sealed class ShockAndAwePower : BorealisCards2Power
 
     public override async Task AfterOrbChanneled(PlayerChoiceContext choiceContext, Player player, OrbModel orb)
     {
-        if (player != Owner.Player || ShockedAndAwed.Get(orb) || orb is not LightningOrb)
+        if (player != Owner.Player || orb is not LightningOrb)
             return;
-        
-        for (int i = 0; i < Amount; i++)
-        {
-            OrbModel orb2 = OrbModel.GetRandomOrb(Owner.Player.RunState.Rng.CombatOrbGeneration).ToMutable();
-            ShockedAndAwed.Set(orb2, true);
-            await OrbCmd.Channel(choiceContext, orb2, Owner.Player);
-        }
+        var num = CombatManager.Instance.History.Entries.OfType<OrbChanneledEntry>().Count(o => o.Actor == Owner && o.HappenedThisTurn(Owner.CombatState) && o.Orb is LightningOrb);
+        if(num != 1) return;
+        for (var i = 0; i < Amount; i++)
+            await OrbCmd.Channel(choiceContext, ModelDb.Orb<LightningOrb>().ToMutable(), Owner.Player);
     }
-
-    public static readonly SpireField<OrbModel, bool> ShockedAndAwed = new(() => false);
 }

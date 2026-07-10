@@ -1,5 +1,4 @@
-﻿using BaseLib.Abstracts;
-using BorealisCards2.BorealisCards2Code.Cards.Defect;
+﻿using BorealisCards2.BorealisCards2Code.Cards.Defect;
 using MegaCrit.Sts2.Core.Models;
 
 namespace BorealisCards2.BorealisCards2Code.Powers.Defect;

@@ -1,4 +1,3 @@
-using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Powers;
@@ -9,7 +8,7 @@ using MegaCrit.Sts2.Core.Models.Orbs;
 
 namespace BorealisCards2.BorealisCards2Code.Powers.Defect;
 
-public sealed class ShockAndAwePower : BorealisCards2Power
+public sealed class LogisticsPower : BorealisCards2Power
 {
     public override PowerType Type => PowerType.Buff;
 
@@ -19,16 +18,8 @@ public sealed class ShockAndAwePower : BorealisCards2Power
 
     public override async Task AfterOrbChanneled(PlayerChoiceContext choiceContext, Player player, OrbModel orb)
     {
-        if (player != Owner.Player || ShockedAndAwed.Get(orb) || orb is not LightningOrb)
+        if (player != Owner.Player)
             return;
-        
-        for (int i = 0; i < Amount; i++)
-        {
-            OrbModel orb2 = OrbModel.GetRandomOrb(Owner.Player.RunState.Rng.CombatOrbGeneration).ToMutable();
-            ShockedAndAwed.Set(orb2, true);
-            await OrbCmd.Channel(choiceContext, orb2, Owner.Player);
-        }
+        await PowerCmd.Apply<LogisticsFocusPower>(choiceContext, Owner, Amount, Owner, null);
     }
-
-    public static readonly SpireField<OrbModel, bool> ShockedAndAwed = new(() => false);
 }

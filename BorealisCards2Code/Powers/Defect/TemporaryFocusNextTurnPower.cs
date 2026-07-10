@@ -1,6 +1,4 @@
-﻿using BaseLib.Extensions;
-using BorealisCards2.BorealisCards2Code.Extensions;
-using Godot;
+﻿using BorealisCards2.BorealisCards2Code.Extensions;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Powers;
@@ -11,7 +9,6 @@ using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Powers;
 
 namespace BorealisCards2.BorealisCards2Code.Powers.Defect;
-
 
 public abstract class TemporaryFocusNextTurnPower : BorealisCards2Power
 {
