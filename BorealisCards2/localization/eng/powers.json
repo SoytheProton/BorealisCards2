@@ -19,7 +19,7 @@
   "BOREALISCARDS2-IONIZE_POWER.smartDescription": "The first time you [gold]Channel[/gold] [gold]Lightning[/gold] each turn, [gold]Channel[/gold] [blue]{Amount}[/blue] [gold]Lightning[/gold].",
   "BOREALISCARDS2-IONIZE_POWER.title": "Ionize",
 
-  "BOREALISCARDS2-BERSERKER_POWER.description": "tung tung wada potluck iv",
-  "BOREALISCARDS2-BERSERKER_POWER.smartDescription": "tung tung wada potluck iv",
+  "BOREALISCARDS2-BERSERKER_POWER.description": "Whenever you lose HP on your turn, play a random card from your [gold]Draw Pile[/gold].",
+  "BOREALISCARDS2-BERSERKER_POWER.smartDescription": "Whenever you lose HP on your turn, play [blue]1[/blue] random card from your [gold]Draw Pile[/gold].",
   "BOREALISCARDS2-BERSERKER_POWER.title": "Berserker"
 }
