@@ -22,11 +22,10 @@ public class Collect() : BorealisCards2Card(1,
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        CardSelectorPrefs prefs = new CardSelectorPrefs(SelectionScreenPrompt, 1);
-        CardModel card = (await CardSelectCmd.FromCombatPile(choiceContext, PileType.Draw.GetPile(Owner), Owner, prefs, model => Filter(model))).FirstOrDefault();
-        if (card == null)
-            return;
-        await CardPileCmd.Add(card, PileType.Hand);
+        var prefs = new CardSelectorPrefs(SelectionScreenPrompt, 1);
+        var card = (await CardSelectCmd.FromCombatPile(choiceContext, PileType.Draw.GetPile(Owner), Owner, prefs, model => Filter(model))).FirstOrDefault();
+        if (card != null)
+            await CardPileCmd.Add(card, PileType.Hand);
         await CardPileCmd.Draw(choiceContext, DynamicVars.Cards.BaseValue, Owner);
     }
 

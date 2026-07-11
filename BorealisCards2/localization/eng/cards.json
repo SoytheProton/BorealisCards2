@@ -36,6 +36,7 @@
   "BOREALISCARDS2-LOGISTICS.title": "Logistics",
 
   "BOREALISCARDS2-COLLECT.description": "Put a 0{energyPrefix:energyIcons(1)} card from your [gold]Draw Pile[/gold] into your [gold]Hand[/gold].\nDraw {Cards:diff()} {Cards:plural:card|cards}.",
+  "BOREALISCARDS2-COLLECT.selectionScreenPrompt": "Select a card to put in your Hand.",
   "BOREALISCARDS2-COLLECT.title": "Collect",
 
   "BOREALISCARDS2-IONIZE.description": "The first time you [gold]Channel[/gold] [gold]Lightning[/gold] each turn, [gold]Channel[/gold] {Repeat:diff()} [gold]Lightning[/gold].",
