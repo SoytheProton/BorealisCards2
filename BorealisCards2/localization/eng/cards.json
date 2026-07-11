@@ -42,5 +42,8 @@
   "BOREALISCARDS2-IONIZE.title": "Ionize",
 
   "BOREALISCARDS2-METALLURGY.description": "Deal {Damage:diff()} damage.\nWhenever you [gold]Exhaust[/gold] a Status, increase this card's damage by {Increase:diff()} and put this into your [gold]Hand[/gold].",
-  "BOREALISCARDS2-METALLURGY.title": "Metallurgy"
+  "BOREALISCARDS2-METALLURGY.title": "Metallurgy",
+
+  "BOREALISCARDS2-BERSERKER.description": "bbroom bbroom play cards go wheeee",
+  "BOREALISCARDS2-BERSERKER.title": "Berserker"
 }
