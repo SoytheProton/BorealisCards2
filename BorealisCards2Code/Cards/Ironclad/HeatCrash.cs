@@ -9,7 +9,7 @@ using MegaCrit.Sts2.Core.ValueProps;
 namespace BorealisCards2.BorealisCards2Code.Cards.Ironclad;
 
 [Pool(typeof(IroncladCardPool))]
-public class BlazingStrike() : BorealisCards2Card(2,
+public class HeatCrash() : BorealisCards2Card(2,
     CardType.Attack, CardRarity.Rare,
     TargetType.AnyEnemy)
 {
@@ -26,9 +26,9 @@ public class BlazingStrike() : BorealisCards2Card(2,
         var cards = await CardPileCmd.Draw(choiceContext, DynamicVars.Cards.BaseValue, Owner);
         foreach (var card in cards)
         {
-            if (card.Type == CardType.Attack && !card.EnergyCost.CostsX && card.EnergyCost.GetWithModifiers(CostModifiers.None) >= 0)
+            if (card.Type == CardType.Attack && card.CostsEnergyOrStars(true))
             {
-                card.EnergyCost.AddUntilPlayed(-1, true);
+                card.EnergyCost.SetUntilPlayed(0);
             }
         }
     }
