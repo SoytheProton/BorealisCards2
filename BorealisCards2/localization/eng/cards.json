@@ -1,4 +1,24 @@
-{
+{"BOREALISCARDS2-Character1": "Ironclad",
+  
+  "BOREALISCARDS2-BERSERKER.description": "Whenever you lose HP on your turn, play 1 random card from your [gold]Draw Pile[/gold].",
+  "BOREALISCARDS2-BERSERKER.title": "Berserker",
+
+  "BOREALISCARDS2-BLOODY_STRIKE.description": "Deal {Damage:diff()} damage.\nLose 1 HP at the start of your turns.",
+  "BOREALISCARDS2-BLOODY_STRIKE.title": "Bloody Strike",
+
+  "BOREALISCARDS2-TOWER_SHIELD.description": "If you have [gold]Block[/gold], gain {Conditional:diff()} [gold]Block[/gold].\nGain {Block:diff()} [gold]Block[/gold].",
+  "BOREALISCARDS2-TOWER_SHIELD.title": "Tower Shield",
+
+  "BOREALISCARDS2-BLAZING_STRIKE.description": "Deal {Damage:diff()} damage.\nDraw {Cards:diff()} {Cards:plural:card|cards}.\nAll Attacks drawn this way cost 0 {energyPrefix:energyIcons(1)} until played.",
+  "BOREALISCARDS2-BLAZING_STRIKE.title": "Blazing Strike",
+
+  "BOREALISCARDS2-SPARKS.description": "",
+  "BOREALISCARDS2-SPARKS.title": "Sparks",
+
+
+  
+  "BOREALISCARDS2-Character5": "Defect",
+
   "BOREALISCARDS2-GLASSBLOWER.description": "[gold]Channel[/gold] 1 [gold]Glass[/gold].\nEvery {Cards:diff()} 0{energyPrefix:energyIcons(1)} {Cards:plural:Attack|Attacks} you play, put this into your [gold]Hand[/gold].",
   "BOREALISCARDS2-GLASSBLOWER.title": "Glassblowing",
 
@@ -13,7 +33,7 @@
 
   "BOREALISCARDS2-ERR.description": "Whenever you draw this card, play {Cards:diff()} random {Cards:plural:Power|Powers}.",
   "BOREALISCARDS2-ERR.title": "ERR://23¤Y%/",
-  
+
   "BOREALISCARDS2-NUCLEAR.description": "{IfUpgraded:show:[gold]Channel[/gold] 1 [gold]Plasma[/gold].\n}At the start of the next {NuclearPower:plural:turn|{:diff()} turns}, [gold]Channel[/gold] 1 [gold]Plasma[/gold].",
   "BOREALISCARDS2-NUCLEAR.title": "Nuclear",
 
@@ -31,7 +51,7 @@
 
   "BOREALISCARDS2-ALPHA_TESTING.description": "Gain {Block:diff()} [gold]Block[/gold].\nTrigger the passive abilities of all your Orbs{IfUpgraded:show: twice}.",
   "BOREALISCARDS2-ALPHA_TESTING.title": "Alpha Testing",
-  
+
   "BOREALISCARDS2-LIQUID_COOLING.description": "Whenever you [gold]Channel[/gold] an [gold]Frost[/gold], gain {FocusPower:diff()} [gold]Focus[/gold] that turn.",
   "BOREALISCARDS2-LIQUID_COOLING.title": "Liquid Cooling",
 
