@@ -11,7 +11,7 @@ using MegaCrit.Sts2.Core.Models.CardPools;
 namespace BorealisCards2.BorealisCards2Code.Cards.Ironclad;
 
 [Pool(typeof(IroncladCardPool))]
-public sealed class FanTheFlames() : BorealisCards2Card(2,
+public sealed class FanTheFlames() : BorealisCards2Card(1,
     CardType.Power, CardRarity.Uncommon,
     TargetType.Self)
 {
@@ -26,5 +26,5 @@ public sealed class FanTheFlames() : BorealisCards2Card(2,
         await PowerCmd.Apply<FanTheFlamesPower>(choiceContext, Owner.Creature, DynamicVars.Power<FanTheFlamesPower>().BaseValue, Owner.Creature, this);
     }
 
-    protected override void OnUpgrade() => EnergyCost.UpgradeBy(-1);
+    protected override void OnUpgrade() => DynamicVars.Power<FanTheFlamesPower>().UpgradeValueBy(1M);
 }
