@@ -21,7 +21,7 @@ public class BloodyStrike() : BorealisCards2Card(1,
         CardPlay play)
     {
         await CreatureCmd.TriggerAnim(Owner.Creature, "Attack", Owner.Character.AttackAnimDelay);
-        DamageCmd.Attack(DynamicVars.Damage.BaseValue).FromCard(this, play).Targeting(play.Target).WithHitFx("vfx/vfx_attack_slash").Execute(choiceContext);
+        await DamageCmd.Attack(DynamicVars.Damage.BaseValue).FromCard(this, play).Targeting(play.Target).WithHitFx("vfx/vfx_attack_slash").Execute(choiceContext);
         await PowerCmd.Apply<BloodyStrikePower>(choiceContext, Owner.Creature, DynamicVars["BloodyStrikePower"].BaseValue, Owner.Creature, this);
     }
 

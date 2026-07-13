@@ -53,5 +53,8 @@
   "BOREALISCARDS2-BLOODY_STRIKE.title": "Bloody Strike",
 
   "BOREALISCARDS2-TOWER_SHIELD.description": "If you have [gold]Block[/gold], gain {Conditional:diff()} [gold]Block[/gold].\nGain {Block:diff()} [gold]Block[/gold].",
-  "BOREALISCARDS2-TOWER_SHIELD.title": "Tower Shield"
+  "BOREALISCARDS2-TOWER_SHIELD.title": "Tower Shield",
+
+  "BOREALISCARDS2-BLAZING_STRIKE.description": "Deal {Damage:diff()} damage.\nDraw {Cards:diff()} {Cards:plural:card|cards}.\nAll Attacks drawn this way cost 0 {energyPrefix:energyIcons(1)} until played.",
+  "BOREALISCARDS2-BLAZING_STRIKE.title": "Blazing Strike"
 }

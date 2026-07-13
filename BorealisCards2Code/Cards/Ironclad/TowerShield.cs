@@ -8,7 +8,7 @@ using MegaCrit.Sts2.Core.ValueProps;
 
 namespace BorealisCards2.BorealisCards2Code.Cards.Ironclad;
 
-[Pool(typeof(DefectCardPool))]
+[Pool(typeof(IroncladCardPool))]
 public class TowerShield() : BorealisCards2Card(1,
     CardType.Skill, CardRarity.Common,
     TargetType.Self)
