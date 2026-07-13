@@ -13,7 +13,7 @@ using MegaCrit.Sts2.Core.Models.Powers;
 namespace BorealisCards2.BorealisCards2Code.Cards.Defect;
 
 [Pool(typeof(DefectCardPool))]
-internal class LiquidCooling() : BorealisCards2Card(2,
+public sealed class LiquidCooling() : BorealisCards2Card(2,
     CardType.Power, CardRarity.Uncommon,
     TargetType.Self)
 {

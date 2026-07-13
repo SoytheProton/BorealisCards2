@@ -12,7 +12,7 @@ using MegaCrit.Sts2.Core.Models.Orbs;
 namespace BorealisCards2.BorealisCards2Code.Cards.Defect;
 
 [Pool(typeof(DefectCardPool))]
-public class Glassblower() : BorealisCards2Card(0, CardType.Skill, CardRarity.Rare, TargetType.Self)
+public sealed class Glassblower() : BorealisCards2Card(0, CardType.Skill, CardRarity.Rare, TargetType.Self)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new CardsVar(4)];
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.Static(StaticHoverTip.Channeling), HoverTipFactory.FromOrb<GlassOrb>()];

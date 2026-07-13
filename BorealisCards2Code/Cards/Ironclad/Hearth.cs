@@ -9,7 +9,7 @@ using MegaCrit.Sts2.Core.ValueProps;
 namespace BorealisCards2.BorealisCards2Code.Cards.Ironclad;
 
 [Pool(typeof(IroncladCardPool))]
-public class Hearth() : BorealisCards2Card(1,
+public sealed class Hearth() : BorealisCards2Card(1,
     CardType.Skill, CardRarity.Common,
     TargetType.Self)
 {

@@ -11,11 +11,11 @@ using MegaCrit.Sts2.Core.ValueProps;
 namespace BorealisCards2.BorealisCards2Code.Cards.Ironclad;
 
 [Pool(typeof(IroncladCardPool))]
-public class HeatCrash() : BorealisCards2Card(2,
+public sealed class HeatCrash() : BorealisCards2Card(2,
     CardType.Attack, CardRarity.Rare,
     TargetType.AnyEnemy)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(18M, ValueProp.Move)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(18M, ValueProp.Move), new PowerVar<VulnerablePower>(3)];
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromPower<VulnerablePower>(), HoverTipFactory.FromPower<ArtifactPower>()];
 
@@ -36,5 +36,6 @@ public class HeatCrash() : BorealisCards2Card(2,
     protected override void OnUpgrade()
     {
         DynamicVars.Damage.UpgradeValueBy(4M);
+        DynamicVars.Vulnerable.UpgradeValueBy(1M);
     }
 }

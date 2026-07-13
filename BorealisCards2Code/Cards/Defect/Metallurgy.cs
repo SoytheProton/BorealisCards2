@@ -11,7 +11,7 @@ using Void = MegaCrit.Sts2.Core.Models.Cards.Void;
 namespace BorealisCards2.BorealisCards2Code.Cards.Defect;
 
 [Pool(typeof(DefectCardPool))]
-public class Metallurgy() : BorealisCards2Card(1,
+public sealed class Metallurgy() : BorealisCards2Card(1,
     CardType.Attack, CardRarity.Uncommon,
     TargetType.AnyEnemy)
 {

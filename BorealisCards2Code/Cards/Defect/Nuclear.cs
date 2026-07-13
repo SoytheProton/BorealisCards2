@@ -11,7 +11,7 @@ using MegaCrit.Sts2.Core.Models.Orbs;
 namespace BorealisCards2.BorealisCards2Code.Cards.Defect;
 
 [Pool(typeof(DefectCardPool))]
-public class Nuclear() : BorealisCards2Card(1,
+public sealed class Nuclear() : BorealisCards2Card(1,
     CardType.Skill, CardRarity.Rare,
     TargetType.Self)
 {

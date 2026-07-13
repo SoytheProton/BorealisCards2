@@ -5,7 +5,7 @@ using MegaCrit.Sts2.Core.Models.Powers;
 
 namespace BorealisCards2.BorealisCards2Code.Powers.Defect;
 
-public class LiquidCoolingFocusPower : TemporaryFocusPower, ICustomPower
+public sealed class LiquidCoolingFocusPower : TemporaryFocusPower, ICustomPower
 {
     public override AbstractModel OriginModel => ModelDb.Card<PowerUp>();
 }

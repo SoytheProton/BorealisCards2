@@ -9,7 +9,7 @@ using MegaCrit.Sts2.Core.ValueProps;
 namespace BorealisCards2.BorealisCards2Code.Cards.Defect;
 
 [Pool(typeof(DefectCardPool))]
-public class AlphaTesting() : BorealisCards2Card(2,
+public sealed class AlphaTesting() : BorealisCards2Card(2,
     CardType.Skill, CardRarity.Uncommon,
     TargetType.Self)
 {

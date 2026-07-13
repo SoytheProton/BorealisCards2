@@ -1,5 +1,5 @@
 using BaseLib.Utils;
-using BorealisCards2.BorealisCards2Code.Powers.Defect;
+using BorealisCards2.BorealisCards2Code.Powers.Ironclad;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
@@ -10,7 +10,7 @@ using MegaCrit.Sts2.Core.ValueProps;
 namespace BorealisCards2.BorealisCards2Code.Cards.Ironclad;
 
 [Pool(typeof(IroncladCardPool))]
-public class BloodyStrike() : BorealisCards2Card(1,
+public sealed class BloodyStrike() : BorealisCards2Card(1,
     CardType.Power, CardRarity.Uncommon,
     TargetType.AnyEnemy)
 {

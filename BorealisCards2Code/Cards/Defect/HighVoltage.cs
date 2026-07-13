@@ -11,7 +11,7 @@ using MegaCrit.Sts2.Core.ValueProps;
 namespace BorealisCards2.BorealisCards2Code.Cards.Defect;
 
 [Pool(typeof(DefectCardPool))]
-public class HighVoltage() : BorealisCards2Card(3,
+public sealed class HighVoltage() : BorealisCards2Card(3,
     CardType.Attack, CardRarity.Common,
     TargetType.AnyEnemy)
 {

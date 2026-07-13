@@ -13,7 +13,7 @@ namespace BorealisCards2.BorealisCards2Code.Cards.Ironclad;
 
 
 [Pool(typeof(IroncladCardPool))]
-public class Smolder() : BorealisCards2Card(0,
+public sealed class Smolder() : BorealisCards2Card(0,
     CardType.Skill, CardRarity.Common,
     TargetType.AnyEnemy)
 {

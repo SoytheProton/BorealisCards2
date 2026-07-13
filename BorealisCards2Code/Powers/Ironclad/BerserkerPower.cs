@@ -9,8 +9,7 @@ using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Orbs;
 using MegaCrit.Sts2.Core.ValueProps;
 
-namespace BorealisCards2.BorealisCards2Code.Powers.Defect;
-
+namespace BorealisCards2.BorealisCards2Code.Powers.Ironclad;
 
 public sealed class BerserkerPower : BorealisCards2Power
 {

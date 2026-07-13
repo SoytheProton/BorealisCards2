@@ -9,7 +9,7 @@ using MegaCrit.Sts2.Core.Models.Orbs;
 namespace BorealisCards2.BorealisCards2Code.Cards.Defect;
 
 [Pool(typeof(DefectCardPool))]
-public class TemperatureShock() : BorealisCards2Card(1,
+public sealed class TemperatureShock() : BorealisCards2Card(1,
     CardType.Skill, CardRarity.Common,
     TargetType.Self)
 { 

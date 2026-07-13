@@ -11,7 +11,7 @@ using MegaCrit.Sts2.Core.Models.Orbs;
 namespace BorealisCards2.BorealisCards2Code.Cards.Defect;
 
 [Pool(typeof(DefectCardPool))]
-internal class ShockAndAwe() : BorealisCards2Card(2,
+public sealed class ShockAndAwe() : BorealisCards2Card(2,
     CardType.Power, CardRarity.Rare,
     TargetType.Self)
 {

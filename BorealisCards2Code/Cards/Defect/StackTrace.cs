@@ -10,7 +10,7 @@ using Void = MegaCrit.Sts2.Core.Models.Cards.Void;
 namespace BorealisCards2.BorealisCards2Code.Cards.Defect;
 
 [Pool(typeof(DefectCardPool))]
-public class StackTrace() : BorealisCards2Card(0,
+public sealed class StackTrace() : BorealisCards2Card(0,
     CardType.Skill, CardRarity.Common,
     TargetType.Self)
 {
