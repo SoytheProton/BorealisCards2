@@ -22,7 +22,7 @@ public class HighVoltage() : BorealisCards2Card(3,
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        await CreatureCmd.Damage(choiceContext, play.Target, DynamicVars.Damage, this, play);
+        DamageCmd.Attack(DynamicVars.Damage.BaseValue).FromCard(this, play).Targeting(play.Target).WithHitFx("vfx/vfx_attack_slash").Execute(choiceContext);
         for (int i = 0; i < DynamicVars.Repeat.BaseValue; ++i)
             await OrbCmd.Channel<LightningOrb>(choiceContext, Owner);
     }

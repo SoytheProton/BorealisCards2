@@ -8,7 +8,7 @@ using MegaCrit.Sts2.Core.Models.Orbs;
 
 namespace BorealisCards2.BorealisCards2Code.Powers.Defect;
 
-public sealed class LogisticsPower : BorealisCards2Power
+public sealed class LiquidCoolingPower : BorealisCards2Power
 {
     public override PowerType Type => PowerType.Buff;
 
@@ -18,8 +18,8 @@ public sealed class LogisticsPower : BorealisCards2Power
 
     public override async Task AfterOrbChanneled(PlayerChoiceContext choiceContext, Player player, OrbModel orb)
     {
-        if (player != Owner.Player)
+        if (player != Owner.Player || orb is not FrostOrb)
             return;
-        await PowerCmd.Apply<LogisticsFocusPower>(choiceContext, Owner, Amount, Owner, null);
+        await PowerCmd.Apply<LiquidCoolingFocusPower>(choiceContext, Owner, Amount, Owner, null);
     }
 }
