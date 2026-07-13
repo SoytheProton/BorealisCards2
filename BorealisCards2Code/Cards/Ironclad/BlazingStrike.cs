@@ -15,6 +15,8 @@ public sealed class BlazingStrike() : BorealisCards2Card(2,
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(13M, ValueProp.Move), new CardsVar(3)];
 
+    protected override HashSet<CardTag> CanonicalTags => [CardTag.Strike];
+
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
         CardPlay play)

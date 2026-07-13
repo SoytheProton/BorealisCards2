@@ -15,6 +15,8 @@ public sealed class HyperspeedStrike() : BorealisCards2Card(0,
     TargetType.AnyEnemy)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(12M, ValueProp.Move)];
+    
+    protected override HashSet<CardTag> CanonicalTags => [CardTag.Strike];
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,

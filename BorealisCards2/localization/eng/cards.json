@@ -1,10 +1,11 @@
-{"BOREALISCARDS2-Character1": "Ironclad",
+{
+  "BOREALISCARDS2-Character1": "Ironclad",
   
   "BOREALISCARDS2-BERSERKER.description": "Whenever you lose HP on your turn, play 1 random card from your [gold]Draw Pile[/gold].",
   "BOREALISCARDS2-BERSERKER.title": "Berserker",
 
-  "BOREALISCARDS2-BLOODY_STRIKE.description": "Deal {Damage:diff()} damage.\nLose 1 HP at the start of your turns.",
-  "BOREALISCARDS2-BLOODY_STRIKE.title": "Bloody Strike",
+  "BOREALISCARDS2-BLOODY_STRIKE.description": "Deal {Damage:diff()} damage.\nAt the start of your turn, lose 1 HP.",
+  "BOREALISCARDS2-BLOODY_STRIKE.title": "Impale",
 
   "BOREALISCARDS2-TOWER_SHIELD.description": "If you have [gold]Block[/gold], gain {Conditional:diff()} [gold]Block[/gold].\nGain {Block:diff()} [gold]Block[/gold].",
   "BOREALISCARDS2-TOWER_SHIELD.title": "Tower Shield",
@@ -12,26 +13,38 @@
   "BOREALISCARDS2-BLAZING_STRIKE.description": "Deal {Damage:diff()} damage.\nDraw {Cards:diff()} {Cards:plural:card|cards}.\nAll Attacks drawn this way cost 0 {energyPrefix:energyIcons(1)} until played.",
   "BOREALISCARDS2-BLAZING_STRIKE.title": "Blazing Strike",
 
-  "BOREALISCARDS2-SPARKS.description": "",
+  "BOREALISCARDS2-SPARKS.description": "Deal {Damage:diff()} damage.\n[gold]Exhaust[/gold] 1 card from your [gold]Draw Pile[/gold].",
   "BOREALISCARDS2-SPARKS.title": "Sparks",
 
   "BOREALISCARDS2-HEAT_CRASH.description": "Deal {Damage:diff()} damage.\nRemove [gold]Artifact[/gold] from ALL enemies.\nApply {VulnerablePower:diff()} [gold]Vulnerable[/gold] to ALL enemies.",
   "BOREALISCARDS2-HEAT_CRASH.title": "Heat Crash",
 
-  "BOREALISCARDS2-SMOLDER.description": "",
+  "BOREALISCARDS2-SMOLDER.description": "Apply {Initial:diff()} [gold]Vulnerable[/gold].\n[gold]Exhaust[/gold] 1 card. If you [gold]Exhausted[/gold] an Attack, apply {VulnerablePower:diff()} [gold]Vulnerable[/gold].",
   "BOREALISCARDS2-SMOLDER.title": "Smolder",
 
-  "BOREALISCARDS2-HEARTH.description": "",
+  "BOREALISCARDS2-HEARTH.description": "Gain {Block:diff()} [gold]Block[/gold].\nHeal {Heal:diff()} HP.",
   "BOREALISCARDS2-HEARTH.title": "Hearth",
 
-  "BOREALISCARDS2-DETERMINED.description": "",
+  "BOREALISCARDS2-DETERMINED.description": "Gain {Block:diff()} [gold]Block[/gold].\nWhen this card is [gold]Exhausted[/gold], draw {Cards:diff()} {Cards:plural:card|cards} and return this to your [gold]Hand[/gold].",
   "BOREALISCARDS2-DETERMINED.title": "Determined",
   
-  "BOREALISCARDS2-TERRORIZE.description": "",
+  "BOREALISCARDS2-TERRORIZE.description": "Apply {VulnerablePower:diff()} [gold]Vulnerable[/gold].",
   "BOREALISCARDS2-TERRORIZE.title": "Terrorize",
 
-  "BOREALISCARDS2-RUSH.description": "",
-  "BOREALISCARDS2-RUSH.title": "Determined",
+  "BOREALISCARDS2-RUSH.description": "Deal {Damage:diff()} damage.\nAt the start of the next {RushPower:plural:turn|{:diff()} turns}, lose 1 HP and gain {Block:diff()} [gold]Block[/gold].",
+  "BOREALISCARDS2-RUSH.title": "Rush",
+
+  "BOREALISCARDS2-FAN_THE_FLAMES.description": "Whenever a card is [gold]Exhausted[/gold], deal {FanTheFlamesPower:diff()} damage to ALL enemies at the end of your turn.",
+  "BOREALISCARDS2-FAN_THE_FLAMES.title": "Fan the Flames",
+
+  "BOREALISCARDS2-OVERPOWER.description": "Lose {HpLoss:diff()} HP.\nEnemy loses {StrengthPower:diff()} [gold]Strength[/gold] this turn.",
+  "BOREALISCARDS2-OVERPOWER.title": "Overpower",
+
+  "BOREALISCARDS2-UNDYING_SPEAR.description": "Deal {Damage:diff()} damage.\nWhen this card is [gold]Exhausted[/gold], raise your Max HP by {MaxHp:diff()}.",
+  "BOREALISCARDS2-UNDYING_SPEAR.title": "Undying Spear",
+
+  "BOREALISCARDS2-ROARING_FLAMES.description": "Whenever an Attack is [gold]Exhausted[/gold], play {Power:diff()} random {Power:plural:Attack|Attacks} in your [gold]Exhaust Pile[/gold] and return {Power:plural:it|them}  to the [gold]Exhaust Pile[/gold].",
+  "BOREALISCARDS2-ROARING_FLAMES.title": "Roaring Flames",
 
 
   

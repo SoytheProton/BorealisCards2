@@ -17,6 +17,6 @@ public sealed class BloodyStrikePower : BorealisCards2Power
         if (player != Owner.Player)
             return;
         Flash();
-        await CreatureCmd.Damage(choiceContext, Owner, Amount, ValueProp.Unpowered, Owner);
+        await CreatureCmd.Damage(choiceContext, Owner, Amount, ValueProp.Unpowered | ValueProp.Unblockable, Owner);
     }
 }

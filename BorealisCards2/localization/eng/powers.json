@@ -20,18 +20,22 @@
   "BOREALISCARDS2-IONIZE_POWER.title": "Ionize",
 
   "BOREALISCARDS2-BERSERKER_POWER.description": "Whenever you lose HP on your turn, play a random card from your [gold]Draw Pile[/gold].",
-  "BOREALISCARDS2-BERSERKER_POWER.smartDescription": "Whenever you lose HP on your turn, play [blue]1[/blue] random card from your [gold]Draw Pile[/gold].",
+  "BOREALISCARDS2-BERSERKER_POWER.smartDescription": "Whenever you lose HP on your turn, play [blue]{Amount}[/blue] random {Amount:plural:card|cards} from your [gold]Draw Pile[/gold].",
   "BOREALISCARDS2-BERSERKER_POWER.title": "Berserker",
 
-  "BOREALISCARDS2-BLOODY_STRIKE_POWER.description": "",
-  "BOREALISCARDS2-BLOODY_STRIKE_POWER.smartDescription": "",
-  "BOREALISCARDS2-BLOODY_STRIKE_POWER.title": "BloodyStrikePower",
+  "BOREALISCARDS2-BLOODY_STRIKE_POWER.description": "At the start of your turn, lose HP.",
+  "BOREALISCARDS2-BLOODY_STRIKE_POWER.smartDescription": "At the start of your turn, lose [blue]{Amount}[/blue] HP.",
+  "BOREALISCARDS2-BLOODY_STRIKE_POWER.title": "Impale",
 
-  "BOREALISCARDS2-SCARRED_POWER.description": "",
-  "BOREALISCARDS2-SCARRED_POWER.smartDescription": "",
-  "BOREALISCARDS2-SCARRED_POWER.title": "ScarredPower",
+  "BOREALISCARDS2-RUSH_POWER.description": "At the start of the next turn, lose HP, and gain [gold]Block[/gold].",
+  "BOREALISCARDS2-RUSH_POWER.smartDescription": "At the start of the next {Amount:plural:turn|[blue]{}[/blue] turns}, lose [blue]1[/blue] HP and gain [blue]{Block}[/blue] [gold]Block[/gold].",
+  "BOREALISCARDS2-RUSH_POWER.title": "Rush",
 
-  "BOREALISCARDS2-RUSH_POWER.description": "",
-  "BOREALISCARDS2-RUSH_POWER.smartDescription": "",
-  "BOREALISCARDS2-RUSH_POWER.title": "ScarredPower"
+  "BOREALISCARDS2-FAN_THE_FLAMES_POWER.description": "At the end of your turn, deal  damage to ALL enemies. Whenever a card is [gold]Exhausted[/gold], increase this damage.",
+  "BOREALISCARDS2-FAN_THE_FLAMES_POWER.smartDescription": "At the end of your turn, deal [blue]{Damage}[/blue] damage to ALL enemies. Whenever a card is [gold]Exhausted[/gold], increase this damage by [blue]{Amount}[/blue].",
+  "BOREALISCARDS2-FAN_THE_FLAMES_POWER.title": "Fan the Flames",
+
+  "BOREALISCARDS2-ROARING_FLAMES_POWER.description": "Whenever an Attack is [gold]Exhausted[/gold], play a random Attack in your [gold]Exhaust Pile[/gold] and return it to the [gold]Exhaust Pile[/gold].",
+  "BOREALISCARDS2-ROARING_FLAMES_POWER.smartDescription": "Whenever an Attack is [gold]Exhausted[/gold], play {Amount} random {Amount:plural:Attack|Attacks} in your [gold]Exhaust Pile[/gold] and return {Amount:plural:it|them} to the [gold]Exhaust Pile[/gold].",
+  "BOREALISCARDS2-ROARING_FLAMES_POWER.title": "Roaring Flames"
 }

@@ -1,3 +1,4 @@
+using BaseLib.Extensions;
 using BaseLib.Utils;
 using BorealisCards2.BorealisCards2Code.Powers.Ironclad;
 using MegaCrit.Sts2.Core.Commands;
@@ -9,19 +10,19 @@ using MegaCrit.Sts2.Core.Models.CardPools;
 namespace BorealisCards2.BorealisCards2Code.Cards.Ironclad;
 
 [Pool(typeof(IroncladCardPool))]
-public sealed class Berserker() : BorealisCards2Card(2,
+public sealed class RoaringFlames() : BorealisCards2Card(2,
     CardType.Power, CardRarity.Rare,
     TargetType.Self)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<BerserkerPower>(1M)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<RoaringFlamesPower>("Power",1M)];
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
         await CreatureCmd.TriggerAnim(Owner.Creature, "PowerUp", Owner.Character.PowerUpAnimDelay);
-        await PowerCmd.Apply<BerserkerPower>(choiceContext, Owner.Creature, DynamicVars["BerserkerPower"].BaseValue, Owner.Creature, this);
+        await PowerCmd.Apply<RoaringFlamesPower>(choiceContext, Owner.Creature, DynamicVars["Power"].BaseValue, Owner.Creature, this);
     }
 
-    protected override void OnUpgrade() => AddKeyword(CardKeyword.Innate);
+    protected override void OnUpgrade() => EnergyCost.UpgradeBy(-1);
 }
