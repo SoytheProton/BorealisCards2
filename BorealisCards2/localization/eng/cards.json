@@ -18,6 +18,15 @@
   "BOREALISCARDS2-HEAT_CRASH.description": "Deal {Damage:diff()} damage.\nRemove [gold]Artifact[/gold] from ALL enemies.\nApply {VulnerablePower:diff()} [gold]Vulnerable[/gold] to ALL enemies.",
   "BOREALISCARDS2-HEAT_CRASH.title": "Heat Crash",
 
+  "BOREALISCARDS2-SMOLDER.description": "",
+  "BOREALISCARDS2-SMOLDER.title": "Smolder",
+
+  "BOREALISCARDS2-HEARTH.description": "",
+  "BOREALISCARDS2-HEARTH.title": "Hearth",
+
+  "BOREALISCARDS2-DETERMINED.description": "",
+  "BOREALISCARDS2-DETERMINED.title": "Determined",
+
 
   
   "BOREALISCARDS2-Character5": "Defect",
@@ -66,5 +75,5 @@
   "BOREALISCARDS2-IONIZE.title": "Ionize",
 
   "BOREALISCARDS2-METALLURGY.description": "Deal {Damage:diff()} damage.\nWhenever you [gold]Exhaust[/gold] a Status, increase this card's damage by {Increase:diff()} and put this into your [gold]Hand[/gold].",
-  "BOREALISCARDS2-METALLURGY.title": "Metallurgy",
+  "BOREALISCARDS2-METALLURGY.title": "Metallurgy"
 }
