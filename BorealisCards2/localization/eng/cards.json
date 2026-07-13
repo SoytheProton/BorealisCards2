@@ -46,5 +46,8 @@
   "BOREALISCARDS2-METALLURGY.title": "Metallurgy",
 
   "BOREALISCARDS2-BERSERKER.description": "Whenever you lose HP on your turn, play 1 random card from your [gold]Draw Pile[/gold].",
-  "BOREALISCARDS2-BERSERKER.title": "Berserker"
+  "BOREALISCARDS2-BERSERKER.title": "Berserker",
+
+  "BOREALISCARDS2-BLOODY_STRIKE.description": "Deal {Damage:diff()} damage.\nLose 1 HP at the start of your turns.",
+  "BOREALISCARDS2-BLOODY_STRIKE.title": "BloodyStrike"
 }

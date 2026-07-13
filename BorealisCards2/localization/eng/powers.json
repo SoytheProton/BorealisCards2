@@ -21,5 +21,9 @@
 
   "BOREALISCARDS2-BERSERKER_POWER.description": "Whenever you lose HP on your turn, play a random card from your [gold]Draw Pile[/gold].",
   "BOREALISCARDS2-BERSERKER_POWER.smartDescription": "Whenever you lose HP on your turn, play [blue]1[/blue] random card from your [gold]Draw Pile[/gold].",
-  "BOREALISCARDS2-BERSERKER_POWER.title": "Berserker"
+  "BOREALISCARDS2-BERSERKER_POWER.title": "Berserker",
+
+  "BOREALISCARDS2-BLOODY_STRIKE_POWER.description": "",
+  "BOREALISCARDS2-BLOODY_STRIKE_POWER.smartDescription": "",
+  "BOREALISCARDS2-BLOODY_STRIKE_POWER.title": "BloodyStrikePower"
 }
