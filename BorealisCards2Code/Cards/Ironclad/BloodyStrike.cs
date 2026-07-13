@@ -1,5 +1,4 @@
 using BaseLib.Utils;
-using BorealisCards2.BorealisCards2Code.Cards;
 using BorealisCards2.BorealisCards2Code.Powers.Defect;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
