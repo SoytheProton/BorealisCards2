@@ -15,6 +15,9 @@
   "BOREALISCARDS2-SPARKS.description": "",
   "BOREALISCARDS2-SPARKS.title": "Sparks",
 
+  "BOREALISCARDS2-HEAT_CRASH.description": "Deal {Damage:diff()} damage.\nRemove [gold]Artifact[/gold] from ALL enemies.\nApply {VulnerablePower:diff()} [gold]Vulnerable[/gold] to ALL enemies.",
+  "BOREALISCARDS2-HEAT_CRASH.title": "Heat Crash",
+
 
   
   "BOREALISCARDS2-Character5": "Defect",
@@ -64,20 +67,4 @@
 
   "BOREALISCARDS2-METALLURGY.description": "Deal {Damage:diff()} damage.\nWhenever you [gold]Exhaust[/gold] a Status, increase this card's damage by {Increase:diff()} and put this into your [gold]Hand[/gold].",
   "BOREALISCARDS2-METALLURGY.title": "Metallurgy",
-  
-  
-  "BOREALISCARDS2-BERSERKER.description": "Whenever you lose HP on your turn, play 1 random card from your [gold]Draw Pile[/gold].",
-  "BOREALISCARDS2-BERSERKER.title": "Berserker",
-
-  "BOREALISCARDS2-BLOODY_STRIKE.description": "Deal {Damage:diff()} damage.\nLose 1 HP at the start of your turns.",
-  "BOREALISCARDS2-BLOODY_STRIKE.title": "Bloody Strike",
-
-  "BOREALISCARDS2-TOWER_SHIELD.description": "If you have [gold]Block[/gold], gain {Conditional:diff()} [gold]Block[/gold].\nGain {Block:diff()} [gold]Block[/gold].",
-  "BOREALISCARDS2-TOWER_SHIELD.title": "Tower Shield",
-
-  "BOREALISCARDS2-BLAZING_STRIKE.description": "Deal {Damage:diff()} damage.\nDraw {Cards:diff()} {Cards:plural:card|cards}.\nAll Attacks drawn this way cost 0 {energyPrefix:energyIcons(1)} until played.",
-  "BOREALISCARDS2-BLAZING_STRIKE.title": "Blazing Strike",
-
-  "BOREALISCARDS2-HEAT_CRASH.description": "Deal {Damage:diff()} damage.",
-  "BOREALISCARDS2-HEAT_CRASH.title": "Heat Crash"
 }
