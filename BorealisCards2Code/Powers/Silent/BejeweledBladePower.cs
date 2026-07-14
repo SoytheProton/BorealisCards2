@@ -1,5 +1,7 @@
+using BorealisCards2.BorealisCards2Code.Enchantments;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Combat.History.Entries;
+using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Powers;
@@ -20,10 +22,10 @@ public sealed class BejeweledBladePower : BorealisCards2Power
     {
         if (creator == null || creator.Creature != Owner || !card.Tags.Contains(CardTag.Shiv))
             return Task.CompletedTask;
-       /* var num = CombatManager.Instance.History.Entries.OfType<CardGeneratedEntry>().Count(o => o.Actor == Owner && o.HappenedThisTurn(Owner.CombatState) && o.Card.Tags.Contains(CardTag.Shiv));
-        if(num != 1) return Task.CompletedTask; */
+        var num = CombatManager.Instance.History.Entries.OfType<CardGeneratedEntry>().Count(o => o.Actor == Owner && o.HappenedThisTurn(Owner.CombatState) && o.Card.Tags.Contains(CardTag.Shiv));
+        if(num > Amount) return Task.CompletedTask;
         Flash();
-        card.BaseReplayCount+= Amount;
+        CardCmd.Enchant<Crystalline>(card, 1);
         return Task.CompletedTask;
     }
 }

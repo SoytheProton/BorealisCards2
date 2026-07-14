@@ -1,0 +1,29 @@
+﻿using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.Entities.Cards;
+using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.Localization.DynamicVars;
+using MegaCrit.Sts2.Core.ValueProps;
+
+namespace BorealisCards2.BorealisCards2Code.Enchantments;
+
+public class Crystalline : BorealisCards2Enchantment
+{
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new BlockVar(3M, ValueProp.Move), new DamageVar(2M, ValueProp.Move), new RepeatVar(1)];
+    
+    public override bool HasExtraCardText => true;
+    
+    public override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay? cardPlay)
+    {
+        await CreatureCmd.GainBlock(Card.Owner.Creature, DynamicVars.Block, cardPlay);
+    }
+
+    public override decimal EnchantDamageAdditive(decimal originalDamage, ValueProp props)
+    {
+        return !props.IsPoweredAttack() ? 0M : DynamicVars.Damage.BaseValue;
+    }
+    
+    public override int EnchantPlayCount(int originalPlayCount)
+    {
+        return originalPlayCount + DynamicVars.Repeat.IntValue;
+    }
+}

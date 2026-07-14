@@ -26,8 +26,7 @@ public sealed class Misdirection() : BorealisCards2Card(1,
         var card = await CardSelectCmd.FromCombatPile(choiceContext, PileType.Draw.GetPile(Owner), Owner, new CardSelectorPrefs(CardSelectorPrefs.DiscardSelectionPrompt, DynamicVars.Cards.IntValue));
         if (card == null)
             return;
-        foreach(CardModel card2 in card)
-            await CardCmd.Discard(choiceContext, card2);
+        await CardCmd.Discard(choiceContext, card);
     }
 
     protected override void OnUpgrade()

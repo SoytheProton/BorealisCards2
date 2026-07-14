@@ -28,13 +28,8 @@ public static class StringExtensions
         return Path.Join(BorealisCards2Main.ModId, "images", "powers", "big", path);
     }
 
-    public static string RelicImagePath(this string path)
+    public static string EnchantmentImagePath(this string path)
     {
-        return Path.Join(BorealisCards2Main.ModId, "images", "relics", path);
-    }
-
-    public static string BigRelicImagePath(this string path)
-    {
-        return Path.Join(BorealisCards2Main.ModId, "images", "relics", "big", path);
+        return Path.Join(BorealisCards2Main.ModId, "images", "enchantments", path);
     }
 }
