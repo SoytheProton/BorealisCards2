@@ -1,6 +1,7 @@
 using BaseLib.Abstracts;
 using BaseLib.Extensions;
 using MegaCrit.Sts2.Core.Combat;
+using MegaCrit.Sts2.Core.Combat.History.Entries;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Powers;
@@ -14,27 +15,11 @@ using MegaCrit.Sts2.Core.ValueProps;
 
 namespace BorealisCards2.BorealisCards2Code.Powers.Ironclad;
 
-public sealed class FanTheFlamesPower : BorealisCards2Power, IHasSecondAmount
+public sealed class FanTheFlamesPower : BorealisCards2Power
 {
-    private int _secondAmount;
-
-    private int SecondAmount
-    {
-        get => _secondAmount;
-        set
-        {
-            AssertMutable();
-            _secondAmount = value;
-            DynamicVars.Damage.BaseValue = value;
-            this.InvokeSecondAmountChanged();
-        }
-    }
-
     public override PowerType Type => PowerType.Buff;
 
     public override PowerStackType StackType => PowerStackType.Counter;
-    
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(0M, ValueProp.Unpowered)];
 
     public override async Task AfterSideTurnEnd(
         PlayerChoiceContext choiceContext,
@@ -43,25 +28,11 @@ public sealed class FanTheFlamesPower : BorealisCards2Power, IHasSecondAmount
     {
         if (side == CombatSide.Enemy || !participants.Contains(Owner))
             return;
+        if(!CombatManager.Instance.History.Entries.OfType<CardExhaustedEntry>().Any(o => o.Actor == Owner && o.HappenedThisTurn(Owner.CombatState)))
+            return;
         Flash();
         NFireBurningVfx.Create(Owner, 0.75f, false);
         await Cmd.CustomScaledWait(0.2f, 0.4f);
-        await CreatureCmd.Damage(choiceContext, CombatState.HittableEnemies, SecondAmount, ValueProp.Unpowered, Owner);
-    }
-
-    public override Task AfterCardExhausted(
-        PlayerChoiceContext choiceContext,
-        CardModel card,
-        bool _)
-    {
-        if (card.Owner.Creature != Owner)
-            return Task.CompletedTask;
-        SecondAmount += Amount;
-        return Task.CompletedTask;
-    }
-    
-    public string GetSecondAmount()
-    {
-        return SecondAmount.ToString();
+        await CreatureCmd.Damage(choiceContext, CombatState.HittableEnemies, Amount, ValueProp.Unpowered, Owner);
     }
 }

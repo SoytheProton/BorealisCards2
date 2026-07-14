@@ -15,7 +15,7 @@ public sealed class FanTheFlames() : BorealisCards2Card(1,
     CardType.Power, CardRarity.Uncommon,
     TargetType.Self)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<FanTheFlamesPower>(1M)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<FanTheFlamesPower>(8M)];
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromKeyword(CardKeyword.Exhaust)];
     
     protected override async Task OnPlay(
@@ -26,5 +26,5 @@ public sealed class FanTheFlames() : BorealisCards2Card(1,
         await PowerCmd.Apply<FanTheFlamesPower>(choiceContext, Owner.Creature, DynamicVars.Power<FanTheFlamesPower>().BaseValue, Owner.Creature, this);
     }
 
-    protected override void OnUpgrade() => DynamicVars.Power<FanTheFlamesPower>().UpgradeValueBy(1M);
+    protected override void OnUpgrade() => DynamicVars.Power<FanTheFlamesPower>().UpgradeValueBy(4M);
 }
