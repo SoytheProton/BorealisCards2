@@ -15,7 +15,7 @@ public sealed class EmptyJar() : BorealisCards2Card(1,
     CardType.Skill, CardRarity.Common,
     TargetType.Self)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new BlockVar(11M, ValueProp.Move), new CardsVar(3)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new BlockVar(9M, ValueProp.Move), new CardsVar(3)];
     public override bool GainsBlock => true;
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
@@ -28,5 +28,5 @@ public sealed class EmptyJar() : BorealisCards2Card(1,
         await CardCmd.Discard(choiceContext, card);
     }
 
-    protected override void OnUpgrade() => DynamicVars.Block.UpgradeValueBy(4M);
+    protected override void OnUpgrade() => DynamicVars.Block.UpgradeValueBy(3M);
 }
