@@ -16,7 +16,7 @@ public sealed class SatchelPower : BorealisCards2Power
     
     public override async Task AfterCardDiscarded(PlayerChoiceContext choiceContext, CardModel card)
     {
-        if (card.Owner != Owner.Player || Owner.Side != Owner.CombatState.CurrentSide)
+        if (card.Owner != Owner.Player || Owner.Side != Owner.CombatState.CurrentSide || !card.Keywords.Contains(CardKeyword.Sly))
             return;
         var num = CombatManager.Instance.History.Entries.OfType<CardDiscardedEntry>().Count(o => o.Actor == Owner && o.HappenedThisTurn(Owner.CombatState) && o.Card.Keywords.Contains(CardKeyword.Sly));
         if (num != 1) return;

@@ -9,11 +9,12 @@ using MegaCrit.Sts2.Core.Models.CardPools;
 namespace BorealisCards2.BorealisCards2Code.Cards.Silent;
 
 [Pool(typeof(SilentCardPool))]
-public sealed class Satchel() : BorealisCards2Card(1,
-    CardType.Power, CardRarity.Rare,
+public sealed class Satchel() : BorealisCards2Card(2,
+    CardType.Power, CardRarity.Uncommon,
     TargetType.Self)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new CardsVar(1)];
+    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Sly];
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,

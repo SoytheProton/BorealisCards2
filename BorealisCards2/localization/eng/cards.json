@@ -50,23 +50,32 @@
 
   "BOREALISCARDS2-Character2": "Silent",
   
-  "BOREALISCARDS2-TOXICOLOGY.description": "",
+  "BOREALISCARDS2-TOXICOLOGY.description": "Whenever you apply [gold]Poison[/gold], apply an additional {ToxicologyPower} [gold]Poison[/gold].",
   "BOREALISCARDS2-TOXICOLOGY.title": "Toxicology",
   
-  "BOREALISCARDS2-BEJEWELED_BLADE.description": "",
-  "BOREALISCARDS2-BEJEWELED_BLADE.title": "Toxicology",
+  "BOREALISCARDS2-BEJEWELED_BLADE.description": "The first [gold]Shiv[/gold] you create each turn gains [gold]Replay[/gold] {Repeat:diff()}.",
+  "BOREALISCARDS2-BEJEWELED_BLADE.title": "Bejeweled Blade",
 
-  "BOREALISCARDS2-SATCHEL.description": "",
-  "BOREALISCARDS2-SATCHEL.title": "Toxicology",
+  "BOREALISCARDS2-SATCHEL.description": "The first time you [gold]Discard[/gold] a [gold]Sly[/gold] card each turn, draw {Cards:diff()} cards.",
+  "BOREALISCARDS2-SATCHEL.title": "Satchel",
 
-  "BOREALISCARDS2-MISDIRECTION.description": "",
-  "BOREALISCARDS2-MISDIRECTION.title": "Toxicology",
+  "BOREALISCARDS2-MISDIRECTION.description": "Gain {Block:diff()} [gold]Block[/gold].\n[gold]Discard[/gold] {Cards:diff()} {Cards:plural:card|cards} from your [gold]Draw Pile[/gold].",
+  "BOREALISCARDS2-MISDIRECTION.title": "Misdirection",
 
-  "BOREALISCARDS2-VANISH.description": "",
-  "BOREALISCARDS2-VANISH.title": "Toxicology",
+  "BOREALISCARDS2-VANISH.description": "Discard your [gold]Hand[/gold].\nApply {PoisonPower:diff()} [gold]Poison[/gold] for each card [gold]Discarded[/gold].",
+  "BOREALISCARDS2-VANISH.title": "Vanish",
 
-  "BOREALISCARDS2-ROPE_DART.description": "",
-  "BOREALISCARDS2-ROPE_DART.title": "Toxicology",
+  "BOREALISCARDS2-ROPE_DART.description": "Deal {Damage:diff()} damage.\nDraw {Cards:diff()} {Cards:plural:card|cards}.\nWhenever you play a [gold]Shiv[/gold] while this is in your [gold]Draw Pile[/gold], put this into your [gold]Hand[/gold].",
+  "BOREALISCARDS2-ROPE_DART.title": "Rope Dart",
+
+  "BOREALISCARDS2-VOLUNTARY_SUICIDE.description": "Deal {Damage:diff()} damage.\nTrigger that enemy's [gold]Poison[/gold] {Repeat:diff()} {Repeat:plural:time|times}.",
+  "BOREALISCARDS2-VOLUNTARY_SUICIDE.title": "Voluntary Suicide",
+
+  "BOREALISCARDS2-RONDELMANCY.description": "Whenever you create a [gold]Shiv[/gold], add {Cards:diff()} additional {Cards:plural:Shiv|Shivs} into your [gold]Hand[/gold]. Play any [gold]Shivs[/gold] that enter your [gold]Discard Pile[/gold].",
+  "BOREALISCARDS2-RONDELMANCY.title": "Rondelmancy",
+
+  "BOREALISCARDS2-DANCING_STRIKE.description": "Deal {Damage:diff()} damage.\nDraw {Cards:diff()} cards.\nDiscard all [gold]Sly[/gold] cards drawn this way.",
+  "BOREALISCARDS2-DANCING_STRIKE.title": "Dancing Strike.",
 
 
 

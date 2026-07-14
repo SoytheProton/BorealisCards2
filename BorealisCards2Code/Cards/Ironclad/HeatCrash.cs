@@ -15,7 +15,7 @@ public sealed class HeatCrash() : BorealisCards2Card(2,
     CardType.Attack, CardRarity.Rare,
     TargetType.AnyEnemy)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(18M, ValueProp.Move), new PowerVar<VulnerablePower>(3)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(18M, ValueProp.Move), new PowerVar<VulnerablePower>(2)];
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromPower<VulnerablePower>(), HoverTipFactory.FromPower<ArtifactPower>()];
 
