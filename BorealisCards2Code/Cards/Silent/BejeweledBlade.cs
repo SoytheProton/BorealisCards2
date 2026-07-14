@@ -10,7 +10,7 @@ using MegaCrit.Sts2.Core.Models.CardPools;
 namespace BorealisCards2.BorealisCards2Code.Cards.Silent;
 
 [Pool(typeof(SilentCardPool))]
-public sealed class BejeweledBlade() : BorealisCards2Card(1,
+public sealed class BejeweledBlade() : BorealisCards2Card(3,
     CardType.Power, CardRarity.Rare,
     TargetType.Self)
 {
@@ -25,5 +25,5 @@ public sealed class BejeweledBlade() : BorealisCards2Card(1,
         await PowerCmd.Apply<BejeweledBladePower>(choiceContext, Owner.Creature, DynamicVars.Repeat.BaseValue, Owner.Creature, this);
     }
 
-    protected override void OnUpgrade() => DynamicVars.Repeat.UpgradeValueBy(1M);
+    protected override void OnUpgrade() => EnergyCost.UpgradeBy(-1);
 }
