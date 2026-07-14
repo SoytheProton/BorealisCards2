@@ -1,23 +1,5 @@
 {
-  "BOREALISCARDS2-NUCLEAR_POWER.description": "At the start of the next turn, [gold]Channel[/gold] [blue]1[/blue] [gold]Plasma[/gold].",
-  "BOREALISCARDS2-NUCLEAR_POWER.smartDescription": "At the start of the next {Amount:plural:turn|[blue]{}[/blue] turns}, [gold]Channel[/gold] [blue]1[/blue] [gold]Plasma[/gold].",
-  "BOREALISCARDS2-NUCLEAR_POWER.title": "Nuclear",
-
-  "BOREALISCARDS2-SHOCK_AND_AWE_POWER.description": "Whenever you [gold]Channel[/gold] an Orb, [gold]Channel[/gold] a random Orb.",
-  "BOREALISCARDS2-SHOCK_AND_AWE_POWER.smartDescription": "Whenever you [gold]Channel[/gold] an Orb, [gold]Channel[/gold] [blue]{Amount}[/blue] random {Amount:plural:Orb|Orbs}.",
-  "BOREALISCARDS2-SHOCK_AND_AWE_POWER.title": "Shock and Awe",
-  
-  "BOREALISCARDS2-TEMPORARY_FOCUS_NEXT_TURN_POWER.description": "At the start of your next turn, gain [gold]Focus[/gold] for that turn.",
-  "BOREALISCARDS2-TEMPORARY_FOCUS_NEXT_TURN_POWER.smartDescription": "At the start of your next turn, gain [blue]{Amount}[/blue] [gold]Focus[/gold] for that turn.",
-  "BOREALISCARDS2-TEMPORARY_FOCUS_NEXT_TURN_POWER.title": "Focus Next Turn Power",
-
-  "BOREALISCARDS2-LIQUID_COOLING_POWER.description": "Whenever you [gold]Channel[/gold] a [gold]Frost[/gold], gain [gold]Focus[/gold] that turn.",
-  "BOREALISCARDS2-LIQUID_COOLING_POWER.smartDescription": "Whenever you [gold]Channel[/gold] a [gold]Frost[/gold], gain [blue]{Amount}[/blue] [gold]Focus[/gold] that turn.",
-  "BOREALISCARDS2-LIQUID_COOLING_POWER.title": "Liquid Cooling",
-
-  "BOREALISCARDS2-IONIZE_POWER.description": "The first time you [gold]Channel[/gold] [gold]Lightning[/gold] each turn, [gold]Channel[/gold] a [gold]Lightning[/gold].",
-  "BOREALISCARDS2-IONIZE_POWER.smartDescription": "The first time you [gold]Channel[/gold] [gold]Lightning[/gold] each turn, [gold]Channel[/gold] [blue]{Amount}[/blue] [gold]Lightning[/gold].",
-  "BOREALISCARDS2-IONIZE_POWER.title": "Ionize",
+  "BOREALISCARDS2-Character1": "Ironclad",
 
   "BOREALISCARDS2-BERSERKER_POWER.description": "Whenever you lose HP on your turn, play a random card from your [gold]Draw Pile[/gold].",
   "BOREALISCARDS2-BERSERKER_POWER.smartDescription": "Whenever you lose HP on your turn, play [blue]{Amount}[/blue] random {Amount:plural:card|cards} from your [gold]Draw Pile[/gold].",
@@ -37,5 +19,46 @@
 
   "BOREALISCARDS2-ROARING_FLAMES_POWER.description": "Whenever an Attack is [gold]Exhausted[/gold], play a random Attack in your [gold]Exhaust Pile[/gold] and return it to the [gold]Exhaust Pile[/gold].",
   "BOREALISCARDS2-ROARING_FLAMES_POWER.smartDescription": "Whenever an Attack is [gold]Exhausted[/gold], play {Amount} random {Amount:plural:Attack|Attacks} in your [gold]Exhaust Pile[/gold] and return {Amount:plural:it|them} to the [gold]Exhaust Pile[/gold].",
-  "BOREALISCARDS2-ROARING_FLAMES_POWER.title": "Roaring Flames"
+  "BOREALISCARDS2-ROARING_FLAMES_POWER.title": "Roaring Flames",
+  
+  
+  
+  "BOREALISCARDS2-Character2": "Silent",
+
+  "BOREALISCARDS2-TOXICOLOGY_POWER.description": "",
+  "BOREALISCARDS2-TOXICOLOGY_POWER.smartDescription": "",
+  "BOREALISCARDS2-TOXICOLOGY_POWER.title": "ToxicologyPower",
+  
+  
+
+  "BOREALISCARDS2-Character3": "Regent",
+
+
+
+  "BOREALISCARDS2-Character4": "Necrobinder",
+
+
+
+  "BOREALISCARDS2-Character5": "Defect",
+
+
+  "BOREALISCARDS2-NUCLEAR_POWER.description": "At the start of the next turn, [gold]Channel[/gold] [blue]1[/blue] [gold]Plasma[/gold].",
+  "BOREALISCARDS2-NUCLEAR_POWER.smartDescription": "At the start of the next {Amount:plural:turn|[blue]{}[/blue] turns}, [gold]Channel[/gold] [blue]1[/blue] [gold]Plasma[/gold].",
+  "BOREALISCARDS2-NUCLEAR_POWER.title": "Nuclear",
+
+  "BOREALISCARDS2-SHOCK_AND_AWE_POWER.description": "Whenever you [gold]Channel[/gold] an Orb, [gold]Channel[/gold] a random Orb.",
+  "BOREALISCARDS2-SHOCK_AND_AWE_POWER.smartDescription": "Whenever you [gold]Channel[/gold] an Orb, [gold]Channel[/gold] [blue]{Amount}[/blue] random {Amount:plural:Orb|Orbs}.",
+  "BOREALISCARDS2-SHOCK_AND_AWE_POWER.title": "Shock and Awe",
+
+  "BOREALISCARDS2-TEMPORARY_FOCUS_NEXT_TURN_POWER.description": "At the start of your next turn, gain [gold]Focus[/gold] for that turn.",
+  "BOREALISCARDS2-TEMPORARY_FOCUS_NEXT_TURN_POWER.smartDescription": "At the start of your next turn, gain [blue]{Amount}[/blue] [gold]Focus[/gold] for that turn.",
+  "BOREALISCARDS2-TEMPORARY_FOCUS_NEXT_TURN_POWER.title": "Focus Next Turn Power",
+
+  "BOREALISCARDS2-LIQUID_COOLING_POWER.description": "Whenever you [gold]Channel[/gold] a [gold]Frost[/gold], gain [gold]Focus[/gold] that turn.",
+  "BOREALISCARDS2-LIQUID_COOLING_POWER.smartDescription": "Whenever you [gold]Channel[/gold] a [gold]Frost[/gold], gain [blue]{Amount}[/blue] [gold]Focus[/gold] that turn.",
+  "BOREALISCARDS2-LIQUID_COOLING_POWER.title": "Liquid Cooling",
+
+  "BOREALISCARDS2-IONIZE_POWER.description": "The first time you [gold]Channel[/gold] [gold]Lightning[/gold] each turn, [gold]Channel[/gold] a [gold]Lightning[/gold].",
+  "BOREALISCARDS2-IONIZE_POWER.smartDescription": "The first time you [gold]Channel[/gold] [gold]Lightning[/gold] each turn, [gold]Channel[/gold] [blue]{Amount}[/blue] [gold]Lightning[/gold].",
+  "BOREALISCARDS2-IONIZE_POWER.title": "Ionize"
 }
