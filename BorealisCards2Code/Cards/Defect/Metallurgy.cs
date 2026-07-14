@@ -49,7 +49,7 @@ public sealed class Metallurgy() : BorealisCards2Card(1,
         CardModel card,
         bool _)
     {
-        if (card.Owner != Owner)
+        if (card.Owner != Owner || card.Type != CardType.Status)
             return;
         DamageVar damage = DynamicVars.Damage;
         damage.BaseValue += DynamicVars["Increase"].BaseValue;
