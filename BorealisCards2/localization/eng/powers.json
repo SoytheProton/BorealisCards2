@@ -29,9 +29,9 @@
   "BOREALISCARDS2-TOXICOLOGY_POWER.smartDescription": "Whenever you apply [gold]Poison[/gold], apply an additional [blue]{Amount}[/blue] [gold]Poison[/gold].",
   "BOREALISCARDS2-TOXICOLOGY_POWER.title": "Toxicology",
 
-  "BOREALISCARDS2-BEJEWELED_BLADE_POWER.description": "The first [gold]Shiv[/gold] you create each turn gains [gold]Replay[/gold].",
-  "BOREALISCARDS2-BEJEWELED_BLADE_POWER.smartDescription": "The first [gold]Shiv[/gold] you create each turn gains [gold]Replay[/gold] [blue]{Amount}[/blue].",
-  "BOREALISCARDS2-BEJEWELED_BLADE_POWER.title": "Bejeweled Blade",
+  "BOREALISCARDS2-BEJEWELED_BLADE_POWER.description": "[gold]Shivs[/gold] you create gain [gold]Replay[/gold].",
+  "BOREALISCARDS2-BEJEWELED_BLADE_POWER.smartDescription": "[gold]Shivs[/gold] you create gain [gold]Replay[/gold] [blue]{Amount}[/blue].",
+  "BOREALISCARDS2-BEJEWELED_BLADE_POWER.title": "Bejeweled Blades",
 
   "BOREALISCARDS2-POCKET_DAGGERS_POWER.description": "At the start of the next turn, add 1 [gold]Shiv[/gold] into your [gold]Hand[/gold].",
   "BOREALISCARDS2-POCKET_DAGGERS_POWER.smartDescription": "At the start of the next {Amount:plural:turn|[blue]{}[/blue] turns}, add [blue]1[/blue] [gold]Shiv[/gold] into your [gold]Hand[/gold].",
@@ -43,7 +43,7 @@
 
   "BOREALISCARDS2-RONDELMANCY_POWER.description": "After creating [blue]3[/blue] more [gold]Shivs[/gold], add an additional Shiv into your [gold]Hand[/gold]. Play any [gold]Shivs[/gold] that enter your [gold]Discard Pile[/gold].",
   "BOREALISCARDS2-RONDELMANCY_POWER.smartDescription": "After creating [blue]{ShivCount}[/blue] more [gold]{ShivCount:plural:Shiv|Shivs}[/gold], add [blue]{Amount}[/blue] additional {Amount:plural:Shiv|Shivs} into your [gold]Hand[/gold]. Play any [gold]Shivs[/gold] that enter your [gold]Discard Pile[/gold].",
-  "BOREALISCARDS2-RONDELMANCY_POWER.title": "Bejeweled Blade",
+  "BOREALISCARDS2-RONDELMANCY_POWER.title": "Rondelmancy",
   
   
 
