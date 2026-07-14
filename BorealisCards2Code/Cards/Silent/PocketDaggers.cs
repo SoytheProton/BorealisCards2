@@ -21,7 +21,7 @@ namespace BorealisCards2.BorealisCards2Code.Cards.Silent;
 
 
 [Pool(typeof(SilentCardPool))]
-public sealed class PocketDaggers() : BorealisCards2Card(2,
+public sealed class PocketDaggers() : BorealisCards2Card(1,
     CardType.Skill, CardRarity.Common,
     TargetType.Self)
 {
