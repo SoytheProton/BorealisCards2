@@ -1,14 +1,16 @@
 ﻿using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.ValueProps;
 
-namespace BorealisCards2.BorealisCards2Code.Enchantments;
+namespace BorealisCards2.BorealisCards2Code.Enchantments.Silent;
 
 public class Crystalline : BorealisCards2Enchantment
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new BlockVar(3M, ValueProp.Move), new DamageVar(2M, ValueProp.Move), new RepeatVar(1)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new BlockVar(2M, ValueProp.Move), new DamageVar(2M, ValueProp.Move), new RepeatVar("Times",1)];
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.Static(StaticHoverTip.ReplayDynamic, DynamicVars["Times"])];
     
     public override bool HasExtraCardText => true;
     
@@ -24,6 +26,6 @@ public class Crystalline : BorealisCards2Enchantment
     
     public override int EnchantPlayCount(int originalPlayCount)
     {
-        return originalPlayCount + DynamicVars.Repeat.IntValue;
+        return originalPlayCount + DynamicVars["Times"].IntValue;
     }
 }

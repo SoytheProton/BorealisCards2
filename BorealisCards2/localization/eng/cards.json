@@ -53,7 +53,7 @@
   "BOREALISCARDS2-TOXICOLOGY.description": "Whenever you apply [gold]Poison[/gold], apply an additional {ToxicologyPower:diff()} [gold]Poison[/gold].",
   "BOREALISCARDS2-TOXICOLOGY.title": "Toxicology",
   
-  "BOREALISCARDS2-BEJEWELED_BLADE.description": "[gold]Shivs[/gold] you create gain [gold]Replay[/gold] {Repeat:diff()}.",
+  "BOREALISCARDS2-BEJEWELED_BLADE.description": "The first {Repeat:diff()} [gold]{Repeat:plural:Shiv|Shivs}[/gold] you create each turn {Repeat:plural:is|are} [gold]Enchanted[/gold] with [purple]Crystalline[/purple].",
   "BOREALISCARDS2-BEJEWELED_BLADE.title": "Bejeweled Blades",
 
   "BOREALISCARDS2-SATCHEL.description": "The first time you [gold]Discard[/gold] a [gold]Sly[/gold] card each turn, draw {Cards:diff()} cards.",

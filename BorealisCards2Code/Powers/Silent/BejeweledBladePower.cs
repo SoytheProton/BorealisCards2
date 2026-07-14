@@ -1,4 +1,5 @@
 using BorealisCards2.BorealisCards2Code.Enchantments;
+using BorealisCards2.BorealisCards2Code.Enchantments.Silent;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Combat.History.Entries;
 using MegaCrit.Sts2.Core.Commands;
@@ -16,7 +17,7 @@ public sealed class BejeweledBladePower : BorealisCards2Power
 
     public override PowerStackType StackType => PowerStackType.Counter;
 
-    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.Static(StaticHoverTip.ReplayStatic)];
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => HoverTipFactory.FromEnchantment<Crystalline>();
     
     public override Task AfterCardGeneratedForCombat(CardModel card, Player? creator)
     {
@@ -25,7 +26,8 @@ public sealed class BejeweledBladePower : BorealisCards2Power
         var num = CombatManager.Instance.History.Entries.OfType<CardGeneratedEntry>().Count(o => o.Actor == Owner && o.HappenedThisTurn(Owner.CombatState) && o.Card.Tags.Contains(CardTag.Shiv));
         if(num > Amount) return Task.CompletedTask;
         Flash();
-        CardCmd.Enchant<Crystalline>(card, 1);
+        if(ModelDb.Enchantment<Crystalline>().CanEnchant(card))
+            CardCmd.Enchant<Crystalline>(card, 1);
         return Task.CompletedTask;
     }
 }
