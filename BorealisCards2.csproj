@@ -109,12 +109,10 @@
         <Folder Include="BorealisCards2Code\Cards\Colorless\" />
         <Folder Include="BorealisCards2Code\Cards\Necrobinder\" />
         <Folder Include="BorealisCards2Code\Cards\Regent\" />
-        <Folder Include="BorealisCards2Code\Cards\Silent\" />
         <Folder Include="BorealisCards2Code\Cards\Token\" />
         <Folder Include="BorealisCards2Code\Powers\Necrobinder\" />
         <Folder Include="BorealisCards2Code\Powers\Regent\" />
         <Folder Include="BorealisCards2Code\Powers\Shared\" />
-        <Folder Include="BorealisCards2Code\Powers\Silent\" />
         <Folder Include="BorealisCards2\images\card_portraits\big\"/>
         <Folder Include="BorealisCards2\images\powers\big\"/>
         <Folder Include="BorealisCards2\images\relics\big\"/>
