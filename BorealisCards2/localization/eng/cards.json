@@ -43,7 +43,7 @@
   "BOREALISCARDS2-UNDYING_SPEAR.description": "Deal {Damage:diff()} damage.\nWhen this card is [gold]Exhausted[/gold], raise your Max HP by {MaxHp:diff()}.",
   "BOREALISCARDS2-UNDYING_SPEAR.title": "Undying Spear",
 
-  "BOREALISCARDS2-ROARING_FLAMES.description": "Whenever an Attack is [gold]Exhausted[/gold], play {Power:diff()} random {Power:plural:Attack|Attacks} in your [gold]Exhaust Pile[/gold] and return {Power:plural:it|them}  to the [gold]Exhaust Pile[/gold].",
+  "BOREALISCARDS2-ROARING_FLAMES.description": "Whenever an Attack is [gold]Exhausted[/gold], play {Power:diff()} random {Power:plural:Attack|Attacks} in your [gold]Exhaust Pile[/gold] and return {Power:plural:it|them} to the [gold]Exhaust Pile[/gold].",
   "BOREALISCARDS2-ROARING_FLAMES.title": "Roaring Flames",
 
 
