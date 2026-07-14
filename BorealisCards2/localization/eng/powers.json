@@ -33,6 +33,13 @@
   "BOREALISCARDS2-BEJEWELED_BLADE_POWER.smartDescription": "The first [gold]Shiv[/gold] you create each turn gains [gold]Replay[/gold] [blue]{Amount}[/blue].",
   "BOREALISCARDS2-BEJEWELED_BLADE_POWER.title": "Bejeweled Blade",
 
+  "BOREALISCARDS2-SATCHEL_POWER.description": "",
+  "BOREALISCARDS2-SATCHEL_POWER.smartDescription": "",
+  "BOREALISCARDS2-SATCHEL_POWER.title": "Bejeweled Blade",
+
+  "BOREALISCARDS2-POCKET_DAGGERS_POWER.description": "",
+  "BOREALISCARDS2-POCKET_DAGGERS_POWER.smartDescription": "",
+  "BOREALISCARDS2-POCKET_DAGGERS_POWER.title": "PocketDaggers",
   "BOREALISCARDS2-SATCHEL_POWER.description": "The first time you [gold]Discard[/gold] a [gold]Sly[/gold] card each turn, draw cards.",
   "BOREALISCARDS2-SATCHEL_POWER.smartDescription": "The first time you [gold]Discard[/gold] a [gold]Sly[/gold] card each turn, draw [blue]{Amount}[/blue] cards.",
   "BOREALISCARDS2-SATCHEL_POWER.title": "Satchel",
@@ -40,6 +47,7 @@
   "BOREALISCARDS2-RONDELMANCY_POWER.description": "Whenever you create a [gold]Shiv[/gold], add an additional Shiv into your [gold]Hand[/gold]. Play any [gold]Shivs[/gold] that enter your [gold]Discard Pile[/gold].",
   "BOREALISCARDS2-RONDELMANCY_POWER.smartDescription": "Whenever you create a [gold]Shiv[/gold], add [blue]{Amount}[/blue] additional {Amount:plural:Shiv|Shivs} into your [gold]Hand[/gold]. Play any [gold]Shivs[/gold] that enter your [gold]Discard Pile[/gold].",
   "BOREALISCARDS2-RONDELMANCY_POWER.title": "Bejeweled Blade",
+  
   
 
   "BOREALISCARDS2-Character3": "Regent",
