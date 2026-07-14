@@ -13,7 +13,7 @@
 
   "BOREALISCARDS2-LIQUID_COOLING_POWER.description": "Whenever you [gold]Channel[/gold] a [gold]Frost[/gold], gain [gold]Focus[/gold] that turn.",
   "BOREALISCARDS2-LIQUID_COOLING_POWER.smartDescription": "Whenever you [gold]Channel[/gold] a [gold]Frost[/gold], gain [blue]{Amount}[/blue] [gold]Focus[/gold] that turn.",
-  "BOREALISCARDS2-LIQUID_COOLING_POWER.title": "Logistics",
+  "BOREALISCARDS2-LIQUID_COOLING_POWER.title": "Liquid Cooling",
 
   "BOREALISCARDS2-IONIZE_POWER.description": "The first time you [gold]Channel[/gold] [gold]Lightning[/gold] each turn, [gold]Channel[/gold] a [gold]Lightning[/gold].",
   "BOREALISCARDS2-IONIZE_POWER.smartDescription": "The first time you [gold]Channel[/gold] [gold]Lightning[/gold] each turn, [gold]Channel[/gold] [blue]{Amount}[/blue] [gold]Lightning[/gold].",

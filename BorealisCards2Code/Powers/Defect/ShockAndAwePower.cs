@@ -30,5 +30,5 @@ public sealed class ShockAndAwePower : BorealisCards2Power
         }
     }
 
-    public static readonly SpireField<OrbModel, bool> ShockedAndAwed = new(() => false);
+    private static readonly SpireField<OrbModel, bool> ShockedAndAwed = new(() => false);
 }

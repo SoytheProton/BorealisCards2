@@ -1,3 +1,4 @@
+using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Powers;
@@ -19,6 +20,11 @@ public sealed class RoaringFlamesPower : BorealisCards2Power
     {
         if(card.Owner.Creature != Owner || card.Type != CardType.Attack)
             return;
+        if (AutoplayedByFlames.Get(card))
+        {
+            AutoplayedByFlames.Set(card, false);
+            return;
+        }
         var pile = PileType.Exhaust.GetPile(Owner.Player);
         for (var i = 0; i < Amount; ++i)
         {
@@ -27,8 +33,11 @@ public sealed class RoaringFlamesPower : BorealisCards2Power
             
             if (exhaustedCard == null) continue;
             
+            AutoplayedByFlames.Set(exhaustedCard, true);
             await CardCmd.AutoPlay(choiceContext, exhaustedCard, null);
             await CardPileCmd.Add(exhaustedCard, PileType.Exhaust, CardPilePosition.Bottom, this, true);
         }
     }
+
+    private static readonly SpireField<CardModel, bool> AutoplayedByFlames = new(() => false);
 }

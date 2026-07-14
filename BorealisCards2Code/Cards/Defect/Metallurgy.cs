@@ -18,6 +18,7 @@ public sealed class Metallurgy() : BorealisCards2Card(1,
     private decimal _extraDamageFromPlays;
     
     protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(6M, ValueProp.Move), new ("Increase", 6M)];
+    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Retain];
 
     private decimal ExtraDamageFromPlays
     {
