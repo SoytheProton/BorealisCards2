@@ -1,6 +1,4 @@
-using BaseLib.Extensions;
 using BaseLib.Utils;
-using BorealisCards2.BorealisCards2Code.Powers.Silent;
 using MegaCrit.Sts2.Core.CardSelection;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
@@ -12,20 +10,19 @@ using MegaCrit.Sts2.Core.ValueProps;
 
 namespace BorealisCards2.BorealisCards2Code.Cards.Silent;
 
-
 [Pool(typeof(SilentCardPool))]
 public sealed class EmptyJar() : BorealisCards2Card(1,
     CardType.Skill, CardRarity.Common,
     TargetType.Self)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new BlockVar(11M, ValueProp.Move)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new BlockVar(11M, ValueProp.Move), new CardsVar(3)];
     public override bool GainsBlock => true;
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
         await CreatureCmd.GainBlock(Owner.Creature, DynamicVars.Block, play);
-        CardModel card = (await CardSelectCmd.FromHandForDiscard(choiceContext, Owner, new CardSelectorPrefs(CardSelectorPrefs.DiscardSelectionPrompt, 3), null, this)).FirstOrDefault();
+        CardModel card = (await CardSelectCmd.FromHandForDiscard(choiceContext, Owner, new CardSelectorPrefs(CardSelectorPrefs.DiscardSelectionPrompt, DynamicVars.Cards.IntValue), null, this)).FirstOrDefault();
         if (card == null)
             return;
         await CardCmd.Discard(choiceContext, card);

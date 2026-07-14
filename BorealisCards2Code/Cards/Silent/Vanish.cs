@@ -21,9 +21,9 @@ public sealed class Vanish() : BorealisCards2Card(2,
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        var hand = PileType.Hand.GetPile(Owner).Cards;
-        await CardCmd.Discard(choiceContext, hand);
-        for(var i = 0; i < hand.Count; i++)
+        var hand = PileType.Hand.GetPile(Owner).Cards.Count;
+        await CardCmd.Discard(choiceContext, PileType.Hand.GetPile(Owner).Cards);
+        for(var i = 0; i < hand; i++)
         {
             await PowerCmd.Apply<PoisonPower>(choiceContext, play.Target, DynamicVars.Poison.BaseValue, Owner.Creature, this);
         }

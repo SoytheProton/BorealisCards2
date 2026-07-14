@@ -1,6 +1,5 @@
 using BaseLib.Extensions;
 using BaseLib.Utils;
-using BorealisCards2.BorealisCards2Code.Powers.Ironclad;
 using BorealisCards2.BorealisCards2Code.Powers.Silent;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
@@ -11,7 +10,6 @@ using MegaCrit.Sts2.Core.Models.CardPools;
 using MegaCrit.Sts2.Core.Models.Powers;
 
 namespace BorealisCards2.BorealisCards2Code.Cards.Silent;
-
 
 [Pool(typeof(SilentCardPool))]
 public sealed class Toxicology() : BorealisCards2Card(1,
