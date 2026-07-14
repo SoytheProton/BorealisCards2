@@ -75,7 +75,7 @@
   "BOREALISCARDS2-RONDELMANCY.title": "Rondelmancy",
 
   "BOREALISCARDS2-DANCING_STRIKE.description": "Deal {Damage:diff()} damage.\nDraw {Cards:diff()} {Cards:plural:card|cards}.\nDiscard all [gold]Sly[/gold] cards drawn this way.",
-  "BOREALISCARDS2-DANCING_STRIKE.title": "Dancing Strike.",
+  "BOREALISCARDS2-DANCING_STRIKE.title": "Dancing Strike",
 
   "BOREALISCARDS2-EMPTY_JAR.description": "Gain {Block:diff()} [gold]Block[/gold].\nDiscard {Cards:diff()} {Cards:plural:card|cards}.",
   "BOREALISCARDS2-EMPTY_JAR.title": "Empty Jar",
