@@ -17,7 +17,7 @@ public sealed class RoaringFlamesPower : BorealisCards2Power
         CardModel card,
         bool _)
     {
-        if(card.Owner.Creature != Owner && card.Type != CardType.Attack)
+        if(card.Owner.Creature != Owner || card.Type != CardType.Attack)
             return;
         var pile = PileType.Exhaust.GetPile(Owner.Player);
         for (var i = 0; i < Amount; ++i)
