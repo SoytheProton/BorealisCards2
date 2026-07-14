@@ -21,7 +21,6 @@ public sealed class Rush() : BorealisCards2Card(1,
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        await CreatureCmd.TriggerAnim(Owner.Creature, "Attack", Owner.Character.AttackAnimDelay);
         await DamageCmd.Attack(DynamicVars.Damage.BaseValue).FromCard(this, play).Targeting(play.Target).WithHitFx("vfx/vfx_attack_slash").Execute(choiceContext);
         await PowerCmd.Apply<RushPower>(choiceContext, Owner.Creature, DynamicVars.Power<RushPower>().BaseValue, Owner.Creature, this);
     }

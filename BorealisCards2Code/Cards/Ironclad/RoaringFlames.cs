@@ -1,4 +1,3 @@
-using BaseLib.Extensions;
 using BaseLib.Utils;
 using BorealisCards2.BorealisCards2Code.Powers.Ironclad;
 using MegaCrit.Sts2.Core.Commands;

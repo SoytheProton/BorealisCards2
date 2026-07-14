@@ -11,7 +11,6 @@ using MegaCrit.Sts2.Core.ValueProps;
 
 namespace BorealisCards2.BorealisCards2Code.Cards.Ironclad;
 
-
 [Pool(typeof(IroncladCardPool))]
 public sealed class Sparks() : BorealisCards2Card(0,
     CardType.Attack, CardRarity.Common,

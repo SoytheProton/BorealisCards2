@@ -11,7 +11,6 @@ using MegaCrit.Sts2.Core.Models.Powers;
 
 namespace BorealisCards2.BorealisCards2Code.Cards.Ironclad;
 
-
 [Pool(typeof(IroncladCardPool))]
 public sealed class Smolder() : BorealisCards2Card(0,
     CardType.Skill, CardRarity.Common,
