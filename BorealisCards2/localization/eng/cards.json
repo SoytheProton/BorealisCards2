@@ -116,7 +116,7 @@
   "BOREALISCARDS2-POWER_UP.description": "Gain {Block:diff()} [gold]Block[/gold].\nNext turn, gain {FocusPower:diff()} [gold]Focus[/gold] for that turn.",
   "BOREALISCARDS2-POWER_UP.title": "Power Up",
 
-  "BOREALISCARDS2-RIPSAW.description": "Deal {Damage:diff()} damage twice.\nAdd {Cards:diff()} [gold]Dazed[/gold] into your [gold]Discard Pile[/gold].",
+  "BOREALISCARDS2-RIPSAW.description": "Deal {Damage:diff()} damage to ALL enemies twice.\nAdd {Cards:diff()} [gold]Dazed[/gold] into your [gold]Discard Pile[/gold].",
   "BOREALISCARDS2-RIPSAW.title": "Ripsaw",
 
   "BOREALISCARDS2-ERR.description": "Whenever you draw this card, play {Cards:diff()} random {Cards:plural:Power|Powers}.",
