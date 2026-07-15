@@ -13,8 +13,8 @@
   "BOREALISCARDS2-RUSH_POWER.smartDescription": "At the start of the next {Amount:plural:turn|[blue]{}[/blue] turns}, lose [blue]1[/blue] HP and gain [blue]{Block}[/blue] [gold]Block[/gold].",
   "BOREALISCARDS2-RUSH_POWER.title": "Rush",
 
-  "BOREALISCARDS2-FAN_THE_FLAMES_POWER.description": "At the end of your turn, deal damage to ALL enemies if a card was [gold]Exhausted[/gold] that turn.",
-  "BOREALISCARDS2-FAN_THE_FLAMES_POWER.smartDescription": "At the end of your turn, deal [blue]{Amount}[/blue] damage to ALL enemies if a card was [gold]Exhausted[/gold] that turn.",
+  "BOREALISCARDS2-FAN_THE_FLAMES_POWER.description": "At the end of your turn, deal damage to ALL enemies for each card [gold]Exhausted[/gold] that turn.",
+  "BOREALISCARDS2-FAN_THE_FLAMES_POWER.smartDescription": "At the end of your turn, deal [blue]{Amount}[/blue] damage to ALL enemies for each card [gold]Exhausted[/gold] that turn.",
   "BOREALISCARDS2-FAN_THE_FLAMES_POWER.title": "Fan the Flames",
 
   "BOREALISCARDS2-ROARING_FLAMES_POWER.description": "Whenever an Attack is [gold]Exhausted[/gold], play a random Attack in your [gold]Exhaust Pile[/gold] and return it to the [gold]Exhaust Pile[/gold].",

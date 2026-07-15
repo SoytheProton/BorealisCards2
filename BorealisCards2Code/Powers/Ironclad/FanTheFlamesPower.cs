@@ -28,11 +28,14 @@ public sealed class FanTheFlamesPower : BorealisCards2Power
     {
         if (side == CombatSide.Enemy || !participants.Contains(Owner))
             return;
-        if(!CombatManager.Instance.History.Entries.OfType<CardExhaustedEntry>().Any(o => o.Actor == Owner && o.HappenedThisTurn(Owner.CombatState)))
-            return;
-        Flash();
-        NFireBurningVfx.Create(Owner, 0.75f, false);
-        await Cmd.CustomScaledWait(0.2f, 0.4f);
-        await CreatureCmd.Damage(choiceContext, CombatState.HittableEnemies, Amount, ValueProp.Unpowered, Owner);
+        var num = CombatManager.Instance.History.Entries.OfType<CardExhaustedEntry>()
+            .Count(o => o.Actor == Owner && o.HappenedThisTurn(Owner.CombatState));
+        if(num > 0) Flash(); 
+        for (var i = 0; i < num; i++)
+        {
+            NFireBurningVfx.Create(Owner, 0.75f, false);
+            await Cmd.CustomScaledWait(0.2f, 0.4f);
+            await CreatureCmd.Damage(choiceContext, CombatState.HittableEnemies, Amount, ValueProp.Unpowered, Owner);
+        }
     }
 }

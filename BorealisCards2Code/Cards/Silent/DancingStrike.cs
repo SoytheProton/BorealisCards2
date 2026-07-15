@@ -14,7 +14,7 @@ public sealed class DancingStrike() : BorealisCards2Card(1,
     CardType.Attack, CardRarity.Rare,
     TargetType.AnyEnemy)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(10M, ValueProp.Move), new CardsVar(2)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(10M, ValueProp.Move), new CardsVar(3)];
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromKeyword(CardKeyword.Sly)];
     protected override HashSet<CardTag> CanonicalTags => [CardTag.Strike];
     

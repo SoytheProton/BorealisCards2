@@ -13,7 +13,7 @@ public sealed class BlazingStrike() : BorealisCards2Card(2,
     CardType.Attack, CardRarity.Rare,
     TargetType.AnyEnemy)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(13M, ValueProp.Move), new CardsVar(3)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(13M, ValueProp.Move), new CardsVar(4)];
 
     protected override HashSet<CardTag> CanonicalTags => [CardTag.Strike];
 

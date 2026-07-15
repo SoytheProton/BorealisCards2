@@ -27,14 +27,15 @@
 
   "BOREALISCARDS2-DETERMINED.description": "Gain {Block:diff()} [gold]Block[/gold].\nWhen this card is [gold]Exhausted[/gold], draw {Cards:diff()} {Cards:plural:card|cards} and return this to your [gold]Hand[/gold].",
   "BOREALISCARDS2-DETERMINED.title": "Determined",
-  
-  "BOREALISCARDS2-TERRORIZE.description": "Apply {VulnerablePower:diff()} [gold]Vulnerable[/gold].",
-  "BOREALISCARDS2-TERRORIZE.title": "Terrorize",
+
+  "BOREALISCARDS2-PURGE.description": "Exhaust up to {Cards:diff()} cards in your [gold]Hand[/gold]. Draw 1 card for each card [gold]Exhausted[/gold].",
+  "BOREALISCARDS2-PURGE.selectionScreenPrompt": "Choose up to {Cards:diff()} cards to [gold]Exhaust[/gold].",
+  "BOREALISCARDS2-PURGE.title": "Purge",
 
   "BOREALISCARDS2-RUSH.description": "Deal {Damage:diff()} damage.\nAt the start of the next {RushPower:plural:turn|{:diff()} turns}, lose 1 HP and gain {Block:diff()} [gold]Block[/gold].",
   "BOREALISCARDS2-RUSH.title": "Rush",
 
-  "BOREALISCARDS2-FAN_THE_FLAMES.description": "At the end of your turn, deal {FanTheFlamesPower:diff()} damage to ALL enemies if a card was [gold]Exhausted[/gold] that turn.",
+  "BOREALISCARDS2-FAN_THE_FLAMES.description": "At the end of your turn, deal {FanTheFlamesPower:diff()} damage to ALL enemies for each card [gold]Exhausted[/gold] that turn.",
   "BOREALISCARDS2-FAN_THE_FLAMES.title": "Fan the Flames",
 
   "BOREALISCARDS2-OVERPOWER.description": "Lose {HpLoss:diff()} HP.\nEnemy loses {StrengthPower:diff()} [gold]Strength[/gold] this turn.",

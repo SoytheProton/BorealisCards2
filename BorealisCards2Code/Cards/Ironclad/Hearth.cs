@@ -15,7 +15,7 @@ public sealed class Hearth() : BorealisCards2Card(1,
 {
     public override bool GainsBlock => true;
     public override bool CanBeGeneratedInCombat => false;
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new BlockVar(8M, ValueProp.Move), new HealVar(2M)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new BlockVar(7M, ValueProp.Move), new HealVar(2M)];
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
     
     protected override async Task OnPlay(
