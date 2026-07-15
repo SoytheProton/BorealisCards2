@@ -11,7 +11,7 @@ using MegaCrit.Sts2.Core.Models.Cards;
 namespace BorealisCards2.BorealisCards2Code.Cards.Silent;
 
 [Pool(typeof(SilentCardPool))]
-public sealed class Rondelmancy() : BorealisCards2Card(3,
+public sealed class Rondelmancy() : BorealisCards2Card(1,
     CardType.Power, CardRarity.Rare,
     TargetType.Self)
 {
@@ -26,5 +26,5 @@ public sealed class Rondelmancy() : BorealisCards2Card(3,
         await PowerCmd.Apply<RondelmancyPower>(choiceContext, Owner.Creature, DynamicVars.Cards.BaseValue, Owner.Creature, this);
     }
 
-    protected override void OnUpgrade() => AddKeyword(CardKeyword.Innate);
+    protected override void OnUpgrade() => DynamicVars.Cards.UpgradeValueBy(1);
 }
