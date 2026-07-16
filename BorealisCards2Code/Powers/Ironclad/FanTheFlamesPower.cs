@@ -20,22 +20,14 @@ public sealed class FanTheFlamesPower : BorealisCards2Power
     public override PowerType Type => PowerType.Buff;
 
     public override PowerStackType StackType => PowerStackType.Counter;
-
-    public override async Task AfterSideTurnEnd(
+    
+    public override async Task AfterCardExhausted(
         PlayerChoiceContext choiceContext,
-        CombatSide side,
-        IEnumerable<Creature> participants)
+        CardModel card,
+        bool _)
     {
-        if (side == CombatSide.Enemy || !participants.Contains(Owner))
-            return;
-        var num = CombatManager.Instance.History.Entries.OfType<CardExhaustedEntry>()
-            .Count(o => o.Actor == Owner && o.HappenedThisTurn(Owner.CombatState));
-        if(num > 0) Flash(); 
-        for (var i = 0; i < num; i++)
-        {
-            NFireBurningVfx.Create(Owner, 0.75f, false);
-            await Cmd.CustomScaledWait(0.2f, 0.4f);
-            await CreatureCmd.Damage(choiceContext, CombatState.HittableEnemies, Amount, ValueProp.Unpowered, Owner);
-        }
+        NFireBurningVfx.Create(Owner, 0.75f, false);
+        await Cmd.CustomScaledWait(0.2f, 0.4f);
+        await CreatureCmd.Damage(choiceContext, CombatState.HittableEnemies, Amount, ValueProp.Unpowered, Owner);
     }
 }

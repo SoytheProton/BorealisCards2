@@ -11,7 +11,7 @@ using MegaCrit.Sts2.Core.Models.Cards;
 namespace BorealisCards2.BorealisCards2Code.Cards.Silent;
 
 [Pool(typeof(SilentCardPool))]
-public sealed class Rondelmancy() : BorealisCards2Card(1,
+public sealed class Rondelmancy() : BorealisCards2Card(2,
     CardType.Power, CardRarity.Rare,
     TargetType.Self)
 {

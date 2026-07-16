@@ -35,7 +35,7 @@
   "BOREALISCARDS2-RUSH.description": "Deal {Damage:diff()} damage.\nAt the start of the next {RushPower:plural:turn|{:diff()} turns}, lose 1 HP and gain {Block:diff()} [gold]Block[/gold].",
   "BOREALISCARDS2-RUSH.title": "Rush",
 
-  "BOREALISCARDS2-FAN_THE_FLAMES.description": "At the end of your turn, deal {FanTheFlamesPower:diff()} damage to ALL enemies for each card [gold]Exhausted[/gold] that turn.",
+  "BOREALISCARDS2-FAN_THE_FLAMES.description": "Whenever you [gold]Exhaust[/gold] a card, deal {FanTheFlamesPower:diff()} damage to ALL enemies.",
   "BOREALISCARDS2-FAN_THE_FLAMES.title": "Fan the Flames",
 
   "BOREALISCARDS2-OVERPOWER.description": "Lose {HpLoss:diff()} HP.\nEnemy loses {StrengthPower:diff()} [gold]Strength[/gold] this turn.",
