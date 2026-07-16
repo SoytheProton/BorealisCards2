@@ -151,6 +151,6 @@
   "BOREALISCARDS2-IONIZE.description": "The first time you [gold]Channel[/gold] [gold]Lightning[/gold] each turn, [gold]Channel[/gold] {Repeat:diff()} [gold]Lightning[/gold].",
   "BOREALISCARDS2-IONIZE.title": "Ionize",
 
-  "BOREALISCARDS2-METALLURGY.description": "Deal {Damage:diff()} damage.\nWhenever you [gold]Exhaust[/gold] a Status, increase this card's damage by {Increase:diff()} and put this into your [gold]Hand[/gold].",
+  "BOREALISCARDS2-METALLURGY.description": "Deal {Damage:diff()} damage.\nApply {VulnerablePower:diff()} [gold]Vulnerable[/gold].\nWhenever you draw this card, Add a [gold]Burn[/gold] into your [gold]Discard Pile[/gold].",
   "BOREALISCARDS2-METALLURGY.title": "Metallurgy"
 }
