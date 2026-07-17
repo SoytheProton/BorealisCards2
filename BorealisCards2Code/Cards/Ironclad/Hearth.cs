@@ -28,7 +28,7 @@ public sealed class Hearth() : BorealisCards2Card(1,
 
     protected override void OnUpgrade()
     {
-        DynamicVars.Block.UpgradeValueBy(3M);
+        DynamicVars.Block.UpgradeValueBy(2M);
         DynamicVars.Heal.UpgradeValueBy(1M);
     }
 }

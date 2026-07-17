@@ -26,6 +26,8 @@ public sealed class FanTheFlamesPower : BorealisCards2Power
         CardModel card,
         bool _)
     {
+        if(card.Owner.Creature != Owner)
+            return;
         NFireBurningVfx.Create(Owner, 0.75f, false);
         await Cmd.CustomScaledWait(0.2f, 0.4f);
         await CreatureCmd.Damage(choiceContext, CombatState.HittableEnemies, Amount, ValueProp.Unpowered, Owner);

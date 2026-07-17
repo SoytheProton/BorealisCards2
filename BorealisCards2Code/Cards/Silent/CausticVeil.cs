@@ -17,7 +17,7 @@ public sealed class CausticVeil() : BorealisCards2Card(2,
     CardType.Skill, CardRarity.Rare,
     CustomTargetType.Everyone)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<PoisonPower>(6), new BlockVar(14M, ValueProp.Move)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<PoisonPower>(8), new BlockVar(14M, ValueProp.Move)];
     public override bool GainsBlock => true;
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromPower<PoisonPower>()];
     

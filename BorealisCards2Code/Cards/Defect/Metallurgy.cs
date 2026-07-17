@@ -19,7 +19,7 @@ public sealed class Metallurgy() : BorealisCards2Card(1,
     CardType.Attack, CardRarity.Uncommon,
     TargetType.AnyEnemy)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(11M, ValueProp.Move), new PowerVar<VulnerablePower>(2)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(11M, ValueProp.Move), new PowerVar<VulnerablePower>(1)];
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromPower<VulnerablePower>(), HoverTipFactory.FromCard<Burn>()];
     
     protected override async Task OnPlay(

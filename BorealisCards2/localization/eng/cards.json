@@ -141,7 +141,7 @@
   "BOREALISCARDS2-ALPHA_TESTING.description": "Gain {Block:diff()} [gold]Block[/gold].\nTrigger the passive abilities of all your Orbs{IfUpgraded:show: twice}.",
   "BOREALISCARDS2-ALPHA_TESTING.title": "Alpha Testing",
 
-  "BOREALISCARDS2-LIQUID_COOLING.description": "Whenever you [gold]Channel[/gold] an [gold]Frost[/gold], gain {FocusPower:diff()} [gold]Focus[/gold] that turn.",
+  "BOREALISCARDS2-LIQUID_COOLING.description": "Whenever you [gold]Channel[/gold] a [gold]Frost[/gold], gain {FocusPower:diff()} [gold]Focus[/gold] that turn.",
   "BOREALISCARDS2-LIQUID_COOLING.title": "Liquid Cooling",
 
   "BOREALISCARDS2-COLLECT.description": "Put a 0{energyPrefix:energyIcons(1)} card from your [gold]Draw Pile[/gold] into your [gold]Hand[/gold].\nDraw {Cards:diff()} {Cards:plural:card|cards}.",
