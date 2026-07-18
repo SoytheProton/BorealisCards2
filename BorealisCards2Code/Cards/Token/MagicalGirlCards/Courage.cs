@@ -9,7 +9,7 @@ using MegaCrit.Sts2.Core.Models.CardPools;
 namespace BorealisCards2.BorealisCards2Code.Cards.Token.MagicalGirlCards;
 
 [Pool(typeof(TokenCardPool))]
-public sealed class Courage() : BorealisCards2Card(0,
+public sealed class Courage() : PowerOfFriendship.MagicalGirlCard(0,
     CardType.Status, CardRarity.Token,
     TargetType.Self)
 {
@@ -23,8 +23,8 @@ public sealed class Courage() : BorealisCards2Card(0,
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        await CardPileCmd.Draw(choiceContext, DynamicVars.Cards.BaseValue, Owner);
         await PlayerCmd.GainEnergy(DynamicVars.Energy.BaseValue, Owner);
+        await CardPileCmd.Draw(choiceContext, DynamicVars.Cards.BaseValue, Owner);
     }
 
     protected override void OnUpgrade() => DynamicVars.Cards.UpgradeValueBy(1);

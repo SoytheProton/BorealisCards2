@@ -1,5 +1,9 @@
 {
   "BOREALISCARDS2-CRYSTALLINE.description": "This card deals [blue]{Damage}[/blue] additional damage, gains [blue]{Block:diff()}[/blue] [gold]Block[/gold], and gains [gold]Replay[/gold] [blue]{Times}[/blue].",
   "BOREALISCARDS2-CRYSTALLINE.extraCardText": "Gain {Block:diff()} [gold]Block[/gold].",
-  "BOREALISCARDS2-CRYSTALLINE.title": "Crystalline"
+  "BOREALISCARDS2-CRYSTALLINE.title": "Crystalline",
+
+  "BOREALISCARDS2-LIVING.description": "[gold]Summon[/gold] [blue]{Summon}[/blue].",
+  "BOREALISCARDS2-LIVING.extraCardText": "[gold]Summon[/gold] {Summon:diff()}.",
+  "BOREALISCARDS2-LIVING.title": "Living"
 }

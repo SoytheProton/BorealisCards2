@@ -107,7 +107,6 @@
 
     <ItemGroup>
         <Folder Include="BorealisCards2Code\Cards\Colorless\" />
-        <Folder Include="BorealisCards2Code\Powers\Necrobinder\" />
         <Folder Include="BorealisCards2Code\Powers\Shared\" />
         <Folder Include="BorealisCards2\images\card_portraits\big\"/>
         <Folder Include="BorealisCards2\images\powers\big\"/>

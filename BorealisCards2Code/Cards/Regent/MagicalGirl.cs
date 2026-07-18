@@ -24,6 +24,6 @@ public class MagicalGirl() : BorealisCards2Card(2,
         CardPlay play)
     {
         await CreatureCmd.TriggerAnim(Owner.Creature, "PowerUp", Owner.Character.PowerUpAnimDelay);
-        await PowerCmd.Apply<OvertimePower>(choiceContext, Owner.Creature, DynamicVars.Repeat.BaseValue, Owner.Creature, this);
+        await PowerCmd.Apply<MagicalGirlPower>(choiceContext, Owner.Creature, 1, Owner.Creature, this);
     }
 }

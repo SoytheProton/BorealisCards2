@@ -1,13 +1,10 @@
 using BaseLib.Utils;
-using BorealisCards2.BorealisCards2Code.Cards;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
-using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
-using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.CardPools;
-using MegaCrit.Sts2.Core.Models.Cards;
 using MegaCrit.Sts2.Core.Models.Monsters;
 using MegaCrit.Sts2.Core.Models.Powers;
 using MegaCrit.Sts2.Core.ValueProps;
@@ -19,9 +16,10 @@ public class Knucklebones() : BorealisCards2Card(1,
     CardType.Attack, CardRarity.Common,
     TargetType.AnyEnemy)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new OstyDamageVar(5M, ValueProp.Move), new EnergyVar(1)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new OstyDamageVar(8M, ValueProp.Move), new EnergyVar(1)];
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Ethereal];
     protected override HashSet<CardTag> CanonicalTags => [CardTag.OstyAttack];
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => [EnergyHoverTip];
     protected override bool ShouldGlowRedInternal => Owner.IsOstyMissing;
 
     protected override async Task OnPlay(
@@ -39,6 +37,5 @@ public class Knucklebones() : BorealisCards2Card(1,
     protected override void OnUpgrade()
     {
         DynamicVars.OstyDamage.UpgradeValueBy(3M);
-        DynamicVars.Energy.UpgradeValueBy(1M);
     }
 }

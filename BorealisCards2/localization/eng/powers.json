@@ -53,19 +53,31 @@
   "BOREALISCARDS2-LOSE_STAR_NEXT_TURN_POWER.smartDescription": "Lose [blue]{Amount}[/blue] {singleStarIcon} next turn.",
   "BOREALISCARDS2-LOSE_STAR_NEXT_TURN_POWER.title": "Lose Star Next Turn",
 
-  "BOREALISCARDS2-OVERTIME_POWER.description": "Cards containing “Minion” gain [gold]Replay[/gold].",
-  "BOREALISCARDS2-OVERTIME_POWER.smartDescription": "Cards containing “Minion” gain [gold]Replay[/gold] [blue]{Amount}[/blue].",
+  "BOREALISCARDS2-OVERTIME_POWER.description": "Cards containing “Minion” are played an additional time.",
+  "BOREALISCARDS2-OVERTIME_POWER.smartDescription": "Cards containing “Minion” are played [blue]{Amount}[/blue] additional times.",
   "BOREALISCARDS2-OVERTIME_POWER.title": "OVERTIME!!!",
 
-  "BOREALISCARDS2-MAGICAL_GIRL_POWER.description": "At the start of your turn, add a [gold]{Amount:plural:POWER OF FRIENDSHIP! <3|POWERS OF FRIENDSHIP! <3}[/gold] into your [gold]Hand[/gold].",
-  "BOREALISCARDS2-MAGICAL_GIRL_POWER.smartDescription": "At the start of your turn, add [blue]{Amount}[/blue] [gold]{Amount:plural:POWER OF FRIENDSHIP! <3|POWERS OF FRIENDSHIP! <3}[/gold] into your [gold]Hand[/gold].",
-  "BOREALISCARDS2-MAGICAL_GIRL_POWER.title": "OVERTIME!!!",
+  "BOREALISCARDS2-MAGICAL_GIRL_POWER.description": "At the start of your turn, add a [gold]POWER OF FRIENDSHIP! <3[/gold] into your [gold]Hand[/gold].",
+  "BOREALISCARDS2-MAGICAL_GIRL_POWER.smartDescription": "At the start of your turn, add [blue]{Amount}[/blue] [gold]{Amount:plural:POWER OF FRIENDSHIP! <3|POWERS OF FRIENDSHIP! <3}{IsUpgraded:cond:|+}[/gold] into your [gold]Hand[/gold].",
+  "BOREALISCARDS2-MAGICAL_GIRL_POWER.title": "Magical Cute Transformation!!!",
+
+  "BOREALISCARDS2-HAPPINESS_POWER.description": "At the start of your turn, gain [blue]1[/blue] [gold]Energy[/gold] and draw an additional card.",
+  "BOREALISCARDS2-HAPPINESS_POWER.smartDescription": "At the start of your turn, gain {Amount:energyIcons()} and draw [blue]{Amount}[/blue] additional {Amount:plural:card|cards}.",
+  "BOREALISCARDS2-HAPPINESS_POWER.title": "Happiness",
   
   
 
   "BOREALISCARDS2-Character4": "Necrobinder",
 
+  "BOREALISCARDS2-VITRIFICATION_POWER.description": "Cards that cost {energyPrefix:energyIcons(3)} or more gain [gold]Retain[/gold].",
+  "BOREALISCARDS2-VITRIFICATION_POWER.smartDescription": "Cards that cost {Threshold:cond:>2?{energyPrefix:energyIcons(3)}|{energyPrefix:energyIcons(2)}} gain [gold]Retain[/gold].",
+  "BOREALISCARDS2-VITRIFICATION_POWER.title": "Vitrification",
 
+  "BOREALISCARDS2-TOMB_OF_ANNIHILATION_POWER.description": "Whenever you apply [gold]Doom[/gold], apply more.",
+  "BOREALISCARDS2-TOMB_OF_ANNIHILATION_POWER.smartDescription": "Whenever you apply [gold]Doom[/gold], apply [blue]{Amount}%[/blue] more.",
+  "BOREALISCARDS2-TOMB_OF_ANNIHILATION_POWER.title": "Tomb of Annihilation",
+  
+  
 
   "BOREALISCARDS2-Character5": "Defect",
 

@@ -10,11 +10,12 @@ using MegaCrit.Sts2.Core.ValueProps;
 namespace BorealisCards2.BorealisCards2Code.Cards.Token.MagicalGirlCards;
 
 [Pool(typeof(TokenCardPool))]
-public sealed class JusticeDefend() : BorealisCards2Card(0,
+public sealed class JusticeDefend() : PowerOfFriendship.MagicalGirlCard(0,
     CardType.Skill, CardRarity.Token,
     TargetType.Self)
 {
     public override bool CanBeGeneratedByModifiers => false;
+    public override bool GainsBlock => true;
     
     protected override IEnumerable<DynamicVar> CanonicalVars => [new BlockVar(5M, ValueProp.Move), new StarsVar(1)];
     public override IEnumerable<CardKeyword> CanonicalKeywords => [];

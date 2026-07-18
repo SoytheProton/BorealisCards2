@@ -16,7 +16,7 @@ public class Overtime() : BorealisCards2Card(1,
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new RepeatVar(1)];
     public override IEnumerable<CardKeyword> CanonicalKeywords => [];
-    protected override IEnumerable<IHoverTip> ExtraHoverTips => [];
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.Static(StaticHoverTip.ReplayStatic)];
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,

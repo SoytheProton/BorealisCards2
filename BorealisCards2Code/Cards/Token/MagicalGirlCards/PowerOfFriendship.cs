@@ -1,13 +1,13 @@
 using BaseLib.Utils;
+using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
+using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
-using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.CardPools;
 using MegaCrit.Sts2.Core.Nodes.CommonUi;
-using MegaCrit.Sts2.Core.ValueProps;
 
 namespace BorealisCards2.BorealisCards2Code.Cards.Token.MagicalGirlCards;
 
@@ -19,29 +19,44 @@ public class PowerOfFriendship() : BorealisCards2Card(0,
     public override int CanonicalStarCost => 2;
     public override bool CanBeGeneratedByModifiers => false;
     protected override IEnumerable<DynamicVar> CanonicalVars => [];
-    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
-    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromCard<LoveStrike>(IsUpgraded),HoverTipFactory.FromCard<JusticeDefend>(IsUpgraded),HoverTipFactory.FromCard<Happiness>(IsUpgraded),HoverTipFactory.FromCard<Courage>(IsUpgraded)];
+    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust, CardKeyword.Ethereal];
     
-    public override bool GainsBlock => true;
-
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        foreach (var card in PileType.Hand.GetPile(Owner).Cards)
+        await CreatureCmd.TriggerAnim(Owner.Creature, "PowerUp", Owner.Character.PowerUpAnimDelay);
+        var cards = PileType.Hand.GetPile(Owner).Cards.ToList();
+        foreach (var card in cards)
         {
             CardModel replacement = card.Type switch
             {
-                CardType.Attack => ModelDb.Card<LoveStrike>(),
-                CardType.Skill => ModelDb.Card<JusticeDefend>(),
-                CardType.Power => ModelDb.Card<Happiness>(),
-                _ => ModelDb.Card<Courage>()
+                CardType.Attack => CombatState.CreateCard<LoveStrike>(Owner),
+                CardType.Skill => CombatState.CreateCard<JusticeDefend>(Owner),
+                CardType.Power => CombatState.CreateCard<Happiness>(Owner),
+                _ => CombatState.CreateCard<Courage>(Owner)
             };
             if(IsUpgraded)
                 CardCmd.Upgrade(replacement, CardPreviewStyle.None);
+            var clone = card.CreateClone();
+            clone.DeckVersion = card.DeckVersion;
+            ((MagicalGirlCard)replacement).OriginalCard = clone;
             await CardCmd.Transform(card, replacement);
         }
     }
 
-    protected override void OnUpgrade() => DynamicVars.Block.UpgradeValueBy(3M);
+    public abstract class MagicalGirlCard(int cost, CardType type, CardRarity rarity, TargetType target) : BorealisCards2Card(cost, type, rarity, target)
+    {
+        public CardModel OriginalCard;
+        
+        public override async Task BeforeSideTurnEnd(
+            PlayerChoiceContext choiceContext,
+            CombatSide side,
+            IEnumerable<Creature> participants)
+        {
+            if (!participants.Contains(Owner.Creature))
+                return;
+            await CardCmd.Transform(this, OriginalCard, CardPreviewStyle.None);
+        }
+    }
 }

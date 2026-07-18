@@ -10,7 +10,7 @@ using MegaCrit.Sts2.Core.ValueProps;
 namespace BorealisCards2.BorealisCards2Code.Cards.Token.MagicalGirlCards;
 
 [Pool(typeof(TokenCardPool))]
-public sealed class LoveStrike() : BorealisCards2Card(0,
+public sealed class LoveStrike() : PowerOfFriendship.MagicalGirlCard(0,
     CardType.Attack, CardRarity.Token,
     TargetType.AnyEnemy)
 {
@@ -26,7 +26,7 @@ public sealed class LoveStrike() : BorealisCards2Card(0,
         CardPlay play)
     {
         await DamageCmd.Attack(DynamicVars.Damage.BaseValue).FromCard(this, play).Targeting(play.Target).WithHitFx("vfx/vfx_attack_slash").Execute(choiceContext);
-        await PlayerCmd.GainStars(DynamicVars.Stars.BaseValue, Owner);
+        await ForgeCmd.Forge(DynamicVars.Forge.IntValue, Owner, this);
     }
 
     protected override void OnUpgrade()

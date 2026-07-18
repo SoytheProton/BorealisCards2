@@ -6,6 +6,7 @@ using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 
 namespace BorealisCards2.BorealisCards2Code.Powers.Regent;
@@ -13,6 +14,17 @@ namespace BorealisCards2.BorealisCards2Code.Powers.Regent;
 public sealed class MagicalGirlPower : BorealisCards2Power
 {
     private bool _isUpgraded;
+
+    private bool IsUpgraded
+    {
+        get => _isUpgraded;
+        set
+        {
+            AssertMutable();
+            _isUpgraded = value;
+            ((BoolVar)DynamicVars["IsUpgraded"]).BoolVal = value;
+        }
+    }
     
     public override PowerType Type => PowerType.Buff;
 
@@ -20,6 +32,8 @@ public sealed class MagicalGirlPower : BorealisCards2Power
     
     public override PowerInstanceType InstanceType => PowerInstanceType.Instanced;
 
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new BoolVar("IsUpgraded")];
+    
     public override async Task BeforeHandDraw(
         Player player,
         PlayerChoiceContext choiceContext,
@@ -30,13 +44,17 @@ public sealed class MagicalGirlPower : BorealisCards2Power
         Flash();
         List<CardModel> cards = [];
         for (var index = 0; index < Amount; ++index)
-            cards.Add(combatState.CreateCard<PowerOfFriendship>(Owner.Player));
+        {
+            var card = combatState.CreateCard<PowerOfFriendship>(Owner.Player);
+            if(IsUpgraded) CardCmd.Upgrade(card);
+            cards.Add(card);
+        }
         await CardPileCmd.AddGeneratedCardsToCombat(cards, PileType.Hand, Owner.Player);
     }
 
     public override Task AfterApplied(Creature? applier, CardModel? cardSource)
     {
-        _isUpgraded = cardSource.IsUpgraded;
+        IsUpgraded = cardSource.IsUpgraded;
         return Task.CompletedTask;
     }
 }
