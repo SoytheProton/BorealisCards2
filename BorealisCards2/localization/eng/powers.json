@@ -50,6 +50,12 @@
   "BOREALISCARDS2-Character3": "Regent",
 
 
+  
+  "BOREALISCARDS2-LOSE_STAR_NEXT_TURN_POWER.description": "Lose {singleStarIcon} next turn.",
+  "BOREALISCARDS2-LOSE_STAR_NEXT_TURN_POWER.smartDescription": "Spend [blue]{Amount}[/blue] {singleStarIcon} next turn.",
+  "BOREALISCARDS2-LOSE_STAR_NEXT_TURN_POWER.title": "Spend Star Next Turn",
+  
+  
 
   "BOREALISCARDS2-Character4": "Necrobinder",
 
