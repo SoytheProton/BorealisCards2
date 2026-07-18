@@ -63,20 +63,20 @@
   "BOREALISCARDS2-MISDIRECTION.description": "Gain {Block:diff()} [gold]Block[/gold].\n[gold]Discard[/gold] {Cards:diff()} {Cards:plural:card|cards} from your [gold]Draw Pile[/gold] as if it was from your [gold]Hand[/gold].",
   "BOREALISCARDS2-MISDIRECTION.title": "Misdirection",
 
-  "BOREALISCARDS2-VANISH.description": "Discard your [gold]Hand[/gold].\nApply {PoisonPower:diff()} [gold]Poison[/gold] for each card [gold]Discarded[/gold].",
-  "BOREALISCARDS2-VANISH.title": "Vanish",
+  "BOREALISCARDS2-VANISH.description": "Apply {PoisonPower:diff()} [gold]Poison[/gold].",
+  "BOREALISCARDS2-VANISH.title": "Vice",
 
   "BOREALISCARDS2-ROPE_DART.description": "Deal {Damage:diff()} damage.\nDraw {Cards:diff()} {Cards:plural:card|cards}.\nWhenever you play a [gold]Shiv[/gold], put this into your [gold]Hand[/gold] from your [gold]Draw Pile[/gold].",
   "BOREALISCARDS2-ROPE_DART.title": "Rope Dart",
 
-  "BOREALISCARDS2-VOLUNTARY_SUICIDE.description": "Deal {Damage:diff()} damage.\nTrigger that enemy's [gold]Poison[/gold] {Repeat:diff()} {Repeat:plural:time|times}.",
+  "BOREALISCARDS2-VOLUNTARY_SUICIDE.description": "Deal {Damage:diff()} damage.\nIf the enemy has {Threshold:diff()} or more [gold]Poison[/gold], deal {AlternateDamage:diff()} damage instead.",
   "BOREALISCARDS2-VOLUNTARY_SUICIDE.title": "Voluntary Suicide",
 
   "BOREALISCARDS2-RONDELMANCY.description": "Every 3 [gold]Shivs[/gold] you create, add {Cards:diff()} additional {Cards:plural:Shiv|Shivs} into your [gold]Hand[/gold]. Play any [gold]Shivs[/gold] that enter your [gold]Discard Pile[/gold].",
   "BOREALISCARDS2-RONDELMANCY.title": "Rondelmancy",
 
-  "BOREALISCARDS2-DANCING_STRIKE.description": "Deal {Damage:diff()} damage.\nDraw {Cards:diff()} {Cards:plural:card|cards}.\nDiscard all [gold]Sly[/gold] cards drawn this way.",
-  "BOREALISCARDS2-DANCING_STRIKE.title": "Dancing Strike",
+  "BOREALISCARDS2-RUMOR.description": "Deal {Damage:diff()} damage to ALL enemies. Increase this card's damage by {Scaling:diff()} this combat. Shuffle this card into your [gold]Draw Pile[/gold].",
+  "BOREALISCARDS2-RUMOR.title": "Rumor",
 
   "BOREALISCARDS2-EMPTY_JAR.description": "Gain {Block:diff()} [gold]Block[/gold].\nDiscard {Cards:diff()} {Cards:plural:card|cards}.",
   "BOREALISCARDS2-EMPTY_JAR.title": "Empty Jar",
@@ -126,7 +126,7 @@
   
   "BOREALISCARDS2-Character5": "Defect",
 
-  "BOREALISCARDS2-GLASSBLOWER.description": "[gold]Channel[/gold] 1 [gold]Glass[/gold].\nEvery {Cards:diff()} 0{energyPrefix:energyIcons(1)} {Cards:plural:Attack|Attacks} you play, put this into your [gold]Hand[/gold].",
+  "BOREALISCARDS2-GLASSBLOWER.description": "[gold]Channel[/gold] 1 [gold]Glass[/gold].\nEvery {Cards:diff()} 0{energyPrefix:energyIcons(1)} {Cards:plural:card|cards} you play, put this into your [gold]Hand[/gold].",
   "BOREALISCARDS2-GLASSBLOWER.title": "Glassblowing",
 
   "BOREALISCARDS2-HYPERSPEED_STRIKE.description": "Deal {Damage:diff()} damage.\nAdd a [gold]Void[/gold] into your [gold]Draw Pile[/gold].",
@@ -156,13 +156,13 @@
   "BOREALISCARDS2-TEMPERATURE_SHOCK.description": "[gold]Channel[/gold] 1 [gold]Lightning[/gold].\n[gold]Channel[/gold] 1 [gold]Frost[/gold].",
   "BOREALISCARDS2-TEMPERATURE_SHOCK.title": "Temperature Shock",
 
-  "BOREALISCARDS2-ALPHA_TESTING.description": "Gain {Block:diff()} [gold]Block[/gold].\nTrigger the passive abilities of all your Orbs{IfUpgraded:show: twice}.",
+  "BOREALISCARDS2-ALPHA_TESTING.description": "Gain {Block:diff()} [gold]Block[/gold].\nTrigger the passive abilities of all your Orbs.",
   "BOREALISCARDS2-ALPHA_TESTING.title": "Alpha Testing",
 
   "BOREALISCARDS2-LIQUID_COOLING.description": "Whenever you [gold]Channel[/gold] a [gold]Frost[/gold], gain {FocusPower:diff()} [gold]Focus[/gold] that turn.",
   "BOREALISCARDS2-LIQUID_COOLING.title": "Liquid Cooling",
 
-  "BOREALISCARDS2-COLLECT.description": "Put a 0{energyPrefix:energyIcons(1)} card from your [gold]Draw Pile[/gold] into your [gold]Hand[/gold].\nDraw {Cards:diff()} {Cards:plural:card|cards}.",
+  "BOREALISCARDS2-COLLECT.description": "Channel 1 [gold]Frost[/gold].\nPut a 0{energyPrefix:energyIcons(1)} card from your [gold]Draw Pile[/gold] into your [gold]Hand[/gold].",
   "BOREALISCARDS2-COLLECT.selectionScreenPrompt": "Select a card to put in your Hand.",
   "BOREALISCARDS2-COLLECT.title": "Collect",
 
@@ -178,7 +178,7 @@
 
 
 
-  "BOREALISCARDS2-Character6": "Tokens",
+  "BOREALISCARDS2-Character7": "Tokens",
 
   "BOREALISCARDS2-MINION_SMITH.description": "",
   "BOREALISCARDS2-MINION_SMITH.title": "MinionSmith",

@@ -3,9 +3,11 @@ using MegaCrit.Sts2.Core.CardSelection;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.CardPools;
+using MegaCrit.Sts2.Core.Models.Orbs;
 
 namespace BorealisCards2.BorealisCards2Code.Cards.Defect;
 
@@ -16,15 +18,17 @@ public sealed class Collect() : BorealisCards2Card(1,
 { 
     protected override IEnumerable<DynamicVar> CanonicalVars => [new CardsVar(1)];
     
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromOrb<FrostOrb>()];
+    
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
+        await OrbCmd.Channel<FrostOrb>(choiceContext, Owner);
         var prefs = new CardSelectorPrefs(SelectionScreenPrompt, 1);
         var card = (await CardSelectCmd.FromCombatPile(choiceContext, PileType.Draw.GetPile(Owner), Owner, prefs, model => Filter(model))).FirstOrDefault();
         if (card != null)
             await CardPileCmd.Add(card, PileType.Hand);
-        await CardPileCmd.Draw(choiceContext, DynamicVars.Cards.BaseValue, Owner);
     }
 
     private static bool Filter(CardModel card)
@@ -40,5 +44,5 @@ public sealed class Collect() : BorealisCards2Card(1,
         return flag1;
     }
 
-    protected override void OnUpgrade() => DynamicVars.Cards.UpgradeValueBy(1);
+    protected override void OnUpgrade() => EnergyCost.UpgradeBy(-1);
 }

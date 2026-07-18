@@ -1,5 +1,4 @@
 using BaseLib.Utils;
-using BorealisCards2.BorealisCards2Code.Enchantments;
 using BorealisCards2.BorealisCards2Code.Enchantments.Silent;
 using BorealisCards2.BorealisCards2Code.Powers.Silent;
 using MegaCrit.Sts2.Core.Commands;
