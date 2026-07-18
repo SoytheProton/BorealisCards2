@@ -15,7 +15,7 @@ public class Whispers() : BorealisCards2Card(1,
     CardType.Skill, CardRarity.Common,
     TargetType.RandomEnemy)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<DoomPower>(6),new RepeatVar(3)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<DoomPower>(5),new RepeatVar(3)];
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromPower<DoomPower>()];
 
     protected override async Task OnPlay(

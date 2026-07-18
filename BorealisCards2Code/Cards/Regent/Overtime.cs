@@ -10,14 +10,14 @@ using MegaCrit.Sts2.Core.Models.CardPools;
 namespace BorealisCards2.BorealisCards2Code.Cards.Regent;
 
 [Pool(typeof(RegentCardPool))]
-public class Overtime() : BorealisCards2Card(1,
+public class Overtime() : BorealisCards2Card(3,
     CardType.Power, CardRarity.Rare,
     TargetType.Self)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new RepeatVar(1)];
-    public override IEnumerable<CardKeyword> CanonicalKeywords => [];
+    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Ethereal];
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.Static(StaticHoverTip.ReplayStatic)];
-
+    
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
         CardPlay play)

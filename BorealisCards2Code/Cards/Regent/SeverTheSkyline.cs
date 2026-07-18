@@ -17,7 +17,7 @@ public class SeverTheSkyline() : BorealisCards2Card(2,
     CardType.Skill, CardRarity.Uncommon,
     TargetType.Self)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new ForgeVar(11), new StarsVar(3), new CardsVar(2)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new ForgeVar(9), new StarsVar(3), new CardsVar(2)];
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.Static(StaticHoverTip.Forge), HoverTipFactory.FromCard<MinionDefend>(IsUpgraded)];
 
@@ -34,7 +34,7 @@ public class SeverTheSkyline() : BorealisCards2Card(2,
             return;
         foreach (var item in original)
         {
-            CardModel card = CombatState.CreateCard<MinionDiveBomb>(Owner);
+            CardModel card = CombatState.CreateCard<MinionDefend>(Owner);
             if (IsUpgraded)
                 CardCmd.Upgrade(card);
             await CardCmd.Transform(item, card);
