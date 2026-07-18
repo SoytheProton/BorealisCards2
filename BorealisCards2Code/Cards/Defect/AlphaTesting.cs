@@ -22,13 +22,12 @@ public sealed class AlphaTesting() : BorealisCards2Card(2,
         CardPlay play)
     {
         await CreatureCmd.GainBlock(Owner.Creature, DynamicVars.Block, play);
-        for (var i = 0; i < (IsUpgraded ? 2 : 1); i++)
+        foreach (var orb in Owner.PlayerCombatState.OrbQueue.Orbs)
         {
-            foreach (var orb in Owner.PlayerCombatState.OrbQueue.Orbs)
-            {
-                await OrbCmd.Passive(choiceContext, orb, null);
-                await Cmd.Wait(0.10f);
-            }
+            await OrbCmd.Passive(choiceContext, orb, null);
+            await Cmd.Wait(0.10f);
         }
     }
+    
+    protected override void OnUpgrade() => DynamicVars.Block.UpgradeValueBy(4);
 }

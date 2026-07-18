@@ -14,23 +14,19 @@ public sealed class Vanish() : BorealisCards2Card(2,
     CardType.Skill, CardRarity.Uncommon,
     TargetType.AnyEnemy)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<PoisonPower>(3M)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<PoisonPower>(18M)];
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromPower<PoisonPower>()];
+    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
     
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        var hand = PileType.Hand.GetPile(Owner).Cards.Count;
-        await CardCmd.Discard(choiceContext, PileType.Hand.GetPile(Owner).Cards);
-        for(var i = 0; i < hand; i++)
-        {
-            await PowerCmd.Apply<PoisonPower>(choiceContext, play.Target, DynamicVars.Poison.BaseValue, Owner.Creature, this);
-        }
+        await PowerCmd.Apply<PoisonPower>(choiceContext, play.Target, DynamicVars.Poison.BaseValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()
     {
-        DynamicVars.Poison.UpgradeValueBy(1M);
+        DynamicVars.Poison.UpgradeValueBy(4M);
     }
 }
