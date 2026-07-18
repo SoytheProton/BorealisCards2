@@ -28,6 +28,7 @@ public class SeverTheSkyline() : BorealisCards2Card(2,
         await CreatureCmd.TriggerAnim(Owner.Creature, "Cast", Owner.Character.CastAnimDelay);
         await ForgeCmd.Forge(DynamicVars.Forge.IntValue, Owner, this);
         await PlayerCmd.GainStars(DynamicVars.Stars.BaseValue, Owner);
+        
         CardSelectorPrefs prefs = new CardSelectorPrefs(CardSelectorPrefs.TransformSelectionPrompt, (int)DynamicVars.Cards._baseValue);
         var original = (await CardSelectCmd.FromHand(choiceContext, Owner, prefs, null, this)).ToList();
         if (original == null)
@@ -35,8 +36,6 @@ public class SeverTheSkyline() : BorealisCards2Card(2,
         foreach (var item in original)
         {
             CardModel card = CombatState.CreateCard<MinionDefend>(Owner);
-            if (IsUpgraded)
-                CardCmd.Upgrade(card);
             await CardCmd.Transform(item, card);
         }
     }

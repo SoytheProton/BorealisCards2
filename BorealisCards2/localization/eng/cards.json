@@ -118,7 +118,7 @@
   "BOREALISCARDS2-WORK_HARDER.description": "Deal {Damage:diff()} damage.\nAdd {Cards:diff()} [gold]{Cards:plural:Minion Smith|Minion Smiths}[/gold] into your [gold]Draw Pile[/gold].",
   "BOREALISCARDS2-WORK_HARDER.title": "WORK HARDER!!",
 
-  "BOREALISCARDS2-SEVER_THE_SKYLINE.description": "Gain {Stars:starIcons()}.\n[gold]Forge[/gold] {Forge:diff()}.\nTransform {Cards:diff()} {Cards:plural:card|cards} in your [gold]Hand[/gold] into [gold]Minion Defend{IfUpgraded:show:+|}[/gold].",
+  "BOREALISCARDS2-SEVER_THE_SKYLINE.description": "Gain {Stars:starIcons()}.\n[gold]Forge[/gold] {Forge:diff()}.\nTransform {Cards:diff()} {Cards:plural:card|cards} in your [gold]Hand[/gold] into [gold]Minion Defend[/gold].",
   "BOREALISCARDS2-SEVER_THE_SKYLINE.title": "Sever the Skyline",
 
   "BOREALISCARDS2-COSMIC_ANVIL.description": "[gold]Forge[/gold] {Forge:diff()}.\nAt the end of your turn, if this is on top of your [gold]Draw Pile[/gold], play it.",
@@ -126,21 +126,6 @@
 
   "BOREALISCARDS2-MAGICAL_GIRL.description": "At the start of your turn, add a [gold]POWER OF FRIENDSHIP! <3{IfUpgraded:show:+|}[/gold]",
   "BOREALISCARDS2-MAGICAL_GIRL.title": "Magical Cute Transformation!!!",
-
-  "BOREALISCARDS2-POWER_OF_FRIENDSHIP.description": "[wave][color=#ff1cf0]Magicalize[/color][/wave] your [gold]Hand[/gold]!",
-  "BOREALISCARDS2-POWER_OF_FRIENDSHIP.title": "POWER OF FRIENDSHIP! <3",
-
-  "BOREALISCARDS2-LOVE_STRIKE.description": "Deal {Damage:diff()} damage.\n[gold]Forge[/gold] {Forge:diff()}.",
-  "BOREALISCARDS2-LOVE_STRIKE.title": "LOVE STRIKE!",
-
-  "BOREALISCARDS2-JUSTICE_DEFEND.description": "Gain {Block:diff()} [gold]Block[/gold].\nGain {Stars:starIcons()}.",
-  "BOREALISCARDS2-JUSTICE_DEFEND.title": "JUSTICE DEFEND!",
-
-  "BOREALISCARDS2-HAPPINESS.description": "{IfUpgraded:show:Draw 1 card.\n|}At the start of your turn, gain {Power:energyIcons()} and draw {Power:diff()} additional {Power:plural:card|cards}.",
-  "BOREALISCARDS2-HAPPINESS.title": "FOR HAPPINESS!",
-
-  "BOREALISCARDS2-COURAGE.description": "Gain {Energy:energyIcons()}.\nDraw {Cards:diff()} {Cards:plural:card|cards}.",
-  "BOREALISCARDS2-COURAGE.title": "OUR COURAGE!",
 
   
   
@@ -238,5 +223,20 @@
   "BOREALISCARDS2-MINION_SCOUTS.title": "Minion Scouts",
 
   "BOREALISCARDS2-MINION_DEFEND.description": "Gain {Block:diff()} [gold]Block[/gold].\nDraw 1 card.",
-  "BOREALISCARDS2-MINION_DEFEND.title": "Minion Defend"
+  "BOREALISCARDS2-MINION_DEFEND.title": "Minion Defend",
+  
+  "BOREALISCARDS2-POWER_OF_FRIENDSHIP.description": "[wave][color=#ff1cf0]Magicalize[/color][/wave] your [gold]Hand[/gold]!",
+  "BOREALISCARDS2-POWER_OF_FRIENDSHIP.title": "POWER OF FRIENDSHIP! <3",
+
+  "BOREALISCARDS2-LOVE_STRIKE.description": "Deal {Damage:diff()} damage.\n[gold]Forge[/gold] {Forge:diff()}.",
+  "BOREALISCARDS2-LOVE_STRIKE.title": "LOVE STRIKE!",
+
+  "BOREALISCARDS2-JUSTICE_DEFEND.description": "Gain {Block:diff()} [gold]Block[/gold].\nGain {Stars:starIcons()}.",
+  "BOREALISCARDS2-JUSTICE_DEFEND.title": "JUSTICE DEFEND!",
+
+  "BOREALISCARDS2-HAPPINESS.description": "{IfUpgraded:show:Draw 1 card.\n|}At the start of your turn, gain {Power:energyIcons()} and draw {Power:diff()} additional {Power:plural:card|cards}.",
+  "BOREALISCARDS2-HAPPINESS.title": "FOR HAPPINESS!",
+
+  "BOREALISCARDS2-COURAGE.description": "Gain {Energy:energyIcons()}.\nDraw {Cards:diff()} {Cards:plural:card|cards}.",
+  "BOREALISCARDS2-COURAGE.title": "OUR COURAGE!"
 }
