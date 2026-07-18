@@ -11,7 +11,7 @@ using MegaCrit.Sts2.Core.Models.Cards;
 namespace BorealisCards2.BorealisCards2Code.Cards.Regent;
 
 [Pool(typeof(RegentCardPool))]
-public class Lob() : BorealisCards2Card(1,
+public class GetMad() : BorealisCards2Card(1,
     CardType.Skill, CardRarity.Common,
     TargetType.Self)
 {

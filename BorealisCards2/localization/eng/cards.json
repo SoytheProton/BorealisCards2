@@ -100,14 +100,14 @@
 
   "BOREALISCARDS2-Character3": "Regent",
 
-  "BOREALISCARDS2-LOB.description": "",
-  "BOREALISCARDS2-LOB.title": "Lob",
+  "BOREALISCARDS2-GET_MAD.description": "",
+  "BOREALISCARDS2-GET_MAD.title": "GET MAD!",
 
   "BOREALISCARDS2-SEEING_STARS.description": "",
-  "BOREALISCARDS2-SEEING_STARS.title": "SeeingStars",
+  "BOREALISCARDS2-SEEING_STARS.title": "Seeing Stars",
 
   "BOREALISCARDS2-KING_OF_HEARTS.description": "",
-  "BOREALISCARDS2-KING_OF_HEARTS.title": "KingOfHearts",
+  "BOREALISCARDS2-KING_OF_HEARTS.title": "King of Hearts",
 
   "BOREALISCARDS2-INSIGNIFICANCE.description": "",
   "BOREALISCARDS2-INSIGNIFICANCE.title": "Insignificance",
@@ -116,10 +116,13 @@
   "BOREALISCARDS2-OVERTIME.title": "OVERTIME!!!",
 
   "BOREALISCARDS2-WORK_HARDER.description": "",
-  "BOREALISCARDS2-WORK_HARDER.title": "WorkHarder",
+  "BOREALISCARDS2-WORK_HARDER.title": "WORK HARDER!!",
 
   "BOREALISCARDS2-SEVER_THE_SKYLINE.description": "",
-  "BOREALISCARDS2-SEVER_THE_SKYLINE.title": "SeverTheSkyline",
+  "BOREALISCARDS2-SEVER_THE_SKYLINE.title": "Sever the Skyline",
+
+  "BOREALISCARDS2-COSMIC_ANVIL.description": "",
+  "BOREALISCARDS2-COSMIC_ANVIL.title": "Cosmic Anvil",
 
   "BOREALISCARDS2-MAGICAL_GIRL.description": "",
   "BOREALISCARDS2-MAGICAL_GIRL.title": "Magical Cute Transformation!!!",
@@ -153,6 +156,12 @@
 
   "BOREALISCARDS2-RIBCAGE.description": "",
   "BOREALISCARDS2-RIBCAGE.title": "Ribcage",
+
+  "BOREALISCARDS2-SUPERNATURAL.description": "",
+  "BOREALISCARDS2-SUPERNATURAL.title": "Supernatural",
+
+  "BOREALISCARDS2-GROWTH_SPURT.description": "",
+  "BOREALISCARDS2-GROWTH_SPURT.title": "Growth Spurt",
   
   
   
