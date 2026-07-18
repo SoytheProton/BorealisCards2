@@ -1,4 +1,3 @@
-using BaseLib.Extensions;
 using BaseLib.Utils;
 using BorealisCards2.BorealisCards2Code.Powers.Regent;
 using MegaCrit.Sts2.Core.Commands;
@@ -11,11 +10,11 @@ using MegaCrit.Sts2.Core.Models.CardPools;
 namespace BorealisCards2.BorealisCards2Code.Cards.Regent;
 
 [Pool(typeof(RegentCardPool))]
-public class Insignificance() : BorealisCards2Card(1,
-    CardType.Skill, CardRarity.Common,
+public class Overtime() : BorealisCards2Card(1,
+    CardType.Power, CardRarity.Rare,
     TargetType.Self)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new StarsVar(4), new PowerVar<LoseStarNextTurnPower>(2M)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new RepeatVar(1)];
     public override IEnumerable<CardKeyword> CanonicalKeywords => [];
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [];
 
@@ -23,13 +22,12 @@ public class Insignificance() : BorealisCards2Card(1,
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        await CreatureCmd.TriggerAnim(Owner.Creature, "Cast", Owner.Character.CastAnimDelay);
-        await PlayerCmd.GainStars(DynamicVars.Stars.BaseValue, Owner);
-        await PowerCmd.Apply<LoseStarNextTurnPower>(choiceContext, Owner.Creature, DynamicVars.Power<LoseStarNextTurnPower>().BaseValue, Owner.Creature, this);
+        await CreatureCmd.TriggerAnim(Owner.Creature, "PowerUp", Owner.Character.PowerUpAnimDelay);
+        await PowerCmd.Apply<OvertimePower>(choiceContext, Owner.Creature, DynamicVars.Repeat.BaseValue, Owner.Creature, this);
     }
     
     protected override void OnUpgrade()
     {
-        DynamicVars.Stars.UpgradeValueBy(1M);
+        DynamicVars.Repeat.UpgradeValueBy(1M);
     }
 }

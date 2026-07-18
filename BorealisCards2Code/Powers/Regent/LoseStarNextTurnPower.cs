@@ -15,7 +15,7 @@ public sealed class LoseStarNextTurnPower : BorealisCards2Power
     {
         if (player != Owner.Player)
             return;
-        await PlayerCmd.GainStars(Amount, player);
+        await PlayerCmd.LoseStars(Amount, player);
         await PowerCmd.Remove(this);
     }
 }

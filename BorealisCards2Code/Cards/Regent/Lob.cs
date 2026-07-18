@@ -1,5 +1,4 @@
 using BaseLib.Utils;
-using BorealisCards2.BorealisCards2Code.Cards;
 using MegaCrit.Sts2.Core.CardSelection;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;

@@ -48,12 +48,18 @@
   
 
   "BOREALISCARDS2-Character3": "Regent",
-
-
   
   "BOREALISCARDS2-LOSE_STAR_NEXT_TURN_POWER.description": "Lose {singleStarIcon} next turn.",
-  "BOREALISCARDS2-LOSE_STAR_NEXT_TURN_POWER.smartDescription": "Spend [blue]{Amount}[/blue] {singleStarIcon} next turn.",
-  "BOREALISCARDS2-LOSE_STAR_NEXT_TURN_POWER.title": "Spend Star Next Turn",
+  "BOREALISCARDS2-LOSE_STAR_NEXT_TURN_POWER.smartDescription": "Lose [blue]{Amount}[/blue] {singleStarIcon} next turn.",
+  "BOREALISCARDS2-LOSE_STAR_NEXT_TURN_POWER.title": "Lose Star Next Turn",
+
+  "BOREALISCARDS2-OVERTIME_POWER.description": "Cards containing “Minion” gain [gold]Replay[/gold].",
+  "BOREALISCARDS2-OVERTIME_POWER.smartDescription": "Cards containing “Minion” gain [gold]Replay[/gold] [blue]{Amount}[/blue].",
+  "BOREALISCARDS2-OVERTIME_POWER.title": "OVERTIME!!!",
+
+  "BOREALISCARDS2-MAGICAL_GIRL_POWER.description": "At the start of your turn, add a [gold]{Amount:plural:POWER OF FRIENDSHIP! <3|POWERS OF FRIENDSHIP! <3}[/gold] into your [gold]Hand[/gold].",
+  "BOREALISCARDS2-MAGICAL_GIRL_POWER.smartDescription": "At the start of your turn, add [blue]{Amount}[/blue] [gold]{Amount:plural:POWER OF FRIENDSHIP! <3|POWERS OF FRIENDSHIP! <3}[/gold] into your [gold]Hand[/gold].",
+  "BOREALISCARDS2-MAGICAL_GIRL_POWER.title": "OVERTIME!!!",
   
   
 
