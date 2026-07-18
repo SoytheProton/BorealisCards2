@@ -16,6 +16,6 @@ public sealed class OvertimePower : BorealisCards2Power
 
     public override int ModifyCardPlayCount(CardModel card, Creature? target, int playCount)
     {
-        return card.Owner.Creature != Owner || card.Tags.Contains(CardTag.Minion) ? playCount + Amount : playCount;
+        return card.Owner.Creature == Owner && card.Tags.Contains(CardTag.Minion) ? playCount + Amount : playCount;
     }
 }
