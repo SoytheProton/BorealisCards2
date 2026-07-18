@@ -103,6 +103,18 @@
 
 
   "BOREALISCARDS2-Character4": "Necrobinder",
+
+  "BOREALISCARDS2-POLTERGEIST.description": "",
+  "BOREALISCARDS2-POLTERGEIST.title": "Poltergeist",
+
+  "BOREALISCARDS2-WHISPERS.description": "",
+  "BOREALISCARDS2-WHISPERS.title": "Whispers",
+  
+  "BOREALISCARDS2-KNUCKLEBONES.description": "",
+  "BOREALISCARDS2-KNUCKLEBONES.title": "Knucklebones",
+
+  "BOREALISCARDS2-RIBCAGE.description": "",
+  "BOREALISCARDS2-RIBCAGE.title": "Ribcage",
   
   
   
@@ -152,5 +164,22 @@
   "BOREALISCARDS2-IONIZE.title": "Ionize",
 
   "BOREALISCARDS2-METALLURGY.description": "Deal {Damage:diff()} damage.\nApply {VulnerablePower:diff()} [gold]Vulnerable[/gold].\nWhenever you draw this card, Add a [gold]Burn[/gold] into your [gold]Discard Pile[/gold].",
-  "BOREALISCARDS2-METALLURGY.title": "Metallurgy"
+  "BOREALISCARDS2-METALLURGY.title": "Metallurgy",
+
+
+
+  "BOREALISCARDS2-Character6": "Colorless",
+
+
+
+  "BOREALISCARDS2-Character6": "Tokens",
+
+  "BOREALISCARDS2-MINION_SMITH.description": "",
+  "BOREALISCARDS2-MINION_SMITH.title": "MinionSmith",
+
+  "BOREALISCARDS2-MINION_SCOUTS.description": "",
+  "BOREALISCARDS2-MINION_SCOUTS.title": "MinionScouts",
+
+  "BOREALISCARDS2-MINION_DEFEND.description": "",
+  "BOREALISCARDS2-MINION_DEFEND.title": "MinionDefend"
 }
