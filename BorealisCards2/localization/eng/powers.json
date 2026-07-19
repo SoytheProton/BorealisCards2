@@ -68,6 +68,14 @@
   "BOREALISCARDS2-STARRY_HAMMER_POWER.description": "At the start of the next turn, [gold]Forge[/gold].",
   "BOREALISCARDS2-STARRY_HAMMER_POWER.smartDescription": "At the start of the next {Amount:plural:turn|[blue]{}[/blue] turns}, [gold]Forge[/gold] [blue]{Forge}[/blue].",
   "BOREALISCARDS2-STARRY_HAMMER_POWER.title": "Starry Hammer",
+
+  "BOREALISCARDS2-COSMIC_ANVIL_POWER.description": "At the end of your turn, [gold]Forge[/gold].",
+  "BOREALISCARDS2-COSMIC_ANVIL_POWER.smartDescription": "At the end of your turn, [gold]Forge[/gold] [blue]{Amount}[/blue].",
+  "BOREALISCARDS2-COSMIC_ANVIL_POWER.title": "Cosmic Anvil",
+
+  "BOREALISCARDS2-EN_GARDE_POWER.description": "At the start of your turn, ALL enemies lose [gold]Strength[/gold].",
+  "BOREALISCARDS2-EN_GARDE_POWER.smartDescription": "At the start of your turn, ALL enemies lose [blue]{Amount}[/blue] [gold]Strength[/gold].",
+  "BOREALISCARDS2-EN_GARDE_POWER.title": "En Garde",
   
   
 

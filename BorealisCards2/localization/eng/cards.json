@@ -25,7 +25,7 @@
   "BOREALISCARDS2-HEARTH.description": "Gain {Block:diff()} [gold]Block[/gold].\nHeal {Heal:diff()} HP.",
   "BOREALISCARDS2-HEARTH.title": "Hearth",
 
-  "BOREALISCARDS2-DETERMINED.description": "Gain {Block:diff()} [gold]Block[/gold].\nWhen this card is [gold]Exhausted[/gold], draw {Cards:diff()} {Cards:plural:card|cards} and return this to your [gold]Hand[/gold].",
+  "BOREALISCARDS2-DETERMINED.description": "Deal {Damage:diff()} damage.\nWhen this card is [gold]Exhausted[/gold], gain {StrengthPower:diff()} [gold]Strength[/gold] and return this to your [gold]Hand[/gold].",
   "BOREALISCARDS2-DETERMINED.title": "Determined",
 
   "BOREALISCARDS2-PURGE.description": "Exhaust up to {Cards:diff()} cards in your [gold]Hand[/gold]. Draw 1 card for each card [gold]Exhausted[/gold].",
@@ -103,7 +103,7 @@
   "BOREALISCARDS2-PROTECT_ME.description": "Choose {Cards:diff()} cards in your [gold]Discard Pile[/gold] to [gold]Transform[/gold] into [gold]{IfUpgraded:show:Minion Defends+|Minion Defends}[/gold].",
   "BOREALISCARDS2-PROTECT_ME.title": "PROTECT ME!",
 
-  "BOREALISCARDS2-SEEING_STARS.description": "Choose up to {Cards:diff()} {Cards:plural:card|cards} in your [gold]Draw Pile[/gold] to [gold]Transform[/gold] into\n[gold]{Cards:plural:Minion Scout|Minion Scouts}[/gold].",
+  "BOREALISCARDS2-SEEING_STARS.description": "Choose a card in your [gold]Draw Pile[/gold] to [gold]Transform[/gold] into\n[gold]{IfUpgraded:show:Minion Scout+|Minion Scout}[/gold].",
   "BOREALISCARDS2-SEEING_STARS.title": "Seeing Stars",
 
   "BOREALISCARDS2-KING_OF_HEARTS.description": "Add {Cards:diff()} random cards containing “Minion” into your [gold]Hand[/gold].",
@@ -115,13 +115,13 @@
   "BOREALISCARDS2-OVERTIME.description": "Cards containing “Minion” are played {Repeat:diff()} additional {Repeat:plural:time|times}.",
   "BOREALISCARDS2-OVERTIME.title": "OVERTIME!!!",
 
-  "BOREALISCARDS2-WORK_HARDER.description": "Deal {Damage:diff()} damage.\nChoose up to {Cards:diff()} cards in your [gold]Draw Pile[/gold] to [gold]Transform[/gold] into [gold]{Cards:plural:Minion Smith|Minion Smiths}[/gold].",
+  "BOREALISCARDS2-WORK_HARDER.description": "Deal {Damage:diff()} damage.\nChoose {Cards:diff()} cards in your [gold]Discard Pile[/gold] to [gold]Transform[/gold] into [gold]{IfUpgraded:show:Minion Smiths+|Minion Smiths}[/gold].",
   "BOREALISCARDS2-WORK_HARDER.title": "WORK HARDER!!",
 
   "BOREALISCARDS2-SEVER_THE_SKYLINE.description": "Gain {Stars:starIcons()}.\n[gold]Forge[/gold] {Forge:diff()}.\nTransform {Cards:diff()} {Cards:plural:card|cards} in your [gold]Hand[/gold] into [gold]Minion Strikes[/gold].",
   "BOREALISCARDS2-SEVER_THE_SKYLINE.title": "Sever the Skyline",
 
-  "BOREALISCARDS2-COSMIC_ANVIL.description": "[gold]Forge[/gold] {Forge:diff()}.\nAt the end of your turn, if this is on top of your [gold]Draw Pile[/gold], play it.",
+  "BOREALISCARDS2-COSMIC_ANVIL.description": "[gold]Forge[/gold] {Forge:diff()}.\nAt the end of your turn, [gold]Forge[/gold] {CosmicAnvilPower:diff()}.",
   "BOREALISCARDS2-COSMIC_ANVIL.title": "Cosmic Anvil",
 
   "BOREALISCARDS2-MAGICAL_GIRL.description": "At the start of your turn, add a [gold]{IfUpgraded:show:POWER OF FRIENDSHIP! <3+|POWER OF FRIENDSHIP! <3}[/gold] to your [gold]Hand[/gold].",
@@ -130,17 +130,27 @@
   "BOREALISCARDS2-STARRY_HAMMER.description": "Gain {Block:diff()} [gold]Block[/gold].\nAt the start of the next {StarryHammerPower:plural:turn|{:diff()} turns}, [gold]Forge[/gold] {Power:diff()}.",
   "BOREALISCARDS2-STARRY_HAMMER.title": "Starry Hammer",
 
-  "BOREALISCARDS2-BETELGEUSE.description": "Draw cards until your [gold]Hand[/gold] is full.\nAttacks drawn this way are played {Repeat:diff()} times.",
+  "BOREALISCARDS2-BETELGEUSE.description": "Draw cards until your [gold]Hand[/gold] is full. Attacks drawn this way are played {Repeat:diff()} times.",
   "BOREALISCARDS2-BETELGEUSE.title": "Betelgeuse",
 
   "BOREALISCARDS2-EQUIVALENT_EXCHANGE.description": "Gain {Stars:starIcons()}.\nGain {Block:diff()} [gold]Block[/gold].\nAt the start of combat, play this.",
   "BOREALISCARDS2-EQUIVALENT_EXCHANGE.title": "Equivalent Exchange",
 
+  "BOREALISCARDS2-REGAL_STRIKE.selectionScreenPrompt": "Choose a card to put on top of your Draw Pile.",
+  "BOREALISCARDS2-REGAL_STRIKE.description": "Deal {Damage:diff()} damage twice.\nPut a card from your [gold]Draw Pile[/gold] on top of your [gold]Draw Pile[/gold].",
+  "BOREALISCARDS2-REGAL_STRIKE.title": "Regal Strike",
+
+  "BOREALISCARDS2-BRACE_FOR_IMPACT.description": "Gain {Block:diff()} [gold]Block[/gold].\nAdd {Cards:diff()} [gold]Debris[/gold] into your [gold]Discard Pile[/gold]. Permanently increase the amount of [gold]Debris[/gold] added by {Increase:diff()}.",
+  "BOREALISCARDS2-BRACE_FOR_IMPACT.title": "BRACE FOR IMPACT!!!",
+
+  "BOREALISCARDS2-EN_GARDE.description": "At the start of your turn, if [gold]Sovereign Blade[/gold] is in your [gold]Hand[/gold], ALL enemies lose {StrengthPower:diff()} [gold]Strength[/gold] that turn.",
+  "BOREALISCARDS2-EN_GARDE.title": "EN GARDE!!",
+
   
   
   "BOREALISCARDS2-Character4": "Necrobinder",
 
-  "BOREALISCARDS2-POLTERGEIST.description": "Deal {Damage:diff()} damage.\nGain {Block:diff()} [gold]Block[/gold].\nAdd a [gold]Soul[/gold] into your [gold]Draw Pile[/gold].",
+  "BOREALISCARDS2-POLTERGEIST.description": "Gain {Block:diff()} [gold]Block[/gold].\nDeal {Damage:diff()} damage.\nAdd a [gold]Soul[/gold] into your [gold]Draw Pile[/gold].",
   "BOREALISCARDS2-POLTERGEIST.title": "Poltergeist",
 
   "BOREALISCARDS2-WHISPERS.description": "Apply {DoomPower:diff()} [gold]Doom[/gold] to a random enemy {Repeat:diff()} times.",

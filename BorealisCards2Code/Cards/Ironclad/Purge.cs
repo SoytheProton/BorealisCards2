@@ -15,6 +15,8 @@ public sealed class Purge() : BorealisCards2Card(1,
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new CardsVar(3)];
     
+    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
+    
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
         CardPlay play)

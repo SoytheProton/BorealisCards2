@@ -6,25 +6,25 @@ using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.CardPools;
+using MegaCrit.Sts2.Core.Models.Powers;
 using MegaCrit.Sts2.Core.ValueProps;
 
 namespace BorealisCards2.BorealisCards2Code.Cards.Ironclad;
 
 [Pool(typeof(IroncladCardPool))]
 public sealed class Determined() : BorealisCards2Card(1,
-    CardType.Skill, CardRarity.Uncommon,
+    CardType.Attack, CardRarity.Uncommon,
     TargetType.Self)
 {
     public override bool GainsBlock => true;
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new BlockVar(7M, ValueProp.Move), new CardsVar(1)];
-
-    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromKeyword(CardKeyword.Exhaust)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(10M, ValueProp.Move), new PowerVar<StrengthPower>(1)];
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromKeyword(CardKeyword.Exhaust), HoverTipFactory.FromPower<StrengthPower>()];
     
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        await CreatureCmd.GainBlock(Owner.Creature, DynamicVars.Block, play);
+        await DamageCmd.Attack(DynamicVars.Damage.BaseValue).FromCard(this, play).Targeting(play.Target).WithHitFx("vfx/vfx_attack_slash").Execute(choiceContext);
     }
     
     public override async Task AfterCardExhausted(
@@ -34,14 +34,14 @@ public sealed class Determined() : BorealisCards2Card(1,
     {
         if (card != this || CombatState == null)
             return;
-        int playCount = await GeneratePlayCount(CombatState, null);
-        for (int i = 0; i < playCount; ++i)
-            await CardPileCmd.Draw(choiceContext, DynamicVars.Cards.BaseValue, Owner);
+        var playCount = await GeneratePlayCount(CombatState, null);
+        for (var i = 0; i < playCount; ++i)
+            await PowerCmd.Apply<StrengthPower>(choiceContext, Owner.Creature, DynamicVars.Strength.BaseValue, Owner.Creature, this);
         await CardPileCmd.Add(this, PileType.Hand);
     }
 
     protected override void OnUpgrade()
     {
-        DynamicVars.Block.UpgradeValueBy(3M);
+        DynamicVars.Damage.UpgradeValueBy(3M);
     }
 }

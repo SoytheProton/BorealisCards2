@@ -32,6 +32,7 @@ public class StarryHammer() : BorealisCards2Card(1,
     
     protected override void OnUpgrade()
     {
-        DynamicVars.Block.UpgradeValueBy(3M);
+        DynamicVars.Block.UpgradeValueBy(2M);
+        DynamicVars.Power<StarryHammerPower>().UpgradeValueBy(1M);
     }
 }

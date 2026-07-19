@@ -16,7 +16,7 @@ public class ProtectMe() : BorealisCards2Card(1,
     TargetType.Self)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new CardsVar(2)];
-    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromCard<MinionDefend>()];
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromCard<MinionDefend>(IsUpgraded)];
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
@@ -29,7 +29,7 @@ public class ProtectMe() : BorealisCards2Card(1,
             var card = CombatState.CreateCard<MinionDefend>(Owner);
             if(IsUpgraded)
                 CardCmd.Upgrade(card);
-            await CardCmd.TransformTo<MinionDefend>(original);
+            await CardCmd.Transform(original, card);
         }
     }
 }

@@ -6,7 +6,6 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
-using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.CardPools;
 
 namespace BorealisCards2.BorealisCards2Code.Cards.Regent;
@@ -17,22 +16,20 @@ public class SeeingStars() : BorealisCards2Card(1,
     TargetType.Self)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new CardsVar(1)];
-    protected override IEnumerable<IHoverTip> ExtraHoverTips => HoverTipFactory.FromCardWithCardHoverTips<MinionScouts>();
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => HoverTipFactory.FromCardWithCardHoverTips<MinionScouts>(IsUpgraded);
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        var selection = (await CardSelectCmd.FromCombatPile(choiceContext, PileType.Draw.GetPile(Owner), Owner, new CardSelectorPrefs(CardSelectorPrefs.TransformSelectionPrompt, 0, DynamicVars.Cards.IntValue))).ToList();
+        var selection = (await CardSelectCmd.FromCombatPile(choiceContext, PileType.Draw.GetPile(Owner), Owner, new CardSelectorPrefs(CardSelectorPrefs.TransformSelectionPrompt, DynamicVars.Cards.IntValue))).ToList();
         await CreatureCmd.TriggerAnim(Owner.Creature, "Cast", Owner.Character.CastAnimDelay);
         foreach (var original in selection)
         {
-            await CardCmd.TransformTo<MinionScouts>(original);
+            var card = CombatState.CreateCard<SeeingStars>(Owner);
+            if(IsUpgraded)
+                CardCmd.Upgrade(card);
+            await CardCmd.Transform(original, card);
         }
-    }
-    
-    protected override void OnUpgrade()
-    {
-        DynamicVars.Cards.UpgradeValueBy(1M);
     }
 }

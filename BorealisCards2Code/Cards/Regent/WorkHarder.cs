@@ -17,23 +17,21 @@ public class WorkHarder() : BorealisCards2Card(1,
     TargetType.AnyEnemy)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(9M, ValueProp.Move), new CardsVar(2)];
-    protected override IEnumerable<IHoverTip> ExtraHoverTips => HoverTipFactory.FromCardWithCardHoverTips<MinionSmith>();
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => HoverTipFactory.FromCardWithCardHoverTips<MinionSmith>(IsUpgraded);
     
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
         await DamageCmd.Attack(DynamicVars.Damage.BaseValue).FromCard(this, play).Targeting(play.Target).WithHitFx("vfx/vfx_attack_slash").Execute(choiceContext);
-        var selection = (await CardSelectCmd.FromCombatPile(choiceContext, PileType.Draw.GetPile(Owner), Owner, new CardSelectorPrefs(CardSelectorPrefs.TransformSelectionPrompt, 0, DynamicVars.Cards.IntValue))).ToList();
+        var selection = (await CardSelectCmd.FromCombatPile(choiceContext, PileType.Discard.GetPile(Owner), Owner, new CardSelectorPrefs(CardSelectorPrefs.TransformSelectionPrompt, DynamicVars.Cards.IntValue))).ToList();
         await CreatureCmd.TriggerAnim(Owner.Creature, "Cast", Owner.Character.CastAnimDelay);
         foreach (var original in selection)
         {
-            await CardCmd.TransformTo<MinionSmith>(original);
+            var card = CombatState.CreateCard<MinionSmith>(Owner);
+            if(IsUpgraded)
+                CardCmd.Upgrade(card);
+            await CardCmd.Transform(original, card);
         }
-    }
-    
-    protected override void OnUpgrade()
-    {
-        DynamicVars.Cards.UpgradeValueBy(1M);
     }
 }

@@ -13,13 +13,15 @@ public class Betelgeuse() : BorealisCards2Card(0,
     TargetType.Self)
 {
     public override int CanonicalStarCost => 9;
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new CardsVar(4), new RepeatVar(2)]; // technically shouldn't need a repeat var but in-case we change it in the future...
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new RepeatVar(2)]; // technically shouldn't need a repeat var but in-case we change it in the future... // I WAS RIGHT
+    
+    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
     
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        var cards = await CardPileCmd.Draw(choiceContext, DynamicVars.Cards.BaseValue, Owner);
+        var cards = await CardPileCmd.Draw(choiceContext, CardPile.MaxCardsInHand - Owner.PlayerCombatState.Hand.Cards.Count, Owner);
         foreach (var card in cards)
         {
             if (card.Type != CardType.Attack) continue;
@@ -30,6 +32,6 @@ public class Betelgeuse() : BorealisCards2Card(0,
     
     protected override void OnUpgrade()
     {
-        DynamicVars.Cards.UpgradeValueBy(2M);
+        DynamicVars.Repeat.UpgradeValueBy(1M);
     }
 }

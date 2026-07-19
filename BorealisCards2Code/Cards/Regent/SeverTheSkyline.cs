@@ -1,5 +1,4 @@
 using BaseLib.Utils;
-using BorealisCards2.BorealisCards2Code.Cards.Token;
 using MegaCrit.Sts2.Core.CardSelection;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
@@ -19,7 +18,7 @@ public class SeverTheSkyline() : BorealisCards2Card(2,
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new ForgeVar(7), new StarsVar(2), new CardsVar(2)];
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
-    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.Static(StaticHoverTip.Forge), HoverTipFactory.FromCard<MinionStrike>(IsUpgraded)];
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.Static(StaticHoverTip.Forge), HoverTipFactory.FromCard<MinionStrike>()];
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,

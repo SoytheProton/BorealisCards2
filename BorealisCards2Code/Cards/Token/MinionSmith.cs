@@ -26,5 +26,5 @@ public class MinionSmith() : BorealisCards2Card(0,
         await CardPileCmd.Draw(choiceContext, DynamicVars.Cards.BaseValue, Owner);
     }
 
-    protected override void OnUpgrade() => DynamicVars.Forge.UpgradeValueBy(1M);
+    protected override void OnUpgrade() => DynamicVars.Forge.UpgradeValueBy(3M);
 }
