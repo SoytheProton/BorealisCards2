@@ -23,6 +23,7 @@ public class Poltergeist() : BorealisCards2Card(2,
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
+        await CreatureCmd.GainBlock(Owner.Creature, DynamicVars.Block, play);
         await DamageCmd.Attack(DynamicVars.Damage.BaseValue).FromCard(this, play).Targeting(play.Target).WithHitFx("vfx/vfx_attack_slash").Execute(choiceContext);
         var soul = Soul.Create(Owner, DynamicVars.Cards.IntValue, CombatState).FirstOrDefault();
         await CardPileCmd.AddGeneratedCardToCombat(soul, PileType.Draw, Owner, CardPilePosition.Random);
