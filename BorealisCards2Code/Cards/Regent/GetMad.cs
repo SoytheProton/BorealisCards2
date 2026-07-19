@@ -18,20 +18,17 @@ public class GetMad() : BorealisCards2Card(1,
     TargetType.Self)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [];
-    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromCard<MinionDefend>(IsUpgraded)];
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        CardSelectorPrefs prefs = new CardSelectorPrefs(CardSelectorPrefs.TransformSelectionPrompt, 1);
-        CardModel original = (await CardSelectCmd.FromHand(choiceContext, Owner, prefs, null, this)).FirstOrDefault();
-        if (original == null)
-            return;
-        CardModel card = CombatState.CreateCard<MinionDiveBomb>(Owner);
-        if (IsUpgraded)
-            CardCmd.Upgrade(card);
-        await CardCmd.Transform(original, card);
+        var selection = (await CardSelectCmd.FromCombatPile(choiceContext, PileType.Discard.GetPile(Owner), Owner, new CardSelectorPrefs(CardSelectorPrefs.TransformSelectionPrompt, DynamicVars.Cards.IntValue))).ToList();
+        await CreatureCmd.TriggerAnim(Owner.Creature, "Cast", Owner.Character.CastAnimDelay);
+        foreach (var original in selection)
+        {
+            await CardCmd.TransformTo<MinionDefend>(original);
+        }
     }
 }
