@@ -42,6 +42,7 @@ public class SeverTheSkyline() : BorealisCards2Card(2,
     
     protected override void OnUpgrade()
     {
+        DynamicVars.Stars.UpgradeValueBy(1);
         DynamicVars.Forge.UpgradeValueBy(3M);
     }
 }

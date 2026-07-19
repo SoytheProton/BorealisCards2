@@ -130,7 +130,7 @@
   "BOREALISCARDS2-STARRY_HAMMER.description": "Gain {Block:diff()} [gold]Block[/gold].\nAt the start of the next {StarryHammerPower:plural:turn|{:diff()} turns}, [gold]Forge[/gold] {Power:diff()}.",
   "BOREALISCARDS2-STARRY_HAMMER.title": "Starry Hammer",
 
-  "BOREALISCARDS2-BETELGEUSE.description": "Draw {Cards:diff()} {Cards:plural:card|cards}.\nAttacks drawn this way are played twice.",
+  "BOREALISCARDS2-BETELGEUSE.description": "Draw cards until your [gold]Hand[/gold] is full.\nAttacks drawn this way are played {Repeat:diff()} times.",
   "BOREALISCARDS2-BETELGEUSE.title": "Betelgeuse",
 
   "BOREALISCARDS2-EQUIVALENT_EXCHANGE.description": "Gain {Stars:starIcons()}.\nGain {Block:diff()} [gold]Block[/gold].\nAt the start of combat, play this.",
