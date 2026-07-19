@@ -13,7 +13,7 @@ public class GrowthSpurt() : BorealisCards2Card(0,
     CardType.Skill, CardRarity.Uncommon,
     TargetType.Self)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new SummonVar(7)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new SummonVar(6)];
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.Static(StaticHoverTip.SummonDynamic, DynamicVars.Summon)];
 
     protected override async Task OnPlay(

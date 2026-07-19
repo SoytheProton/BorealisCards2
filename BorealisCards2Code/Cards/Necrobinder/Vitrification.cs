@@ -15,38 +15,26 @@ public class Vitrification() : BorealisCards2Card(1,
     CardType.Power, CardRarity.Rare,
     TargetType.Self)
 {
-    private const string ThresholdKey = "Threshold";
+    public const int VitrificationAmount = 2;
     
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new IntVar(ThresholdKey, 3)];
-
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<VitrificationPower>(VitrificationAmount)];
+    
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
         await CreatureCmd.TriggerAnim(Owner.Creature, "PowerUp", Owner.Character.PowerUpAnimDelay);
-        if (Owner.HasPower<VitrificationPower>())
-        {
-            var power = Owner.Creature.GetPower<VitrificationPower>();
-            if(power.DynamicVars[ThresholdKey].BaseValue > DynamicVars[ThresholdKey].BaseValue)
-                power.DynamicVars[ThresholdKey].BaseValue = DynamicVars[ThresholdKey].BaseValue;
-            await PowerCmd.Apply<VitrificationPower>(choiceContext, Owner.Creature, 1, Owner.Creature, this); // Applied just for the visuals and sfx.
-        }
-        else
-        {
-            var power = ModelDb.Power<VitrificationPower>().ToMutable();
-            power.DynamicVars[ThresholdKey].BaseValue = DynamicVars[ThresholdKey].BaseValue;
-            await PowerCmd.Apply(choiceContext, power, Owner.Creature, 1, Owner.Creature,
+        await PowerCmd.Apply<VitrificationPower>(choiceContext, Owner.Creature, 1, Owner.Creature,
                 this);
-        }
         foreach (var allCard in Owner.PlayerCombatState.AllCards)
         {
-            if(allCard != this && !allCard.Keywords.Contains(CardKeyword.Retain) && allCard.EnergyCost.GetWithModifiers(CostModifiers.All) >= DynamicVars[ThresholdKey].BaseValue)
+            if(allCard != this && !allCard.Keywords.Contains(CardKeyword.Retain) && allCard.EnergyCost.GetWithModifiers(CostModifiers.All) >= VitrificationAmount)
                 CardCmd.ApplyKeyword(allCard, CardKeyword.Retain);
         }
     }
 
     protected override void OnUpgrade()
     {
-        DynamicVars[ThresholdKey].UpgradeValueBy(-1);
+        AddKeyword(CardKeyword.Innate);
     }
 }

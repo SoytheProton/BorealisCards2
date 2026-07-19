@@ -6,16 +6,17 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models.CardPools;
+using MegaCrit.Sts2.Core.Models.Powers;
 
 namespace BorealisCards2.BorealisCards2Code.Cards.Token.MagicalGirlCards;
 
 [Pool(typeof(TokenCardPool))]
-public sealed class Happiness() : PowerOfFriendship.MagicalGirlCard(0,
+public sealed class Happiness() : PowerOfFriendship.MagicalGirlCard(1,
     CardType.Power, CardRarity.Token,
     TargetType.Self)
 {
     public override bool CanBeGeneratedByModifiers => false;
-    
+    public override int CanonicalStarCost => 2;
     protected override IEnumerable<DynamicVar> CanonicalVars => [new ("Power", 1M)];
     public override IEnumerable<CardKeyword> CanonicalKeywords => [];
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [];
@@ -30,5 +31,5 @@ public sealed class Happiness() : PowerOfFriendship.MagicalGirlCard(0,
             Owner.Creature, this);
     }
 
-    protected override void OnUpgrade() => DynamicVars["Power"].UpgradeValueBy(1M);
+    protected override void OnUpgrade() => EnergyCost.UpgradeBy(-1);
 }

@@ -11,11 +11,11 @@ using MegaCrit.Sts2.Core.ValueProps;
 namespace BorealisCards2.BorealisCards2Code.Cards.Necrobinder;
 
 [Pool(typeof(NecrobinderCardPool))]
-public class Poltergeist() : BorealisCards2Card(1,
+public class Poltergeist() : BorealisCards2Card(2,
     CardType.Attack, CardRarity.Common,
     TargetType.AnyEnemy)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(7M, ValueProp.Move), new CardsVar(1)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(8M, ValueProp.Move), new BlockVar(6M, ValueProp.Move), new CardsVar(1)];
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Ethereal];
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromCard<Soul>()];
 
@@ -25,11 +25,12 @@ public class Poltergeist() : BorealisCards2Card(1,
     {
         await DamageCmd.Attack(DynamicVars.Damage.BaseValue).FromCard(this, play).Targeting(play.Target).WithHitFx("vfx/vfx_attack_slash").Execute(choiceContext);
         var soul = Soul.Create(Owner, DynamicVars.Cards.IntValue, CombatState).FirstOrDefault();
-        await CardPileCmd.AddGeneratedCardToCombat(soul, PileType.Hand, Owner);
+        await CardPileCmd.AddGeneratedCardToCombat(soul, PileType.Draw, Owner, CardPilePosition.Random);
     }
 
     protected override void OnUpgrade()
     {
-        DynamicVars.Damage.UpgradeValueBy(3M);
+        DynamicVars.Damage.UpgradeValueBy(2M);
+        DynamicVars.Block.UpgradeValueBy(2M);
     }
 }

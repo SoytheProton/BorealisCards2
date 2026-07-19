@@ -1,4 +1,3 @@
-using BorealisCards2.BorealisCards2Code.Enchantments;
 using BorealisCards2.BorealisCards2Code.Enchantments.Silent;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Combat.History.Entries;

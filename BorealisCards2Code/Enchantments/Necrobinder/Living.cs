@@ -9,7 +9,7 @@ namespace BorealisCards2.BorealisCards2Code.Enchantments.Necrobinder;
 
 public sealed class Living : BorealisCards2Enchantment
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new SummonVar(5M)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new SummonVar(3M)];
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.Static(StaticHoverTip.SummonDynamic, DynamicVars.Summon)];
     
     public override bool HasExtraCardText => true;

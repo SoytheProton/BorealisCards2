@@ -26,12 +26,11 @@ public class Supernatural() : BorealisCards2Card(1,
         await OstyCmd.Summon(choiceContext, Owner, DynamicVars.Summon.BaseValue, this);
     }
     
-    public override async Task AfterAutoPostPlayPhaseEntered(
+    public override async Task AfterAutoPrePlayPhaseEnteredEarly(
         PlayerChoiceContext choiceContext,
         Player player)
     {
-        CardPile pile = Pile;
-        if ((pile != null ? (pile.Type != PileType.Exhaust ? 1 : 0) : 1) != 0 || player != Owner)
+        if ((Pile != null ? Pile.Type != PileType.Exhaust ? 1 : 0 : 1) != 0 || player != Owner)
             return;
         await CardCmd.AutoPlay(choiceContext, this, null);
     }

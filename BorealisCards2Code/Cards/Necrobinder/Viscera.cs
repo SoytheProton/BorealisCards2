@@ -12,24 +12,24 @@ using MegaCrit.Sts2.Core.Models.Powers;
 namespace BorealisCards2.BorealisCards2Code.Cards.Necrobinder;
 
 [Pool(typeof(NecrobinderCardPool))]
-public class TombOfAnnihilation() : BorealisCards2Card(3,
-    CardType.Power, CardRarity.Rare,
-    TargetType.Self)
+public class Viscera() : BorealisCards2Card(1,
+    CardType.Skill, CardRarity.Uncommon,
+    TargetType.AnyEnemy)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<TombOfAnnihilationPower>(75)];
-    public override IEnumerable<CardKeyword> CanonicalKeywords => [];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<DoomPower>(8), new PowerVar<VisceraPower>(2M)];
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromPower<DoomPower>()];
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        await CreatureCmd.TriggerAnim(Owner.Creature, "PowerUp", Owner.Character.PowerUpAnimDelay);
-        await PowerCmd.Apply<TombOfAnnihilationPower>(choiceContext, Owner.Creature, DynamicVars.Power<TombOfAnnihilationPower>().BaseValue, Owner.Creature, this);
+        await CreatureCmd.TriggerAnim(Owner.Creature, "Cast", Owner.Character.CastAnimDelay);
+        await PowerCmd.Apply<DoomPower>(choiceContext, play.Target, DynamicVars.Doom.BaseValue, Owner.Creature, this);
+        await PowerCmd.Apply<VisceraPower>(choiceContext, play.Target, DynamicVars.Power<VisceraPower>().BaseValue, Owner.Creature, this);
     }
-    
+
     protected override void OnUpgrade()
     {
-        DynamicVars.Power<TombOfAnnihilationPower>().UpgradeValueBy(25);
+        DynamicVars.Power<VisceraPower>().UpgradeValueBy(1M);
     }
 }

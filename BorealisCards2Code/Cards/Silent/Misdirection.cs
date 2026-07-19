@@ -15,7 +15,7 @@ public sealed class Misdirection() : BorealisCards2Card(1,
     TargetType.Self)
 {
     public override bool GainsBlock => true;
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new BlockVar(5M, ValueProp.Move), new CardsVar(1)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new BlockVar(4M, ValueProp.Move), new CardsVar(1)];
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
@@ -30,7 +30,6 @@ public sealed class Misdirection() : BorealisCards2Card(1,
 
     protected override void OnUpgrade()
     {
-        DynamicVars.Block.UpgradeValueBy(2M);
         DynamicVars.Cards.UpgradeValueBy(1M);
     }
 }
