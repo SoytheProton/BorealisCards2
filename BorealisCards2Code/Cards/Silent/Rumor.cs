@@ -34,7 +34,7 @@ public sealed class Rumor() : BorealisCards2Card(1,
     {
         await CreatureCmd.TriggerAnim(Owner.Creature, "Attack", Owner.Character.AttackAnimDelay);
         await DamageCmd.Attack(DynamicVars.Damage.BaseValue).FromCard(this, play).TargetingAllOpponents(CombatState).WithHitFx("vfx/vfx_attack_slash").Execute(choiceContext);
-        DynamicVars.Damage.BaseValue += DynamicVars["Increase"].BaseValue;
+        DynamicVars.Damage.BaseValue += DynamicVars["Scaling"].BaseValue;
         ExtraDamageFromPlays += DynamicVars["Scaling"].BaseValue;
     }
     

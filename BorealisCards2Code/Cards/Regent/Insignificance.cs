@@ -15,7 +15,7 @@ public class Insignificance() : BorealisCards2Card(1,
     CardType.Skill, CardRarity.Common,
     TargetType.Self)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new StarsVar(4), new PowerVar<LoseStarNextTurnPower>(2M)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new StarsVar(5), new PowerVar<LoseStarNextTurnPower>(2M)];
     public override IEnumerable<CardKeyword> CanonicalKeywords => [];
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [];
 

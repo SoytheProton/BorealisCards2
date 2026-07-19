@@ -11,7 +11,7 @@ namespace BorealisCards2.BorealisCards2Code.Cards.Necrobinder;
 
 [Pool(typeof(NecrobinderCardPool))]
 public class TurnThePage() : BorealisCards2Card(5,
-    CardType.Skill, CardRarity.Token,
+    CardType.Skill, CardRarity.Rare,
     TargetType.Self)
 {
     public override bool CanBeGeneratedByModifiers => false;

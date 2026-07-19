@@ -17,7 +17,7 @@ public sealed class ShakedownPower : BorealisCards2Power
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [];
     
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new OstyDamageVar(Shakedown.SummonAmount, ValueProp.Unpowered)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new SummonVar(Shakedown.SummonAmount)];
 
     public override async Task AfterPlayerTurnStart(PlayerChoiceContext choiceContext, Player player)
     {

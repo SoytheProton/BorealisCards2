@@ -25,7 +25,10 @@ public class Resurrection() : BorealisCards2Card(1,
     {
         var soul = Soul.Create(Owner, DynamicVars.Cards.IntValue, CombatState);
         foreach (var card in await CardPileCmd.AddGeneratedCardsToCombat(soul, PileType.Discard, Owner))
+        {
             CardCmd.Enchant<Living>(card.cardAdded, 1);
+            CardCmd.PreviewCardPileAdd(card);
+        }
     }
 
     protected override void OnUpgrade()

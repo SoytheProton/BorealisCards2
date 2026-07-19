@@ -100,8 +100,8 @@
 
   "BOREALISCARDS2-Character3": "Regent",
 
-  "BOREALISCARDS2-GET_MAD.description": "Choose {Cards:diff()} cards in your [gold]Discard Pile[/gold] to [gold]Transform[/gold] into [gold]Minion Defend[/gold].",
-  "BOREALISCARDS2-GET_MAD.title": "PROTECT ME!",
+  "BOREALISCARDS2-PROTECT_ME.description": "Choose {Cards:diff()} cards in your [gold]Discard Pile[/gold] to [gold]Transform[/gold] into [gold]{IfUpgraded:show:Minion Defends+|Minion Defends}[/gold].",
+  "BOREALISCARDS2-PROTECT_ME.title": "PROTECT ME!",
 
   "BOREALISCARDS2-SEEING_STARS.description": "Choose {Cards:diff()} {Cards:plural:card|cards} in your [gold]Draw Pile[/gold] to [gold]Transform[/gold] into\n[gold]{Cards:plural:Minion Scout|Minion Scouts}[/gold].",
   "BOREALISCARDS2-SEEING_STARS.title": "Seeing Stars",
@@ -118,13 +118,13 @@
   "BOREALISCARDS2-WORK_HARDER.description": "Deal {Damage:diff()} damage.\nChoose {Cards:diff()} cards in your [gold]Draw Pile[/gold] to [gold]Transform[/gold] into [gold]{Cards:plural:Minion Smith|Minion Smiths}[/gold].",
   "BOREALISCARDS2-WORK_HARDER.title": "WORK HARDER!!",
 
-  "BOREALISCARDS2-SEVER_THE_SKYLINE.description": "Gain {Stars:starIcons()}.\n[gold]Forge[/gold] {Forge:diff()}.\nTransform {Cards:diff()} {Cards:plural:card|cards} in your [gold]Hand[/gold] into [gold]Minion Strikes[/gold].",
+  "BOREALISCARDS2-SEVER_THE_SKYLINE.description": "Gain {Stars:starIcons()}.\n[gold]Forge[/gold] {Forge:diff()}.\nTransform {Cards:diff()} {Cards:plural:card|cards} in your [gold]Hand[/gold] into [gold]Minion Strikes  [/gold].",
   "BOREALISCARDS2-SEVER_THE_SKYLINE.title": "Sever the Skyline",
 
   "BOREALISCARDS2-COSMIC_ANVIL.description": "[gold]Forge[/gold] {Forge:diff()}.\nAt the end of your turn, if this is on top of your [gold]Draw Pile[/gold], play it.",
   "BOREALISCARDS2-COSMIC_ANVIL.title": "Cosmic Anvil",
 
-  "BOREALISCARDS2-MAGICAL_GIRL.description": "At the start of your turn, add a [gold]POWER OF FRIENDSHIP! <3{IfUpgraded:show:+|}[/gold]",
+  "BOREALISCARDS2-MAGICAL_GIRL.description": "At the start of your turn, add a [gold]{IfUpgraded:show:POWER OF FRIENDSHIP! <3+|POWER OF FRIENDSHIP! <3}[/gold]",
   "BOREALISCARDS2-MAGICAL_GIRL.title": "Magical Cute Transformation!!!",
 
   "BOREALISCARDS2-STARRY_HAMMER.description": "Gain {Block:diff()} [gold]Block[/gold].\nAt the start of the next {StarryHammerPower:plural:turn|{:diff()} turns}, [gold]Forge[/gold] {Power:diff()}.",
@@ -173,7 +173,7 @@
   "BOREALISCARDS2-VISCERA.description": "Apply {DoomPower:diff()} [gold]Doom[/gold].\nWhenever this enemy receives [gold]Doom[/gold], it receives an additional {VisceraPower:diff()} [gold]Doom[/gold].",
   "BOREALISCARDS2-VISCERA.title": "Viscera",
 
-  "BOREALISCARDS2-TURN_THE_PAGE.description": "[gold]Transform[/gold] your [gold]Hand[/gold] into [gold]Souls[/gold].\nGain {energyPrefix:energyIcons(1)} for each card [gold]Transformed[/gold].",
+  "BOREALISCARDS2-TURN_THE_PAGE.description": "[gold]Transform[/gold] your [gold]Hand[/gold] into [gold]Souls[/gold]. Gain {energyPrefix:energyIcons(1)} for each card [gold]Transformed[/gold].",
   "BOREALISCARDS2-TURN_THE_PAGE.title": "Turn The Page",
   
   
