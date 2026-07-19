@@ -26,12 +26,10 @@ public class ProtectMe() : BorealisCards2Card(1,
         await CreatureCmd.TriggerAnim(Owner.Creature, "Cast", Owner.Character.CastAnimDelay);
         foreach (var original in selection)
         {
+            var card = CombatState.CreateCard<MinionDefend>(Owner);
+            if(IsUpgraded)
+                CardCmd.Upgrade(card);
             await CardCmd.TransformTo<MinionDefend>(original);
         }
-    }
-    
-    protected override void OnUpgrade()
-    {
-        DynamicVars.Cards.UpgradeValueBy(1M);
     }
 }

@@ -12,7 +12,7 @@ public class MinionScouts() : BorealisCards2Card(0,
     CardType.Skill, CardRarity.Token,
     TargetType.Self)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new StarsVar(2)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new StarsVar(2), new CardsVar(1)];
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
     protected override HashSet<CardTag> CanonicalTags => [CardTag.Minion];
 
@@ -22,6 +22,7 @@ public class MinionScouts() : BorealisCards2Card(0,
     {
         await CreatureCmd.TriggerAnim(Owner.Creature, "Cast", Owner.Character.CastAnimDelay);
         await PlayerCmd.GainStars(DynamicVars.Stars.BaseValue, Owner);
+        await CardPileCmd.Draw(choiceContext, DynamicVars.Cards.BaseValue, Owner);
     }
 
     protected override void OnUpgrade() => DynamicVars.Stars.UpgradeValueBy(1M);

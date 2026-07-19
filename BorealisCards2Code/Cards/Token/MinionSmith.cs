@@ -13,7 +13,7 @@ public class MinionSmith() : BorealisCards2Card(0,
     CardType.Skill, CardRarity.Token,
     TargetType.Self)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new ForgeVar(4), new CardsVar(1)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new ForgeVar(4), new CardsVar(2)];
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
     protected override HashSet<CardTag> CanonicalTags => [CardTag.Minion];
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.Static(StaticHoverTip.Forge)];
