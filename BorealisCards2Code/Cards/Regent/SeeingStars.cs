@@ -26,7 +26,7 @@ public class SeeingStars() : BorealisCards2Card(1,
         await CreatureCmd.TriggerAnim(Owner.Creature, "Cast", Owner.Character.CastAnimDelay);
         foreach (var original in selection)
         {
-            var card = CombatState.CreateCard<SeeingStars>(Owner);
+            var card = CombatState.CreateCard<MinionScouts>(Owner);
             if(IsUpgraded)
                 CardCmd.Upgrade(card);
             await CardCmd.Transform(original, card);
