@@ -30,6 +30,6 @@ public sealed class LoveStrike() : PowerOfFriendship.MagicalGirlCard(1,
 
     protected override void OnUpgrade()
     {
-        DynamicVars.Damage.UpgradeValueBy(2M);
+        DynamicVars.CalculationBase.UpgradeValueBy(3M);
     }
 }

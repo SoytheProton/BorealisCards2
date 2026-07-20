@@ -72,7 +72,7 @@
   "BOREALISCARDS2-VOLUNTARY_SUICIDE.description": "Deal {Damage:diff()} damage.\nIf the enemy has {Threshold:diff()} or more [gold]Poison[/gold], deal {AlternateDamage:diff()} damage instead.",
   "BOREALISCARDS2-VOLUNTARY_SUICIDE.title": "Voluntary Suicide",
 
-  "BOREALISCARDS2-RONDELMANCY.description": "Every 3 [gold]Shivs[/gold] you create, add {Cards:diff()} additional {Cards:plural:Shiv|Shivs} into your [gold]Hand[/gold]. Play any [gold]Shivs[/gold] that enter your [gold]Discard Pile[/gold].",
+  "BOREALISCARDS2-RONDELMANCY.description": "Every 3 [gold]Shivs[/gold] you create, add {Cards:diff()} additional [gold]{Cards:plural:Shiv|Shivs}[/gold] into your [gold]Hand[/gold]. Play any [gold]Shivs[/gold] that enter your [gold]Discard Pile[/gold].",
   "BOREALISCARDS2-RONDELMANCY.title": "Rondelmancy",
 
   "BOREALISCARDS2-RUMOR.description": "Deal {Damage:diff()} damage to ALL enemies. Increase this card's damage by {Scaling:diff()} this combat. Shuffle this card into your [gold]Draw Pile[/gold].",
@@ -90,10 +90,10 @@
   "BOREALISCARDS2-CAUSTIC_VEIL.description": "Gain {Block:diff()} [gold]Block[/gold].\nApply {PoisonPower:diff()} [gold]Poison[/gold] to ALL enemies.",
   "BOREALISCARDS2-CAUSTIC_VEIL.title": "Caustic Veil",
 
-  "BOREALISCARDS2-TOMAHAWK.description": "Add {Cards:diff()} {Cards:plural:Shiv|Shivs} into your [gold]Hand[/gold].",
+  "BOREALISCARDS2-TOMAHAWK.description": "Add {Cards:diff()} [gold]{Cards:plural:Shiv|Shivs}[/gold] into your [gold]Hand[/gold].",
   "BOREALISCARDS2-TOMAHAWK.title": "Tomahawk",
   
-  "BOREALISCARDS2-POCKET_DAGGERS.description": "Add {Cards:diff()} {Cards:plural:Shiv|Shivs} into your [gold]Hand[/gold].\nAt the start of the next {PocketDaggersPower:plural:turn|{:diff()} turns}, add 1 Shiv into your [gold]Hand[/gold].",
+  "BOREALISCARDS2-POCKET_DAGGERS.description": "Add {Cards:diff()} [gold]{Cards:plural:Shiv|Shivs}[/gold] into your [gold]Hand[/gold].\nAt the start of the next {PocketDaggersPower:plural:turn|{:diff()} turns}, add 1 [gold]Shiv[/gold] into your [gold]Hand[/gold].",
   "BOREALISCARDS2-POCKET_DAGGERS.title": "Pocket Daggers",
   
   
@@ -121,10 +121,10 @@
   "BOREALISCARDS2-SEVER_THE_SKYLINE.description": "Gain {Stars:starIcons()}.\n[gold]Forge[/gold] {Forge:diff()}.\nTransform {Cards:diff()} {Cards:plural:card|cards} in your [gold]Hand[/gold] into [gold]Minion Strikes[/gold].",
   "BOREALISCARDS2-SEVER_THE_SKYLINE.title": "Sever the Skyline",
 
-  "BOREALISCARDS2-COSMIC_ANVIL.description": "[gold]Forge[/gold] {Forge:diff()}.\nAt the end of your turn, [gold]Forge[/gold] {CosmicAnvilPower:diff()}.",
+  "BOREALISCARDS2-COSMIC_ANVIL.description": "[gold]Forge[/gold] {Forge:diff()}.\nAt the end of\nyour turn, [gold]Forge[/gold] {CosmicAnvilPower:diff()}.",
   "BOREALISCARDS2-COSMIC_ANVIL.title": "Cosmic Anvil",
 
-  "BOREALISCARDS2-MAGICAL_GIRL.description": "At the start of your turn, add a [gold]{IfUpgraded:show:POWER OF FRIENDSHIP! <3+|POWER OF FRIENDSHIP! <3}[/gold] to your [gold]Hand[/gold].",
+  "BOREALISCARDS2-MAGICAL_GIRL.description": "At the start of your turn, add a [color=#ff1cf0]{IfUpgraded:show:POWER OF FRIENDSHIP! <3+|POWER OF FRIENDSHIP! <3}[/color] to your [gold]Hand[/gold].",
   "BOREALISCARDS2-MAGICAL_GIRL.title": "Magical Cute Transformation!!!",
 
   "BOREALISCARDS2-STARRY_HAMMER.description": "Gain {Block:diff()} [gold]Block[/gold].\nAt the start of the next {StarryHammerPower:plural:turn|{:diff()} turns}, [gold]Forge[/gold] {Power:diff()}.",
@@ -165,7 +165,7 @@
   "BOREALISCARDS2-SUPERNATURAL.description": "[gold]Summon[/gold] {Summon:diff()}.\nAt the start of your turn, if this is in your [gold]Exhaust Pile[/gold], play it.",
   "BOREALISCARDS2-SUPERNATURAL.title": "Supernatural",
 
-  "BOREALISCARDS2-GROWTH_SPURT.description": "[gold]Summon[/gold] {Summon:diff()}.\nIncrease this card's cost by 1.",
+  "BOREALISCARDS2-GROWTH_SPURT.description": "[gold]Summon[/gold] {Summon:diff()}.\nIncrease the cost of this card by 1.",
   "BOREALISCARDS2-GROWTH_SPURT.title": "Growth Spurt",
 
   "BOREALISCARDS2-VITRIFICATION.description": "Cards that cost {energyPrefix:energyIcons(2)} or more gain [gold]Retain[/gold].",
@@ -177,7 +177,7 @@
   "BOREALISCARDS2-RESURRECTION.description": "Add {Cards:diff()} [purple]Living[/purple] [gold]Souls[/gold] into your [gold]Discard Pile[/gold].",
   "BOREALISCARDS2-RESURRECTION.title": "Resurrection",
 
-  "BOREALISCARDS2-SHAKEDOWN.description": "[gold]Osty[/gold] deals {OstyDamage:diff()} damage to ALL enemies. At the start of the next {ShakedownPower:plural:turn|{:diff()} turns}, [gold]Summon[/gold] {Summon:diff()}.",
+  "BOREALISCARDS2-SHAKEDOWN.description": "[gold]Osty[/gold] deals {OstyDamage:diff()} damage\nto ALL enemies.\nAt the start of the next {ShakedownPower:plural:turn|{:diff()} turns}, [gold]Summon[/gold] {Summon:diff()}.",
   "BOREALISCARDS2-SHAKEDOWN.title": "Shakedown",
 
   "BOREALISCARDS2-VISCERA.description": "Apply {DoomPower:diff()} [gold]Doom[/gold].\nWhenever this enemy receives [gold]Doom[/gold], it receives an additional {VisceraPower:diff()} [gold]Doom[/gold].",
@@ -185,7 +185,15 @@
 
   "BOREALISCARDS2-TURN_THE_PAGE.description": "[gold]Transform[/gold] your [gold]Hand[/gold] into [gold]Souls[/gold]. Gain {energyPrefix:energyIcons(1)} for each card [gold]Transformed[/gold].",
   "BOREALISCARDS2-TURN_THE_PAGE.title": "Turn The Page",
-  
+
+  "BOREALISCARDS2-SIXBONE.description": "[gold]Osty[/gold] deals {OstyDamage:diff()} damage.\nWhenever [gold]Osty[/gold] loses HP, return this to your [gold]Hand[/gold].",
+  "BOREALISCARDS2-SIXBONE.title": "Sixbone",
+
+  "BOREALISCARDS2-RAVAGE.description": "Deal {Damage:diff()} damage.\nALL enemies lose {StrengthPower:diff()} [gold]Strength[/gold] this turn.",
+  "BOREALISCARDS2-RAVAGE.title": "Ravage",
+
+  "BOREALISCARDS2-EBONY_GAZE.description": "Apply {DoomPower:diff()} [gold]Doom[/gold].\n[gold]Summon[/gold] {Summon:diff()}.",
+  "BOREALISCARDS2-EBONY_GAZE.title": "Ebony Gaze",
   
   
   "BOREALISCARDS2-Character5": "Defect",
