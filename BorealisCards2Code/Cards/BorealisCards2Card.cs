@@ -1,5 +1,6 @@
 ﻿using BaseLib.Abstracts;
 using BaseLib.Extensions;
+using BorealisCards2.BorealisCards2Code.ArtRoller;
 using BorealisCards2.BorealisCards2Code.Extensions;
 using MegaCrit.Sts2.Core.Entities.Cards;
 
@@ -11,7 +12,29 @@ public abstract class BorealisCards2Card(int cost, CardType type, CardRarity rar
     //Image size:
     //Normal art: 1000x760 (Using 500x380 should also work, it will simply be scaled.)
     //Full art: 606x852
-    public override string CustomPortraitPath => File.Exists(Path.GetFullPath($"{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".BigCardImagePath())) ? $"{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".BigCardImagePath() : "card.png".BigCardImagePath();
+    public override string CustomPortraitPath
+    {
+        get
+        {
+            var cardId = Id.ToString();
+            
+            var userHsv = CardArtRoller.GetCardData(cardId);
+            if (userHsv != null && !string.IsNullOrWhiteSpace(userHsv.PortraitPath))
+            {
+                return userHsv.PortraitPath;
+            }
+
+            var defaultHsv = CardArtRoller.GetDefaultHsvForCard(cardId);
+            if (defaultHsv != null && !string.IsNullOrWhiteSpace(defaultHsv.PortraitPath))
+            {
+                return defaultHsv.PortraitPath;
+            }
+            
+            return File.Exists($"{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".BigCardImagePath())
+                ? $"{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".BigCardImagePath()
+                : "card.png".BigCardImagePath();
+        }
+    }
 
     //Smaller variants of card images for efficiency:
     //Smaller variant of fullart: 250x350

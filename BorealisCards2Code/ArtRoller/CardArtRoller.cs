@@ -12,7 +12,7 @@ public class CardArtRoller
 {
     public static Dictionary<string, CardHsvData> CardHsvModifiers { get; private set; } = new();
     public static string SaveDirectory = "user://card_hsv_data";
-    public static string DefaultsDirectory { get; private set; } = "res://IntoTheSpireverse/ArtRoller";
+    public static string DefaultsDirectory { get; private set; } = "res://BorealisCards2/ArtRoller";
     
     public static string DefaultsOutputDirectory { get; set; } = ""; // empty = use SaveDirectory/defaults
 

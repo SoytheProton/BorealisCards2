@@ -1,0 +1,12 @@
+{
+  "card_id": "CARD.BOREALISCARDS2-RUSH",
+  "hue": 1,
+  "saturation": 1,
+  "value": 0.85,
+  "red": 2,
+  "green": 0.63,
+  "blue": 1.06,
+  "contrast": 1.17,
+  "flip_h": false,
+  "portrait_path": "res://images/atlases/card_atlas.sprites/silent/dash.tres"
+}

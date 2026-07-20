@@ -91,6 +91,7 @@
         <Compile Remove="materials/**"/>
         <Compile Remove="shaders/**"/>
         <Compile Remove="images/**"/>
+        <None Include="BorealisCards2\shaders\color_adjust.gdshader" />
         <EmbeddedResource Remove="BorealisCards2/**"/>
         <EmbeddedResource Remove="materials/**"/>
         <EmbeddedResource Remove="shaders/**"/>
@@ -108,6 +109,7 @@
     <ItemGroup>
         <Folder Include="BorealisCards2Code\Cards\Colorless\" />
         <Folder Include="BorealisCards2Code\Powers\Shared\" />
+        <Folder Include="BorealisCards2\ArtRoller\" />
         <Folder Include="BorealisCards2\images\card_portraits\big\"/>
         <Folder Include="BorealisCards2\images\powers\big\"/>
         <Folder Include="BorealisCards2\images\relics\big\"/>

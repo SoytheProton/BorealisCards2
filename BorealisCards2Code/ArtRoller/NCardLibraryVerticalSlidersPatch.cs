@@ -1,20 +1,16 @@
-namespace BorealisCards2.BorealisCards2Code.ArtRoller;
-
-using HarmonyLib;
 using Godot;
-using System;
-using System.Linq;
-using BaseLib.Utils;
-using MegaCrit.Sts2.Core.Nodes.Screens.CardLibrary;
-using MegaCrit.Sts2.Core.Logging;
-using MegaCrit.Sts2.Core.Nodes;
-using MegaCrit.Sts2.Core.Nodes.Cards.Holders;
-using MegaCrit.Sts2.Core.Saves;
+using HarmonyLib;
 using MegaCrit.Sts2.addons.mega_text;
 using MegaCrit.Sts2.Core.Entities.Cards;
+using MegaCrit.Sts2.Core.Logging;
+using MegaCrit.Sts2.Core.Nodes;
 using MegaCrit.Sts2.Core.Nodes.Cards;
-using IntoTheSpireverse.IntoTheSpireverseCode.Config;
+using MegaCrit.Sts2.Core.Nodes.Cards.Holders;
+using MegaCrit.Sts2.Core.Nodes.Screens.CardLibrary;
+using MegaCrit.Sts2.Core.Saves;
+using Range = Godot.Range;
 
+namespace BorealisCards2.BorealisCards2Code.ArtRoller;
 
 [HarmonyPatch(typeof(NCardLibrary))]
 public class NCardLibraryVerticalSlidersPatch
@@ -80,26 +76,26 @@ public class NCardLibraryVerticalSlidersPatch
         // HSV sliders
         _row1 = CreateSliderRow(vbox, sliderScene, "Hue",      val => { _currentH        = (float)val; UpdateCardShader(); });
         _row2 = CreateSliderRow(vbox, sliderScene, "Sat",      val => { _currentS        = (float)val; UpdateCardShader(); });
-        if (_row2.Slider.GetNodeOrNull<Godot.Range>("Slider") is { } satSlider)
+        if (_row2.Slider.GetNodeOrNull<Range>("Slider") is { } satSlider)
             satSlider.MaxValue = 200;
         _row3 = CreateSliderRow(vbox, sliderScene, "Lum",      val => { _currentV        = (float)val; UpdateCardShader(); });
-        if (_row3.Slider.GetNodeOrNull<Godot.Range>("Slider") is { } lumSlider)
+        if (_row3.Slider.GetNodeOrNull<Range>("Slider") is { } lumSlider)
             lumSlider.MaxValue = 200;
 
         // RGB sliders
         _rowR = CreateSliderRow(vbox, sliderScene, "Red",      val => { _currentR        = (float)val; UpdateCardShader(); });
-        if (_rowR.Slider.GetNodeOrNull<Godot.Range>("Slider") is { } redSlider)
+        if (_rowR.Slider.GetNodeOrNull<Range>("Slider") is { } redSlider)
             redSlider.MaxValue = 200;
         _rowG = CreateSliderRow(vbox, sliderScene, "Green",    val => { _currentG        = (float)val; UpdateCardShader(); });
-        if (_rowG.Slider.GetNodeOrNull<Godot.Range>("Slider") is { } greenSlider)
+        if (_rowG.Slider.GetNodeOrNull<Range>("Slider") is { } greenSlider)
             greenSlider.MaxValue = 200;
         _rowB = CreateSliderRow(vbox, sliderScene, "Blue",     val => { _currentB        = (float)val; UpdateCardShader(); });
-        if (_rowB.Slider.GetNodeOrNull<Godot.Range>("Slider") is { } blueSlider)
+        if (_rowB.Slider.GetNodeOrNull<Range>("Slider") is { } blueSlider)
             blueSlider.MaxValue = 200;
 
         // Contrast slider
         _rowContrast = CreateSliderRow(vbox, sliderScene, "Contrast", val => { _currentContrast = (float)val; UpdateCardShader(); });
-        if (_rowContrast.Slider.GetNodeOrNull<Godot.Range>("Slider") is { } contrastSlider)
+        if (_rowContrast.Slider.GetNodeOrNull<Range>("Slider") is { } contrastSlider)
             contrastSlider.MaxValue = 200;
 
         // Flip X toggle
@@ -118,7 +114,7 @@ public class NCardLibraryVerticalSlidersPatch
         inspectScreen.AddChild(_sliderContainer);
         inspectScreen.MoveChild(_sliderContainer, inspectScreen.GetChildCount() - 1);
 
-        _defaultOutputFolderField?.PlaceholderText = CardArtRoller.DefaultsOutputDirectory;
+        _defaultOutputFolderField.PlaceholderText = CardArtRoller.DefaultsOutputDirectory;
         
         _loaded = true;
     }
@@ -206,7 +202,7 @@ public class NCardLibraryVerticalSlidersPatch
         var sliderInstance = (Control)scene.Instantiate();
         row.AddChild(sliderInstance);
 
-        if (sliderInstance.GetNodeOrNull<Godot.Range>("Slider") is { } internalSlider)
+        if (sliderInstance.GetNodeOrNull<Range>("Slider") is { } internalSlider)
         {
             if (sliderInstance.GetNodeOrNull<MegaLabel>("SliderValue") is { } sliderLabel)
             {
@@ -303,13 +299,13 @@ public class NCardLibraryVerticalSlidersPatch
 
     private static void SyncSlidersToState()
     {
-        if (_row1.Slider.GetNodeOrNull<Godot.Range>("Slider")        is { } s1)   s1.Value   = _currentH;
-        if (_row2.Slider.GetNodeOrNull<Godot.Range>("Slider")        is { } s2)   s2.Value   = _currentS;
-        if (_row3.Slider.GetNodeOrNull<Godot.Range>("Slider")        is { } s3)   s3.Value   = _currentV;
-        if (_rowR.Slider.GetNodeOrNull<Godot.Range>("Slider")        is { } sR)   sR.Value   = _currentR;
-        if (_rowG.Slider.GetNodeOrNull<Godot.Range>("Slider")        is { } sG)   sG.Value   = _currentG;
-        if (_rowB.Slider.GetNodeOrNull<Godot.Range>("Slider")        is { } sB)   sB.Value   = _currentB;
-        if (_rowContrast.Slider.GetNodeOrNull<Godot.Range>("Slider") is { } sCon) sCon.Value = _currentContrast;
+        if (_row1.Slider.GetNodeOrNull<Range>("Slider")        is { } s1)   s1.Value   = _currentH;
+        if (_row2.Slider.GetNodeOrNull<Range>("Slider")        is { } s2)   s2.Value   = _currentS;
+        if (_row3.Slider.GetNodeOrNull<Range>("Slider")        is { } s3)   s3.Value   = _currentV;
+        if (_rowR.Slider.GetNodeOrNull<Range>("Slider")        is { } sR)   sR.Value   = _currentR;
+        if (_rowG.Slider.GetNodeOrNull<Range>("Slider")        is { } sG)   sG.Value   = _currentG;
+        if (_rowB.Slider.GetNodeOrNull<Range>("Slider")        is { } sB)   sB.Value   = _currentB;
+        if (_rowContrast.Slider.GetNodeOrNull<Range>("Slider") is { } sCon) sCon.Value = _currentContrast;
 
         if (_flipButton != null)
             _flipButton.Text = _currentFlipH ? "Flip X: ON" : "Flip X: OFF";

@@ -1,3 +1,5 @@
+using System.Reflection;
+using BorealisCards2.BorealisCards2Code.ArtRoller;
 using Godot;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Modding;
@@ -12,10 +14,15 @@ public partial class BorealisCards2Main : Node
     public static MegaCrit.Sts2.Core.Logging.Logger Logger { get; } =
         new(ModId, MegaCrit.Sts2.Core.Logging.LogType.Generic);
 
+    public static readonly string CardsDirectory = Path.Combine(
+        Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)!,
+        "ArtRoller");
+    
     public static void Initialize()
     {
         Harmony harmony = new(ModId);
-
+        Directory.CreateDirectory(CardsDirectory);
+        CardArtRoller.RegisterAllFromDirectory(CardsDirectory);
         harmony.PatchAll();
     }
 }

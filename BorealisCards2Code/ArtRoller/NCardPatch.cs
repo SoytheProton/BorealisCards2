@@ -1,12 +1,9 @@
-namespace BorealisCards2.BorealisCards2Code.ArtRoller;
-
-using BaseLib.Utils;
-using HarmonyLib;
-using MegaCrit.Sts2.Core.Nodes.Cards;
 using Godot;
+using HarmonyLib;
 using MegaCrit.Sts2.Core.Entities.Cards;
-using MegaCrit.Sts2.Core.Logging;
-using IntoTheSpireverse;
+using MegaCrit.Sts2.Core.Nodes.Cards;
+
+namespace BorealisCards2.BorealisCards2Code.ArtRoller;
 
 [HarmonyPatch(typeof(NCard), "Reload")]
 public static class NCardPatch
