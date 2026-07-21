@@ -15,6 +15,7 @@ public class EquivalentExchange() : BorealisCards2Card(0,
     TargetType.Self)
 {
     public override int CanonicalStarCost => 2;
+    public override bool GainsBlock => true;
     protected override IEnumerable<DynamicVar> CanonicalVars => [new StarsVar(2), new BlockVar(4M, ValueProp.Move)];
     
     protected override async Task OnPlay(

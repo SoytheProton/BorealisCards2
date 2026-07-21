@@ -15,7 +15,8 @@ public class Poltergeist() : BorealisCards2Card(2,
     CardType.Attack, CardRarity.Common,
     TargetType.AnyEnemy)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(8M, ValueProp.Move), new BlockVar(6M, ValueProp.Move), new CardsVar(1)];
+    public override bool GainsBlock => true;
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(10M, ValueProp.Move), new BlockVar(6M, ValueProp.Move), new CardsVar(1)];
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Ethereal];
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromCard<Soul>()];
 
@@ -32,6 +33,6 @@ public class Poltergeist() : BorealisCards2Card(2,
     protected override void OnUpgrade()
     {
         DynamicVars.Damage.UpgradeValueBy(2M);
-        DynamicVars.Block.UpgradeValueBy(2M);
+        DynamicVars.Block.UpgradeValueBy(3M);
     }
 }

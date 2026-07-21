@@ -137,7 +137,7 @@
   "BOREALISCARDS2-EQUIVALENT_EXCHANGE.title": "Equivalent Exchange",
 
   "BOREALISCARDS2-REGAL_STRIKE.selectionScreenPrompt": "Choose a card to put on top of your Draw Pile.",
-  "BOREALISCARDS2-REGAL_STRIKE.description": "Deal {Damage:diff()} damage twice.\nPut a card from your [gold]Draw Pile[/gold] on top of your [gold]Draw Pile[/gold].",
+  "BOREALISCARDS2-REGAL_STRIKE.description": "Gain {Block:diff()} [gold]Block[/gold].\nDeal {Damage:diff()} damage.\nPut a card from your [gold]Draw Pile[/gold] on top of your [gold]Draw Pile[/gold].",
   "BOREALISCARDS2-REGAL_STRIKE.title": "Regal Strike",
 
   "BOREALISCARDS2-BRACE_FOR_IMPACT.description": "Gain {Block:diff()} [gold]Block[/gold].\nAdd {Cards:diff()} [gold]Debris[/gold] into your [gold]Discard Pile[/gold]. Permanently increase the amount of [gold]Debris[/gold] added by {Increase:diff()}.",

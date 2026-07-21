@@ -15,7 +15,7 @@ public class CosmicAnvil() : BorealisCards2Card(1,
     CardType.Skill, CardRarity.Rare,
     TargetType.Self)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new ForgeVar(9), new PowerVar<CosmicAnvilPower>(2M)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new ForgeVar(9), new PowerVar<CosmicAnvilPower>(4M)];
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.Static(StaticHoverTip.Forge)];
     
     protected override async Task OnPlay(

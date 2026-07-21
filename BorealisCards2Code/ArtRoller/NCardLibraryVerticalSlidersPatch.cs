@@ -15,6 +15,7 @@ namespace BorealisCards2.BorealisCards2Code.ArtRoller;
 [HarmonyPatch(typeof(NCardLibrary))]
 public class NCardLibraryVerticalSlidersPatch
 {
+    /*
     private const string SliderScenePath = "res://scenes/screens/settings_slider.tscn";
     private static LineEdit? _defaultOutputFolderField;
 
@@ -418,4 +419,5 @@ public class NCardLibraryVerticalSlidersPatch
         if (_currentHolder?.CardNode == null) return;
         AccessTools.Method(typeof(NCard), "Reload")?.Invoke(_currentHolder.CardNode, null);
     }
+    // */
 }
