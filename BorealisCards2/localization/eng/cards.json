@@ -100,7 +100,7 @@
 
   "BOREALISCARDS2-Character3": "Regent",
 
-  "BOREALISCARDS2-PROTECT_ME.description": "Choose {Cards:diff()} cards in your [gold]Discard Pile[/gold] to [gold]Transform[/gold] into [gold]{IfUpgraded:show:Minion Defends+|Minion Defends}[/gold].",
+  "BOREALISCARDS2-PROTECT_ME.description": "Choose {Cards:diff()} cards in your [gold]Hand[/gold] to [gold]Transform[/gold] into [gold]{IfUpgraded:show:Minion Defends+|Minion Defends}[/gold].",
   "BOREALISCARDS2-PROTECT_ME.title": "PROTECT ME!",
 
   "BOREALISCARDS2-SEEING_STARS.description": "Choose a card in your [gold]Draw Pile[/gold] to [gold]Transform[/gold] into\n[gold]{IfUpgraded:show:Minion Scout+|Minion Scout}[/gold].",
@@ -121,7 +121,7 @@
   "BOREALISCARDS2-SEVER_THE_SKYLINE.description": "Gain {Stars:starIcons()}.\n[gold]Forge[/gold] {Forge:diff()}.\nTransform {Cards:diff()} {Cards:plural:card|cards} in your [gold]Hand[/gold] into [gold]Minion Strikes[/gold].",
   "BOREALISCARDS2-SEVER_THE_SKYLINE.title": "Sever the Skyline",
 
-  "BOREALISCARDS2-COSMIC_ANVIL.description": "[gold]Forge[/gold] {Forge:diff()}.\nAt the end of\nyour turn, [gold]Forge[/gold] {CosmicAnvilPower:diff()}.",
+  "BOREALISCARDS2-COSMIC_ANVIL.description": "[gold]Forge[/gold] {Forge:diff()}.\nAt the end of each of your\nturns, [gold]Forge[/gold] {CosmicAnvilPower:diff()}.",
   "BOREALISCARDS2-COSMIC_ANVIL.title": "Cosmic Anvil",
 
   "BOREALISCARDS2-MAGICAL_GIRL.description": "At the start of your turn, add a [color=#ff1cf0]{IfUpgraded:show:POWER OF FRIENDSHIP! <3+|POWER OF FRIENDSHIP! <3}[/color] to your [gold]Hand[/gold].",
@@ -130,7 +130,7 @@
   "BOREALISCARDS2-STARRY_HAMMER.description": "Gain {Block:diff()} [gold]Block[/gold].\nAt the start of the next {StarryHammerPower:plural:turn|{:diff()} turns}, [gold]Forge[/gold] {Power:diff()}.",
   "BOREALISCARDS2-STARRY_HAMMER.title": "Starry Hammer",
 
-  "BOREALISCARDS2-BETELGEUSE.description": "Draw cards until your [gold]Hand[/gold] is full. Attacks drawn this way are played {Repeat:diff()} times.",
+  "BOREALISCARDS2-BETELGEUSE.description": "Draw cards until your [gold]Hand[/gold] is full. Attacks in your [gold]Hand[/gold] are played {Repeat:diff()} times.",
   "BOREALISCARDS2-BETELGEUSE.title": "Betelgeuse",
 
   "BOREALISCARDS2-EQUIVALENT_EXCHANGE.description": "Gain {Stars:starIcons()}.\nGain {Block:diff()} [gold]Block[/gold].\nAt the start of combat, play this.",
@@ -165,7 +165,7 @@
   "BOREALISCARDS2-SUPERNATURAL.description": "[gold]Summon[/gold] {Summon:diff()}.\nAt the start of your turn, if this is in your [gold]Exhaust Pile[/gold], play it.",
   "BOREALISCARDS2-SUPERNATURAL.title": "Supernatural",
 
-  "BOREALISCARDS2-GROWTH_SPURT.description": "[gold]Summon[/gold] {Summon:diff()}.\nIncrease the cost of this card by 1.",
+  "BOREALISCARDS2-GROWTH_SPURT.description": "[gold]Summon[/gold] {Summon:diff()}.\nReduce the cost of this card by 1.",
   "BOREALISCARDS2-GROWTH_SPURT.title": "Growth Spurt",
 
   "BOREALISCARDS2-VITRIFICATION.description": "Cards that cost {energyPrefix:energyIcons(2)} or more gain [gold]Retain[/gold].",
@@ -180,7 +180,7 @@
   "BOREALISCARDS2-SHAKEDOWN.description": "[gold]Osty[/gold] deals {OstyDamage:diff()} damage\nto ALL enemies.\nAt the start of the next {ShakedownPower:plural:turn|{:diff()} turns}, [gold]Summon[/gold] {Summon:diff()}.",
   "BOREALISCARDS2-SHAKEDOWN.title": "Shakedown",
 
-  "BOREALISCARDS2-VISCERA.description": "Apply {DoomPower:diff()} [gold]Doom[/gold].\nWhenever this enemy receives [gold]Doom[/gold], it receives an additional {VisceraPower:diff()} [gold]Doom[/gold].",
+  "BOREALISCARDS2-VISCERA.description": "Apply {DoomPower:diff()} [gold]Doom[/gold].\nWhenever this enemy receives [gold]Doom[/gold] this combat, it receives an additional {VisceraPower:diff()} [gold]Doom[/gold].",
   "BOREALISCARDS2-VISCERA.title": "Viscera",
 
   "BOREALISCARDS2-TURN_THE_PAGE.description": "[gold]Transform[/gold] your [gold]Hand[/gold] into [gold]Souls[/gold]. Gain {energyPrefix:energyIcons(1)} for each card [gold]Transformed[/gold].",

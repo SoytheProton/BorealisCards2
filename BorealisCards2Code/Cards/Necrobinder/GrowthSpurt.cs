@@ -9,11 +9,11 @@ using MegaCrit.Sts2.Core.Models.CardPools;
 namespace BorealisCards2.BorealisCards2Code.Cards.Necrobinder;
 
 [Pool(typeof(NecrobinderCardPool))]
-public class GrowthSpurt() : BorealisCards2Card(0,
+public class GrowthSpurt() : BorealisCards2Card(2,
     CardType.Skill, CardRarity.Uncommon,
     TargetType.Self)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new SummonVar(6)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new SummonVar(9)];
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.Static(StaticHoverTip.SummonDynamic, DynamicVars.Summon)];
 
     protected override async Task OnPlay(
@@ -22,7 +22,7 @@ public class GrowthSpurt() : BorealisCards2Card(0,
     {
         await CreatureCmd.TriggerAnim(Owner.Creature, MegaCrit.Sts2.Core.Models.Characters.Necrobinder.GetSummonAnimIfApplicable(Owner.Character), MegaCrit.Sts2.Core.Models.Characters.Necrobinder.GetSummonDelayIfApplicable(Owner.Character));
         await OstyCmd.Summon(choiceContext, Owner, DynamicVars.Summon.BaseValue, this);
-        EnergyCost.AddThisCombat(1);
+        EnergyCost.AddThisCombat(-1);
     }
 
     protected override void OnUpgrade()

@@ -4,6 +4,7 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models.CardPools;
+using MegaCrit.Sts2.Core.Nodes.Vfx;
 
 namespace BorealisCards2.BorealisCards2Code.Cards.Regent;
 
@@ -20,9 +21,9 @@ public class Betelgeuse() : BorealisCards2Card(0,
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
         CardPlay play)
-    {
-        var cards = await CardPileCmd.Draw(choiceContext, CardPile.MaxCardsInHand - Owner.PlayerCombatState.Hand.Cards.Count, Owner);
-        foreach (var card in cards)
+    { 
+        await CardPileCmd.Draw(choiceContext, CardPile.MaxCardsInHand - Owner.PlayerCombatState.Hand.Cards.Count, Owner);
+        foreach (var card in PileType.Hand.GetPile(Owner).Cards)
         {
             if (card.Type != CardType.Attack) continue;
             for (var i = 0; i < DynamicVars.Repeat.IntValue; ++i)

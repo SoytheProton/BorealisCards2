@@ -29,7 +29,6 @@ public class EquivalentExchange() : BorealisCards2Card(0,
     protected override void OnUpgrade()
     {
         DynamicVars.Stars.UpgradeValueBy(1M);
-        DynamicVars.Block.UpgradeValueBy(2M);
     }
     
     public override async Task AfterAutoPrePlayPhaseEntered(

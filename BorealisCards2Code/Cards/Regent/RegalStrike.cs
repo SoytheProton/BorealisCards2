@@ -16,6 +16,7 @@ public class RegalStrike() : BorealisCards2Card(2,
 {
     public override bool GainsBlock => true;
     protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(6M, ValueProp.Move), new BlockVar(10M, ValueProp.Move)];
+    protected override HashSet<CardTag> CanonicalTags => [CardTag.Strike];
     
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,

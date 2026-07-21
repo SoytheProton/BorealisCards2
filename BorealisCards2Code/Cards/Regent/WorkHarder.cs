@@ -16,7 +16,7 @@ public class WorkHarder() : BorealisCards2Card(1,
     CardType.Attack, CardRarity.Uncommon,
     TargetType.AnyEnemy)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(9M, ValueProp.Move), new CardsVar(2)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(11M, ValueProp.Move), new CardsVar(2)];
     protected override IEnumerable<IHoverTip> ExtraHoverTips => HoverTipFactory.FromCardWithCardHoverTips<MinionSmith>(IsUpgraded);
     
     protected override async Task OnPlay(

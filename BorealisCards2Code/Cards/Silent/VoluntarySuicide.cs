@@ -15,7 +15,7 @@ public sealed class VoluntarySuicide() : BorealisCards2Card(0,
     CardType.Attack, CardRarity.Rare,
     TargetType.AnyEnemy)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(5M, ValueProp.Move), new DamageVar("AlternateDamage", 50M, ValueProp.Move), new ("Threshold", 15M)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(6M, ValueProp.Move), new DamageVar("AlternateDamage", 30M, ValueProp.Move), new ("Threshold", 15M)];
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromPower<PoisonPower>()];
     
     protected override async Task OnPlay(
@@ -34,7 +34,7 @@ public sealed class VoluntarySuicide() : BorealisCards2Card(0,
 
     protected override void OnUpgrade()
     {
-        DynamicVars.Damage.UpgradeValueBy(1M);
+        DynamicVars.Damage.UpgradeValueBy(2M);
         DynamicVars["AlternateDamage"].UpgradeValueBy(10M);
     }
 }

@@ -9,7 +9,7 @@ using MegaCrit.Sts2.Core.ValueProps;
 namespace BorealisCards2.BorealisCards2Code.Cards.Silent;
 
 [Pool(typeof(SilentCardPool))]
-public sealed class Rumor() : BorealisCards2Card(1,
+public sealed class Rumor() : BorealisCards2Card(2,
     CardType.Attack, CardRarity.Rare,
     TargetType.AllEnemies)
 {

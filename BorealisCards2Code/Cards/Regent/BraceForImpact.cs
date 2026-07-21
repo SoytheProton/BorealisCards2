@@ -21,7 +21,7 @@ public class BraceForImpact() : BorealisCards2Card(2,
     private int _increasedCards;
     private const int BaseCards = 2;
     
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new BlockVar(40, ValueProp.Move), new CardsVar(CurrentCards), new (IncreaseKey, 2)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new BlockVar(30, ValueProp.Move), new CardsVar(CurrentCards), new (IncreaseKey, 1)];
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromCard<Debris>()];
     
     [SavedProperty]
@@ -66,7 +66,7 @@ public class BraceForImpact() : BorealisCards2Card(2,
     
     protected override void OnUpgrade()
     {
-        DynamicVars.Block.UpgradeValueBy(20M);
+        DynamicVars.Block.UpgradeValueBy(10M);
     }
     
     protected override void AfterDowngraded() => UpdateCards();

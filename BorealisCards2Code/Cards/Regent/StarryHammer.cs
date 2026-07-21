@@ -19,7 +19,7 @@ public class StarryHammer() : BorealisCards2Card(1,
     public const int PowerForge = 5;
     public override int CanonicalStarCost => 1;
     public override bool GainsBlock => true;
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new BlockVar(6, ValueProp.Move), new PowerVar<StarryHammerPower>(2M), new ForgeVar("Power", PowerForge)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new BlockVar(7, ValueProp.Move), new PowerVar<StarryHammerPower>(2M), new ForgeVar("Power", PowerForge)];
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.Static(StaticHoverTip.Forge)];
     
     protected override async Task OnPlay(
