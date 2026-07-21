@@ -1,0 +1,12 @@
+{
+  "card_id": "CARD.BOREALISCARDS2-SIXBONE",
+  "hue": 0.95,
+  "saturation": 0.82,
+  "value": 0.58,
+  "red": 1.81,
+  "green": 1.12,
+  "blue": 0.62,
+  "contrast": 1.26,
+  "flip_h": true,
+  "portrait_path": "res://images/atlases/card_atlas.sprites/token/minion_dive_bomb.tres"
+}

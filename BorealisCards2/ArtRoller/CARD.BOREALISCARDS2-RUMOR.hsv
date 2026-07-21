@@ -1,0 +1,12 @@
+{
+  "card_id": "CARD.BOREALISCARDS2-RUMOR",
+  "hue": 0,
+  "saturation": 1.03,
+  "value": 1.54,
+  "red": 1.33,
+  "green": 0.46,
+  "blue": 0.58,
+  "contrast": 1.04,
+  "flip_h": false,
+  "portrait_path": "res://images/atlases/card_atlas.sprites/curse/doubt.tres"
+}

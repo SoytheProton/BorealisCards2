@@ -1,0 +1,12 @@
+{
+  "card_id": "CARD.BOREALISCARDS2-BETELGEUSE",
+  "hue": 0.12,
+  "saturation": 1.63,
+  "value": 1.42,
+  "red": 1.15,
+  "green": 0.68,
+  "blue": 1.29,
+  "contrast": 1.09,
+  "flip_h": true,
+  "portrait_path": "res://images/atlases/card_atlas.sprites/curse/enthralled.tres"
+}

@@ -1,0 +1,12 @@
+{
+  "card_id": "CARD.BOREALISCARDS2-OVERTIME",
+  "hue": 0.08,
+  "saturation": 1.37,
+  "value": 0.91,
+  "red": 0.64,
+  "green": 1.4,
+  "blue": 1.36,
+  "contrast": 1.22,
+  "flip_h": true,
+  "portrait_path": "res://images/atlases/card_atlas.sprites/token/sloth.tres"
+}

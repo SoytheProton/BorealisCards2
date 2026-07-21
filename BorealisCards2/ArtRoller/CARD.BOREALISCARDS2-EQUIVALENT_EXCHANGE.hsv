@@ -1,0 +1,12 @@
+{
+  "card_id": "CARD.BOREALISCARDS2-EQUIVALENT_EXCHANGE",
+  "hue": 0.22,
+  "saturation": 0.75,
+  "value": 1.43,
+  "red": 0.31,
+  "green": 1.65,
+  "blue": 0.75,
+  "contrast": 1.31,
+  "flip_h": true,
+  "portrait_path": "res://images/atlases/card_atlas.sprites/colorless/equilibrium.tres"
+}

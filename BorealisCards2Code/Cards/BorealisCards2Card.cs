@@ -2,6 +2,7 @@
 using BaseLib.Extensions;
 using BorealisCards2.BorealisCards2Code.ArtRoller;
 using BorealisCards2.BorealisCards2Code.Extensions;
+using Godot;
 using MegaCrit.Sts2.Core.Entities.Cards;
 
 namespace BorealisCards2.BorealisCards2Code.Cards;
@@ -30,9 +31,8 @@ public abstract class BorealisCards2Card(int cost, CardType type, CardRarity rar
                 return defaultHsv.PortraitPath;
             }
             
-            return File.Exists($"{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".BigCardImagePath())
-                ? $"{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".BigCardImagePath()
-                : "card.png".BigCardImagePath();
+            var path = $"{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".BigCardImagePath();
+            return ResourceLoader.Exists(path) ? path : "card.png".BigCardImagePath();
         }
     }
 

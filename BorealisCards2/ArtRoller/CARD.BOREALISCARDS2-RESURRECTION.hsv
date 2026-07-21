@@ -1,0 +1,12 @@
+{
+  "card_id": "CARD.BOREALISCARDS2-RESURRECTION",
+  "hue": 1,
+  "saturation": 0.98,
+  "value": 1.34,
+  "red": 0.61,
+  "green": 0.69,
+  "blue": 0.47,
+  "contrast": 1.41,
+  "flip_h": true,
+  "portrait_path": "res://images/atlases/card_atlas.sprites/colorless/purity.tres"
+}

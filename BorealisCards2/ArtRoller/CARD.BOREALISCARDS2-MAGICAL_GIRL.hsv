@@ -1,0 +1,12 @@
+{
+  "card_id": "CARD.BOREALISCARDS2-MAGICAL_GIRL",
+  "hue": 0.16,
+  "saturation": 1.15,
+  "value": 1.77,
+  "red": 1.1,
+  "green": 0.66,
+  "blue": 0.99,
+  "contrast": 0.78,
+  "flip_h": false,
+  "portrait_path": "res://images/atlases/card_atlas.sprites/defect/echo_form.tres"
+}

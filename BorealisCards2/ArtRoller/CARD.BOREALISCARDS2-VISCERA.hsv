@@ -1,0 +1,12 @@
+{
+  "card_id": "CARD.BOREALISCARDS2-VISCERA",
+  "hue": 0.33,
+  "saturation": 0.56,
+  "value": 0.88,
+  "red": 0.5,
+  "green": 1.36,
+  "blue": 0.94,
+  "contrast": 1.51,
+  "flip_h": true,
+  "portrait_path": "res://images/atlases/card_atlas.sprites/status/toxic.tres"
+}

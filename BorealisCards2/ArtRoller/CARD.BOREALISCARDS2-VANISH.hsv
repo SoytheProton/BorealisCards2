@@ -1,0 +1,12 @@
+{
+  "card_id": "CARD.BOREALISCARDS2-VANISH",
+  "hue": 0.97,
+  "saturation": 0.65,
+  "value": 1.3,
+  "red": 0.19,
+  "green": 1.43,
+  "blue": 1.46,
+  "contrast": 1.18,
+  "flip_h": true,
+  "portrait_path": "res://images/atlases/card_atlas.sprites/token/mind_rot.tres"
+}

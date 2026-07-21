@@ -1,0 +1,12 @@
+{
+  "card_id": "CARD.BOREALISCARDS2-RAVAGE",
+  "hue": 0,
+  "saturation": 0.35,
+  "value": 1.18,
+  "red": 2,
+  "green": 0.46,
+  "blue": 1.48,
+  "contrast": 1.16,
+  "flip_h": false,
+  "portrait_path": "res://images/atlases/card_atlas.sprites/ironclad/pacts_end.tres"
+}

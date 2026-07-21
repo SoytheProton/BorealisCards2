@@ -1,0 +1,12 @@
+{
+  "card_id": "CARD.BOREALISCARDS2-TOMAHAWK",
+  "hue": 0.73,
+  "saturation": 0.72,
+  "value": 0.76,
+  "red": 0.97,
+  "green": 1.54,
+  "blue": 0.58,
+  "contrast": 0.92,
+  "flip_h": true,
+  "portrait_path": "res://images/atlases/card_atlas.sprites/colorless/thrumming_hatchet.tres"
+}

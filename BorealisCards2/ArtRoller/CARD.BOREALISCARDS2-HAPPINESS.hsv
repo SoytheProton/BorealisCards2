@@ -1,0 +1,12 @@
+{
+  "card_id": "CARD.BOREALISCARDS2-HAPPINESS",
+  "hue": 0.69,
+  "saturation": 1.19,
+  "value": 1.36,
+  "red": 0.97,
+  "green": 2,
+  "blue": 0.78,
+  "contrast": 0.88,
+  "flip_h": false,
+  "portrait_path": "res://images/atlases/card_atlas.sprites/silent/survivor.tres"
+}

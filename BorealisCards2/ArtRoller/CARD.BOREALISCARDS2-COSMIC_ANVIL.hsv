@@ -1,0 +1,12 @@
+{
+  "card_id": "CARD.BOREALISCARDS2-COSMIC_ANVIL",
+  "hue": 0.66,
+  "saturation": 0.98,
+  "value": 1.36,
+  "red": 1.69,
+  "green": 0.94,
+  "blue": 1.78,
+  "contrast": 1,
+  "flip_h": false,
+  "portrait_path": "res://images/atlases/card_atlas.sprites/ironclad/bludgeon.tres"
+}

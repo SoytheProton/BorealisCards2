@@ -1,0 +1,12 @@
+{
+  "card_id": "CARD.BOREALISCARDS2-PLUNGE",
+  "hue": 0.96,
+  "saturation": 1.34,
+  "value": 0.67,
+  "red": 0.7,
+  "green": 2,
+  "blue": 0.37,
+  "contrast": 0.91,
+  "flip_h": true,
+  "portrait_path": "res://images/atlases/card_atlas.sprites/curse/guilty.tres"
+}

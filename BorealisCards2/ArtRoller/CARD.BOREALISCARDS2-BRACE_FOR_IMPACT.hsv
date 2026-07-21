@@ -1,0 +1,12 @@
+{
+  "card_id": "CARD.BOREALISCARDS2-BRACE_FOR_IMPACT",
+  "hue": 0.11,
+  "saturation": 1.35,
+  "value": 1.12,
+  "red": 1.27,
+  "green": 0.7,
+  "blue": 1.21,
+  "contrast": 0.8,
+  "flip_h": true,
+  "portrait_path": "res://images/atlases/card_atlas.sprites/colorless/panic_button.tres"
+}

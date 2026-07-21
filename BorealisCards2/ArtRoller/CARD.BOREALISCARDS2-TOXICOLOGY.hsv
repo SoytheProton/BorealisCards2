@@ -1,0 +1,12 @@
+{
+  "card_id": "CARD.BOREALISCARDS2-TOXICOLOGY",
+  "hue": 0.24,
+  "saturation": 0.57,
+  "value": 0.98,
+  "red": 1.22,
+  "green": 0.76,
+  "blue": 0.85,
+  "contrast": 1,
+  "flip_h": true,
+  "portrait_path": "res://images/atlases/card_atlas.sprites/colorless/alchemize.tres"
+}

@@ -1,0 +1,12 @@
+{
+  "card_id": "CARD.BOREALISCARDS2-SPLATTER",
+  "hue": 0.96,
+  "saturation": 1.36,
+  "value": 0.68,
+  "red": 0.99,
+  "green": 2,
+  "blue": 0.5,
+  "contrast": 0.87,
+  "flip_h": false,
+  "portrait_path": "res://images/atlases/card_atlas.sprites/colorless/splash.tres"
+}

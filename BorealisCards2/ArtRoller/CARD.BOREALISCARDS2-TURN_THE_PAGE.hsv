@@ -1,0 +1,12 @@
+{
+  "card_id": "CARD.BOREALISCARDS2-TURN_THE_PAGE",
+  "hue": 0.9,
+  "saturation": 2,
+  "value": 0.67,
+  "red": 1.02,
+  "green": 1.24,
+  "blue": 1.24,
+  "contrast": 1.09,
+  "flip_h": true,
+  "portrait_path": "res://images/atlases/card_atlas.sprites/colorless/scrawl.tres"
+}

@@ -1,4 +1,5 @@
-﻿using BaseLib.Utils;
+﻿using BaseLib.Extensions;
+using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
@@ -27,7 +28,7 @@ public sealed class Metallurgy() : BorealisCards2Card(1,
         CardPlay play)
     {
         await DamageCmd.Attack(DynamicVars.Damage.BaseValue).FromCard(this, play).Targeting(play.Target).WithHitFx("vfx/vfx_attack_slash").Execute(choiceContext);
-        var amount = DynamicVars["Power"].IntValue;
+        var amount = DynamicVars.Vulnerable.IntValue;
         await PowerCmd.Apply<WeakPower>(choiceContext, play.Target, amount, Owner.Creature, this);
         await PowerCmd.Apply<VulnerablePower>(choiceContext, play.Target, amount, Owner.Creature, this);
     }

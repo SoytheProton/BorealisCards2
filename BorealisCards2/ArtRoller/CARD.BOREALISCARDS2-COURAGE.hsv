@@ -1,0 +1,12 @@
+{
+  "card_id": "CARD.BOREALISCARDS2-COURAGE",
+  "hue": 0.84,
+  "saturation": 0.84,
+  "value": 1.3,
+  "red": 0,
+  "green": 1.68,
+  "blue": 1.24,
+  "contrast": 1.29,
+  "flip_h": false,
+  "portrait_path": "res://images/atlases/card_atlas.sprites/necrobinder/bodyguard.tres"
+}
