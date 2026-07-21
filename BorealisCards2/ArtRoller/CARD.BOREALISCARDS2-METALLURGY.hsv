@@ -1,0 +1,12 @@
+{
+  "card_id": "CARD.BOREALISCARDS2-METALLURGY",
+  "hue": 0.61,
+  "saturation": 1,
+  "value": 1,
+  "red": 1.33,
+  "green": 1.23,
+  "blue": 0.79,
+  "contrast": 1,
+  "flip_h": false,
+  "portrait_path": "res://images/atlases/card_atlas.sprites/regent/glitterstream.tres"
+}

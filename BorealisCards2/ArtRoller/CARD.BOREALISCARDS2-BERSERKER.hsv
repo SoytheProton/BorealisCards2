@@ -1,0 +1,12 @@
+{
+  "card_id": "CARD.BOREALISCARDS2-BERSERKER",
+  "hue": 0.64,
+  "saturation": 1.18,
+  "value": 1.25,
+  "red": 0.9,
+  "green": 1.33,
+  "blue": 0.8,
+  "contrast": 1.25,
+  "flip_h": false,
+  "portrait_path": "res://images/atlases/card_atlas.sprites/defect/supercritical.tres"
+}

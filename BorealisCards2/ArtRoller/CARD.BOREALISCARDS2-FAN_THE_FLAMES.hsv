@@ -1,0 +1,12 @@
+{
+  "card_id": "CARD.BOREALISCARDS2-FAN_THE_FLAMES",
+  "hue": 0.1,
+  "saturation": 1,
+  "value": 1.25,
+  "red": 1.73,
+  "green": 0.87,
+  "blue": 1.13,
+  "contrast": 1,
+  "flip_h": false,
+  "portrait_path": "res://images/atlases/card_atlas.sprites/necrobinder/deathbringer.tres"
+}

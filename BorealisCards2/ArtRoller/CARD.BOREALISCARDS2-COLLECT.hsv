@@ -1,0 +1,12 @@
+{
+  "card_id": "CARD.BOREALISCARDS2-COLLECT",
+  "hue": 0.55,
+  "saturation": 2,
+  "value": 0.94,
+  "red": 1.45,
+  "green": 1.62,
+  "blue": 1.07,
+  "contrast": 1,
+  "flip_h": false,
+  "portrait_path": "res://images/atlases/card_atlas.sprites/necrobinder/transfigure.tres"
+}

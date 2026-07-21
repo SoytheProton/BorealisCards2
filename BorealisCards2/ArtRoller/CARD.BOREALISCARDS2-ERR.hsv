@@ -1,0 +1,12 @@
+{
+  "card_id": "CARD.BOREALISCARDS2-ERR",
+  "hue": 0.15,
+  "saturation": 0.76,
+  "value": 1.64,
+  "red": 0.38,
+  "green": 1.59,
+  "blue": 1.29,
+  "contrast": 2,
+  "flip_h": true,
+  "portrait_path": "res://images/atlases/card_atlas.sprites/curse/bad_luck.tres"
+}

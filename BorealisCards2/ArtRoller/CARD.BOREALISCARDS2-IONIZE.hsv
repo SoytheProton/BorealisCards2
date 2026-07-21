@@ -1,0 +1,12 @@
+{
+  "card_id": "CARD.BOREALISCARDS2-IONIZE",
+  "hue": 0.61,
+  "saturation": 1.3,
+  "value": 1.71,
+  "red": 1.02,
+  "green": 1,
+  "blue": 0.74,
+  "contrast": 1.05,
+  "flip_h": false,
+  "portrait_path": "res://images/atlases/card_atlas.sprites/regent/orbit.tres"
+}
