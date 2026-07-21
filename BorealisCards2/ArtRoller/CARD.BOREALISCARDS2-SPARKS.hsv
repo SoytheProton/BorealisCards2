@@ -1,0 +1,12 @@
+{
+  "card_id": "CARD.BOREALISCARDS2-SPARKS",
+  "hue": 1,
+  "saturation": 0.78,
+  "value": 1.15,
+  "red": 1.76,
+  "green": 0.73,
+  "blue": 0.09,
+  "contrast": 1.16,
+  "flip_h": false,
+  "portrait_path": "res://images/atlases/card_atlas.sprites/regent/patter.tres"
+}

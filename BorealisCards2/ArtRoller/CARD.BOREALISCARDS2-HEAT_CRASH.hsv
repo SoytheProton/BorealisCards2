@@ -1,0 +1,12 @@
+{
+  "card_id": "CARD.BOREALISCARDS2-HEAT_CRASH",
+  "hue": 0.1,
+  "saturation": 1,
+  "value": 1.14,
+  "red": 1.35,
+  "green": 0.49,
+  "blue": 1.48,
+  "contrast": 1,
+  "flip_h": false,
+  "portrait_path": "res://images/atlases/card_atlas.sprites/defect/meteor_strike.tres"
+}

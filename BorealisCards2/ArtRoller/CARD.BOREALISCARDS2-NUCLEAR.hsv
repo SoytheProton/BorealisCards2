@@ -1,0 +1,12 @@
+{
+  "card_id": "CARD.BOREALISCARDS2-NUCLEAR",
+  "hue": 0.13,
+  "saturation": 1.63,
+  "value": 0.69,
+  "red": 2,
+  "green": 1.4,
+  "blue": 1.44,
+  "contrast": 0.92,
+  "flip_h": false,
+  "portrait_path": "res://images/atlases/card_atlas.sprites/regent/supermassive.tres"
+}

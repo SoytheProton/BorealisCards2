@@ -1,12 +1,12 @@
 {
   "card_id": "CARD.BOREALISCARDS2-RUSH",
   "hue": 1,
-  "saturation": 1,
-  "value": 0.85,
-  "red": 2,
-  "green": 0.63,
-  "blue": 1.06,
-  "contrast": 1.17,
+  "saturation": 0.57,
+  "value": 1.18,
+  "red": 1.55,
+  "green": 0.76,
+  "blue": 0,
+  "contrast": 1.07,
   "flip_h": false,
-  "portrait_path": "res://images/atlases/card_atlas.sprites/silent/dash.tres"
+  "portrait_path": "res://images/atlases/card_atlas.sprites/defect/momentum_strike.tres"
 }

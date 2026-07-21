@@ -1,12 +1,12 @@
 {
   "card_id": "CARD.BOREALISCARDS2-TOWER_SHIELD",
   "hue": 1,
-  "saturation": 1.43,
-  "value": 0.77,
-  "red": 1.04,
-  "green": 2,
-  "blue": 2,
-  "contrast": 1.16,
+  "saturation": 0.77,
+  "value": 1.71,
+  "red": 1.87,
+  "green": 0.49,
+  "blue": 0.15,
+  "contrast": 1.2,
   "flip_h": false,
-  "portrait_path": "res://images/atlases/card_atlas.sprites/event/entrench.tres"
+  "portrait_path": "res://images/atlases/card_atlas.sprites/colorless/ultimate_defend.tres"
 }

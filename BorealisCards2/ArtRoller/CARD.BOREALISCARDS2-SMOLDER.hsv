@@ -1,12 +1,12 @@
 {
   "card_id": "CARD.BOREALISCARDS2-SMOLDER",
   "hue": 1,
-  "saturation": 0.47,
-  "value": 0.8,
-  "red": 2,
-  "green": 0.7,
-  "blue": 1.34,
-  "contrast": 0.92,
+  "saturation": 1.13,
+  "value": 1.73,
+  "red": 1.77,
+  "green": 0.41,
+  "blue": 0.4,
+  "contrast": 1.32,
   "flip_h": false,
-  "portrait_path": "res://images/atlases/card_atlas.sprites/status/burn.tres"
+  "portrait_path": "res://images/atlases/card_atlas.sprites/silent/haze.tres"
 }

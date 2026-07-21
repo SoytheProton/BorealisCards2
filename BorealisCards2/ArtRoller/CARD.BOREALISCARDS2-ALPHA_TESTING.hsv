@@ -1,0 +1,12 @@
+{
+  "card_id": "CARD.BOREALISCARDS2-ALPHA_TESTING",
+  "hue": 0.58,
+  "saturation": 1,
+  "value": 1,
+  "red": 1.38,
+  "green": 1.32,
+  "blue": 1.36,
+  "contrast": 1,
+  "flip_h": false,
+  "portrait_path": "res://images/atlases/card_atlas.sprites/regent/beat_into_shape.tres"
+}

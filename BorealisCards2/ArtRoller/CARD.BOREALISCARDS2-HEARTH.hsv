@@ -1,12 +1,12 @@
 {
   "card_id": "CARD.BOREALISCARDS2-HEARTH",
   "hue": 1,
-  "saturation": 1.18,
-  "value": 0.85,
+  "saturation": 0.76,
+  "value": 1.26,
   "red": 2,
-  "green": 0.93,
-  "blue": 1.01,
-  "contrast": 0.89,
+  "green": 0.53,
+  "blue": 0.21,
+  "contrast": 1.15,
   "flip_h": false,
-  "portrait_path": "res://images/atlases/card_atlas.sprites/quest/byrdonis_egg.tres"
+  "portrait_path": "res://images/atlases/card_atlas.sprites/necrobinder/death_march.tres"
 }
