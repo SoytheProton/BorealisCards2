@@ -22,7 +22,7 @@ public sealed class VoluntarySuicide() : BorealisCards2Card(0,
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        if (play.Target.GetPowerAmount<PoisonPower>() > DynamicVars["Threshold"].BaseValue)
+        if (play.Target.GetPowerAmount<PoisonPower>() >= DynamicVars["Threshold"].BaseValue)
         {
             await DamageCmd.Attack(DynamicVars["AlternateDamage"].BaseValue).FromCard(this, play).Targeting(play.Target).WithHitFx("vfx/vfx_attack_slash").Execute(choiceContext);
         }

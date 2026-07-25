@@ -16,7 +16,7 @@ public sealed class Sparks() : BorealisCards2Card(0,
     CardType.Attack, CardRarity.Common,
     TargetType.AnyEnemy)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(5M, ValueProp.Move)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(4M, ValueProp.Move)];
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromKeyword(CardKeyword.Exhaust)];
 
     protected override async Task OnPlay(
@@ -32,6 +32,6 @@ public sealed class Sparks() : BorealisCards2Card(0,
 
     protected override void OnUpgrade()
     {
-        DynamicVars.Damage.UpgradeValueBy(2M);
+        DynamicVars.Damage.UpgradeValueBy(3M);
     }
 }

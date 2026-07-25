@@ -8,5 +8,6 @@
   "blue": 0.4,
   "contrast": 1.32,
   "flip_h": false,
-  "portrait_path": "res://images/atlases/card_atlas.sprites/silent/haze.tres"
+  "portrait_path": "res://images/atlases/card_atlas.sprites/silent/
+  haze.tres"
 }

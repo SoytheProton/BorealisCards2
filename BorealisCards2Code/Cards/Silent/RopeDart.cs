@@ -28,8 +28,7 @@ public sealed class RopeDart() : BorealisCards2Card(1,
 
     protected override void OnUpgrade()
     {
-        DynamicVars.Damage.UpgradeValueBy(1M);
-        DynamicVars.Cards.UpgradeValueBy(1M);
+        DynamicVars.Damage.UpgradeValueBy(3M);
     }
     
     public override async Task AfterCardPlayedLate(

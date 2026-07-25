@@ -43,6 +43,6 @@ public class RegalStrike() : BorealisCards2Card(2,
     
     protected override void OnUpgrade()
     {
-        DynamicVars.Damage.UpgradeValueBy(2M);
+        DynamicVars.Block.UpgradeValueBy(4M);
     }
 }

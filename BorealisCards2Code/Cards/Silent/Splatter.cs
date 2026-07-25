@@ -13,29 +13,28 @@ using MegaCrit.Sts2.Core.ValueProps;
 namespace BorealisCards2.BorealisCards2Code.Cards.Silent;
 
 [Pool(typeof(SilentCardPool))]
-public sealed class Splatter() : BorealisCards2Card(1,
+public sealed class Splatter() : BorealisCards2Card(2,
     CardType.Attack, CardRarity.Common,
-    TargetType.AnyEnemy)
+    TargetType.AllEnemies)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(3M, ValueProp.Move), new PowerVar<PoisonPower>(4), new CardsVar(2)];
-    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromPower<PoisonPower>()];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<PoisonPower>(6), new PowerVar<WeakPower>(1)];
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromPower<PoisonPower>(), HoverTipFactory.FromPower<WeakPower>()];
     
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        await DamageCmd.Attack(DynamicVars.Damage.BaseValue).FromCard(this, play).Targeting(play.Target).WithHitFx("vfx/vfx_attack_slash").Execute(choiceContext);
-        await PowerCmd.Apply<PoisonPower>(choiceContext, play.Target, DynamicVars.Poison.BaseValue, Owner.Creature, this);
-        var card = await CardSelectCmd.FromHandForDiscard(choiceContext, Owner, new CardSelectorPrefs(CardSelectorPrefs.DiscardSelectionPrompt, DynamicVars.Cards.IntValue), null, this);
-        if (card == null)
-            return;
-        await CardCmd.Discard(choiceContext, card);
+        await CreatureCmd.TriggerAnim(Owner.Creature, "Cast", Owner.Character.CastAnimDelay);
+        foreach (var creature in CombatState.HittableEnemies)
+        {
+            await PowerCmd.Apply<PoisonPower>(choiceContext, creature, DynamicVars.Poison.BaseValue, Owner.Creature, this);
+            await PowerCmd.Apply<WeakPower>(choiceContext, creature, DynamicVars.Weak.BaseValue, Owner.Creature, this);
+        }
     }
 
     protected override void OnUpgrade()
     {
-        DynamicVars.Damage.UpgradeValueBy(1M);
-        DynamicVars.Poison.UpgradeValueBy(1M);
+        DynamicVars.Poison.UpgradeValueBy(2M);
     }
 }

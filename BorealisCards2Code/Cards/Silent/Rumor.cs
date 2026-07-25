@@ -15,7 +15,7 @@ public sealed class Rumor() : BorealisCards2Card(2,
 {
     private decimal _extraDamageFromPlays;
     
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(6M, ValueProp.Move), new ("Scaling", 6M)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(4M, ValueProp.Move), new ("Scaling", 4M)];
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Sly];
 
     private decimal ExtraDamageFromPlays

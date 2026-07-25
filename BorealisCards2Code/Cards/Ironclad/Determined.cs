@@ -14,7 +14,7 @@ namespace BorealisCards2.BorealisCards2Code.Cards.Ironclad;
 [Pool(typeof(IroncladCardPool))]
 public sealed class Determined() : BorealisCards2Card(1,
     CardType.Attack, CardRarity.Uncommon,
-    TargetType.Self)
+    TargetType.AnyEnemy)
 {
     public override bool GainsBlock => true;
     protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(10M, ValueProp.Move), new PowerVar<StrengthPower>(1)];

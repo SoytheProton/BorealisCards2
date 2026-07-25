@@ -1,7 +1,10 @@
-using MegaCrit.Sts2.Core.Entities.Creatures;
+using BorealisCards2.BorealisCards2Code.Enchantments.Necrobinder;
+using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Powers;
-using MegaCrit.Sts2.Core.Models;
-using MegaCrit.Sts2.Core.Models.Powers;
+using MegaCrit.Sts2.Core.HoverTips;
+using MegaCrit.Sts2.Core.Models.Cards;
+using MegaCrit.Sts2.Core.Rooms;
 
 namespace BorealisCards2.BorealisCards2Code.Powers.Necrobinder;
 
@@ -11,13 +14,15 @@ public sealed class TombOfAnnihilationPower : BorealisCards2Power
 
     public override PowerStackType StackType => PowerStackType.Counter;
 
-    public override decimal ModifyPowerAmountGivenMultiplicative(
-        PowerModel power,
-        Creature giver,
-        decimal amount,
-        Creature? target,
-        CardModel? cardSource)
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => HoverTipFactory.FromEnchantment<Damned>().Prepend(HoverTipFactory.FromCard<Soul>());
+
+    public override async Task AfterCombatEnd(CombatRoom room)
     {
-        return power is not DoomPower || giver != Owner ? 1M : 1M + Amount/100M;
+        for (var i = 0; i < Amount; i++)
+        {
+            var soul = Owner.Player.RunState.CreateCard<Soul>(Owner.Player);
+            CardCmd.Enchant<Damned>(soul, 1);
+            CardCmd.PreviewCardPileAdd(await CardPileCmd.Add(soul, PileType.Deck));
+        }
     }
 }

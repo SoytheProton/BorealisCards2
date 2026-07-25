@@ -4,7 +4,7 @@
   "BOREALISCARDS2-BERSERKER.description": "Whenever you lose HP on your turn, play 1 random card from your [gold]Draw Pile[/gold].",
   "BOREALISCARDS2-BERSERKER.title": "Berserker",
 
-  "BOREALISCARDS2-BLOODY_STRIKE.description": "Deal {Damage:diff()} damage.\nAt the start of your turn, lose 1 HP.",
+  "BOREALISCARDS2-BLOODY_STRIKE.description": "Deal {Damage:diff()} damage.\nHeal {Heal:diff()} HP.\nAt the start of your turn, lose 1 HP.",
   "BOREALISCARDS2-BLOODY_STRIKE.title": "Impale",
 
   "BOREALISCARDS2-TOWER_SHIELD.description": "If you have [gold]Block[/gold], gain {Conditional:diff()} [gold]Block[/gold].\nGain {Block:diff()} [gold]Block[/gold].",
@@ -60,7 +60,7 @@
   "BOREALISCARDS2-SATCHEL.description": "The first time you [gold]Discard[/gold] a [gold]Sly[/gold] card each turn, draw {Cards:diff()} cards.",
   "BOREALISCARDS2-SATCHEL.title": "Satchel",
 
-  "BOREALISCARDS2-MISDIRECTION.description": "Gain {Block:diff()} [gold]Block[/gold].\n[gold]Discard[/gold] {Cards:diff()} {Cards:plural:card|cards} from your [gold]Draw Pile[/gold] as if it was from your [gold]Hand[/gold].",
+  "BOREALISCARDS2-MISDIRECTION.description": "Gain {Block:diff()} [gold]Block[/gold].\n[gold]Discard[/gold] a card from your [gold]Draw Pile[/gold] as if it was from your [gold]Hand[/gold].",
   "BOREALISCARDS2-MISDIRECTION.title": "Misdirection",
 
   "BOREALISCARDS2-VANISH.description": "Apply {PoisonPower:diff()} [gold]Poison[/gold].",
@@ -81,7 +81,7 @@
   "BOREALISCARDS2-EMPTY_JAR.description": "Gain {Block:diff()} [gold]Block[/gold].\nDiscard {Cards:diff()} {Cards:plural:card|cards}.",
   "BOREALISCARDS2-EMPTY_JAR.title": "Empty Jar",
 
-  "BOREALISCARDS2-SPLATTER.description": "Deal {Damage:diff()} damage.\nApply {PoisonPower:diff()} [gold]Poison[/gold].\nDiscard {Cards:diff()} {Cards:plural:card|cards}.",
+  "BOREALISCARDS2-SPLATTER.description": "Apply {PoisonPower:diff()} [gold]Poison[/gold] and {WeakPower:diff()} [gold]Vulnerable[/gold] to ALL enemies.",
   "BOREALISCARDS2-SPLATTER.title": "Splatter",
 
   "BOREALISCARDS2-PLUNGE.description": "Apply {PoisonPower:diff()} [gold]Poison[/gold].\nDraw {Cards:diff()} {Cards:plural:card|cards}.",
@@ -90,7 +90,7 @@
   "BOREALISCARDS2-CAUSTIC_VEIL.description": "Gain {Block:diff()} [gold]Block[/gold].\nApply {PoisonPower:diff()} [gold]Poison[/gold] to ALL enemies.",
   "BOREALISCARDS2-CAUSTIC_VEIL.title": "Caustic Veil",
 
-  "BOREALISCARDS2-TOMAHAWK.description": "Add {Cards:diff()} [gold]{Cards:plural:Shiv|Shivs}[/gold] into your [gold]Hand[/gold].",
+  "BOREALISCARDS2-TOMAHAWK.description": "Apply {Power:diff()} [gold]Weak[/gold] and [gold]Vulnerable[/gold] to ALL enemies.",
   "BOREALISCARDS2-TOMAHAWK.title": "Tomahawk",
   
   "BOREALISCARDS2-POCKET_DAGGERS.description": "Add {Cards:diff()} [gold]{Cards:plural:Shiv|Shivs}[/gold] into your [gold]Hand[/gold].\nAt the start of the next {PocketDaggersPower:plural:turn|{:diff()} turns}, add 1 [gold]Shiv[/gold] into your [gold]Hand[/gold].",
@@ -100,7 +100,7 @@
 
   "BOREALISCARDS2-Character3": "Regent",
 
-  "BOREALISCARDS2-PROTECT_ME.description": "Choose {Cards:diff()} cards in your [gold]Hand[/gold] to [gold]Transform[/gold] into [gold]{IfUpgraded:show:Minion Defends+|Minion Defends}[/gold].",
+  "BOREALISCARDS2-PROTECT_ME.description": "[gold]Transform[/gold] {Cards:diff()} random cards in your [gold]Hand[/gold] into [gold]{IfUpgraded:show:Minion Defends+|Minion Defends}[/gold].",
   "BOREALISCARDS2-PROTECT_ME.title": "PROTECT ME!",
 
   "BOREALISCARDS2-SEEING_STARS.description": "Choose a card in your [gold]Draw Pile[/gold] to [gold]Transform[/gold] into\n[gold]{IfUpgraded:show:Minion Scout+|Minion Scout}[/gold].",
@@ -165,13 +165,13 @@
   "BOREALISCARDS2-SUPERNATURAL.description": "[gold]Summon[/gold] {Summon:diff()}.\nAt the start of your turn, if this is in your [gold]Exhaust Pile[/gold], play it.",
   "BOREALISCARDS2-SUPERNATURAL.title": "Supernatural",
 
-  "BOREALISCARDS2-GROWTH_SPURT.description": "[gold]Summon[/gold] {Summon:diff()}.\nReduce the cost of this card by 1.",
-  "BOREALISCARDS2-GROWTH_SPURT.title": "Growth Spurt",
+  "BOREALISCARDS2-INTIMIDATE.description": "[gold]Summon[/gold] {Summon:diff()}.\nApply {VulnerablePower:diff()} [gold]Vulnerable[/gold] to ALL enemies.",
+  "BOREALISCARDS2-INTIMIDATE.title": "Intimidate",
 
   "BOREALISCARDS2-VITRIFICATION.description": "Cards that cost {energyPrefix:energyIcons(2)} or more gain [gold]Retain[/gold].",
   "BOREALISCARDS2-VITRIFICATION.title": "Vitrification",
 
-  "BOREALISCARDS2-TOMB_OF_ANNIHILATION.description": "Whenever you apply [gold]Doom[/gold], apply {TombOfAnnihilationPower:diff()}% more.",
+  "BOREALISCARDS2-TOMB_OF_ANNIHILATION.description": "At the end of combat, add a [purple]Damned[/purple] [gold]{IfUpgraded:show:Soul+|Soul}[/gold] to your [gold]Deck[/gold].",
   "BOREALISCARDS2-TOMB_OF_ANNIHILATION.title": "Tomb of Annihilation",
 
   "BOREALISCARDS2-RESURRECTION.description": "Add {Cards:diff()} [purple]Living[/purple] [gold]Souls[/gold] into your [gold]Discard Pile[/gold].",
@@ -180,13 +180,13 @@
   "BOREALISCARDS2-SHAKEDOWN.description": "[gold]Osty[/gold] deals {OstyDamage:diff()} damage\nto ALL enemies.\nAt the start of the next {ShakedownPower:plural:turn|{:diff()} turns}, [gold]Summon[/gold] {Summon:diff()}.",
   "BOREALISCARDS2-SHAKEDOWN.title": "Shakedown",
 
-  "BOREALISCARDS2-VISCERA.description": "Apply {DoomPower:diff()} [gold]Doom[/gold].\nWhenever this enemy receives [gold]Doom[/gold] this combat, it receives an additional {VisceraPower:diff()} [gold]Doom[/gold].",
+  "BOREALISCARDS2-VISCERA.description": "Apply {DoomPower:diff()} [gold]Doom[/gold].\nAt the start of your next turn, return this to your [gold]Hand[/gold].",
   "BOREALISCARDS2-VISCERA.title": "Viscera",
 
   "BOREALISCARDS2-TURN_THE_PAGE.description": "[gold]Transform[/gold] your [gold]Hand[/gold] into [gold]Souls[/gold]. Gain {energyPrefix:energyIcons(1)} for each card [gold]Transformed[/gold].",
   "BOREALISCARDS2-TURN_THE_PAGE.title": "Turn The Page",
 
-  "BOREALISCARDS2-SIXBONE.description": "[gold]Osty[/gold] deals {OstyDamage:diff()} damage.\nWhenever [gold]Osty[/gold] loses HP, return this to your [gold]Hand[/gold].",
+  "BOREALISCARDS2-SIXBONE.description": "[gold]Osty[/gold] deals {OstyDamage:diff()} damage.\nWhenever [gold]Osty[/gold] loses HP, add   this to your [gold]Hand[/gold].",
   "BOREALISCARDS2-SIXBONE.title": "Sixbone",
 
   "BOREALISCARDS2-RAVAGE.description": "Deal {Damage:diff()} damage.\nALL enemies lose {StrengthPower:diff()} [gold]Strength[/gold] this turn.",
@@ -198,7 +198,7 @@
   
   "BOREALISCARDS2-Character5": "Defect",
 
-  "BOREALISCARDS2-GLASSBLOWER.description": "[gold]Channel[/gold] 1 [gold]Glass[/gold].\nEvery {Cards:diff()} 0{energyPrefix:energyIcons(1)} {Cards:plural:card|cards} you play, put this into your [gold]Hand[/gold].",
+  "BOREALISCARDS2-GLASSBLOWER.description": "[gold]Channel[/gold] {Repeat:diff()} [gold]Glass[/gold].",
   "BOREALISCARDS2-GLASSBLOWER.title": "Glassblowing",
 
   "BOREALISCARDS2-HYPERSPEED_STRIKE.description": "Deal {Damage:diff()} damage.\nAdd a [gold]Void[/gold] into your [gold]Draw Pile[/gold].",
@@ -210,7 +210,7 @@
   "BOREALISCARDS2-RIPSAW.description": "Deal {Damage:diff()} damage to ALL enemies twice.\nAdd {Cards:diff()} [gold]Dazed[/gold] into your [gold]Discard Pile[/gold].",
   "BOREALISCARDS2-RIPSAW.title": "Ripsaw",
 
-  "BOREALISCARDS2-ERR.description": "Whenever you draw this card, play {Cards:diff()} random {Cards:plural:Power|Powers}.",
+  "BOREALISCARDS2-ERR.description": "Whenever you draw this card, play a random {IfUpgraded:show:Upgraded|} Power.",
   "BOREALISCARDS2-ERR.title": "ERR://23¤Y%/",
 
   "BOREALISCARDS2-NUCLEAR.description": "{IfUpgraded:show:[gold]Channel[/gold] 1 [gold]Plasma[/gold].\n}At the start of the next {NuclearPower:plural:turn|{:diff()} turns}, [gold]Channel[/gold] 1 [gold]Plasma[/gold].",

@@ -5,5 +5,9 @@
 
   "BOREALISCARDS2-LIVING.description": "[gold]Summon[/gold] [blue]{Summon}[/blue].",
   "BOREALISCARDS2-LIVING.extraCardText": "[gold]Summon[/gold] {Summon:diff()}.",
-  "BOREALISCARDS2-LIVING.title": "Living"
+  "BOREALISCARDS2-LIVING.title": "Living",
+
+  "BOREALISCARDS2-DAMNED.description": "Apply [blue]{DoomPower}[/blue] [gold]Doom[/gold] to yourself.",
+  "BOREALISCARDS2-DAMNED.extraCardText": "Apply {DoomPower:diff()} [gold]Doom[/gold] to yourself.",
+  "BOREALISCARDS2-DAMNED.title": "Damned"
 }

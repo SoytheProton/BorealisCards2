@@ -15,12 +15,13 @@ public sealed class AlphaTesting() : BorealisCards2Card(2,
 {
     public override bool GainsBlock => true;
     
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new BlockVar(10M, ValueProp.Move)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new BlockVar(7M, ValueProp.Move)];
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
+        await CreatureCmd.TriggerAnim(Owner.Creature, "Cast", Owner.Character.CastAnimDelay);
         await CreatureCmd.GainBlock(Owner.Creature, DynamicVars.Block, play);
         foreach (var orb in Owner.PlayerCombatState.OrbQueue.Orbs)
         {

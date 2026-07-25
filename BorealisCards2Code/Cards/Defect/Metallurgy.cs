@@ -1,5 +1,4 @@
-﻿using BaseLib.Extensions;
-using BaseLib.Utils;
+﻿using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
@@ -8,10 +7,8 @@ using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.CardPools;
 using MegaCrit.Sts2.Core.Models.Cards;
-using MegaCrit.Sts2.Core.Models.Orbs;
 using MegaCrit.Sts2.Core.Models.Powers;
 using MegaCrit.Sts2.Core.ValueProps;
-using Void = MegaCrit.Sts2.Core.Models.Cards.Void;
 
 namespace BorealisCards2.BorealisCards2Code.Cards.Defect;
 
@@ -44,5 +41,9 @@ public sealed class Metallurgy() : BorealisCards2Card(1,
         await Cmd.Wait(0.5f);
     }
 
-    protected override void OnUpgrade() => DynamicVars.Vulnerable.UpgradeValueBy(1);
+    protected override void OnUpgrade()
+    {
+        DynamicVars.Damage.UpgradeValueBy(3M);
+        DynamicVars.Vulnerable.UpgradeValueBy(1);
+    }
 }

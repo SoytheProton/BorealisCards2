@@ -14,7 +14,7 @@ public class EbonyGaze() : BorealisCards2Card(3,
     CardType.Skill, CardRarity.Common,
     TargetType.AnyEnemy)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<DoomPower>(22), new SummonVar(12M)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<DoomPower>(22), new SummonVar(10M)];
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromPower<DoomPower>(), HoverTipFactory.Static(StaticHoverTip.SummonDynamic, DynamicVars.Summon)];
 
     protected override async Task OnPlay(
@@ -29,6 +29,6 @@ public class EbonyGaze() : BorealisCards2Card(3,
     protected override void OnUpgrade()
     {
         DynamicVars.Doom.UpgradeValueBy(6M);
-        DynamicVars.Summon.UpgradeValueBy(4M);
+        DynamicVars.Summon.UpgradeValueBy(2M);
     }
 }

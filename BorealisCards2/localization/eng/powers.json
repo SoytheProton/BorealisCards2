@@ -85,17 +85,17 @@
   "BOREALISCARDS2-VITRIFICATION_POWER.smartDescription": "Cards that cost {energyPrefix:energyIcons(2)} gain [gold]Retain[/gold].",
   "BOREALISCARDS2-VITRIFICATION_POWER.title": "Vitrification",
 
-  "BOREALISCARDS2-TOMB_OF_ANNIHILATION_POWER.description": "Whenever you apply [gold]Doom[/gold], apply more.",
-  "BOREALISCARDS2-TOMB_OF_ANNIHILATION_POWER.smartDescription": "Whenever you apply [gold]Doom[/gold], apply [blue]{Amount}%[/blue] more.",
+  "BOREALISCARDS2-TOMB_OF_ANNIHILATION_POWER.description": "At the end of combat, add a [purple]Damned[/purple] [gold]Soul[/gold] to your [gold]Deck[/gold].",
+  "BOREALISCARDS2-TOMB_OF_ANNIHILATION_POWER.smartDescription": "At the end of combat, add [blue]{Amount}[/blue] [purple]Damned[/purple] [gold]{Amount:plural:Soul|Souls}[/gold] to your [gold]Deck[/gold]",
   "BOREALISCARDS2-TOMB_OF_ANNIHILATION_POWER.title": "Tomb of Annihilation",
+
+  "BOREALISCARDS2-TOMB_OF_ANNIHILATION_UPGRADE_POWER.description": "At the end of combat, add a [purple]Damned[/purple] [gold]Soul+[/gold] to your [gold]Deck[/gold].",
+  "BOREALISCARDS2-TOMB_OF_ANNIHILATION_UPGRADE_POWER.smartDescription": "At the end of combat, add [blue]{Amount}[/blue] [purple]Damned[/purple] [gold]{Amount:plural:Soul|Souls}+[/gold] to your [gold]Deck[/gold]",
+  "BOREALISCARDS2-TOMB_OF_ANNIHILATION_UPGRADE_POWER.title": "Tomb of Annihilation+",
 
   "BOREALISCARDS2-SHAKEDOWN_POWER.description": "At the start of the next turn, [gold]Summon[/gold].",
   "BOREALISCARDS2-SHAKEDOWN_POWER.smartDescription": "At the start of the next {Amount:plural:turn|[blue]{}[/blue] turns}, [gold]Summon[/gold] [blue]{Summon}[/blue].",
   "BOREALISCARDS2-SHAKEDOWN_POWER.title": "Shakedown",
-
-  "BOREALISCARDS2-VISCERA_POWER.description": "Whenever this creature receives [gold]Doom[/gold], it receives an additional [gold]Doom[/gold].",
-  "BOREALISCARDS2-VISCERA_POWER.smartDescription": "Whenever {OnPlayer:you|this enemy} receives [gold]Doom[/gold], it receives an additional [blue]{Amount}[/blue] [gold]Doom[/gold].",
-  "BOREALISCARDS2-VISCERA_POWER.title": "Viscera",
   
   
 

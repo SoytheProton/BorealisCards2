@@ -35,7 +35,7 @@ public class Sixbone() : BorealisCards2Card(1,
     
     public override async Task AfterCurrentHpChanged(Creature creature, decimal delta)
     {
-        if (delta >= 0M || creature.Monster is not Osty || creature.PetOwner != Owner || Pile.Type == PileType.Hand)
+        if (delta >= 0M || CombatState == null || creature.Monster is not Osty || creature.PetOwner != Owner || Pile.Type == PileType.Hand)
             return;
         await CardPileCmd.Add(this, PileType.Hand);
     }

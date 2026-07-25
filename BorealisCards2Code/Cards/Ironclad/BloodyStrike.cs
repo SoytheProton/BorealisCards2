@@ -14,7 +14,7 @@ public sealed class BloodyStrike() : BorealisCards2Card(1,
     CardType.Power, CardRarity.Uncommon,
     TargetType.AnyEnemy)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(17M, ValueProp.Move), new PowerVar<BloodyStrikePower>(1M)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(17M, ValueProp.Move), new PowerVar<BloodyStrikePower>(1M), new HealVar(2M)];
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
@@ -22,6 +22,7 @@ public sealed class BloodyStrike() : BorealisCards2Card(1,
     {
         await CreatureCmd.TriggerAnim(Owner.Creature, "Attack", Owner.Character.AttackAnimDelay);
         await DamageCmd.Attack(DynamicVars.Damage.BaseValue).FromCard(this, play).Targeting(play.Target).WithHitFx("vfx/vfx_attack_slash").Execute(choiceContext);
+        await CreatureCmd.Heal(Owner.Creature, DynamicVars.Heal.BaseValue);
         await PowerCmd.Apply<BloodyStrikePower>(choiceContext, Owner.Creature, DynamicVars["BloodyStrikePower"].BaseValue, Owner.Creature, this);
     }
 
