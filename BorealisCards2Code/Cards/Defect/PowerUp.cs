@@ -19,7 +19,7 @@ public sealed class PowerUp() : BorealisCards2Card(1,
     TargetType.Self)
 {
     public override bool GainsBlock => true;
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<FocusPower>(2M), new BlockVar(7M, ValueProp.Move)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<FocusPower>(1M), new BlockVar(7M, ValueProp.Move)];
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromPower<FocusPower>()];
     
     protected override async Task OnPlay(

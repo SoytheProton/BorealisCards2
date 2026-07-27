@@ -25,9 +25,7 @@ public sealed class Metallurgy() : BorealisCards2Card(1,
         CardPlay play)
     {
         await DamageCmd.Attack(DynamicVars.Damage.BaseValue).FromCard(this, play).Targeting(play.Target).WithHitFx("vfx/vfx_attack_slash").Execute(choiceContext);
-        var amount = DynamicVars.Vulnerable.IntValue;
-        await PowerCmd.Apply<WeakPower>(choiceContext, play.Target, amount, Owner.Creature, this);
-        await PowerCmd.Apply<VulnerablePower>(choiceContext, play.Target, amount, Owner.Creature, this);
+        await PowerCmd.Apply<VulnerablePower>(choiceContext, play.Target, DynamicVars.Vulnerable.IntValue, Owner.Creature, this);
     }
 
     public override async Task AfterCardDrawn(

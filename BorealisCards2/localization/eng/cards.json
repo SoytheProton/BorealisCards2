@@ -81,7 +81,7 @@
   "BOREALISCARDS2-EMPTY_JAR.description": "Gain {Block:diff()} [gold]Block[/gold].\nDiscard {Cards:diff()} {Cards:plural:card|cards}.",
   "BOREALISCARDS2-EMPTY_JAR.title": "Empty Jar",
 
-  "BOREALISCARDS2-SPLATTER.description": "Apply {PoisonPower:diff()} [gold]Poison[/gold] and {WeakPower:diff()} [gold]Vulnerable[/gold] to ALL enemies.",
+  "BOREALISCARDS2-SPLATTER.description": "Apply {PoisonPower:diff()} [gold]Poison[/gold] and {WeakPower:diff()} [gold]Weak[/gold] to ALL enemies.",
   "BOREALISCARDS2-SPLATTER.title": "Splatter",
 
   "BOREALISCARDS2-PLUNGE.description": "Apply {PoisonPower:diff()} [gold]Poison[/gold].\nDraw {Cards:diff()} {Cards:plural:card|cards}.",

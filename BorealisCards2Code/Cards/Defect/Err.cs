@@ -10,11 +10,11 @@ using MegaCrit.Sts2.Core.Models.CardPools;
 namespace BorealisCards2.BorealisCards2Code.Cards.Defect;
 
 [Pool(typeof(DefectCardPool))]
-public sealed class Err() : BorealisCards2Card(1,
+public sealed class Err() : BorealisCards2Card(-1,
     CardType.Skill, CardRarity.Rare,
     TargetType.None)
 {
-    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Ethereal];
+    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Unplayable];
     
     protected override IEnumerable<DynamicVar> CanonicalVars => [new CardsVar(1)];
 
