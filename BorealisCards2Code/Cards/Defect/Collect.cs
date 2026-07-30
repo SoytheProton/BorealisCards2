@@ -26,22 +26,9 @@ public sealed class Collect() : BorealisCards2Card(1,
     {
         await OrbCmd.Channel<FrostOrb>(choiceContext, Owner);
         var prefs = new CardSelectorPrefs(SelectionScreenPrompt, 1);
-        var card = (await CardSelectCmd.FromCombatPile(choiceContext, PileType.Draw.GetPile(Owner), Owner, prefs, model => Filter(model))).FirstOrDefault();
+        var card = (await CardSelectCmd.FromCombatPile(choiceContext, PileType.Draw.GetPile(Owner), Owner, prefs, model => model.EnergyCost.GetWithModifiers(CostModifiers.All) == 0 && !model.EnergyCost.CostsX)).FirstOrDefault();
         if (card != null)
             await CardPileCmd.Add(card, PileType.Hand);
-    }
-
-    private static bool Filter(CardModel card)
-    {
-        var flag1 = card.EnergyCost.GetWithModifiers(CostModifiers.All) == 0 && !card.EnergyCost.CostsX;
-        if (!flag1) return flag1;
-        var flag2 = card.Type switch
-        {
-            CardType.Attack or CardType.Skill or CardType.Power => true,
-            _ => false
-        };
-        flag1 = flag2;
-        return flag1;
     }
 
     protected override void OnUpgrade() => EnergyCost.UpgradeBy(-1);

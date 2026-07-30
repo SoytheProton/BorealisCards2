@@ -19,10 +19,11 @@ public class BraceForImpact() : BorealisCards2Card(2,
     private const string IncreaseKey = "Increase";
     private int _currentCards = BaseCards;
     private int _increasedCards;
-    private const int BaseCards = 2;
+    private const int BaseCards = 1;
     
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new BlockVar(30, ValueProp.Move), new CardsVar(CurrentCards), new (IncreaseKey, 1)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new BlockVar(25, ValueProp.Move), new CardsVar(CurrentCards), new (IncreaseKey, 1)];
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromCard<Debris>()];
+    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Retain];
     
     [SavedProperty]
     private int CurrentCards
@@ -66,7 +67,7 @@ public class BraceForImpact() : BorealisCards2Card(2,
     
     protected override void OnUpgrade()
     {
-        DynamicVars.Block.UpgradeValueBy(10M);
+        DynamicVars.Block.UpgradeValueBy(7);
     }
     
     protected override void AfterDowngraded() => UpdateCards();

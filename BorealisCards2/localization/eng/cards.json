@@ -186,7 +186,7 @@
   "BOREALISCARDS2-TURN_THE_PAGE.description": "[gold]Transform[/gold] your [gold]Hand[/gold] into [gold]Souls[/gold]. Gain {energyPrefix:energyIcons(1)} for each card [gold]Transformed[/gold].",
   "BOREALISCARDS2-TURN_THE_PAGE.title": "Turn The Page",
 
-  "BOREALISCARDS2-SIXBONE.description": "[gold]Osty[/gold] deals {OstyDamage:diff()} damage.\nWhenever [gold]Osty[/gold] loses HP, add   this to your [gold]Hand[/gold].",
+  "BOREALISCARDS2-SIXBONE.description": "[gold]Osty[/gold] deals {OstyDamage:diff()} damage.\nWhenever [gold]Osty[/gold] loses HP, add this to your [gold]Hand[/gold].",
   "BOREALISCARDS2-SIXBONE.title": "Sixbone",
 
   "BOREALISCARDS2-RAVAGE.description": "Deal {Damage:diff()} damage.\nALL enemies lose {StrengthPower:diff()} [gold]Strength[/gold] this turn.",
@@ -210,7 +210,7 @@
   "BOREALISCARDS2-RIPSAW.description": "Deal {Damage:diff()} damage to ALL enemies twice.\nAdd {Cards:diff()} [gold]Dazed[/gold] into your [gold]Discard Pile[/gold].",
   "BOREALISCARDS2-RIPSAW.title": "Ripsaw",
 
-  "BOREALISCARDS2-ERR.description": "Whenever you draw this card, play a random {IfUpgraded:show:Upgraded|} Power.",
+  "BOREALISCARDS2-ERR.description": "Whenever you draw this card, play a random {IfUpgraded:show:Upgraded |}Power.",
   "BOREALISCARDS2-ERR.title": "ERR://23¤Y%/",
 
   "BOREALISCARDS2-NUCLEAR.description": "{IfUpgraded:show:[gold]Channel[/gold] 1 [gold]Plasma[/gold].\n}At the start of the next {NuclearPower:plural:turn|{:diff()} turns}, [gold]Channel[/gold] 1 [gold]Plasma[/gold].",
@@ -222,7 +222,7 @@
   "BOREALISCARDS2-HIGH_VOLTAGE.description": "Deal {Damage:diff()} damage.\n[gold]Channel[/gold] {Repeat:diff()} [gold]Lightning[/gold].",
   "BOREALISCARDS2-HIGH_VOLTAGE.title": "High Voltage",
 
-  "BOREALISCARDS2-STACK_TRACE.description": "Gain 1 Orb Slot.\n Add a {IfUpgraded:show:[gold]Dazed[/gold]|[gold]Void[/gold]} into your [gold]Discard Pile[/gold].",
+  "BOREALISCARDS2-STACK_TRACE.description": "Gain 1 Orb Slot.\nAdd a {IfUpgraded:show:[gold]Dazed[/gold]|[gold]Void[/gold]} into your [gold]Discard Pile[/gold].",
   "BOREALISCARDS2-STACK_TRACE.title": "Stack Trace",
 
   "BOREALISCARDS2-TEMPERATURE_SHOCK.description": "[gold]Channel[/gold] 1 [gold]Lightning[/gold].\n[gold]Channel[/gold] 1 [gold]Frost[/gold].",
@@ -241,7 +241,7 @@
   "BOREALISCARDS2-IONIZE.description": "The first time you [gold]Channel[/gold] [gold]Lightning[/gold] each turn, [gold]Channel[/gold] {Repeat:diff()} [gold]Lightning[/gold].",
   "BOREALISCARDS2-IONIZE.title": "Ionize",
 
-  "BOREALISCARDS2-METALLURGY.description": "Deal {Damage:diff()} damage.\nApply {VulnerablePower:diff()} [gold]Vulnerable[/gold].\nWhenever you draw this card, Add a [gold]Burn[/gold] into your [gold]Discard Pile[/gold].",
+  "BOREALISCARDS2-METALLURGY.description": "Deal {Damage:diff()} damage.\nApply {VulnerablePower:diff()} [gold]Vulnerable[/gold].\nWhenever you draw this card, add a [gold]Burn[/gold] into your [gold]Discard Pile[/gold].",
   "BOREALISCARDS2-METALLURGY.title": "Metallurgy",
 
 

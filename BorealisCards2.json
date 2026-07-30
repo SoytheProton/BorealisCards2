@@ -3,7 +3,7 @@
   "name": "Borealis Cards 2",
   "author": "SoytheProton & CrypticAurora",
   "description": "A card expansion pack.",
-  "version": "v0.1.0",
+  "version": "v0.2.0",
   "has_pck": true,
   "has_dll": true,
   "dependencies": [{"id": "BaseLib", "min_version": "3.3.6"}],

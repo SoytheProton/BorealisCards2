@@ -23,10 +23,9 @@ public sealed class BejeweledBladePower : BorealisCards2Power
         if (creator == null || creator.Creature != Owner || !card.Tags.Contains(CardTag.Shiv))
             return Task.CompletedTask;
         var num = CombatManager.Instance.History.Entries.OfType<CardGeneratedEntry>().Count(o => o.Actor == Owner && o.HappenedThisTurn(Owner.CombatState) && o.Card.Tags.Contains(CardTag.Shiv));
-        if(num > Amount) return Task.CompletedTask;
+        if(num > Amount || !ModelDb.Enchantment<Crystalline>().CanEnchant(card)) return Task.CompletedTask;
         Flash();
-        if(ModelDb.Enchantment<Crystalline>().CanEnchant(card))
-            CardCmd.Enchant<Crystalline>(card, 1);
+        CardCmd.Enchant<Crystalline>(card, 1);
         return Task.CompletedTask;
     }
 }

@@ -11,10 +11,10 @@ namespace BorealisCards2.BorealisCards2Code.Cards.Silent;
 
 [Pool(typeof(SilentCardPool))]
 public sealed class Splatter() : BorealisCards2Card(2,
-    CardType.Attack, CardRarity.Common,
+    CardType.Skill, CardRarity.Common,
     TargetType.AllEnemies)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<PoisonPower>(7), new PowerVar<WeakPower>(1)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<PoisonPower>(6), new PowerVar<WeakPower>(1)];
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromPower<PoisonPower>(), HoverTipFactory.FromPower<WeakPower>()];
     
 

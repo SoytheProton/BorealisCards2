@@ -17,7 +17,7 @@ public sealed class Tomahawk() : BorealisCards2Card(2,
     CardType.Skill, CardRarity.Common,
     TargetType.AllEnemies)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new ("Power", 2)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new ("Power", 1)];
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Retain, CardKeyword.Sly, CardKeyword.Exhaust];
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromPower<WeakPower>(), HoverTipFactory.FromPower<VulnerablePower>()];
@@ -36,6 +36,6 @@ public sealed class Tomahawk() : BorealisCards2Card(2,
 
     protected override void OnUpgrade()
     {
-        RemoveKeyword(CardKeyword.Exhaust);
+        DynamicVars["Power"].UpgradeValueBy(1);
     }
 }

@@ -9,7 +9,7 @@ namespace BorealisCards2.BorealisCards2Code.Enchantments.Necrobinder;
 
 public sealed class Damned : BorealisCards2Enchantment
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<DoomPower>(5M)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<DoomPower>(3M)];
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromPower<DoomPower>()];
     
     public override bool HasExtraCardText => true;

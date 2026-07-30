@@ -1,17 +1,12 @@
-using BaseLib.Extensions;
 using BaseLib.Utils;
-using BorealisCards2.BorealisCards2Code.Powers.Necrobinder;
 using MegaCrit.Sts2.Core.Combat;
-using MegaCrit.Sts2.Core.Combat.History.Entries;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
-using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.CardPools;
-using MegaCrit.Sts2.Core.Models.Cards;
 using MegaCrit.Sts2.Core.Models.Powers;
 
 namespace BorealisCards2.BorealisCards2Code.Cards.Necrobinder;
@@ -38,7 +33,7 @@ public class Viscera() : BorealisCards2Card(1,
         PlayerChoiceContext choiceContext,
         ICombatState combatState)
     {
-        if (player != Owner || CombatManager.Instance.History.CardPlaysFinished.All(e => e.CardPlay.Card != this))
+        if (player != Owner || CombatManager.Instance.History.CardPlaysFinished.All(e => e.CardPlay.Card != this || !e.HappenedLastPlayerTurn(player)))
             return;
         if ((Pile != null ? Pile.Type != PileType.Hand ? 1 : 0 : 1) == 0)
             return;

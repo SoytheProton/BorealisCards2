@@ -21,8 +21,8 @@ public partial class BorealisCards2Main : Node
     public static void Initialize()
     {
         Harmony harmony = new(ModId);
-        Directory.CreateDirectory(CardsDirectory);
-        CardArtRoller.RegisterAllFromDirectory(CardsDirectory);
+        // Directory.CreateDirectory(CardsDirectory);
+        // CardArtRoller.RegisterAllFromDirectory(CardsDirectory);
         harmony.PatchAll();
     }
 }

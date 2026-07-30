@@ -23,7 +23,7 @@ public class Betelgeuse() : BorealisCards2Card(0,
         CardPlay play)
     { 
         await CardPileCmd.Draw(choiceContext, CardPile.MaxCardsInHand - Owner.PlayerCombatState.Hand.Cards.Count, Owner);
-        foreach (var card in PileType.Hand.GetPile(Owner).Cards)
+        foreach (var card in PileType.Hand.GetPile(Owner).Cards.ToList())
         {
             if (card.Type != CardType.Attack) continue;
             for (var i = 0; i < DynamicVars.Repeat.IntValue; ++i)
