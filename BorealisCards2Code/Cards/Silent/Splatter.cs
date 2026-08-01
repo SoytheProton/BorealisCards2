@@ -10,24 +10,22 @@ using MegaCrit.Sts2.Core.Models.Powers;
 namespace BorealisCards2.BorealisCards2Code.Cards.Silent;
 
 [Pool(typeof(SilentCardPool))]
-public sealed class Splatter() : BorealisCards2Card(2,
+public sealed class Splatter() : BorealisCards2Card(0,
     CardType.Skill, CardRarity.Common,
-    TargetType.AllEnemies)
+    TargetType.AnyEnemy)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<PoisonPower>(6), new PowerVar<WeakPower>(1)];
-    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromPower<PoisonPower>(), HoverTipFactory.FromPower<WeakPower>()];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<PoisonPower>(3)];
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromPower<PoisonPower>()];
     
 
+    // I am NOT happy that they stole OUR card from OUR mod. smh.
+    
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
         await CreatureCmd.TriggerAnim(Owner.Creature, "Cast", Owner.Character.CastAnimDelay);
-        foreach (var creature in CombatState.HittableEnemies)
-        {
-            await PowerCmd.Apply<PoisonPower>(choiceContext, creature, DynamicVars.Poison.BaseValue, Owner.Creature, this);
-            await PowerCmd.Apply<WeakPower>(choiceContext, creature, DynamicVars.Weak.BaseValue, Owner.Creature, this);
-        }
+        await PowerCmd.Apply<PoisonPower>(choiceContext, play.Target, DynamicVars.Poison.BaseValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()
