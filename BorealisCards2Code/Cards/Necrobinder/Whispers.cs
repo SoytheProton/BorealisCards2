@@ -25,7 +25,9 @@ public class Whispers() : BorealisCards2Card(1,
         await CreatureCmd.TriggerAnim(Owner.Creature, "Cast", Owner.Character.CastAnimDelay);
         for (int i = 0; i < DynamicVars.Repeat.IntValue; ++i)
         {
-            Creature enemy = Owner.RunState.Rng.CombatTargets.NextItem(CombatState.HittableEnemies);
+            var enemy = Owner.RunState.Rng.CombatTargets.NextItem(CombatState.HittableEnemies);
+            if(enemy == null)
+                return;
             await PowerCmd.Apply<DoomPower>(choiceContext, enemy, DynamicVars.Doom.BaseValue, Owner.Creature, this);
             await Cmd.Wait(0.2f);
         }
