@@ -92,7 +92,6 @@
         <Compile Remove="materials/**"/>
         <Compile Remove="shaders/**"/>
         <Compile Remove="images/**"/>
-        <None Include="BorealisCards2\shaders\color_adjust.gdshader" />
         <EmbeddedResource Remove="BorealisCards2/**"/>
         <EmbeddedResource Remove="materials/**"/>
         <EmbeddedResource Remove="shaders/**"/>
