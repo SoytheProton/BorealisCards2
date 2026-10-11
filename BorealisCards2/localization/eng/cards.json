@@ -28,7 +28,7 @@
   "BOREALISCARDS2-DETERMINED.description": "Deal {Damage:diff()} damage.\nWhen this card is [gold]Exhausted[/gold], gain {StrengthPower:diff()} [gold]Strength[/gold] and return this to your [gold]Hand[/gold].",
   "BOREALISCARDS2-DETERMINED.title": "Determined",
 
-  "BOREALISCARDS2-PURGE.description": "Exhaust up to {Cards:diff()} cards in your [gold]Hand[/gold]. Draw 1 card for each card [gold]Exhausted[/gold].",
+  "BOREALISCARDS2-PURGE.description": "[gold]Exhaust[/gold] up to {Cards:diff()} cards in your [gold]Hand[/gold]. Draw 1 card for each card [gold]Exhausted[/gold].",
   "BOREALISCARDS2-PURGE.selectionScreenPrompt": "Choose up to {Cards:diff()} cards to [gold]Exhaust[/gold].",
   "BOREALISCARDS2-PURGE.title": "Purge",
 
