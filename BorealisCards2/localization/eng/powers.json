@@ -120,5 +120,17 @@
 
   "BOREALISCARDS2-IONIZE_POWER.description": "The first time you [gold]Channel[/gold] [gold]Lightning[/gold] each turn, [gold]Channel[/gold] a [gold]Lightning[/gold].",
   "BOREALISCARDS2-IONIZE_POWER.smartDescription": "The first time you [gold]Channel[/gold] [gold]Lightning[/gold] each turn, [gold]Channel[/gold] [blue]{Amount}[/blue] [gold]Lightning[/gold].",
-  "BOREALISCARDS2-IONIZE_POWER.title": "Ionize"
+  "BOREALISCARDS2-IONIZE_POWER.title": "Ionize",
+
+  "BOREALISCARDS2-PACKET_LOSS_POWER.description": "At the start of the next turn, shuffle 2 [gold]Dazed[/gold] into your [gold]Draw Pile[/gold].",
+  "BOREALISCARDS2-PACKET_LOSS_POWER.smartDescription": "At the start of the next {Amount:plural:turn|[blue]{}[/blue] turns}, shuffle 2 [gold]Dazed[/gold] into your [gold]Draw Pile[/gold].",
+  "BOREALISCARDS2-PACKET_LOSS_POWER.title": "Packet Loss",
+
+  "BOREALISCARDS2-CARBON_COPY_POWER.description": "what the fuck am i meant to do with this",
+  "BOREALISCARDS2-CARBON_COPY_POWER.smartDescription": "im not figuring out localization for this shit listen you get a card next turn remember it yourself",
+  "BOREALISCARDS2-CARBON_COPY_POWER.title": "Carbon Copy",
+
+  "BOREALISCARDS2-IMPACT_DRIVER_POWER.description": "Whenever ANYONE plays a Power, deal damage to ALL enemies.",
+  "BOREALISCARDS2-IMPACT_DRIVER_POWER.smartDescription": "Whenever ANYONE plays a Power, deal [blue]{Amount}[/blue] damage to ALL enemies.",
+  "BOREALISCARDS2-IMPACT_DRIVER_POWER.title": "Impact Driver"
 }

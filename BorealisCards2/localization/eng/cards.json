@@ -244,6 +244,33 @@
   "BOREALISCARDS2-METALLURGY.description": "Deal {Damage:diff()} damage.\nApply {VulnerablePower:diff()} [gold]Vulnerable[/gold].\nWhenever you draw this card, add a [gold]Burn[/gold] into your [gold]Discard Pile[/gold].",
   "BOREALISCARDS2-METALLURGY.title": "Metallurgy",
 
+  "BOREALISCARDS2-WELD.description": "Deal {Damage:diff()} damage.\nAdd 1 [gold]Burn[/gold] into your [gold]Hand[/gold].\nReturn this card to your [gold]Hand[/gold].",
+  "BOREALISCARDS2-WELD.title": "Weld",
+
+  "BOREALISCARDS2-PACKET_LOSS.description": "Deal {Damage:diff()} damage to ALL enemies.\nAt the start of the next 2 turns, shuffle 2 [gold]Dazed[/gold] into your [gold]Draw Pile[/gold].",
+  "BOREALISCARDS2-PACKET_LOSS.title": "Packet Loss",
+
+  "BOREALISCARDS2-LAG_SWITCH.description": "Gain {FocusPower:diff()} [gold]Focus[/gold] this turn.\nLose 1 [gold]Focus[/gold].",
+  "BOREALISCARDS2-LAG_SWITCH.title": "Lag Switch",
+  
+  "BOREALISCARDS2-CARBON_COPY.description": "Choose 1 0{energyPrefix:energyIcons(1)} card in your [gold]Hand[/gold]. Add a copy of it to your [gold]Hand[/gold] next turn.",
+  "BOREALISCARDS2-CARBON_COPY.selectionScreenPrompt": "Select a card to duplicate.",
+  "BOREALISCARDS2-CARBON_COPY.title": "Carbon Copy",
+
+  "BOREALISCARDS2-FROZEN_OVER.description": "Gain {Repeat:diff()} Orb Slots.\n[gold]Channel[/gold] 10 [gold]Frost[/gold].",
+  "BOREALISCARDS2-FROZEN_OVER.title": "Frozen Over",
+
+  "BOREALISCARDS2-CHOP_SHOP.description": "Deal {Damage:diff()} damage.\nTransform a random card in your [gold]Hand[/gold] into a random 0{energyPrefix:energyIcons(1)} Attack. It gains [gold]Replay[/gold].",
+  "BOREALISCARDS2-CHOP_SHOP.title": "Chop Shop",
+
+  "BOREALISCARDS2-HYPERSONIC.description": "Deal {Damage:diff()} damage.\nDraw {Cards:diff()} card.\nAdd a copy of this card into EVERYONE'S [gold]Discard Pile[/gold].",
+  "BOREALISCARDS2-HYPERSONIC.title": "Hypersonic",
+
+  "BOREALISCARDS2-IMPACT_DRIVER.description": "Whenever ANYONE plays a Power, deal {ImpactDriverPower:diff()} damage to ALL enemies.",
+  "BOREALISCARDS2-IMPACT_DRIVER.title": "Impact Driver",
+
+  "BOREALISCARDS2-BONUS_ROUND.description": "[gold]Channel[/gold] {Repeat:diff()} random {Repeat:plural:Orb|Orbs}.\nGive this card to a random ally.",
+  "BOREALISCARDS2-BONUS_ROUND.title": "Bonus Round",
 
 
   "BOREALISCARDS2-Character6": "Colorless",
