@@ -247,6 +247,14 @@
   "BOREALISCARDS2-WELD.description": "",
   "BOREALISCARDS2-WELD.title": "Weld",
 
+  "BOREALISCARDS2-PACKET_LOSS.description": "",
+  "BOREALISCARDS2-PACKET_LOSS.title": "Packet Loss",
+
+  "BOREALISCARDS2-LAG_SWITCH.description": "",
+  "BOREALISCARDS2-LAG_SWITCH.title": "Lag Switch",
+
+  "BOREALISCARDS2-CARBON_COPY.description": "",
+  "BOREALISCARDS2-CARBON_COPY.title": "Carbon Copy",
 
 
   "BOREALISCARDS2-Character6": "Colorless",

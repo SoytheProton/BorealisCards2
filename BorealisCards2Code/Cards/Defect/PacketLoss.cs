@@ -1,15 +1,17 @@
 using BaseLib.Utils;
+using BorealisCards2.BorealisCards2Code.Powers.Defect;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
+using MegaCrit.Sts2.Core.Models.CardPools;
 using MegaCrit.Sts2.Core.Models.Cards;
 using MegaCrit.Sts2.Core.ValueProps;
 
 namespace BorealisCards2.BorealisCards2Code.Cards.Defect;
 
-[Pool(typeof())]
+[Pool(typeof(DefectCardPool))]
 public class PacketLoss() : BorealisCards2Card(1,
     CardType.Attack, CardRarity.Uncommon,
     TargetType.AnyEnemy)
@@ -23,6 +25,7 @@ public class PacketLoss() : BorealisCards2Card(1,
         CardPlay play)
     {
         await DamageCmd.Attack(DynamicVars.Damage.BaseValue).FromCard(this, play).TargetingAllOpponents(CombatState).WithHitFx("vfx/vfx_attack_slash").Execute(choiceContext);
+        await PowerCmd.Apply<PacketLossPower>(choiceContext, Owner.Creature, DynamicVars.Cards.BaseValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()
