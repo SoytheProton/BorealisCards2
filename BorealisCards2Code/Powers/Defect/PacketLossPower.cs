@@ -25,6 +25,7 @@ public sealed class PacketLossPower : BorealisCards2Power
         if (player != Owner.Player)
             return;
         CardCmd.PreviewCardPileAdd(await CardPileCmd.AddGeneratedCardToCombat(CombatState.CreateCard<Dazed>(Owner.Player), PileType.Draw, Owner.Player, CardPilePosition.Random));
+        CardCmd.PreviewCardPileAdd(await CardPileCmd.AddGeneratedCardToCombat(CombatState.CreateCard<Dazed>(Owner.Player), PileType.Draw, Owner.Player, CardPilePosition.Random));
         await PowerCmd.Decrement(this);
     }
 }

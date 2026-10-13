@@ -34,7 +34,7 @@ public sealed class CarbonCopyPower : BorealisCards2Power
         CardModel card;
         if (player == Owner.Player)
         {
-            card = GetInternalData<NightmarePower.Data>().selectedCard;
+            card = GetInternalData<Data>().selectedCard;
             for (int i = 0; i < Amount; ++i)
             {
                 await CardPileCmd.AddGeneratedCardToCombat(card.CreateClone(), PileType.Hand, Owner.Player);
@@ -47,7 +47,7 @@ public sealed class CarbonCopyPower : BorealisCards2Power
     {
         CardModel clone = card.CreateClone();
         CardCmd.ClearAffliction(clone);
-        GetInternalData<NightmarePower.Data>().selectedCard = clone;
+        GetInternalData<Data>().selectedCard = clone;
         ((StringVar) DynamicVars["Card"]).StringValue = clone.Title;
     }
 

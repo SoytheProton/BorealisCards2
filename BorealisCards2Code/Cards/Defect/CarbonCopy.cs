@@ -25,7 +25,7 @@ public class CarbonCopy() : BorealisCards2Card(1,
         CardPlay play)
     {
         CardSelectorPrefs prefs = new CardSelectorPrefs(SelectionScreenPrompt, 1);
-        IEnumerable<CardModel> cards = await CardSelectCmd.FromHand(choiceContext, Owner, prefs, null, this);
+        IEnumerable<CardModel> cards = await CardSelectCmd.FromHand(choiceContext, Owner, prefs, (Func<CardModel, bool>) (c => c.EnergyCost.GetWithModifiers(CostModifiers.All) == 0), this);
         
         CardModel selectedCard = cards.FirstOrDefault<CardModel>();
         if (selectedCard == null)
