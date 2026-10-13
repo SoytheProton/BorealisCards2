@@ -244,6 +244,9 @@
   "BOREALISCARDS2-METALLURGY.description": "Deal {Damage:diff()} damage.\nApply {VulnerablePower:diff()} [gold]Vulnerable[/gold].\nWhenever you draw this card, add a [gold]Burn[/gold] into your [gold]Discard Pile[/gold].",
   "BOREALISCARDS2-METALLURGY.title": "Metallurgy",
 
+  "BOREALISCARDS2-WELD.description": "",
+  "BOREALISCARDS2-WELD.title": "Weld",
+
 
 
   "BOREALISCARDS2-Character6": "Colorless",
