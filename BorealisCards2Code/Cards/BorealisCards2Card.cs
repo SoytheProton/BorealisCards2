@@ -14,7 +14,7 @@ public abstract class BorealisCards2Card(int cost, CardType type, CardRarity rar
         get
         {
             var path = $"{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".BigCardImagePath();
-            return ResourceLoader.Exists(path) ? path : base.CustomPortraitPath;
+            return ResourceLoader.Exists(path) ? path : "card.png".BigCardImagePath();;
         }
     }
     
