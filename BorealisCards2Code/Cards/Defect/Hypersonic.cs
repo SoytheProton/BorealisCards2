@@ -14,9 +14,9 @@ namespace BorealisCards2.BorealisCards2Code.Cards.Defect;
 
 [Pool(typeof(DefectCardPool))]
 public class Hypersonic() : BorealisCards2Card(0,
-    CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy)
+    CardType.Attack, CardRarity.Rare, TargetType.AnyEnemy)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(2M, ValueProp.Move), new CardsVar(1)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(1M, ValueProp.Move), new CardsVar(1)];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [];
 
@@ -33,6 +33,6 @@ public class Hypersonic() : BorealisCards2Card(0,
 
     protected override void OnUpgrade()
     {
-        DynamicVars.Damage.UpgradeValueBy(2);
+        DynamicVars.Damage.UpgradeValueBy(1);
     }
 }
