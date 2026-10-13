@@ -19,6 +19,8 @@ public class Hypersonic() : BorealisCards2Card(0,
     protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(1M, ValueProp.Move), new CardsVar(1)];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [];
+    
+    public override CardMultiplayerConstraint MultiplayerConstraint => CardMultiplayerConstraint.MultiplayerOnly;
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {

@@ -17,6 +17,8 @@ public class ImpactDriver() : BorealisCards2Card(1,
     protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<ImpactDriverPower>(8)];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [];
+    
+    public override CardMultiplayerConstraint MultiplayerConstraint => CardMultiplayerConstraint.MultiplayerOnly;
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
@@ -25,8 +27,5 @@ public class ImpactDriver() : BorealisCards2Card(1,
         await PowerCmd.Apply<ImpactDriverPower>(choiceContext, Owner.Creature, DynamicVars["ImpactDriverPower"].BaseValue, Owner.Creature, this);
     }
 
-    protected override void OnUpgrade()
-    {
-        DynamicVars["ImpactDriverPower"].UpgradeValueBy(3);
-    }
+    protected override void OnUpgrade() => AddKeyword(CardKeyword.Innate);
 }
