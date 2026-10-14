@@ -257,7 +257,7 @@
   "BOREALISCARDS2-CARBON_COPY.selectionScreenPrompt": "Select a card to duplicate.",
   "BOREALISCARDS2-CARBON_COPY.title": "Carbon Copy",
 
-  "BOREALISCARDS2-FROZEN_OVER.description": "Gain {Repeat:diff()} Orb Slots.\n[gold]Channel[/gold] 10 [gold]Frost[/gold].",
+  "BOREALISCARDS2-FROZEN_OVER.description": "Gain {Repeat:diff()} Orb Slots.\n[gold]Channel[/gold] 5 [gold]Frost[/gold].",
   "BOREALISCARDS2-FROZEN_OVER.title": "Frozen Over",
 
   "BOREALISCARDS2-CHOP_SHOP.description": "Deal {Damage:diff()} damage.\nTransform a random card in your [gold]Hand[/gold] into a random 0{energyPrefix:energyIcons(1)} Attack. It gains [gold]Replay[/gold].",

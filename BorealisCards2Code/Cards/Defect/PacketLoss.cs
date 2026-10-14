@@ -14,7 +14,7 @@ namespace BorealisCards2.BorealisCards2Code.Cards.Defect;
 [Pool(typeof(DefectCardPool))]
 public class PacketLoss() : BorealisCards2Card(1,
     CardType.Attack, CardRarity.Uncommon,
-    TargetType.AnyEnemy)
+    TargetType.AllEnemies)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(12, ValueProp.Move), new CardsVar(2)];
 

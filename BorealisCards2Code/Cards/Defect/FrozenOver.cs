@@ -14,7 +14,7 @@ namespace BorealisCards2.BorealisCards2Code.Cards.Defect;
 public class FrozenOver() : BorealisCards2Card(4,
     CardType.Power, CardRarity.Rare, TargetType.Self)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new RepeatVar(4), new RepeatVar("Orbs",10)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new RepeatVar(4), new RepeatVar("Orbs",5)];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromOrb<FrostOrb>()];
 
