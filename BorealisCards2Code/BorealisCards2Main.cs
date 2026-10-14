@@ -1,3 +1,5 @@
+using BaseLib.Config;
+using BorealisCards2.BorealisCards2Code.Metrics;
 using Godot;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Logging;
@@ -18,5 +20,9 @@ public partial class BorealisCards2Main : Node
     {
         Harmony harmony = new(ModId);
         harmony.PatchAll();
+        
+        ModManager.OnMetricsUpload += Telemetry.OnMetricsUpload;
+        ModConfigRegistry.Register(ModId, new Config());
+        MetricsTest.SendTest();
     }
 }
