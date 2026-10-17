@@ -26,16 +26,16 @@ public class BonusRound() : BorealisCards2Card(0,
         CardPlay play)
     {
         await CreatureCmd.TriggerAnim(Owner.Creature, "Cast", Owner.Character.CastAnimDelay);
-        for (int i = 0; i < DynamicVars.Repeat.IntValue; ++i)
+        for (var i = 0; i < DynamicVars.Repeat.IntValue; ++i)
             await OrbCmd.Channel(choiceContext, OrbModel.GetRandomOrb(Owner.RunState.Rng.CombatOrbGeneration).ToMutable(), Owner);
     }
     
     protected override CardLocation GetResultLocationForCardPlay()
     {
-        CardLocation locationForCardPlay = base.GetResultLocationForCardPlay();
+        var locationForCardPlay = base.GetResultLocationForCardPlay();
         if (CombatState == null)
             return locationForCardPlay;
-        List<Creature> list = CombatState.GetTeammatesOf(Owner.Creature).Where(c => c != null && c.IsAlive && c.IsPlayer && c.Player != Owner).ToList();
+        var list = CombatState.GetTeammatesOf(Owner.Creature).Where(c => c is { IsAlive: true, IsPlayer: true } && c.Player != Owner).ToList();
         if (list.Count == 0)
             return locationForCardPlay;
         locationForCardPlay.player = Owner.RunState.Rng.CombatTargets.NextItem(list).Player;

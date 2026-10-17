@@ -13,11 +13,11 @@ namespace BorealisCards2.BorealisCards2Code.Cards.Defect;
 
 
 [Pool(typeof(DefectCardPool))]
-public class Weld() : BorealisCards2Card(0,
+public class Weld() : BorealisCards2Card(1,
     CardType.Attack, CardRarity.Uncommon,
     TargetType.AnyEnemy)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(3M, ValueProp.Move)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(10M, ValueProp.Move)];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromCard<Burn>()];
 
@@ -26,17 +26,17 @@ public class Weld() : BorealisCards2Card(0,
         CardPlay play)
     {
         await DamageCmd.Attack(DynamicVars.Damage.BaseValue).FromCard(this, play).Targeting(play.Target).WithHitFx("vfx/vfx_attack_slash").Execute(choiceContext);
-        CardCmd.PreviewCardPileAdd(await CardPileCmd.AddGeneratedCardToCombat(CombatState.CreateCard<Burn>(Owner), PileType.Hand, Owner));
+        await CardPileCmd.AddGeneratedCardToCombat(CombatState.CreateCard<Burn>(Owner), PileType.Hand, Owner);
         await Cmd.Wait(0.5f);
     }
     
     protected override CardLocation GetResultLocationForCardPlay()
     {
-        CardLocation locationForCardPlay = base.GetResultLocationForCardPlay();
+        var locationForCardPlay = base.GetResultLocationForCardPlay();
         if (locationForCardPlay.pileType == PileType.Discard)
             locationForCardPlay.pileType = PileType.Hand;
         return locationForCardPlay;
     }
 
-    protected override void OnUpgrade() => DynamicVars.Damage.UpgradeValueBy(1M);
+    protected override void OnUpgrade() => DynamicVars.Damage.UpgradeValueBy(3M);
 }

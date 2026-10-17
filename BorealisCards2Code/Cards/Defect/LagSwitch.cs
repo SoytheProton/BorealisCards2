@@ -1,3 +1,4 @@
+using BaseLib.Extensions;
 using BaseLib.Utils;
 using BorealisCards2.BorealisCards2Code.Cards;
 using BorealisCards2.BorealisCards2Code.Powers.Defect;
@@ -23,9 +24,9 @@ public class LagSwitch() : BorealisCards2Card(1,
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        await PowerCmd.Apply<LagSwitchPower>(choiceContext, Owner.Creature, DynamicVars["FocusPower"].BaseValue, Owner.Creature, this);
+        await PowerCmd.Apply<LagSwitchPower>(choiceContext, Owner.Creature, DynamicVars.Power<FocusPower>().BaseValue, Owner.Creature, this);
         await PowerCmd.Apply<FocusPower>(choiceContext, Owner.Creature, -1, Owner.Creature, this);
     }
 
-    protected override void OnUpgrade() => DynamicVars["FocusPower"].UpgradeValueBy(2M);
+    protected override void OnUpgrade() => DynamicVars.Power<FocusPower>().UpgradeValueBy(2M);
 }

@@ -14,7 +14,7 @@ namespace BorealisCards2.BorealisCards2Code.Cards.Defect;
 public class ImpactDriver() : BorealisCards2Card(1,
     CardType.Power, CardRarity.Uncommon, TargetType.Self)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<ImpactDriverPower>(8)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<ImpactDriverPower>(6)];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [];
     

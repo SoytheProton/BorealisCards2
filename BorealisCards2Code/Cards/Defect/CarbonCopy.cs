@@ -24,20 +24,13 @@ public class CarbonCopy() : BorealisCards2Card(1,
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        CardSelectorPrefs prefs = new CardSelectorPrefs(SelectionScreenPrompt, 1);
-        IEnumerable<CardModel> cards = await CardSelectCmd.FromHand(choiceContext, Owner, prefs, (Func<CardModel, bool>) (c => c.EnergyCost.GetWithModifiers(CostModifiers.All) == 0), this);
+        var prefs = new CardSelectorPrefs(SelectionScreenPrompt, 1);
+        var cards = await CardSelectCmd.FromHand(choiceContext, Owner, prefs, (Func<CardModel, bool>) (c => c.EnergyCost.GetWithModifiers(CostModifiers.All) == 0), this);
         
-        CardModel selectedCard = cards.FirstOrDefault<CardModel>();
-        if (selectedCard == null)
-        {
-            cards = (IEnumerable<CardModel>) null;
-            selectedCard = (CardModel) null;
-        }
-        else
+        var selectedCard = cards.FirstOrDefault();
+        if (selectedCard != null)
         {
             (await PowerCmd.Apply<CarbonCopyPower>(choiceContext, Owner.Creature, 1M, Owner.Creature, this)).SetSelectedCard(selectedCard);
-            cards = (IEnumerable<CardModel>) null;
-            selectedCard = (CardModel) null;
         }
     }
 

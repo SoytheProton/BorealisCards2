@@ -24,7 +24,7 @@ public class FrozenOver() : BorealisCards2Card(4,
     {
         await CreatureCmd.TriggerAnim(Owner.Creature, "PowerUp", Owner.Character.PowerUpAnimDelay);
         await OrbCmd.AddSlots(Owner, DynamicVars.Repeat.IntValue);
-        for (int i = 0; i < DynamicVars["Orbs"].IntValue; ++i)
+        for (var i = 0; i < DynamicVars["Orbs"].IntValue; ++i)
             await OrbCmd.Channel<FrostOrb>(choiceContext, Owner);
     }
 

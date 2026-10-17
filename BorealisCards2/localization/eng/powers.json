@@ -132,5 +132,13 @@
 
   "BOREALISCARDS2-IMPACT_DRIVER_POWER.description": "Whenever ANYONE plays a Power, deal damage to ALL enemies.",
   "BOREALISCARDS2-IMPACT_DRIVER_POWER.smartDescription": "Whenever ANYONE plays a Power, deal [blue]{Amount}[/blue] damage to ALL enemies.",
-  "BOREALISCARDS2-IMPACT_DRIVER_POWER.title": "Impact Driver"
+  "BOREALISCARDS2-IMPACT_DRIVER_POWER.title": "Impact Driver",
+  
+  "BOREALISCARDS2-VIGNETTE_POWER.description": "At the end of your turn, trigger the rightmost [gold]Dark[/gold] for each [gold]Dark[gold] you have.",
+  "BOREALISCARDS2-VIGNETTE_POWER.smartDescription": "At the end of your turn, trigger the rightmost [gold]Dark[/gold] [blue]{Amount}[/blue] {Amount:plural:time|times} for each [gold]Dark[gold] you have.",
+  "BOREALISCARDS2-VIGNETTE_POWER.title": "Vignette",
+
+  "BOREALISCARDS2-NETWORKED_SUFFERING_POWER.description": "Whenever you [gold]Evoke[/gold] an Orb, trigger the passive ability of your next Orb.",
+  "BOREALISCARDS2-NETWORKED_SUFFERING_POWER.smartDescription": "Whenever you [gold]Evoke[/gold] an Orb, trigger the passive ability of your next Orb [blue]{Amount}[/blue] {Amount:plural:time|times}.",
+  "BOREALISCARDS2-NETWORKED_SUFFERING_POWER.title": "Networked Suffering"
 }

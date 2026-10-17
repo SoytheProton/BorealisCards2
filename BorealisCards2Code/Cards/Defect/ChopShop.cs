@@ -28,15 +28,17 @@ public class ChopShop() : BorealisCards2Card(0,
         await DamageCmd.Attack(DynamicVars.Damage.BaseValue).FromCard(this, play).Targeting(play.Target).WithHitFx("vfx/vfx_attack_slash").Execute(choiceContext);
         
         var card = Owner.RunState.Rng.CombatCardSelection.NextItem(PileType.Hand.GetPile(Owner).Cards);
+        if(card == null)
+            return;
         
-        IEnumerable<CardModel> zeroCostPool = Owner.Character.CardPool
+        var zeroCostPool = Owner.Character.CardPool
             .GetUnlockedCards(
                 Owner.UnlockState,
                 Owner.RunState.CardMultiplayerConstraint)
-            .Where(card =>
-                card.EnergyCost.GetWithModifiers(CostModifiers.All) == 0 && card.Type == CardType.Attack);
+            .Where(c =>
+                c.EnergyCost.GetWithModifiers(CostModifiers.All) == 0 && c.Type == CardType.Attack);
 
-        CardModel? zeroCost = CardFactory.GetDistinctForCombat(
+        var zeroCost = CardFactory.GetDistinctForCombat(
                 Owner,
                 zeroCostPool,
                 1,

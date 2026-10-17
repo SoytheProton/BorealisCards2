@@ -29,7 +29,7 @@ public class Hypersonic() : BorealisCards2Card(0,
         await CardPileCmd.Draw(choiceContext, DynamicVars.Cards.BaseValue, Owner);
         if (CombatState == null)
             return;
-        foreach (Creature creature in CombatState.GetTeammatesOf(Owner.Creature).Where(c => c != null && c.IsAlive && c.IsPlayer))
+        foreach (var creature in CombatState.GetTeammatesOf(Owner.Creature).Where(c => c is { IsAlive: true, IsPlayer: true }))
             CardCmd.PreviewCardPileAdd(await CardPileCmd.AddGeneratedCardToCombat(CreateCloneForPlayer(creature.Player), PileType.Discard, Owner), 2.2f);
     }
 

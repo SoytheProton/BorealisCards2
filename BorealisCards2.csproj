@@ -108,6 +108,7 @@
 
     <ItemGroup>
         <Folder Include="BorealisCards2Code\Cards\Colorless\" />
+        <Folder Include="BorealisCards2Code\Cards\Defect\ColorWheelCards\" />
         <Folder Include="BorealisCards2Code\Powers\Shared\" />
         <Folder Include="BorealisCards2\ArtRoller\" />
         <Folder Include="BorealisCards2\images\card_portraits\big\"/>
@@ -128,6 +129,7 @@
         <Message Text="Copying .dll and manifest to mods folder." Importance="high"/>
         <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(ModsPath)$(MSBuildProjectName)/"/>
         <Copy SourceFiles="BorealisCards2.json" DestinationFolder="$(ModsPath)$(MSBuildProjectName)/"/>
+        <Copy SourceFiles="$(TargetDir)$(TargetName).pdb" DestinationFolder="$(ModsPath)$(MSBuildProjectName)/" />
     </Target>
 
     <Target Name="GodotPublish" AfterTargets="Publish" Condition="'$(GodotPath)' != '' and Exists('$(GodotPath)') and '$(IsInnerGodotExport)' != 'true'">

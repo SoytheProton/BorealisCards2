@@ -23,6 +23,6 @@ public partial class BorealisCards2Main : Node
         
         ModManager.OnMetricsUpload += Telemetry.OnMetricsUpload;
         ModConfigRegistry.Register(ModId, new Config());
-        MetricsTest.SendTest();
+        // MetricsTest.SendTest();
     }
 }

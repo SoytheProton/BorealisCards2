@@ -272,6 +272,18 @@
   "BOREALISCARDS2-BONUS_ROUND.description": "[gold]Channel[/gold] {Repeat:diff()} random {Repeat:plural:Orb|Orbs}.\nGive this card to a random ally.",
   "BOREALISCARDS2-BONUS_ROUND.title": "Bonus Round",
 
+  "BOREALISCARDS2-VIGNETTE.description": "{IfUpgraded:show:[gold]Channel[/gold] 1 [gold]Dark[/gold].\n}At the end of your turn, trigger the rightmost [gold]Dark[/gold] 1 time for each [gold]Dark[/gold] you have.",
+  "BOREALISCARDS2-VIGNETTE.title": "Vignette",
+
+  "BOREALISCARDS2-NETWORKED_SUFFERING.description": "Whenever you [gold]Evoke[/gold] an Orb, trigger the passive ability of your next Orb {Repeat:diff()} {Repeat:plural:time|times}.",
+  "BOREALISCARDS2-NETWORKED_SUFFERING.title": "Networked Suffering",
+
+  "BOREALISCARDS2-COLOR_WHEEL.description": "NOT WORKING RN. {ModdedOrbs:\n(Cannot Channel modded Orbs)|}",
+  "BOREALISCARDS2-COLOR_WHEEL.title": "Color Wheel",
+
+  "BOREALISCARDS2-PATTERN_SCREAMER.description": "{HasEffect:{Lightning:Channel 1 [gold]Lightning[/gold].|}{Frost:Channel 1 [gold]Frost[/gold].|}{Dark:Channel 1 [gold]Dark[/gold].|}{Glass:Channel 1 [gold]Glass[/gold].|}{Plasma:Channel 1 [gold]Plasma[/gold].|}{Block:Gain 5 [gold]Block[/gold].|}{Draw:Draw 2 cards.|}{Energy:Gain {energyPrefix:energyIcons(1)}.|}{Poison:Apply 5 [gold]Poison[/gold] to ALL enemies.|}{Weak:Apply 1 [gold]Weak[/gold] to ALL enemies.|}{Vulnerable:Apply 1 [gold]Vulnerable[/gold] to ALL enemies.|}{Power:Add a random Power into your [gold]Hand[/gold]. It's free to play this turn.|}{ZeroCost:Add a random 0{energyPrefix:energyIcons(1)} card into your [gold]Hand[/gold].|}{Dazes:Add 3 [gold]Dazed[/gold] into your [gold]Hand[/gold].|}{TempFocus:Gain 3 [gold]Focus[/gold] this turn.|}{Focus:Gain 1 [gold]Focus[/gold].|}{Strength:Gain 1 [gold]Strength[/gold].|}{Dexterity:Gain 1 [gold]Dexterity[/gold].|}{Plating:Gain 3 [gold]Plating[/gold].|}{Wish:Put a card from your [gold]Draw Pile[/gold] into your [gold]Hand[/gold].|}{Hologram:Put a card from your [gold]Discard Pile[/gold] into your [gold]Hand[/gold].|}{Exhaust:[gold]Exhaust[/gold] 1 card.|}{Details:Solar, please add details.|}{Reroll:Error. Please try again.|}{Jackpot:Jackpot! [gold]Channel[/gold] every Orb.|}{Kaboom:KABOOM!!!|}{Claw:Claw is the Law.|}{Yaoi:Two boys.... kissing....|}{Phone:Phone a friend...|}{EightOption:lmao get scammed this option isn't real yet.|}|Do a random effect.}\nThe first time you play a 0{energyPrefix:energyIcons(1)} Attack each turn, put this into your [gold]Hand[/gold] and randomize the effect.",
+  "BOREALISCARDS2-PATTERN_SCREAMER.selectionScreenPrompt": "Select a card to put in your Hand.",
+  "BOREALISCARDS2-PATTERN_SCREAMER.title": "Pattern Screamer",
 
   "BOREALISCARDS2-Character6": "Colorless",
 
