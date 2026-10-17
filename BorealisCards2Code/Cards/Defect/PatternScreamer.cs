@@ -239,7 +239,6 @@ public class PatternScreamer() : BorealisCards2Card(0,
         if (cardPlay.Player != Owner || cardPlay.Card.Type != CardType.Attack || cardPlay.Card.EnergyCost.GetWithModifiers(CostModifiers.All) != 0 || cardPlay.Card.EnergyCost.CostsX || Pile?.Type == PileType.Hand)
             return;
         var num = CombatManager.Instance.History.CardPlaysFinished.Count(e => e.HappenedThisTurn(CombatState) && e.CardPlay.Card.Type == CardType.Attack && e.CardPlay.Card.EnergyCost.GetWithModifiers(CostModifiers.All) == 0 && !e.CardPlay.Card.EnergyCost.CostsX && e.CardPlay.Player == Owner);
-        BorealisCards2Main.Logger.Info("------------------------------------------------------------------ "+ num);
         if (num == 1)
         {
             RerollRng();
