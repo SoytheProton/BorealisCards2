@@ -1,5 +1,4 @@
-﻿using ArtRoller;
-using BaseLib.Utils;
+﻿using BaseLib.Utils;
 using BorealisCards2.BorealisCards2Code.Powers.Defect;
 using MegaCrit.Sts2.Core.CardSelection;
 using MegaCrit.Sts2.Core.Combat;
@@ -8,12 +7,16 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Factories;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.Helpers;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization;
+using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.CardPools;
 using MegaCrit.Sts2.Core.Models.Cards;
 using MegaCrit.Sts2.Core.Models.Orbs;
 using MegaCrit.Sts2.Core.Models.Powers;
+using MegaCrit.Sts2.Core.Nodes.Rooms;
+using MegaCrit.Sts2.Core.Nodes.Vfx;
 using MegaCrit.Sts2.Core.ValueProps;
 
 namespace BorealisCards2.BorealisCards2Code.Cards.Defect;
@@ -22,8 +25,12 @@ namespace BorealisCards2.BorealisCards2Code.Cards.Defect;
 public class PatternScreamer() : BorealisCards2Card(0,
     CardType.Skill, CardRarity.Rare, TargetType.Self)
 {
+    private const bool DebugMode = false;
+    
     private PatternScreamerEffects _normalEffect;
     private PatternScreamerSpecialEffects _specialEffect;
+
+    private int _zeroCostAttacksPlayed;
     
     private enum PatternScreamerEffects
     {
@@ -50,9 +57,35 @@ public class PatternScreamer() : BorealisCards2Card(0,
         Wish,
         Hologram,
         Exhaust,
+        Doom,
+        StrengthDown,
         Special
     }
-    
+
+    public override TargetType TargetType
+    {
+        get
+        {
+            return NormalEffect switch
+            {
+                PatternScreamerEffects.Poison or 
+                    PatternScreamerEffects.Weak or 
+                    PatternScreamerEffects.Vulnerable or 
+                    PatternScreamerEffects.StrengthDown 
+                    => TargetType.AllEnemies,
+                PatternScreamerEffects.Doom 
+                    => TargetType.AnyEnemy,
+                PatternScreamerEffects.Special 
+                    => SpecialEffect switch
+                {
+                    PatternScreamerSpecialEffects.Kaboom => TargetType.AllEnemies,
+                    _ => TargetType.Self
+                },
+                _ => TargetType.Self
+            };
+        }
+    }
+
     private enum PatternScreamerSpecialEffects
     {
         None,
@@ -63,7 +96,7 @@ public class PatternScreamer() : BorealisCards2Card(0,
         Claw,
         Yaoi,
         Phone,
-        EightOption
+        Unlimited
     }
     
     private PatternScreamerEffects NormalEffect
@@ -121,7 +154,7 @@ public class PatternScreamer() : BorealisCards2Card(0,
                 await PlayerCmd.GainEnergy(1M, Owner);
                 break;
             case PatternScreamerEffects.Poison:
-                await PowerCmd.Apply<PoisonPower>(choiceContext, CombatState.HittableEnemies, 5M, Owner.Creature, this);
+                await PowerCmd.Apply<PoisonPower>(choiceContext, CombatState.HittableEnemies, 3M, Owner.Creature, this);
                 break;
             case PatternScreamerEffects.Weak:
                 await PowerCmd.Apply<WeakPower>(choiceContext, CombatState.HittableEnemies, 1M, Owner.Creature, this);
@@ -149,7 +182,7 @@ public class PatternScreamer() : BorealisCards2Card(0,
                 await CardPileCmd.AddGeneratedCardToCombat(CombatState.CreateCard<Dazed>(Owner), PileType.Hand, Owner);
                 break;
             case PatternScreamerEffects.TempFocus:
-                await PowerCmd.Apply<PatternScreamerPower>(choiceContext, Owner.Creature, 3M, Owner.Creature, this);
+                await PowerCmd.Apply<PatternScreamerFocusPower>(choiceContext, Owner.Creature, 3M, Owner.Creature, this);
                 break;
             case PatternScreamerEffects.Focus:
                 await PowerCmd.Apply<FocusPower>(choiceContext, Owner.Creature, 1M, Owner.Creature, this);
@@ -184,12 +217,20 @@ public class PatternScreamer() : BorealisCards2Card(0,
                     return;
                 await CardCmd.Exhaust(choiceContext, exhaustCard);
                 break;
+            case PatternScreamerEffects.Doom:
+                await PowerCmd.Apply<DoomPower>(choiceContext, play.Target, 8M, Owner.Creature, this);
+                break;
+            case PatternScreamerEffects.StrengthDown:
+                await PowerCmd.Apply<PatternScreamerStrengthDownPower>(choiceContext, CombatState.HittableEnemies, 3M, Owner.Creature, this);
+                break;
             case PatternScreamerEffects.Special:
                 switch (SpecialEffect)
                 {
                     case PatternScreamerSpecialEffects.None:
                     case PatternScreamerSpecialEffects.Details:
+                        break;
                     case PatternScreamerSpecialEffects.Reroll:
+                        RerollRng();
                         break;
                     case PatternScreamerSpecialEffects.Jackpot:
                         await OrbCmd.Channel<LightningOrb>(choiceContext, Owner);
@@ -199,7 +240,13 @@ public class PatternScreamer() : BorealisCards2Card(0,
                         await OrbCmd.Channel<PlasmaOrb>(choiceContext, Owner);
                         break;
                     case PatternScreamerSpecialEffects.Kaboom:
-                        await CreatureCmd.Damage(choiceContext, Owner.Creature.CombatState.Creatures.Where(c => !c.IsPet), 10M, ValueProp.Unpowered, Owner.Creature, null, null);
+                        var targets = Owner.Creature.CombatState.HittableEnemies;
+                        foreach (var target1 in targets)
+                        {
+                            var instance = NCombatRoom.Instance;
+                            instance?.CombatVfxContainer.AddChildSafely(NFireSmokePuffVfx.Create(target1));
+                        }
+                        await CreatureCmd.Damage(choiceContext,targets , 10M, ValueProp.Unpowered, Owner.Creature, null, null);
                         break;
                     case PatternScreamerSpecialEffects.Claw:
                         var list = PileType.Hand.GetPile(Owner).Cards.Where(c => c is not Claw).ToList();
@@ -215,13 +262,24 @@ public class PatternScreamer() : BorealisCards2Card(0,
                         }
                         break;
                     case PatternScreamerSpecialEffects.Yaoi:
-                        await PlayerCmd.GainStars(1, Owner);
+                        var regentCard = CardFactory.GetDistinctForCombat(Owner, ModelDb.CardPool<RegentCardPool>().GetUnlockedCards(Owner.UnlockState, Owner.RunState.CardMultiplayerConstraint), 1, Owner.RunState.Rng.CombatCardGeneration).First();
+                        await PlayerCmd.GainStars(3, Owner);
                         await ForgeCmd.Forge(10M, Owner, this);
+                        await CardPileCmd.AddGeneratedCardToCombat(regentCard, PileType.Hand, Owner);
                         break;
                     case PatternScreamerSpecialEffects.Phone:
                         await OstyCmd.Summon(choiceContext, Owner, 5M, this);
                         break;
-                    case PatternScreamerSpecialEffects.EightOption:
+                    case PatternScreamerSpecialEffects.Unlimited:
+                        var allCardList = Owner.UnlockState.CharacterCardPools.ToList();
+                        var cards = from c in allCardList.SelectMany(c => c.GetUnlockedCards(Owner.UnlockState, Owner.RunState.CardMultiplayerConstraint))
+                            where c.Type == CardType.Power && c is not MadScience
+                            select c;
+                        var powerCardList = CardFactory.GetDistinctForCombat(Owner, cards, 3, Owner.RunState.Rng.CombatCardGeneration);
+                        foreach (var randomPowerCard in powerCardList)
+                        {
+                            await CardCmd.AutoPlay(choiceContext, randomPowerCard, null);
+                        }
                         break;
                     default:
                         throw new ArgumentOutOfRangeException();
@@ -236,26 +294,43 @@ public class PatternScreamer() : BorealisCards2Card(0,
         PlayerChoiceContext choiceContext,
         CardPlay cardPlay)
     {
-        if (cardPlay.Player != Owner || cardPlay.Card.Type != CardType.Attack || cardPlay.Card.EnergyCost.GetWithModifiers(CostModifiers.All) != 0 || cardPlay.Card.EnergyCost.CostsX || Pile?.Type == PileType.Hand)
+        if (DebugMode)
+        {
+            RerollRng();
+            await CardPileCmd.Add(this, PileType.Hand);
+            return;
+        }
+        if (cardPlay.Player != Owner || cardPlay.Card.Type != CardType.Attack || cardPlay.Card.EnergyCost.GetWithModifiers(CostModifiers.All) != 0 || cardPlay.Card.EnergyCost.CostsX || Pile?.Type == PileType.Hand || _zeroCostAttacksPlayed > 0)
             return;
         var num = CombatManager.Instance.History.CardPlaysFinished.Count(e => e.HappenedThisTurn(CombatState) && e.CardPlay.Card.Type == CardType.Attack && e.CardPlay.Card.EnergyCost.GetWithModifiers(CostModifiers.All) == 0 && !e.CardPlay.Card.EnergyCost.CostsX && e.CardPlay.Player == Owner);
         if (num == 1)
         {
             RerollRng();
+            _zeroCostAttacksPlayed++;
             await CardPileCmd.Add(this, PileType.Hand);
         }
     }
     
+    public override Task AfterSideTurnStart(
+        CombatSide side,
+        IReadOnlyList<Creature> participants,
+        ICombatState combatState)
+    {
+        if (!participants.Contains(Owner.Creature))
+            return Task.CompletedTask;
+        _zeroCostAttacksPlayed = 0;
+        return Task.CompletedTask;
+    }
+    
     protected override CardLocation GetResultLocationForCardPlay()
     {
-        if (SpecialEffect != PatternScreamerSpecialEffects.Reroll && NormalEffect != PatternScreamerEffects.Special)
+        if (SpecialEffect != PatternScreamerSpecialEffects.Reroll && NormalEffect == PatternScreamerEffects.Special)
             return base.GetResultLocationForCardPlay();
         
         var locationForCardPlay = base.GetResultLocationForCardPlay();
         if (locationForCardPlay.pileType == PileType.Discard)
         {
             locationForCardPlay.pileType = PileType.Hand;
-            RerollRng();
         }
         return locationForCardPlay;
     }
@@ -274,6 +349,12 @@ public class PatternScreamer() : BorealisCards2Card(0,
 
     private void RerollRng()
     {
+        if (DebugMode)
+        {
+            NormalEffect = PatternScreamerEffects.Special;
+            SpecialEffect = PatternScreamerSpecialEffects.Unlimited;
+            return;
+        }
         var rng = Owner.RunState.Rng.CombatCardSelection.NextInt(0, (int) PatternScreamerEffects.Special) + 1;
         NormalEffect = (PatternScreamerEffects) rng;
         if (rng == (int)PatternScreamerEffects.Special)
@@ -332,6 +413,7 @@ public class PatternScreamer() : BorealisCards2Card(0,
             case PatternScreamerEffects.Focus:
                 return [HoverTipFactory.FromPower<FocusPower>()];
             case PatternScreamerEffects.Strength:
+            case PatternScreamerEffects.StrengthDown:
                 return [HoverTipFactory.FromPower<StrengthPower>()];
             case PatternScreamerEffects.Dexterity:
                 return [HoverTipFactory.FromPower<DexterityPower>()];
@@ -339,6 +421,8 @@ public class PatternScreamer() : BorealisCards2Card(0,
                 return [HoverTipFactory.FromPower<PlatingPower>()];
             case PatternScreamerEffects.Exhaust:
                 return [HoverTipFactory.FromKeyword(CardKeyword.Exhaust)];
+            case PatternScreamerEffects.Doom:
+                return [HoverTipFactory.FromPower<DoomPower>()];
             default:
                 throw new ArgumentOutOfRangeException();
         }
@@ -351,13 +435,12 @@ public class PatternScreamer() : BorealisCards2Card(0,
             case PatternScreamerSpecialEffects.Kaboom:
             case PatternScreamerSpecialEffects.Yaoi:
             case PatternScreamerSpecialEffects.Phone:
+            case PatternScreamerSpecialEffects.Unlimited:
                 break;
             case PatternScreamerSpecialEffects.Jackpot:
                 return [HoverTipFactory.FromOrb<LightningOrb>(),HoverTipFactory.FromOrb<FrostOrb>(),HoverTipFactory.FromOrb<DarkOrb>(),HoverTipFactory.FromOrb<GlassOrb>(),HoverTipFactory.FromOrb<PlasmaOrb>()];
             case PatternScreamerSpecialEffects.Claw:
                 return [HoverTipFactory.FromCard<Claw>()];
-            case PatternScreamerSpecialEffects.EightOption:
-                break;
             default:
                 throw new ArgumentOutOfRangeException();
         }
