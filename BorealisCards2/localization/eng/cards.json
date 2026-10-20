@@ -278,10 +278,14 @@
   "BOREALISCARDS2-NETWORKED_SUFFERING.description": "Whenever you [gold]Evoke[/gold] an Orb, trigger the passive ability of your next Orb {Repeat:diff()} {Repeat:plural:time|times}.",
   "BOREALISCARDS2-NETWORKED_SUFFERING.title": "Networked Suffering",
 
-  "BOREALISCARDS2-COLOR_WHEEL.description": "NOT WORKING RN. {ModdedOrbs:\n(Cannot Channel modded Orbs)|}",
+  "BOREALISCARDS2-COLOR_WHEEL.description": "{HasChosen:[gold]Channel[/gold] 1 [gold]{ChosenOrb}[/gold]|Upon pickup, choose an Orb to [gold]Channel[/gold].}{Modded:\n(Cannot select modded Orbs.)|}",
+  "BOREALISCARDS2-COLOR_WHEEL.selectionScreenPrompt": "Choose an Orb for Color Wheel to Channel.",
   "BOREALISCARDS2-COLOR_WHEEL.title": "Color Wheel",
 
-  "BOREALISCARDS2-PATTERN_SCREAMER.description": "{HasEffect:{Lightning:Channel 1 [gold]Lightning[/gold].|}{Frost:Channel 1 [gold]Frost[/gold].|}{Dark:Channel 1 [gold]Dark[/gold].|}{Glass:Channel 1 [gold]Glass[/gold].|}{Plasma:Channel 1 [gold]Plasma[/gold].|}{Block:Gain 5 [gold]Block[/gold].|}{Draw:Draw 2 cards.|}{Energy:Gain {energyPrefix:energyIcons(1)}.|}{Poison:Apply 3 [gold]Poison[/gold] to ALL enemies.|}{Weak:Apply 1 [gold]Weak[/gold] to ALL enemies.|}{Vulnerable:Apply 1 [gold]Vulnerable[/gold] to ALL enemies.|}{Power:Add a random Power into your [gold]Hand[/gold]. It's free to play this turn.|}{ZeroCost:Add a random 0{energyPrefix:energyIcons(1)} card into your [gold]Hand[/gold].|}{Dazes:Add 3 [gold]Dazed[/gold] into your [gold]Hand[/gold].|}{TempFocus:Gain 3 [gold]Focus[/gold] this turn.|}{Focus:Gain 1 [gold]Focus[/gold].|}{Strength:Gain 1 [gold]Strength[/gold].|}{Dexterity:Gain 1 [gold]Dexterity[/gold].|}{Plating:Gain 3 [gold]Plating[/gold].|}{Wish:Put a card from your [gold]Draw Pile[/gold] into your [gold]Hand[/gold].|}{Hologram:Put a card from your [gold]Discard Pile[/gold] into your [gold]Hand[/gold].|}{Exhaust:[gold]Exhaust[/gold] 1 card.|}{Doom:Apply 8 [gold]Doom[/gold].|}{StrengthDown:ALL enemies lose 3 [gold]Strength[/gold] this turn.|}{Details:Solar, please add details.|}{Reroll:Error. Please try again.|}{Jackpot:Jackpot! [gold]Channel[/gold] every Orb.|}{Kaboom:KABOOM!!!|}{Claw:Claw is the Law.|}{Yaoi:Two boys.... kissing....|}{Phone:Phone a friend...|}{Unlimited:UNLIMITED!!! POWER!!!.|}|Do a random effect.}\nThe first time you play a 0{energyPrefix:energyIcons(1)} Attack each turn, put this into your [gold]Hand[/gold] and randomize the effect.",
+  "BOREALISCARDS2-FIFO_QUEUE.description": "Gain {Energy:energyIcons()}.\nAt the end of combat, give this to a random ally permanently.",
+  "BOREALISCARDS2-FIFO_QUEUE.title": "FIFO Queue",
+
+  "BOREALISCARDS2-PATTERN_SCREAMER.description": "{HasEffect:{Lightning:[gold]Channel[/gold] 1 [gold]Lightning[/gold].|}{Frost:[gold]Channel[/gold] 1 [gold]Frost[/gold].|}{Dark:[gold]Channel[/gold] 1 [gold]Dark[/gold].|}{Glass:[gold]Channel[/gold] 1 [gold]Glass[/gold].|}{Plasma:[gold]Channel[/gold] 1 [gold]Plasma[/gold].|}{Block:Gain 5 [gold]Block[/gold].|}{Draw:Draw 2 cards.|}{Energy:Gain {energyPrefix:energyIcons(1)}.|}{Poison:Apply 3 [gold]Poison[/gold] to ALL enemies.|}{Weak:Apply 1 [gold]Weak[/gold] to ALL enemies.|}{Vulnerable:Apply 1 [gold]Vulnerable[/gold] to ALL enemies.|}{Power:Add a random Power into your [gold]Hand[/gold]. It's free to play this turn.|}{ZeroCost:Add a random 0{energyPrefix:energyIcons(1)} card into your [gold]Hand[/gold].|}{Dazes:Add 3 [gold]Dazed[/gold] into your [gold]Hand[/gold].|}{TempFocus:Gain 3 [gold]Focus[/gold] this turn.|}{Focus:Gain 1 [gold]Focus[/gold].|}{Strength:Gain 1 [gold]Strength[/gold].|}{Dexterity:Gain 1 [gold]Dexterity[/gold].|}{Plating:Gain 3 [gold]Plating[/gold].|}{Wish:Put a card from your [gold]Draw Pile[/gold] into your [gold]Hand[/gold].|}{Hologram:Put a card from your [gold]Discard Pile[/gold] into your [gold]Hand[/gold].|}{Exhaust:[gold]Exhaust[/gold] 1 card.|}{Doom:Apply 8 [gold]Doom[/gold].|}{StrengthDown:ALL enemies lose 3 [gold]Strength[/gold] this turn.|}{Details:Solar, please add details.|}{Reroll:Error. Please try again.|}{Jackpot:Jackpot! [gold]Channel[/gold] every Orb.|}{Kaboom:KABOOM!!!|}{Claw:Claw is the Law.|}{Yaoi:Two boys.... kissing....|}{Phone:Phone a friend...|}{Unlimited:UNLIMITED!!! POWER!!!.|}|Do a random effect.}\nThe first time you play a 0{energyPrefix:energyIcons(1)} Attack each turn, put this into your [gold]Hand[/gold] and randomize the effect.",
   "BOREALISCARDS2-PATTERN_SCREAMER.selectionScreenPrompt": "Select a card to put in your Hand.",
   "BOREALISCARDS2-PATTERN_SCREAMER.title": "Pattern Screamer",
 
@@ -313,5 +317,20 @@
   "BOREALISCARDS2-HAPPINESS.title": "FOR HAPPINESS!",
 
   "BOREALISCARDS2-COURAGE.description": "Gain {Energy:energyIcons()}.\nDraw {Cards:diff()} {Cards:plural:card|cards}.",
-  "BOREALISCARDS2-COURAGE.title": "OUR COURAGE!"
+  "BOREALISCARDS2-COURAGE.title": "OUR COURAGE!",
+
+  "BOREALISCARDS2-COLOR_WHEEL_LIGHTNING.description": "[gold]Channel[/gold] 1 [gold]Lightning[/gold].",
+  "BOREALISCARDS2-COLOR_WHEEL_LIGHTNING.title": "Lightning",
+  
+  "BOREALISCARDS2-COLOR_WHEEL_FROST.description": "[gold]Channel[/gold] 1 [gold]Frost[/gold].",
+  "BOREALISCARDS2-COLOR_WHEEL_FROST.title": "Frost",
+  
+  "BOREALISCARDS2-COLOR_WHEEL_DARK.description": "[gold]Channel[/gold] 1 [gold]Dark[/gold].",
+  "BOREALISCARDS2-COLOR_WHEEL_DARK.title": "Dark",
+
+  "BOREALISCARDS2-COLOR_WHEEL_GLASS.description": "[gold]Channel[/gold] 1 [gold]Glass[/gold].",
+  "BOREALISCARDS2-COLOR_WHEEL_GLASS.title": "Glass",
+
+  "BOREALISCARDS2-COLOR_WHEEL_PLASMA.description": "[gold]Channel[/gold] 1 [gold]Plasma[/gold].",
+  "BOREALISCARDS2-COLOR_WHEEL_PLASMA.title": "Plasma"
 }

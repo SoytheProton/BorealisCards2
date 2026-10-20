@@ -324,7 +324,7 @@ public class PatternScreamer() : BorealisCards2Card(0,
     
     protected override CardLocation GetResultLocationForCardPlay()
     {
-        if (SpecialEffect != PatternScreamerSpecialEffects.Reroll && NormalEffect == PatternScreamerEffects.Special)
+        if (SpecialEffect != PatternScreamerSpecialEffects.Reroll || NormalEffect != PatternScreamerEffects.Special)
             return base.GetResultLocationForCardPlay();
         
         var locationForCardPlay = base.GetResultLocationForCardPlay();

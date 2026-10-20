@@ -140,5 +140,9 @@
 
   "BOREALISCARDS2-NETWORKED_SUFFERING_POWER.description": "Whenever you [gold]Evoke[/gold] an Orb, trigger the passive ability of your next Orb.",
   "BOREALISCARDS2-NETWORKED_SUFFERING_POWER.smartDescription": "Whenever you [gold]Evoke[/gold] an Orb, trigger the passive ability of your next Orb [blue]{Amount}[/blue] {Amount:plural:time|times}.",
-  "BOREALISCARDS2-NETWORKED_SUFFERING_POWER.title": "Networked Suffering"
+  "BOREALISCARDS2-NETWORKED_SUFFERING_POWER.title": "Networked Suffering",
+
+  "BOREALISCARDS2-FIFO_QUEUE_POWER.description": "At the end of combat, remove [gold]FIFO Queue[/gold] from your [gold]Deck[/gold] and give it to a random ally permanently.",
+  "BOREALISCARDS2-FIFO_QUEUE_POWER.smartDescription": "At the end of combat, remove [gold]{Card}[/gold] from your [gold]Deck[/gold] and give it to a random ally permanently.",
+  "BOREALISCARDS2-FIFO_QUEUE_POWER.title": "FIFO Queue"
 }

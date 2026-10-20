@@ -108,7 +108,6 @@
 
     <ItemGroup>
         <Folder Include="BorealisCards2Code\Cards\Colorless\" />
-        <Folder Include="BorealisCards2Code\Cards\Defect\ColorWheelCards\" />
         <Folder Include="BorealisCards2Code\Powers\Shared\" />
         <Folder Include="BorealisCards2\ArtRoller\" />
         <Folder Include="BorealisCards2\images\card_portraits\big\"/>
