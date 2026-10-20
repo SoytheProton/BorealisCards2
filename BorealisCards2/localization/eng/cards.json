@@ -278,7 +278,7 @@
   "BOREALISCARDS2-NETWORKED_SUFFERING.description": "Whenever you [gold]Evoke[/gold] an Orb, trigger the passive ability of your next Orb {Repeat:diff()} {Repeat:plural:time|times}.",
   "BOREALISCARDS2-NETWORKED_SUFFERING.title": "Networked Suffering",
 
-  "BOREALISCARDS2-COLOR_WHEEL.description": "{HasChosen:[gold]Channel[/gold] 1 [gold]{ChosenOrb}[/gold]|Upon pickup, choose an Orb to [gold]Channel[/gold].}{Modded:\n(Cannot select modded Orbs.)|}",
+  "BOREALISCARDS2-COLOR_WHEEL.description": "{HasChosen:[gold]Channel[/gold] 1 [gold]{ChosenOrb}[/gold].|Upon pickup, choose an Orb to [gold]Channel[/gold].}\nGain {FocusPower:diff()} [gold]Focus[/gold] this turn. {Modded:\n(Cannot select modded Orbs.)|}",
   "BOREALISCARDS2-COLOR_WHEEL.selectionScreenPrompt": "Choose an Orb for Color Wheel to Channel.",
   "BOREALISCARDS2-COLOR_WHEEL.title": "Color Wheel",
 

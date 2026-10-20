@@ -18,7 +18,7 @@ namespace BorealisCards2.BorealisCards2Code.Cards.Defect;
 
 [Pool(typeof(DefectCardPool))]
 public class ColorWheel() : BorealisCards2Card(1,
-    CardType.Skill, CardRarity.Token, TargetType.Self)
+    CardType.Skill, CardRarity.Rare, TargetType.Self)
 {
     private static readonly List<CardModel> ColorWheelCards = [ModelDb.Card<ColorWheelLightning>(), ModelDb.Card<ColorWheelFrost>(), ModelDb.Card<ColorWheelDark>(), ModelDb.Card<ColorWheelGlass>(), ModelDb.Card<ColorWheelPlasma>()];
 
@@ -61,7 +61,7 @@ public class ColorWheel() : BorealisCards2Card(1,
     {
         if(card != this || ChosenOrb != null)
             return;
-        var cardModel = (await CardSelectCmd.FromSimpleGrid(new BlockingPlayerChoiceContext(), [.. ColorWheelCards.Select(c => CombatState?.CreateCard(c, Owner))!], Owner, new CardSelectorPrefs(SelectionScreenPrompt, 1))).FirstOrDefault();
+        var cardModel = (await CardSelectCmd.FromSimpleGrid(new BlockingPlayerChoiceContext(), [.. ColorWheelCards.Select(c => Owner.RunState.CreateCard(c, Owner))], Owner, new CardSelectorPrefs(SelectionScreenPrompt, 1))).FirstOrDefault();
         if (cardModel == null)
             return;
         ChosenOrb = ((IColorWheelChoosable) cardModel).OnChosen().Id;
