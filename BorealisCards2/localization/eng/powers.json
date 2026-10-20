@@ -144,5 +144,9 @@
 
   "BOREALISCARDS2-FIFO_QUEUE_POWER.description": "At the end of combat, remove [gold]FIFO Queue[/gold] from your [gold]Deck[/gold] and give it to a random ally permanently.",
   "BOREALISCARDS2-FIFO_QUEUE_POWER.smartDescription": "At the end of combat, remove [gold]{Card}[/gold] from your [gold]Deck[/gold] and give it to a random ally permanently.",
-  "BOREALISCARDS2-FIFO_QUEUE_POWER.title": "FIFO Queue"
+  "BOREALISCARDS2-FIFO_QUEUE_POWER.title": "FIFO Queue",
+
+  "BOREALISCARDS2-FIFO_QUEUE_ENERGY_POWER.description": "Gain [blue]1[/blue] [gold]Energy[/gold] at the start of each turn.",
+  "BOREALISCARDS2-FIFO_QUEUE_ENERGY_POWER.smartDescription": "Gain {Amount:energyIcons()} at the start of each turn.",
+  "BOREALISCARDS2-FIFO_QUEUE_ENERGY_POWER.title": "Energized"
 }

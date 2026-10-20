@@ -14,18 +14,18 @@ public sealed class FifoQueue() : BorealisCards2Card(1,
     CardType.Power, CardRarity.Uncommon,
     TargetType.Self)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new EnergyVar(3)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new EnergyVar(1)];
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [EnergyHoverTip];
     public override CardMultiplayerConstraint MultiplayerConstraint => CardMultiplayerConstraint.MultiplayerOnly;
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         await CreatureCmd.TriggerAnim(Owner.Creature, "PowerUp", Owner.Character.PowerUpAnimDelay);
-        await PlayerCmd.GainEnergy(DynamicVars.Energy.BaseValue, Owner);
+        await PowerCmd.Apply<FifoQueueEnergyPower>(choiceContext, Owner.Creature, DynamicVars.Energy.BaseValue, Owner.Creature, this);
         if(DeckVersion == null)
             return;
-        var power = await PowerCmd.Apply<FifoQueuePower>(choiceContext, Owner.Creature, DynamicVars.Energy.BaseValue, Owner.Creature, this);
+        var power = await PowerCmd.Apply<FifoQueuePower>(choiceContext, Owner.Creature, 1, Owner.Creature, this);
         power?.SetSelectedCard(this);
     }
-    protected override void OnUpgrade() => DynamicVars.Energy.UpgradeValueBy(1);
+    protected override void OnUpgrade() => EnergyCost.UpgradeBy(-1);
 }
