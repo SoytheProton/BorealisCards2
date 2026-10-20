@@ -36,7 +36,8 @@ public sealed class FifoQueuePower : BorealisCards2Power
         var player = Owner.Player?.RunState.Rng.CombatTargets.NextItem(teammates)?.Player;
         if(player == null)
             return;
-        var clonedCard = card.CreateCloneForPlayer(player);
+        var clonedCard = Owner.Player.RunState.CloneCard(card);
+        clonedCard._owner = player;
         await CardPileCmd.RemoveFromDeck(card);
         CardCmd.PreviewCardPileAdd(await CardPileCmd.Add(clonedCard, PileType.Deck));
     }
