@@ -28,7 +28,7 @@
   "BOREALISCARDS2-DETERMINED.description": "Deal {Damage:diff()} damage.\nWhen this card is [gold]Exhausted[/gold], gain {StrengthPower:diff()} [gold]Strength[/gold] and return this to your [gold]Hand[/gold].",
   "BOREALISCARDS2-DETERMINED.title": "Determined",
 
-  "BOREALISCARDS2-PURGE.description": "Exhaust up to {Cards:diff()} cards in your [gold]Hand[/gold]. Draw 1 card for each card [gold]Exhausted[/gold].",
+  "BOREALISCARDS2-PURGE.description": "[gold]Exhaust[/gold] up to {Cards:diff()} cards in your [gold]Hand[/gold]. Draw 1 card for each card [gold]Exhausted[/gold].",
   "BOREALISCARDS2-PURGE.selectionScreenPrompt": "Choose up to {Cards:diff()} cards to [gold]Exhaust[/gold].",
   "BOREALISCARDS2-PURGE.title": "Purge",
 
@@ -234,7 +234,7 @@
   "BOREALISCARDS2-LIQUID_COOLING.description": "Whenever you [gold]Channel[/gold] a [gold]Frost[/gold], gain {FocusPower:diff()} [gold]Focus[/gold] that turn.",
   "BOREALISCARDS2-LIQUID_COOLING.title": "Liquid Cooling",
 
-  "BOREALISCARDS2-COLLECT.description": "Channel 1 [gold]Frost[/gold].\nPut a 0{energyPrefix:energyIcons(1)} card from your [gold]Draw Pile[/gold] into your [gold]Hand[/gold].",
+  "BOREALISCARDS2-COLLECT.description": "[gold]Channel[/gold] 1 [gold]Frost[/gold].\nPut a 0{energyPrefix:energyIcons(1)} card from your [gold]Draw Pile[/gold] into your [gold]Hand[/gold].",
   "BOREALISCARDS2-COLLECT.selectionScreenPrompt": "Select a card to put in your Hand.",
   "BOREALISCARDS2-COLLECT.title": "Collect",
 
@@ -244,7 +244,53 @@
   "BOREALISCARDS2-METALLURGY.description": "Deal {Damage:diff()} damage.\nApply {VulnerablePower:diff()} [gold]Vulnerable[/gold].\nWhenever you draw this card, add a [gold]Burn[/gold] into your [gold]Discard Pile[/gold].",
   "BOREALISCARDS2-METALLURGY.title": "Metallurgy",
 
+  "BOREALISCARDS2-WELD.description": "Deal {Damage:diff()} damage.\nAdd 1 [gold]Burn[/gold] into your [gold]Hand[/gold].\nReturn this card to your [gold]Hand[/gold].",
+  "BOREALISCARDS2-WELD.title": "Weld",
 
+  "BOREALISCARDS2-PACKET_LOSS.description": "Deal {Damage:diff()} damage to ALL enemies.\nAt the start of the next 2 turns, shuffle 2 [gold]Dazed[/gold] into your [gold]Draw Pile[/gold].",
+  "BOREALISCARDS2-PACKET_LOSS.title": "Packet Loss",
+
+  "BOREALISCARDS2-LAG_SWITCH.description": "Gain {FocusPower:diff()} [gold]Focus[/gold] this turn.\nLose 1 [gold]Focus[/gold].",
+  "BOREALISCARDS2-LAG_SWITCH.title": "Lag Switch",
+  
+  "BOREALISCARDS2-CARBON_COPY.description": "Choose 1 0{energyPrefix:energyIcons(1)} card in your [gold]Hand[/gold]. Add a copy of it to your [gold]Hand[/gold] next turn.",
+  "BOREALISCARDS2-CARBON_COPY.selectionScreenPrompt": "Select a card to duplicate.",
+  "BOREALISCARDS2-CARBON_COPY.title": "Carbon Copy",
+
+  "BOREALISCARDS2-FROZEN_OVER.description": "Gain {Repeat:diff()} Orb Slots.\n[gold]Channel[/gold] 5 [gold]Frost[/gold].",
+  "BOREALISCARDS2-FROZEN_OVER.title": "Frozen Over",
+
+  "BOREALISCARDS2-CHOP_SHOP.description": "Deal {Damage:diff()} damage.\n[gold]Transform[/gold] a random card in your [gold]Hand[/gold] into a random 0{energyPrefix:energyIcons(1)} Attack. It gains [gold]Replay[/gold].",
+  "BOREALISCARDS2-CHOP_SHOP.title": "Chop Shop",
+
+  "BOREALISCARDS2-HYPERSONIC.description": "Deal {Damage:diff()} damage.\nDraw {Cards:diff()} card.\nAdd a copy of this card into a random ally's [gold]Discard Pile[/gold].",
+  "BOREALISCARDS2-HYPERSONIC.title": "Hypersonic",
+
+  "BOREALISCARDS2-IMPACT_DRIVER.description": "Whenever ANYONE plays a Power, deal {ImpactDriverPower:diff()} damage to ALL enemies.",
+  "BOREALISCARDS2-IMPACT_DRIVER.title": "Impact Driver",
+
+  "BOREALISCARDS2-BONUS_ROUND.description": "[gold]Channel[/gold] {Repeat:diff()} random {Repeat:plural:Orb|Orbs}.\nGive this card to a random ally.",
+  "BOREALISCARDS2-BONUS_ROUND.title": "Bonus Round",
+
+  "BOREALISCARDS2-VIGNETTE.description": "{IfUpgraded:show:[gold]Channel[/gold] 1 [gold]Dark[/gold].\n}At the end of your turn, trigger the rightmost [gold]Dark[/gold] 1 time for each [gold]Dark[/gold] you have.",
+  "BOREALISCARDS2-VIGNETTE.title": "Vignette",
+
+  "BOREALISCARDS2-NETWORKED_SUFFERING.description": "Whenever you draw a Status, gain {Repeat:diff()} [gold]Block[/gold].",
+  "BOREALISCARDS2-NETWORKED_SUFFERING.title": "Networked Suffering",
+
+  "BOREALISCARDS2-COLOR_WHEEL.description": "{HasChosen:[gold]Channel[/gold] 1 [gold]{ChosenOrb}[/gold].|Upon pickup, choose an Orb to [gold]Channel[/gold].}\nGain {FocusPower:diff()} [gold]Focus[/gold] this turn. {Modded:\n(Cannot select modded Orbs.)|}",
+  "BOREALISCARDS2-COLOR_WHEEL.selectionScreenPrompt": "Choose an Orb for Color Wheel to Channel.",
+  "BOREALISCARDS2-COLOR_WHEEL.title": "Color Wheel",
+
+  "BOREALISCARDS2-FIFO_QUEUE.description": "Gain {Energy:energyIcons()} at the start of each turn.\nAt the end of combat, give this to a random ally permanently.",
+  "BOREALISCARDS2-FIFO_QUEUE.title": "FIFO Queue",
+
+  "BOREALISCARDS2-PATTERN_SCREAMER.description": "{HasEffect:{Lightning:[gold]Channel[/gold] 1 [gold]Lightning[/gold].|}{Frost:[gold]Channel[/gold] 1 [gold]Frost[/gold].|}{Dark:[gold]Channel[/gold] 1 [gold]Dark[/gold].|}{Glass:[gold]Channel[/gold] 1 [gold]Glass[/gold].|}{Plasma:[gold]Channel[/gold] 1 [gold]Plasma[/gold].|}{Block:Gain 5 [gold]Block[/gold].|}{Draw:Draw 2 cards.|}{Energy:Gain {energyPrefix:energyIcons(1)}.|}{Poison:Apply 3 [gold]Poison[/gold] to ALL enemies.|}{Weak:Apply 1 [gold]Weak[/gold] to ALL enemies.|}{Vulnerable:Apply 1 [gold]Vulnerable[/gold] to ALL enemies.|}{Power:Add a random Power into your [gold]Hand[/gold]. It's free to play this turn.|}{ZeroCost:Add a random 0{energyPrefix:energyIcons(1)} card into your [gold]Hand[/gold].|}{Dazes:Add 3 [gold]Dazed[/gold] into your [gold]Hand[/gold].|}{TempFocus:Gain 3 [gold]Focus[/gold] this turn.|}{Focus:Gain 1 [gold]Focus[/gold].|}{Strength:Gain 1 [gold]Strength[/gold].|}{Dexterity:Gain 1 [gold]Dexterity[/gold].|}{Plating:Gain 3 [gold]Plating[/gold].|}{Wish:Put a card from your [gold]Draw Pile[/gold] into your [gold]Hand[/gold].|}{Hologram:Put a card from your [gold]Discard Pile[/gold] into your [gold]Hand[/gold].|}{Exhaust:[gold]Exhaust[/gold] 1 card.|}{Doom:Apply 8 [gold]Doom[/gold].|}{StrengthDown:ALL enemies lose 3 [gold]Strength[/gold] this turn.|}{Details:Solar, please add details.|}{Reroll:Error. Please try again.|}{Jackpot:Jackpot! [gold]Channel[/gold] every Orb.|}{Kaboom:KABOOM!!!|}{Claw:Claw is the Law.|}{Yaoi:Two boys.... kissing....|}{Phone:Phone a friend...|}{Unlimited:UNLIMITED!!! POWER!!!.|}|Do a random effect.}\nThe first time you play a 0{energyPrefix:energyIcons(1)} Attack each turn, put this into your [gold]Hand[/gold] and randomize the effect.",
+  "BOREALISCARDS2-PATTERN_SCREAMER.selectionScreenPrompt": "Select a card to put in your Hand.",
+  "BOREALISCARDS2-PATTERN_SCREAMER.title": "Pattern Screamer",
+
+  "BOREALISCARDS2-CATASTROPHIC_FAILURE.description": "EVERYONE chooses a card from their [gold]Draw Pile[/gold] to add to their [gold]Hand[/gold]. Add {Repeat:diff()} random Statuses to your [gold]Discard Pile[/gold].",
+  "BOREALISCARDS2-CATASTROPHIC_FAILURE.title": "Catastrophic Failure",
 
   "BOREALISCARDS2-Character6": "Colorless",
 
@@ -274,5 +320,20 @@
   "BOREALISCARDS2-HAPPINESS.title": "FOR HAPPINESS!",
 
   "BOREALISCARDS2-COURAGE.description": "Gain {Energy:energyIcons()}.\nDraw {Cards:diff()} {Cards:plural:card|cards}.",
-  "BOREALISCARDS2-COURAGE.title": "OUR COURAGE!"
+  "BOREALISCARDS2-COURAGE.title": "OUR COURAGE!",
+
+  "BOREALISCARDS2-COLOR_WHEEL_LIGHTNING.description": "[gold]Channel[/gold] 1 [gold]Lightning[/gold].",
+  "BOREALISCARDS2-COLOR_WHEEL_LIGHTNING.title": "Lightning",
+  
+  "BOREALISCARDS2-COLOR_WHEEL_FROST.description": "[gold]Channel[/gold] 1 [gold]Frost[/gold].",
+  "BOREALISCARDS2-COLOR_WHEEL_FROST.title": "Frost",
+  
+  "BOREALISCARDS2-COLOR_WHEEL_DARK.description": "[gold]Channel[/gold] 1 [gold]Dark[/gold].",
+  "BOREALISCARDS2-COLOR_WHEEL_DARK.title": "Dark",
+
+  "BOREALISCARDS2-COLOR_WHEEL_GLASS.description": "[gold]Channel[/gold] 1 [gold]Glass[/gold].",
+  "BOREALISCARDS2-COLOR_WHEEL_GLASS.title": "Glass",
+
+  "BOREALISCARDS2-COLOR_WHEEL_PLASMA.description": "[gold]Channel[/gold] 1 [gold]Plasma[/gold].",
+  "BOREALISCARDS2-COLOR_WHEEL_PLASMA.title": "Plasma"
 }

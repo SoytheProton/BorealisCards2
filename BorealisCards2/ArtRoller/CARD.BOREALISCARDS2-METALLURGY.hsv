@@ -1,12 +1,42 @@
 {
-  "card_id": "CARD.BOREALISCARDS2-METALLURGY",
+  "card_id": "CARD.BOREALISCARDS2-METALLURGY@DEFECT",
+  "portrait_path": "res://images/atlases/card_atlas.sprites/regent/glitterstream.tres",
+  "tint": "#ffffff",
   "hue": 0.61,
   "saturation": 1,
   "value": 1,
+  "gamma": 1,
   "red": 1.33,
+  "red_offset": 1,
   "green": 1.23,
+  "green_offset": 1,
   "blue": 0.79,
+  "blue_offset": 1,
   "contrast": 1,
+  "selective_1": {
+    "color": "#3b87b7",
+    "width": 0.3,
+    "shift": 2,
+    "saturation": 1.36,
+    "brightness": 1,
+    "softness": 0.78
+  },
+  "selective_2": {
+    "color": "#d730cb",
+    "width": 1,
+    "shift": 1.15,
+    "saturation": 0.45,
+    "brightness": 0.95,
+    "softness": 0.5
+  },
+  "selective_3": {
+    "color": "#ff0000",
+    "width": 0.3,
+    "shift": 1,
+    "saturation": 1,
+    "brightness": 1,
+    "softness": 0.5
+  },
   "flip_h": false,
-  "portrait_path": "res://images/atlases/card_atlas.sprites/regent/glitterstream.tres"
+  "flip_v": false
 }

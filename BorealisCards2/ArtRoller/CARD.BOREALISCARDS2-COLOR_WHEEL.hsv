@@ -1,0 +1,42 @@
+{
+  "card_id": "CARD.BOREALISCARDS2-COLOR_WHEEL@DEFECT",
+  "portrait_path": "res://images/atlases/card_atlas.sprites/event/toric_toughness.tres",
+  "tint": "#fdff00",
+  "hue": 1,
+  "saturation": 0.99,
+  "value": 1.09,
+  "gamma": 0.63,
+  "red": 1.24,
+  "red_offset": 0.85,
+  "green": 0.91,
+  "green_offset": 1.06,
+  "blue": 1,
+  "blue_offset": 1,
+  "contrast": 1,
+  "selective_1": {
+    "color": "#005f00",
+    "width": 0.05,
+    "shift": 0.13,
+    "saturation": 2,
+    "brightness": 1.44,
+    "softness": 1
+  },
+  "selective_2": {
+    "color": "#249900",
+    "width": 0.62,
+    "shift": 1.79,
+    "saturation": 0.75,
+    "brightness": 1.53,
+    "softness": 0.29
+  },
+  "selective_3": {
+    "color": "#ff0000",
+    "width": 0.3,
+    "shift": 1,
+    "saturation": 1,
+    "brightness": 1,
+    "softness": 0.5
+  },
+  "flip_h": true,
+  "flip_v": true
+}

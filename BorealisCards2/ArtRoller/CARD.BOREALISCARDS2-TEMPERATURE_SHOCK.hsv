@@ -1,12 +1,42 @@
 {
-  "card_id": "CARD.BOREALISCARDS2-TEMPERATURE_SHOCK",
+  "card_id": "CARD.BOREALISCARDS2-TEMPERATURE_SHOCK@DEFECT",
+  "portrait_path": "res://images/atlases/card_atlas.sprites/ironclad/thunderclap.tres",
+  "tint": "#ffffff",
   "hue": 0.52,
   "saturation": 1.29,
   "value": 1.37,
+  "gamma": 1,
   "red": 1.12,
+  "red_offset": 1,
   "green": 0.97,
+  "green_offset": 1,
   "blue": 2,
+  "blue_offset": 1,
   "contrast": 1.53,
+  "selective_1": {
+    "color": "#00c0ca",
+    "width": 0.54,
+    "shift": 1.16,
+    "saturation": 0.68,
+    "brightness": 1.27,
+    "softness": 0
+  },
+  "selective_2": {
+    "color": "#35a4b5",
+    "width": 0.3,
+    "shift": 1.07,
+    "saturation": 1.01,
+    "brightness": 1.01,
+    "softness": 1
+  },
+  "selective_3": {
+    "color": "#ff0000",
+    "width": 0.3,
+    "shift": 1,
+    "saturation": 1,
+    "brightness": 1,
+    "softness": 0.5
+  },
   "flip_h": false,
-  "portrait_path": "res://images/atlases/card_atlas.sprites/ironclad/thunderclap.tres"
+  "flip_v": false
 }

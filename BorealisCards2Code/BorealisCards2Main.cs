@@ -1,8 +1,10 @@
-using System.Reflection;
-using BorealisCards2.BorealisCards2Code.ArtRoller;
+using BaseLib.Config;
+using BorealisCards2.BorealisCards2Code.Metrics;
 using Godot;
 using HarmonyLib;
+using MegaCrit.Sts2.Core.Logging;
 using MegaCrit.Sts2.Core.Modding;
+using Logger = MegaCrit.Sts2.Core.Logging.Logger;
 
 namespace BorealisCards2.BorealisCards2Code;
 
@@ -11,18 +13,16 @@ public partial class BorealisCards2Main : Node
 {
     public const string ModId = "BorealisCards2"; //Used for resource filepath
 
-    public static MegaCrit.Sts2.Core.Logging.Logger Logger { get; } =
-        new(ModId, MegaCrit.Sts2.Core.Logging.LogType.Generic);
-
-    public static readonly string CardsDirectory = Path.Combine(
-        Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)!,
-        "ArtRoller");
+    public static Logger Logger { get; } =
+        new(ModId, LogType.Generic);
     
     public static void Initialize()
     {
         Harmony harmony = new(ModId);
-        // Directory.CreateDirectory(CardsDirectory);
-        // CardArtRoller.RegisterAllFromDirectory(CardsDirectory);
         harmony.PatchAll();
+        
+        ModManager.OnMetricsUpload += Telemetry.OnMetricsUpload;
+        ModConfigRegistry.Register(ModId, new Config());
+        // MetricsTest.SendTest();
     }
 }

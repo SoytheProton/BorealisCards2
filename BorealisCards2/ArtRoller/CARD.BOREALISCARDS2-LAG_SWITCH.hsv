@@ -1,0 +1,42 @@
+{
+  "card_id": "CARD.BOREALISCARDS2-LAG_SWITCH@DEFECT",
+  "portrait_path": "res://images/atlases/card_atlas.sprites/event/rebound.tres",
+  "tint": "#ffffff",
+  "hue": 1,
+  "saturation": 1,
+  "value": 1,
+  "gamma": 1,
+  "red": 1.06,
+  "red_offset": 0.94,
+  "green": 1.22,
+  "green_offset": 0.75,
+  "blue": 1.54,
+  "blue_offset": 1.15,
+  "contrast": 1.22,
+  "selective_1": {
+    "color": "#00229a",
+    "width": 1,
+    "shift": 0.8,
+    "saturation": 1,
+    "brightness": 1,
+    "softness": 0.5
+  },
+  "selective_2": {
+    "color": "#d3ccff",
+    "width": 1,
+    "shift": 1.6,
+    "saturation": 1,
+    "brightness": 1,
+    "softness": 0.5
+  },
+  "selective_3": {
+    "color": "#ff8d87",
+    "width": 0.34,
+    "shift": 0.31,
+    "saturation": 0.92,
+    "brightness": 1.02,
+    "softness": 0.5
+  },
+  "flip_h": true,
+  "flip_v": false
+}

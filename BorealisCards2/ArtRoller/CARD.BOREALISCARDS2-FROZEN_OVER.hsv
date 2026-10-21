@@ -1,0 +1,42 @@
+{
+  "card_id": "CARD.BOREALISCARDS2-FROZEN_OVER@DEFECT",
+  "portrait_path": "res://images/atlases/card_atlas.sprites/ironclad/crimson_mantle.tres",
+  "tint": "#ffffff",
+  "hue": 0.47,
+  "saturation": 1,
+  "value": 1,
+  "gamma": 1,
+  "red": 1,
+  "red_offset": 1,
+  "green": 1,
+  "green_offset": 1,
+  "blue": 1,
+  "blue_offset": 1,
+  "contrast": 1,
+  "selective_1": {
+    "color": "#afcdff",
+    "width": 0.3,
+    "shift": 0.81,
+    "saturation": 2,
+    "brightness": 1,
+    "softness": 1
+  },
+  "selective_2": {
+    "color": "#009785",
+    "width": 0.1,
+    "shift": 1.15,
+    "saturation": 2,
+    "brightness": 0.83,
+    "softness": 1
+  },
+  "selective_3": {
+    "color": "#a53e00",
+    "width": 0.47,
+    "shift": 0.51,
+    "saturation": 0.6,
+    "brightness": 1,
+    "softness": 0.78
+  },
+  "flip_h": false,
+  "flip_v": false
+}
