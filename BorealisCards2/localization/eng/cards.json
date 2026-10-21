@@ -289,6 +289,9 @@
   "BOREALISCARDS2-PATTERN_SCREAMER.selectionScreenPrompt": "Select a card to put in your Hand.",
   "BOREALISCARDS2-PATTERN_SCREAMER.title": "Pattern Screamer",
 
+  "BOREALISCARDS2-CATASTROPHIC_FAILURE.description": "EVERYONE adds 1 card from their [gold]Draw Pile[/gold] to their [gold]Hand[/gold].\nAdd {Repeat:diff()} random [gold]Statuses[/gold] to your [gold]Discard Pile[/gold].",
+  "BOREALISCARDS2-CATASTROPHIC_FAILURE.title": "Catastrophic Failure",
+
   "BOREALISCARDS2-Character6": "Colorless",
 
 
