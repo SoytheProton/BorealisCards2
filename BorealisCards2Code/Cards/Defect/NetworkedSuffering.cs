@@ -14,8 +14,8 @@ public sealed class NetworkedSuffering() : BorealisCards2Card(2,
     CardType.Power, CardRarity.Rare,
     TargetType.Self)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new RepeatVar(2)];
-    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.Static(StaticHoverTip.Evoke)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new RepeatVar(3)];
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => [];
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
