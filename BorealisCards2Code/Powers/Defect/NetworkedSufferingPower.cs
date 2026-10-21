@@ -5,6 +5,7 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
+using MegaCrit.Sts2.Core.ValueProps;
 
 namespace BorealisCards2.BorealisCards2Code.Powers.Defect;
 
@@ -17,19 +18,15 @@ public sealed class NetworkedSufferingPower : BorealisCards2Power
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [];
 
-    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.Static(StaticHoverTip.Evoke)];
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => [];
     
-    public override async Task AfterOrbEvoked(
+    public override async Task AfterCardDrawn(
         PlayerChoiceContext choiceContext,
-        OrbModel orb,
-        IEnumerable<Creature> targets)
+        CardModel card,
+        bool fromHandDraw)
     {
-        if (orb.Owner != Owner.Player || Owner.Player.PlayerCombatState?.OrbQueue.Orbs[0] == null)
+        if (card.Owner.Creature != Owner)
             return;
-        Flash();
-        for(var i = 0; i < Amount; i++)
-        {
-            await OrbCmd.Passive(choiceContext, Owner.Player.PlayerCombatState.OrbQueue.Orbs[0], null);
-        }
+        await CreatureCmd.GainBlock(Owner, Amount, ValueProp.Unpowered, null);
     }
 }
