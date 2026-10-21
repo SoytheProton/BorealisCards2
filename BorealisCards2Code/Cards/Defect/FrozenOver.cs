@@ -16,7 +16,7 @@ public class FrozenOver() : BorealisCards2Card(4,
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new RepeatVar(4), new RepeatVar("Orbs",5)];
 
-    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromOrb<FrostOrb>()];
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.Static(StaticHoverTip.Channeling),HoverTipFactory.FromOrb<FrostOrb>()];
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,

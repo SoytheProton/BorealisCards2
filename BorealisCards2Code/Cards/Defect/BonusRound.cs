@@ -17,7 +17,7 @@ public class BonusRound() : BorealisCards2Card(0,
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new RepeatVar(1)];
 
-    protected override IEnumerable<IHoverTip> ExtraHoverTips => [];
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.Static(StaticHoverTip.Channeling)];
     
     public override CardMultiplayerConstraint MultiplayerConstraint => CardMultiplayerConstraint.MultiplayerOnly;
 

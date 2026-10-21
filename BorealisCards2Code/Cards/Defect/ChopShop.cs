@@ -19,7 +19,7 @@ public class ChopShop() : BorealisCards2Card(0,
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(5M, ValueProp.Move)];
 
-    protected override IEnumerable<IHoverTip> ExtraHoverTips => [];
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.Static(StaticHoverTip.ReplayStatic)];
 
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,

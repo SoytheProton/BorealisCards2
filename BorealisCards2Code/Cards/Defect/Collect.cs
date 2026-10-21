@@ -18,7 +18,7 @@ public sealed class Collect() : BorealisCards2Card(1,
 { 
     protected override IEnumerable<DynamicVar> CanonicalVars => [new CardsVar(1)];
     
-    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.FromOrb<FrostOrb>()];
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.Static(StaticHoverTip.Channeling), HoverTipFactory.FromOrb<FrostOrb>()];
     
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,

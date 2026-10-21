@@ -82,10 +82,10 @@ public class ColorWheel() : BorealisCards2Card(1,
     
     private IHoverTip[] GetOrbHoverTips()
     {
-        List<IHoverTip> hoverTips = [HoverTipFactory.FromPower<FocusPower>()];
-        if (ChosenOrb == null)
-            return [.. hoverTips];
-        hoverTips.Add(ModelDb.GetById<OrbModel>(ChosenOrb).DumbHoverTip);
+        List<IHoverTip> hoverTips = [HoverTipFactory.Static(StaticHoverTip.Channeling)];
+        if (ChosenOrb != null) 
+            hoverTips.Add(ModelDb.GetById<OrbModel>(ChosenOrb).DumbHoverTip);
+        hoverTips.Add(HoverTipFactory.FromPower<FocusPower>());
         return [.. hoverTips];
     }
     

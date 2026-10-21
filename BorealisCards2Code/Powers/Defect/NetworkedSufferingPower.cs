@@ -1,5 +1,5 @@
 ﻿using MegaCrit.Sts2.Core.Commands;
-using MegaCrit.Sts2.Core.Entities.Creatures;
+using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
@@ -18,14 +18,14 @@ public sealed class NetworkedSufferingPower : BorealisCards2Power
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [];
 
-    protected override IEnumerable<IHoverTip> ExtraHoverTips => [];
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.Static(StaticHoverTip.Block)];
     
     public override async Task AfterCardDrawn(
         PlayerChoiceContext choiceContext,
         CardModel card,
         bool fromHandDraw)
     {
-        if (card.Owner.Creature != Owner)
+        if (card.Owner.Creature != Owner || card.Type != CardType.Status)
             return;
         await CreatureCmd.GainBlock(Owner, Amount, ValueProp.Unpowered, null);
     }

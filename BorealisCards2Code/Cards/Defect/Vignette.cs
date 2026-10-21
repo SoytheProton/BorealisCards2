@@ -14,7 +14,16 @@ public sealed class Vignette() : BorealisCards2Card(1,
     CardType.Power, CardRarity.Uncommon,
     TargetType.Self)
 {
-    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.Static(StaticHoverTip.Channeling), HoverTipFactory.FromOrb<DarkOrb>()];
+    protected override IEnumerable<IHoverTip> ExtraHoverTips {
+        get
+        {
+            List<IHoverTip> hoverTips = [];
+            if(IsUpgraded)
+                hoverTips.Add(HoverTipFactory.Static(StaticHoverTip.Channeling));
+            hoverTips.Add(HoverTipFactory.FromOrb<DarkOrb>());
+            return [.. hoverTips];
+        }
+    }
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {

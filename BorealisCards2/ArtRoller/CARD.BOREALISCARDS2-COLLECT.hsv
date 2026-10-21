@@ -1,12 +1,42 @@
 {
-  "card_id": "CARD.BOREALISCARDS2-COLLECT",
+  "card_id": "CARD.BOREALISCARDS2-COLLECT@DEFECT",
+  "portrait_path": "res://images/atlases/card_atlas.sprites/necrobinder/transfigure.tres",
+  "tint": "#ffffff",
   "hue": 0.55,
   "saturation": 2,
   "value": 0.94,
+  "gamma": 1,
   "red": 1.45,
+  "red_offset": 1,
   "green": 1.62,
+  "green_offset": 1,
   "blue": 1.07,
+  "blue_offset": 1,
   "contrast": 1,
+  "selective_1": {
+    "color": "#14623f",
+    "width": 0.67,
+    "shift": 1.2,
+    "saturation": 0.91,
+    "brightness": 1.09,
+    "softness": 0.5
+  },
+  "selective_2": {
+    "color": "#e26000",
+    "width": 0.25,
+    "shift": 1.9,
+    "saturation": 1,
+    "brightness": 1,
+    "softness": 0.5
+  },
+  "selective_3": {
+    "color": "#f3616c",
+    "width": 1,
+    "shift": 0.37,
+    "saturation": 0.5,
+    "brightness": 1.6,
+    "softness": 1
+  },
   "flip_h": false,
-  "portrait_path": "res://images/atlases/card_atlas.sprites/necrobinder/transfigure.tres"
+  "flip_v": false
 }

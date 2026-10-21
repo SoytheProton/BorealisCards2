@@ -1,8 +1,8 @@
 {
-  "card_id": "CARD.BOREALISCARDS2-POWER_UP@DEFECT",
-  "portrait_path": "res://images/atlases/card_atlas.sprites/regent/radiate.tres",
+  "card_id": "CARD.BOREALISCARDS2-CARBON_COPY@DEFECT",
+  "portrait_path": "res://images/atlases/card_atlas.sprites/silent/afterimage.tres",
   "tint": "#ffffff",
-  "hue": 0.54,
+  "hue": 0.37,
   "saturation": 1,
   "value": 1,
   "gamma": 1,
@@ -14,20 +14,20 @@
   "blue_offset": 1,
   "contrast": 1,
   "selective_1": {
-    "color": "#00221e",
+    "color": "#515700",
     "width": 0.3,
-    "shift": 1.21,
-    "saturation": 1.35,
-    "brightness": 2,
+    "shift": 0.33,
+    "saturation": 1,
+    "brightness": 1,
     "softness": 0.5
   },
   "selective_2": {
-    "color": "#00334c",
+    "color": "#ff0000",
     "width": 0.3,
-    "shift": 1.02,
-    "saturation": 1.6,
-    "brightness": 1.88,
-    "softness": 1
+    "shift": 1,
+    "saturation": 1,
+    "brightness": 1,
+    "softness": 0.5
   },
   "selective_3": {
     "color": "#ff0000",

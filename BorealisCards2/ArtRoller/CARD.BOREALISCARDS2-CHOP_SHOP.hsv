@@ -1,0 +1,42 @@
+{
+  "card_id": "CARD.BOREALISCARDS2-CHOP_SHOP@DEFECT",
+  "portrait_path": "res://images/atlases/card_atlas.sprites/silent/tools_of_the_trade.tres",
+  "tint": "#ffffff",
+  "hue": 0.22,
+  "saturation": 1.4,
+  "value": 1,
+  "gamma": 1,
+  "red": 1,
+  "red_offset": 1,
+  "green": 1,
+  "green_offset": 1,
+  "blue": 1,
+  "blue_offset": 1,
+  "contrast": 1,
+  "selective_1": {
+    "color": "#5bff00",
+    "width": 0.3,
+    "shift": 1.55,
+    "saturation": 1,
+    "brightness": 1,
+    "softness": 0.5
+  },
+  "selective_2": {
+    "color": "#ff0000",
+    "width": 0.3,
+    "shift": 1,
+    "saturation": 1,
+    "brightness": 1,
+    "softness": 0.5
+  },
+  "selective_3": {
+    "color": "#ff0000",
+    "width": 0.3,
+    "shift": 1,
+    "saturation": 1,
+    "brightness": 1,
+    "softness": 0.5
+  },
+  "flip_h": true,
+  "flip_v": false
+}

@@ -234,7 +234,7 @@
   "BOREALISCARDS2-LIQUID_COOLING.description": "Whenever you [gold]Channel[/gold] a [gold]Frost[/gold], gain {FocusPower:diff()} [gold]Focus[/gold] that turn.",
   "BOREALISCARDS2-LIQUID_COOLING.title": "Liquid Cooling",
 
-  "BOREALISCARDS2-COLLECT.description": "Channel 1 [gold]Frost[/gold].\nPut a 0{energyPrefix:energyIcons(1)} card from your [gold]Draw Pile[/gold] into your [gold]Hand[/gold].",
+  "BOREALISCARDS2-COLLECT.description": "[gold]Channel[/gold] 1 [gold]Frost[/gold].\nPut a 0{energyPrefix:energyIcons(1)} card from your [gold]Draw Pile[/gold] into your [gold]Hand[/gold].",
   "BOREALISCARDS2-COLLECT.selectionScreenPrompt": "Select a card to put in your Hand.",
   "BOREALISCARDS2-COLLECT.title": "Collect",
 
@@ -260,7 +260,7 @@
   "BOREALISCARDS2-FROZEN_OVER.description": "Gain {Repeat:diff()} Orb Slots.\n[gold]Channel[/gold] 5 [gold]Frost[/gold].",
   "BOREALISCARDS2-FROZEN_OVER.title": "Frozen Over",
 
-  "BOREALISCARDS2-CHOP_SHOP.description": "Deal {Damage:diff()} damage.\nTransform a random card in your [gold]Hand[/gold] into a random 0{energyPrefix:energyIcons(1)} Attack. It gains [gold]Replay[/gold].",
+  "BOREALISCARDS2-CHOP_SHOP.description": "Deal {Damage:diff()} damage.\n[gold]Transform[/gold] a random card in your [gold]Hand[/gold] into a random 0{energyPrefix:energyIcons(1)} Attack. It gains [gold]Replay[/gold].",
   "BOREALISCARDS2-CHOP_SHOP.title": "Chop Shop",
 
   "BOREALISCARDS2-HYPERSONIC.description": "Deal {Damage:diff()} damage.\nDraw {Cards:diff()} card.\nAdd a copy of this card into a random ally's [gold]Discard Pile[/gold].",
@@ -275,7 +275,7 @@
   "BOREALISCARDS2-VIGNETTE.description": "{IfUpgraded:show:[gold]Channel[/gold] 1 [gold]Dark[/gold].\n}At the end of your turn, trigger the rightmost [gold]Dark[/gold] 1 time for each [gold]Dark[/gold] you have.",
   "BOREALISCARDS2-VIGNETTE.title": "Vignette",
 
-  "BOREALISCARDS2-NETWORKED_SUFFERING.description": "Whenever you [gold]Evoke[/gold] an Orb, trigger the passive ability of your next Orb {Repeat:diff()} {Repeat:plural:time|times}.",
+  "BOREALISCARDS2-NETWORKED_SUFFERING.description": "Whenever you draw a Status, gain {Repeat:diff()} [gold]Block[/gold].",
   "BOREALISCARDS2-NETWORKED_SUFFERING.title": "Networked Suffering",
 
   "BOREALISCARDS2-COLOR_WHEEL.description": "{HasChosen:[gold]Channel[/gold] 1 [gold]{ChosenOrb}[/gold].|Upon pickup, choose an Orb to [gold]Channel[/gold].}\nGain {FocusPower:diff()} [gold]Focus[/gold] this turn. {Modded:\n(Cannot select modded Orbs.)|}",
@@ -289,7 +289,7 @@
   "BOREALISCARDS2-PATTERN_SCREAMER.selectionScreenPrompt": "Select a card to put in your Hand.",
   "BOREALISCARDS2-PATTERN_SCREAMER.title": "Pattern Screamer",
 
-  "BOREALISCARDS2-CATASTROPHIC_FAILURE.description": "EVERYONE adds 1 card from their [gold]Draw Pile[/gold] to their [gold]Hand[/gold].\nAdd {Repeat:diff()} random [gold]Statuses[/gold] to your [gold]Discard Pile[/gold].",
+  "BOREALISCARDS2-CATASTROPHIC_FAILURE.description": "EVERYONE chooses a card from their [gold]Draw Pile[/gold] to add to their [gold]Hand[/gold]. Add {Repeat:diff()} random Statuses to your [gold]Discard Pile[/gold].",
   "BOREALISCARDS2-CATASTROPHIC_FAILURE.title": "Catastrophic Failure",
 
   "BOREALISCARDS2-Character6": "Colorless",

@@ -1,0 +1,42 @@
+{
+  "card_id": "CARD.BOREALISCARDS2-WELD@DEFECT",
+  "portrait_path": "res://images/atlases/card_atlas.sprites/ironclad/inflame.tres",
+  "tint": "#ffffff",
+  "hue": 1,
+  "saturation": 1.36,
+  "value": 1.02,
+  "gamma": 0.8,
+  "red": 1.35,
+  "red_offset": 1.22,
+  "green": 1,
+  "green_offset": 1,
+  "blue": 1,
+  "blue_offset": 1,
+  "contrast": 1,
+  "selective_1": {
+    "color": "#8a1e46",
+    "width": 0.32,
+    "shift": 1.26,
+    "saturation": 1.59,
+    "brightness": 0.96,
+    "softness": 0.93
+  },
+  "selective_2": {
+    "color": "#ff0000",
+    "width": 0.3,
+    "shift": 1,
+    "saturation": 1,
+    "brightness": 1,
+    "softness": 0.5
+  },
+  "selective_3": {
+    "color": "#ff0000",
+    "width": 0.3,
+    "shift": 1,
+    "saturation": 1,
+    "brightness": 1,
+    "softness": 0.5
+  },
+  "flip_h": true,
+  "flip_v": false
+}

@@ -10,12 +10,12 @@ using MegaCrit.Sts2.Core.Models.CardPools;
 namespace BorealisCards2.BorealisCards2Code.Cards.Defect;
 
 [Pool(typeof(DefectCardPool))]
-public sealed class NetworkedSuffering() : BorealisCards2Card(2,
+public sealed class NetworkedSuffering() : BorealisCards2Card(1,
     CardType.Power, CardRarity.Rare,
     TargetType.Self)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new RepeatVar(3)];
-    protected override IEnumerable<IHoverTip> ExtraHoverTips => [];
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => [HoverTipFactory.Static(StaticHoverTip.Block)];
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
