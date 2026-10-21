@@ -30,34 +30,30 @@ public class CatastrophicFailure() : BorealisCards2Card(0,
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        foreach (Creature creature1 in CombatState.GetTeammatesOf(Owner.Creature))
+        foreach (var creature1 in CombatState.GetTeammatesOf(Owner.Creature))
         {
-            CardModel card = (await CardSelectCmd.FromCombatPile(choiceContext, PileType.Draw.GetPile(creature1.Player), creature1.Player, new CardSelectorPrefs(SelectionScreenPrompt, 1), null)).FirstOrDefault();
+            var card = (await CardSelectCmd.FromCombatPile(choiceContext, PileType.Draw.GetPile(creature1.Player), creature1.Player, new CardSelectorPrefs(SelectionScreenPrompt, 1), null)).FirstOrDefault();
             if (card == null)
                 return;
             await CardPileCmd.Add(card, PileType.Hand);
         }
-
-        for (int i = 0; i < DynamicVars.Repeat.BaseValue; i++)
-        {
-            var statusPool = ModelDb.CardPool<StatusCardPool>()
-                .GetUnlockedCards(
-                    Owner.UnlockState,
-                    Owner.RunState.CardMultiplayerConstraint);
-
-            var status = CardFactory.GetDistinctForCombat(
-                    Owner,
-                    statusPool,
-                    1,
-                    Owner.RunState.Rng.CombatCardGeneration)
-                .FirstOrDefault();
-
-            if (status != null)
-            {
-                CardCmd.PreviewCardPileAdd(await CardPileCmd.AddGeneratedCardToCombat(status, PileType.Discard, Owner));
-            }
-        }
         
+        var statusPool = ModelDb.CardPool<StatusCardPool>()
+            .GetUnlockedCards(
+                Owner.UnlockState,
+                Owner.RunState.CardMultiplayerConstraint);
+
+        var status = CardFactory.GetForCombat(
+            Owner,
+            statusPool,
+            DynamicVars.Repeat.IntValue,
+            Owner.RunState.Rng.CombatCardGeneration);
+
+        var cardModels = status.ToList();
+        if (cardModels.Count != 0)
+        {
+            CardCmd.PreviewCardPileAdd(await CardPileCmd.AddGeneratedCardsToCombat(cardModels, PileType.Discard, Owner));
+        }
     }
 
     protected override void OnUpgrade() => AddKeyword(CardKeyword.Retain);

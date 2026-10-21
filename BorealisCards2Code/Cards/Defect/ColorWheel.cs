@@ -24,7 +24,7 @@ public class ColorWheel() : BorealisCards2Card(1,
 
     private ModelId? _chosenOrb;
 
-    [SavedProperty(SerializationCondition.SaveIfNotCollectionEmptyOrNull)]
+    [SavedProperty]
     private ModelId? ChosenOrb
     {
         get => _chosenOrb;
