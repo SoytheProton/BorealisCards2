@@ -1,5 +1,5 @@
 {
-  "card_id": "CARD.BOREALISCARDS2-FIFO_QUEUE@DEFECT",
+  "card_id": "CARD.BOREALISCARDS2-FIFO_QUEUE",
   "portrait_path": "res://images/atlases/card_atlas.sprites/colorless/automation.tres",
   "tint": "#ffffff",
   "hue": 1,

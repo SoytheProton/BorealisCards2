@@ -1,5 +1,5 @@
 {
-  "card_id": "CARD.BOREALISCARDS2-LAG_SWITCH@DEFECT",
+  "card_id": "CARD.BOREALISCARDS2-LAG_SWITCH",
   "portrait_path": "res://images/atlases/card_atlas.sprites/event/rebound.tres",
   "tint": "#ffffff",
   "hue": 1,

@@ -1,5 +1,5 @@
 {
-  "card_id": "CARD.BOREALISCARDS2-LIQUID_COOLING@DEFECT",
+  "card_id": "CARD.BOREALISCARDS2-LIQUID_COOLING",
   "portrait_path": "res://images/atlases/card_atlas.sprites/ironclad/not_yet.tres",
   "tint": "#ffffff",
   "hue": 0.49,

@@ -1,16 +1,14 @@
 using BaseLib.Utils;
-using BorealisCards2.BorealisCards2Code.Cards;
 using MegaCrit.Sts2.Core.CardSelection;
+using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
-using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Factories;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.CardPools;
-using MegaCrit.Sts2.Core.Models.Powers;
 
 namespace BorealisCards2.BorealisCards2Code.Cards.Defect;
 
@@ -30,11 +28,14 @@ public class CatastrophicFailure() : BorealisCards2Card(0,
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        foreach (var creature1 in CombatState.GetTeammatesOf(Owner.Creature))
+        foreach (var creature in CombatState.GetTeammatesOf(Owner.Creature))
         {
-            var card = (await CardSelectCmd.FromCombatPile(choiceContext, PileType.Draw.GetPile(creature1.Player), creature1.Player, new CardSelectorPrefs(SelectionScreenPrompt, 1), null)).FirstOrDefault();
+            var player = creature.Player;
+            if(player == null || player.Creature.IsDead || !CombatManager.Instance.IsPartOfPlayerTurn(player))
+                continue;
+            var card = (await CardSelectCmd.FromCombatPile(choiceContext, PileType.Draw.GetPile(player), player, new CardSelectorPrefs(SelectionScreenPrompt, 1), null)).FirstOrDefault();
             if (card == null)
-                return;
+                continue;
             await CardPileCmd.Add(card, PileType.Hand);
         }
         

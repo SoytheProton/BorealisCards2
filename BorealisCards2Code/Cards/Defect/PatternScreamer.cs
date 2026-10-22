@@ -1,10 +1,12 @@
-﻿using BaseLib.Utils;
+﻿using BaseLib.Patches.Content;
+using BaseLib.Utils;
 using BorealisCards2.BorealisCards2Code.Powers.Defect;
 using MegaCrit.Sts2.Core.CardSelection;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
+using MegaCrit.Sts2.Core.Entities.Rngs;
 using MegaCrit.Sts2.Core.Factories;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Helpers;
@@ -17,6 +19,8 @@ using MegaCrit.Sts2.Core.Models.Orbs;
 using MegaCrit.Sts2.Core.Models.Powers;
 using MegaCrit.Sts2.Core.Nodes.Rooms;
 using MegaCrit.Sts2.Core.Nodes.Vfx;
+using MegaCrit.Sts2.Core.Random;
+using MegaCrit.Sts2.Core.Runs;
 using MegaCrit.Sts2.Core.ValueProps;
 
 namespace BorealisCards2.BorealisCards2Code.Cards.Defect;
@@ -300,14 +304,15 @@ public class PatternScreamer() : BorealisCards2Card(0,
             await CardPileCmd.Add(this, PileType.Hand);
             return;
         }
-        if (cardPlay.Player != Owner || cardPlay.Card.Type != CardType.Attack || cardPlay.Card.EnergyCost.GetWithModifiers(CostModifiers.All) != 0 || cardPlay.Card.EnergyCost.CostsX || Pile?.Type == PileType.Hand || _zeroCostAttacksPlayed > 0)
+        if (cardPlay.Player != Owner || cardPlay.Card.Type != CardType.Attack || cardPlay.Card.EnergyCost.GetWithModifiers(CostModifiers.All) != 0 || cardPlay.Card.EnergyCost.CostsX || _zeroCostAttacksPlayed > 0)
             return;
         var num = CombatManager.Instance.History.CardPlaysFinished.Count(e => e.HappenedThisTurn(CombatState) && e.CardPlay.Card.Type == CardType.Attack && e.CardPlay.Card.EnergyCost.GetWithModifiers(CostModifiers.All) == 0 && !e.CardPlay.Card.EnergyCost.CostsX && e.CardPlay.Player == Owner);
         if (num == 1)
         {
             RerollRng();
             _zeroCostAttacksPlayed++;
-            await CardPileCmd.Add(this, PileType.Hand);
+            if(Pile?.Type != PileType.Hand)
+                await CardPileCmd.Add(this, PileType.Hand);
         }
     }
     
@@ -334,14 +339,22 @@ public class PatternScreamer() : BorealisCards2Card(0,
         }
         return locationForCardPlay;
     }
-    
+
     public override Task BeforeSideTurnStart(
         PlayerChoiceContext choiceContext,
         CombatSide side,
         IReadOnlyList<Creature> participants,
         ICombatState combatState)
     {
-        if (!participants.Contains(Owner.Creature) || Owner.PlayerCombatState?.TurnNumber > 1)
+        if (!participants.Contains(Owner.Creature) || Owner.PlayerCombatState.TurnNumber > 1)
+            return Task.CompletedTask;
+        RerollRng();
+        return Task.CompletedTask;
+    }
+    
+    public override Task AfterCardEnteredCombat(CardModel card)
+    {
+        if (card != this)
             return Task.CompletedTask;
         RerollRng();
         return Task.CompletedTask;
@@ -355,14 +368,30 @@ public class PatternScreamer() : BorealisCards2Card(0,
             SpecialEffect = PatternScreamerSpecialEffects.Unlimited;
             return;
         }
-        var rng = Owner.RunState.Rng.CombatCardSelection.NextInt(0, (int) PatternScreamerEffects.Special) + 1;
-        NormalEffect = (PatternScreamerEffects) rng;
-        if (rng == (int)PatternScreamerEffects.Special)
-            SpecialEffect = (PatternScreamerSpecialEffects)Owner.RunState.Rng.CombatCardSelection.NextInt(0, 8) + 1;
+
+        var rng = InitializeRng(Owner.RunState);
+        var randomNumber = rng.NextInt(0, (int) PatternScreamerEffects.Special) + 1;
+        NormalEffect = (PatternScreamerEffects) randomNumber;
+        if (randomNumber == (int)PatternScreamerEffects.Special)
+            SpecialEffect = (PatternScreamerSpecialEffects)rng.NextInt(0, 8) + 1;
         else
             SpecialEffect = PatternScreamerSpecialEffects.None;
-    } 
-    
+    }
+
+    [CustomEnum] public static RunRngType BorealisCards2RandomEffect;
+
+    private static Rng InitializeRng(IRunState runState)
+    {
+        if (runState.Rng._rngs.TryGetValue(BorealisCards2RandomEffect, out var randomEffectRng))
+        {
+            return randomEffectRng;
+        }
+
+        var rng = runState.Rng.CreateRng(BorealisCards2RandomEffect);
+        runState.Rng._rngs[BorealisCards2RandomEffect] = rng;
+        return rng;
+    }
+
     protected override void AddExtraArgsToDescription(LocString description)
     {
         description.Add("HasEffect", NormalEffect != 0);

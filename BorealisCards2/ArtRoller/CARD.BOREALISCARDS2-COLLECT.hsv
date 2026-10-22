@@ -1,5 +1,5 @@
 {
-  "card_id": "CARD.BOREALISCARDS2-COLLECT@DEFECT",
+  "card_id": "CARD.BOREALISCARDS2-COLLECT",
   "portrait_path": "res://images/atlases/card_atlas.sprites/necrobinder/transfigure.tres",
   "tint": "#ffffff",
   "hue": 0.55,

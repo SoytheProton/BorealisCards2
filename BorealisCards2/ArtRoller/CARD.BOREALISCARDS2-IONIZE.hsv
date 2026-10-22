@@ -1,5 +1,5 @@
 {
-  "card_id": "CARD.BOREALISCARDS2-IONIZE@DEFECT",
+  "card_id": "CARD.BOREALISCARDS2-IONIZE",
   "portrait_path": "res://images/atlases/card_atlas.sprites/regent/orbit.tres",
   "tint": "#ffffff",
   "hue": 0.61,

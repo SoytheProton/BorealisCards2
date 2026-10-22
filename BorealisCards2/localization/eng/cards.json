@@ -272,7 +272,7 @@
   "BOREALISCARDS2-BONUS_ROUND.description": "[gold]Channel[/gold] {Repeat:diff()} random {Repeat:plural:Orb|Orbs}.\nGive this card to a random ally.",
   "BOREALISCARDS2-BONUS_ROUND.title": "Bonus Round",
 
-  "BOREALISCARDS2-VIGNETTE.description": "{IfUpgraded:show:[gold]Channel[/gold] 1 [gold]Dark[/gold].\n}At the end of your turn, trigger the rightmost [gold]Dark[/gold] 1 time for each [gold]Dark[/gold] you have.",
+  "BOREALISCARDS2-VIGNETTE.description": "{IfUpgraded:show:[gold]Channel[/gold] 1 [gold]Dark[/gold].\n}At the end of your turn, trigger the passive ability of the rightmost [gold]Dark[/gold] 1 time for each [gold]Dark[/gold] you have.",
   "BOREALISCARDS2-VIGNETTE.title": "Vignette",
 
   "BOREALISCARDS2-NETWORKED_SUFFERING.description": "Whenever you draw a Status, gain {Repeat:diff()} [gold]Block[/gold].",
@@ -290,6 +290,7 @@
   "BOREALISCARDS2-PATTERN_SCREAMER.title": "Pattern Screamer",
 
   "BOREALISCARDS2-CATASTROPHIC_FAILURE.description": "EVERYONE chooses a card from their [gold]Draw Pile[/gold] to add to their [gold]Hand[/gold]. Add {Repeat:diff()} random Statuses to your [gold]Discard Pile[/gold].",
+  "BOREALISCARDS2-CATASTROPHIC_FAILURE.selectionScreenPrompt": "Select a card to put in your Hand.",
   "BOREALISCARDS2-CATASTROPHIC_FAILURE.title": "Catastrophic Failure",
 
   "BOREALISCARDS2-Character6": "Colorless",
@@ -335,5 +336,8 @@
   "BOREALISCARDS2-COLOR_WHEEL_GLASS.title": "Glass",
 
   "BOREALISCARDS2-COLOR_WHEEL_PLASMA.description": "[gold]Channel[/gold] 1 [gold]Plasma[/gold].",
-  "BOREALISCARDS2-COLOR_WHEEL_PLASMA.title": "Plasma"
+  "BOREALISCARDS2-COLOR_WHEEL_PLASMA.title": "Plasma",
+
+  "BOREALISCARDS2-TESTCARD.description": "test.",
+  "BOREALISCARDS2-TESTCARD.title": "test"
 }

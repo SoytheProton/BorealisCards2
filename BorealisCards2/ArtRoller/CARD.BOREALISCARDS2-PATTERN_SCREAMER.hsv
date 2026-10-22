@@ -1,5 +1,5 @@
 {
-  "card_id": "CARD.BOREALISCARDS2-PATTERN_SCREAMER@DEFECT",
+  "card_id": "CARD.BOREALISCARDS2-PATTERN_SCREAMER",
   "portrait_path": "res://images/atlases/card_atlas.sprites/regent/convergence.tres",
   "tint": "#ffffff",
   "hue": 0.56,

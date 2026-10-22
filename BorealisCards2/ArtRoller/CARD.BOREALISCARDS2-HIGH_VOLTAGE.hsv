@@ -1,5 +1,5 @@
 {
-  "card_id": "CARD.BOREALISCARDS2-HIGH_VOLTAGE@DEFECT",
+  "card_id": "CARD.BOREALISCARDS2-HIGH_VOLTAGE",
   "portrait_path": "res://images/atlases/card_atlas.sprites/ironclad/juggernaut.tres",
   "tint": "#ffffff",
   "hue": 0.29,

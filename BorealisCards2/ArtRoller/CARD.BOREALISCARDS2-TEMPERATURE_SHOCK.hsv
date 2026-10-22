@@ -1,5 +1,5 @@
 {
-  "card_id": "CARD.BOREALISCARDS2-TEMPERATURE_SHOCK@DEFECT",
+  "card_id": "CARD.BOREALISCARDS2-TEMPERATURE_SHOCK",
   "portrait_path": "res://images/atlases/card_atlas.sprites/ironclad/thunderclap.tres",
   "tint": "#ffffff",
   "hue": 0.52,
