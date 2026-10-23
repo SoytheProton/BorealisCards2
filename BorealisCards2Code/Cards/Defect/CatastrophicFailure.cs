@@ -1,4 +1,5 @@
 using BaseLib.Utils;
+using BorealisCards2.BorealisCards2Code.Powers.Defect;
 using MegaCrit.Sts2.Core.CardSelection;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
@@ -29,14 +30,19 @@ public class CatastrophicFailure() : BorealisCards2Card(0,
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        List<Task> taskList =
+        /*List<Task> taskList =
         [
             .. from player in CombatState.GetTeammatesOf(Owner.Creature).Select(creature => creature.Player)
                 .OfType<Player>()
             where !player.Creature.IsDead && CombatManager.Instance.IsPartOfPlayerTurn(player)
             select Seek(choiceContext, player)
         ];
-        await Task.WhenAll(taskList);
+        await Task.WhenAll(taskList);*/
+
+        var players = CombatState.GetTeammatesOf(Owner.Creature).Select(creature => creature)
+            .Where(c => c.IsAlive && CombatManager.Instance.IsPartOfPlayerTurn(c.Player));
+
+        await PowerCmd.Apply<SeekPower>(choiceContext, players, 1, Owner.Creature, this);
         
         var statusPool = ModelDb.CardPool<StatusCardPool>()
             .GetUnlockedCards(
