@@ -3,6 +3,7 @@ using MegaCrit.Sts2.Core.CardSelection;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
+using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Factories;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
@@ -28,16 +29,14 @@ public class CatastrophicFailure() : BorealisCards2Card(0,
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        foreach (var creature in CombatState.GetTeammatesOf(Owner.Creature))
-        {
-            var player = creature.Player;
-            if(player == null || player.Creature.IsDead || !CombatManager.Instance.IsPartOfPlayerTurn(player))
-                continue;
-            var card = (await CardSelectCmd.FromCombatPile(choiceContext, PileType.Draw.GetPile(player), player, new CardSelectorPrefs(SelectionScreenPrompt, 1), null)).FirstOrDefault();
-            if (card == null)
-                continue;
-            await CardPileCmd.Add(card, PileType.Hand);
-        }
+        List<Task> taskList =
+        [
+            .. from player in CombatState.GetTeammatesOf(Owner.Creature).Select(creature => creature.Player)
+                .OfType<Player>()
+            where !player.Creature.IsDead && CombatManager.Instance.IsPartOfPlayerTurn(player)
+            select Seek(choiceContext, player)
+        ];
+        await Task.WhenAll(taskList);
         
         var statusPool = ModelDb.CardPool<StatusCardPool>()
             .GetUnlockedCards(
@@ -55,6 +54,15 @@ public class CatastrophicFailure() : BorealisCards2Card(0,
         {
             CardCmd.PreviewCardPileAdd(await CardPileCmd.AddGeneratedCardsToCombat(cardModels, PileType.Discard, Owner));
         }
+    }
+
+    private async Task Seek(PlayerChoiceContext choiceContext, Player target)
+    {
+        var card = (await CardSelectCmd.FromCombatPile(choiceContext, PileType.Draw.GetPile(target), target,
+            new CardSelectorPrefs(SelectionScreenPrompt, 1), null)).FirstOrDefault();
+        if (card == null)
+            return;
+        await CardPileCmd.Add(card, PileType.Hand);
     }
 
     protected override void OnUpgrade() => AddKeyword(CardKeyword.Retain);
