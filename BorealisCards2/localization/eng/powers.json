@@ -149,9 +149,4 @@
   "BOREALISCARDS2-FIFO_QUEUE_ENERGY_POWER.description": "Gain [blue]1[/blue] [gold]Energy[/gold] at the start of each turn.",
   "BOREALISCARDS2-FIFO_QUEUE_ENERGY_POWER.smartDescription": "Gain {Amount:energyIcons()} at the start of each turn.",
   "BOREALISCARDS2-FIFO_QUEUE_ENERGY_POWER.title": "Energized",
-
-  "BOREALISCARDS2-SEEK_POWER.description": "Next turn, put cards from your [gold]Draw Pile[/gold] into your [gold]Hand[/gold].",
-  "BOREALISCARDS2-SEEK_POWER.selectionScreenPrompt": "Choose {Amount:plural:a card|{} cards} to add into your Hand.",
-  "BOREALISCARDS2-SEEK_POWER.smartDescription": "Next turn, put [blue]{Amount}[/blue] cards from your [gold]Draw Pile[/gold] into your [gold]Hand[/gold].",
-  "BOREALISCARDS2-SEEK_POWER.title": "Catastrophic Failure"
 }

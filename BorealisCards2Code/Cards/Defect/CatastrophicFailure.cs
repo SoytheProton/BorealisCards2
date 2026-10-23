@@ -3,11 +3,14 @@ using BorealisCards2.BorealisCards2Code.Powers.Defect;
 using MegaCrit.Sts2.Core.CardSelection;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.Context;
 using MegaCrit.Sts2.Core.Entities.Cards;
+using MegaCrit.Sts2.Core.Entities.Multiplayer;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Factories;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
+using MegaCrit.Sts2.Core.Localization;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.CardPools;
@@ -30,25 +33,25 @@ public class CatastrophicFailure() : BorealisCards2Card(0,
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        /*List<Task> taskList =
-        [
-            .. from player in CombatState.GetTeammatesOf(Owner.Creature).Select(creature => creature.Player)
-                .OfType<Player>()
-            where !player.Creature.IsDead && CombatManager.Instance.IsPartOfPlayerTurn(player)
-            select Seek(choiceContext, player)
-        ];
-        await Task.WhenAll(taskList);*/
+        // Thank you to pikcube for the code. 
+        if (CombatState is null)
+        {
+            return;
+        }
 
-        var players = CombatState.GetTeammatesOf(Owner.Creature).Select(creature => creature)
-            .Where(c => c.IsAlive && CombatManager.Instance.IsPartOfPlayerTurn(c.Player));
+        foreach (var p in CombatState.Players.Where(p => p != Owner && p.Creature.IsAlive && CombatManager.Instance.IsPartOfPlayerTurn(p)))
+        {
+            BranchingPlayerChoiceContext bpcc = new(this, LocalContext.NetId ?? 0, GameActionType.CombatPlayPhaseOnly, choiceContext);
+            await bpcc.AssignTaskAndWaitForPauseOrCompletion(Seek(bpcc, p, SelectionScreenPrompt));
+        }
 
-        await PowerCmd.Apply<SeekPower>(choiceContext, players, 1, Owner.Creature, this);
-        
+        await Seek(choiceContext, Owner, SelectionScreenPrompt);
+
         var statusPool = ModelDb.CardPool<StatusCardPool>()
             .GetUnlockedCards(
                 Owner.UnlockState,
                 Owner.RunState.CardMultiplayerConstraint);
-
+        
         var status = CardFactory.GetForCombat(
             Owner,
             statusPool,
@@ -62,13 +65,15 @@ public class CatastrophicFailure() : BorealisCards2Card(0,
         }
     }
 
-    private async Task Seek(PlayerChoiceContext choiceContext, Player target)
+    private static async Task Seek(PlayerChoiceContext choiceContext, Player target, LocString selectionScreenPrompt)
     {
+        await CardPileCmd.ShuffleIfNecessary(choiceContext, target);
         var card = (await CardSelectCmd.FromCombatPile(choiceContext, PileType.Draw.GetPile(target), target,
-            new CardSelectorPrefs(SelectionScreenPrompt, 1), null)).FirstOrDefault();
-        if (card == null)
-            return;
-        await CardPileCmd.Add(card, PileType.Hand);
+            new CardSelectorPrefs(selectionScreenPrompt, 1), null)).FirstOrDefault();
+        if (card != null)
+        {
+            await CardPileCmd.Add(card, PileType.Hand);
+        }
     }
 
     protected override void OnUpgrade() => AddKeyword(CardKeyword.Retain);
