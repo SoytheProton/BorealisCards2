@@ -148,5 +148,5 @@
 
   "BOREALISCARDS2-FIFO_QUEUE_ENERGY_POWER.description": "Gain [blue]1[/blue] [gold]Energy[/gold] at the start of each turn.",
   "BOREALISCARDS2-FIFO_QUEUE_ENERGY_POWER.smartDescription": "Gain {Amount:energyIcons()} at the start of each turn.",
-  "BOREALISCARDS2-FIFO_QUEUE_ENERGY_POWER.title": "Energized",
+  "BOREALISCARDS2-FIFO_QUEUE_ENERGY_POWER.title": "Energized"
 }
